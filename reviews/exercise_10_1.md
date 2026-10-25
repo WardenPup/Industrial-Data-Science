@@ -1,6 +1,6 @@
 # Exercise 10.1 review
 
-Status: DRAFT
+Status: AWAITING_HUMAN_REVIEW
 Human review: Pending
 
 ## Requirements and acceptance criteria
@@ -34,8 +34,36 @@ Current AI contributions: workflow rules, templates, CI, validation and evidence
 
 ## Verification for this workflow adoption
 
-Not run yet for this change set. Prior checks are documented in `docs/STATUS.md`;
-they are not substituted for the forthcoming validation of the new QA tooling.
+Executed locally during workflow adoption on 2026-10-25, using Python 3.12.15
+and the locked project environment. Commands below use `scripts/uv.cmd` on Windows.
+
+| Command | Actual result |
+|---|---|
+| `scripts/uv.cmd sync --offline --locked` | Exit 0; 103 installed packages checked |
+| `scripts/uv.cmd run --offline --locked python -m unittest discover -s tests -v` | Exit 0; 9 tests passed (4 mathematical/image tests and 5 QA tests) |
+| `scripts/uv.cmd run --offline --locked python sessions/ch10/aufgabe_10_1.py` | Exit 0; PNG generated |
+| `scripts/uv.cmd run --offline --locked python scripts/validate_notebooks.py` | Exit 0; explicit SKIP, no tracked notebooks |
+| `scripts/uv.cmd run --offline --locked python scripts/check_notebook_tools.py` | Exit 0; actual kernel output 4, HTML exported, readable one-page PDF |
+| `scripts/uv.cmd run --offline --locked python scripts/check_commit_messages.py --base origin/main` | Exit 0; first two new commits checked before this evidence commit; baseline excluded |
+| Workflow YAML parsed with PyYAML; contents permission asserted read-only | Exit 0 |
+| `git diff --exit-code d243632 -- sessions/ch10 tests/test_aufgabe_10_1.py outputs/ch10 pyproject.toml uv.lock` | Exit 0; original solution, dependencies and output unchanged |
+
+The generated heart was visually inspected: full closed curve, equal axis scaling,
+legible labels, no clipping. The synthetic PDF was rendered with Poppler and visually
+inspected: title, code and output readable. Outputs are tooling checks, not student review.
+
+Failures and corrections: the initial staged whitespace check caught an extra final
+blank line in AGENTS.md; corrected before commit. The first QA test run had one
+error because an invalid-cell fixture triggered a nbformat internal TypeError.
+The fixture now uses invalid metadata to test schema rejection; all nine tests
+then passed. No failed run is reported as successful.
+
+Kernel execution still emits the known warning about unencrypted local TCP transport.
+No tracked exercise notebook, AI4I analysis or Exercise 10.2 is claimed as tested.
+Hosted GitHub Actions results are pending until push; local YAML parsing alone
+does not prove hosted execution. See the PR checks for the current hosted result.
+
+Technical validation is complete for this local change set. Human review is pending.
 
 ## Human feedback
 
@@ -44,7 +72,8 @@ work; it is not approval of the mathematical solution or generated code.
 
 ## Revisions
 
-No human-review-driven revisions. New QA infrastructure will be recorded as such.
+No human-review-driven revisions. QA infrastructure and test-fixture corrections
+were made by Codex as technical implementation work, not as invented student feedback.
 
 ## Remaining review questions
 
