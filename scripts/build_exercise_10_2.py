@@ -38,18 +38,23 @@ def main():
     counts = [c.execution_count for c in notebook.cells if c.cell_type == "code"]
     assert counts == list(range(1, len(counts) + 1))
     assert {c.cell_type for c in notebook.cells} == {"code", "markdown", "raw"}
+    images = [o for c in notebook.cells if c.cell_type == "code" for o in c.outputs
+              if "image/png" in o.get("data", {})]
+    assert len(images) == 1, "The actual plot must be embedded in a notebook output"
     nbformat.write(notebook, source)
     output = ROOT / "outputs/ch10/exercise_10_2"
     output.mkdir(parents=True, exist_ok=True)
-    html, _ = HTMLExporter(embed_images=True).from_notebook_node(notebook)
+    template = (ROOT / "templates/notebook_export.html.j2").read_text(encoding="utf-8")
+    html, _ = HTMLExporter(embed_images=True, raw_template=template).from_notebook_node(notebook)
     assert "data:image/png;base64," in html and "Rotational speed" in html
     (output / "ai4i_explore.html").write_text(html, encoding="utf-8")
-    pdf, _ = WebPDFExporter().from_notebook_node(notebook)
+    pdf, _ = WebPDFExporter(raw_template=template).from_notebook_node(notebook)
     pdf_path = output / "ai4i_explore.pdf"
     pdf_path.write_bytes(pdf)
     reader = PdfReader(pdf_path)
     text = " ".join(page.extract_text() for page in reader.pages)
     assert "Torque" in text and "Rotational speed" in text and "Grundstatistik" in text
+    assert sum(len(page.images) for page in reader.pages) >= 1, "PDF must include the plot image"
     assert all("error" != o.output_type for c in notebook.cells if c.cell_type == "code" for o in c.outputs)
     print(f"PASS: {len(counts)} code cells executed in order; HTML with embedded image; PDF {len(reader.pages)} pages")
     print(output)
