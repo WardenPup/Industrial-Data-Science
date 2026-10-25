@@ -85,3 +85,29 @@ were made by Codex as technical implementation work, not as invented student fee
 ## Approval
 
 Not granted; no approval date. Exercise 10.2 remains unstarted.
+
+
+Human Review – Aufgabe 10.1
+
+Status: Freigegeben nach manueller Prüfung
+KI-Unterstützung: Codex
+
+Konkrete Prüfergebnisse
+
+Skriptausführung: Das Skript wurde erfolgreich ausgeführt. Die Grafik wurde unter outputs/ch10/aufgabe_10_1_herz.png gespeichert.
+
+Mathematische Formeln: Die Implementierung entspricht den vorgegebenen Gleichungen für x(t) und y(t). Mit np.linspace(0, 2π, 1001) wird eine vollständige Periode einschließlich der Endpunkte berechnet.
+
+Kurvenschluss: Bei t = 0 und t = 2π ergeben sich dieselben Koordinaten (x ≈ 0, y = 5). Die Herzkurve ist somit geschlossen.
+
+Visualisierung: Die ausgegebene Grafik zeigt eine symmetrische Herzform. Durch set_aspect("equal") werden beide Achsen im gleichen Maßstab dargestellt.
+
+Dateiausgabe: Die Grafik wird mit 160 DPI gespeichert. Durch matplotlib.use("Agg") ist keine grafische Benutzeroberfläche erforderlich.
+
+Codequalität: Die Funktionen heart_coordinates(), save_plot() und main() sind klar getrennt. Ungültige Werte für samples unter 3 werden mit einem ValueError abgefangen.
+
+Ergebnis
+
+Die überprüfte Lösung funktioniert wie erwartet. Es wurden keine offensichtlichen Fehler festgestellt.
+
+Human Review: Approved
