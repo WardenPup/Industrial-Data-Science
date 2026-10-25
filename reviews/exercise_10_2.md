@@ -108,3 +108,39 @@ as authored, without expanding them into additional activities.
 Explicit student approval received and recorded on 2026-10-26. This is separate
 from merge authorization, which remains withheld. Do not merge 10.2, start 10.3
 or submit coursework.
+
+## Final automated verification after student review (2026-10-26)
+
+Codex reran the following in the locked environment; these are AI/automated
+checks and are not attributed to the student:
+
+| Actual command | Result |
+|---|---|
+| `scripts/uv.cmd sync --offline --locked` | Exit 0; 105 installed packages checked |
+| `scripts/uv.cmd run --offline --locked python scripts/download_ai4i.py` | Exit 0; existing CSV matches pinned SHA256 |
+| `scripts/uv.cmd run --offline --locked python -m unittest discover -s tests -v` | Exit 0; 13 tests passed |
+| `scripts/uv.cmd run --offline --locked python scripts/validate_notebooks.py` | Exit 0; tracked notebook validated and executed from a fresh kernel |
+| `scripts/uv.cmd run --offline --locked python scripts/build_exercise_10_2.py` | Exit 0; 6 code cells in order, embedded image, HTML and 6-page PDF exported |
+| `.venv/Scripts/python.exe .tools/verify_exercise2_review.py` | Exit 0 after correcting the ad-hoc HTML row-count assertion; checksum, statistics, preview, labels, exports and student-text preservation verified |
+
+The task-local verification helper is an ad-hoc check, not a new repository
+test. Its initial literal `<tr>` count missed a styled header tag; using an
+HTML parser confirmed 11 rows (one header plus ten observations). This was
+a verification-helper issue, not a dataset/notebook failure, and is not hidden.
+
+Additional checks: pandas' saved statistics CSV matches `data.describe()` with
+floating-point tolerance; the computed mean/min/max are 39.98691/3.8/76.6 Nm;
+selected shape is 10000×4 with zero missing values. All six PDF pages were
+rendered with Poppler and visually inspected, including the preserved student
+answers and human-review section. HTML contains the embedded plot and student
+answers. Both authored cell texts match the pre-edit snapshot exactly.
+
+The official Exercise 10.2 page was freshly retrieved and compared with the
+acceptance criteria: Jupyter environment, named notebook, pandas loading, four
+columns, ten-row preview, basic statistics, labeled Matplotlib line plot, actual
+Code/Markdown/Raw cells and HTML/PDF exports are satisfied. No task requirement
+remains unverified in the technical acceptance checklist. A manual reproduction
+by the student is not claimed. The known local TCP kernel warning remains.
+
+Hosted checks and merge-conflict status are verified separately on PR #2 after
+push; earlier successful CI runs do not establish the result of new commits.

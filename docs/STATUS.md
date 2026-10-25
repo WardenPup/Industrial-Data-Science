@@ -141,3 +141,17 @@ generated along with PNG and statistics CSV. All 13 local tests and fresh notebo
 execution passed; the initial export defects and their corrections are disclosed
 in `reviews/exercise_10_2.md`. Actual computed results are in the notebook/outputs.
 No student review or approval of 10.2 has been received. Do not merge 10.2 or start 10.3.
+
+## Exercise 10.2 positive review and explicit approval (2026-10-26)
+
+The student confirmed the dataset shape, selected-column completeness, ten-row
+preview, plausible statistics, mean/range of torque, axis labels, UDI semantics,
+cell-type understanding and PDF readability; no corrections were requested.
+The student also explicitly confirmed authorship and approval in both added
+notebook Markdown cells. Original wording is preserved verbatim.
+
+Current exercise status: APPROVED. Merge authorization: NOT GRANTED.
+All 13 local tests, pinned-data integrity, fresh sequential notebook execution,
+statistics/export checks and six-page PDF inspection passed. Review findings
+and automated evidence are recorded separately in `reviews/exercise_10_2.md`.
+PR #2 is prepared for final review after hosted checks; no merge or 10.3 work.

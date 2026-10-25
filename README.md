@@ -1,6 +1,6 @@
 # Industrial Data Science – Self-Study Kapitel 10–12
 
-Lokales Lernprojekt. Aufgabe 10.1 ist freigegeben und gemergt; 10.2 wartet auf Human Review.
+Lokales Lernprojekt. Aufgabe 10.1 ist freigegeben und gemergt; 10.2 ist nach Human Review freigegeben und wartet auf Merge-Erlaubnis.
 Die offizielle Aufgabenstellung hat Vorrang vor eigenen Zusammenfassungen.
 
 ## Start in PowerShell
@@ -110,7 +110,8 @@ Use `exercise/<number>` branches and the cycle documented in
 [Human-AI workflow](docs/HUMAN_AI_WORKFLOW.md). Start review records from
 [the template](reviews/TEMPLATE.md). The current [10.1 review](reviews/exercise_10_1.md)
 records genuine provenance, technical evidence and explicit approval.
-The [10.2 review](reviews/exercise_10_2.md) is AWAITING HUMAN REVIEW.
+The [10.2 review](reviews/exercise_10_2.md) records explicit student approval;
+merge permission remains withheld.
 Conventional Commits include explicit AI-Assistance and Human-Review metadata.
 Configure the editor template with `git config --local commit.template .gitmessage`.
 

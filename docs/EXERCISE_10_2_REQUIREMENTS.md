@@ -32,7 +32,8 @@ CI lädt dieselbe Quelle vor Tests/Notebookausführung.
 
 Der aktuelle Nutzerauftrag autorisiert Analyse, Implementierung, automatisierte
 Prüfung, Exporte, Commits, Push und Draft-PR. Keine zusätzliche Planfreigabe nötig.
-Studentische Prüfung und Freigabe von 10.2 stehen aus. Keine Abgabe oder Merge.
+Die studentische Prüfung und ausdrückliche Freigabe von 10.2 wurden anschließend
+am 26.10.2026 bestätigt. Merge-Erlaubnis steht weiterhin aus. Keine Abgabe oder Merge.
 
 ## Einreichung
 

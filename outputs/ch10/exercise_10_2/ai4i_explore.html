@@ -7816,8 +7816,9 @@ pre, .highlight pre, .jp-InputArea-editor pre {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Aufgabe-10.2-%E2%80%93-AI4I-mit-Jupyter-erkunden">Aufgabe 10.2 – AI4I mit Jupyter erkunden<a class="anchor-link" href="#Aufgabe-10.2-%E2%80%93-AI4I-mit-Jupyter-erkunden">¶</a></h1><p><strong>Status: AWAITING HUMAN REVIEW.</strong> Initiale Implementierung und technische Prüfung:
-Codex. Eine studentische Freigabe dieser Aufgabe liegt noch nicht vor.</p>
+<h1 id="Aufgabe-10.2-%E2%80%93-AI4I-mit-Jupyter-erkunden">Aufgabe 10.2 – AI4I mit Jupyter erkunden<a class="anchor-link" href="#Aufgabe-10.2-%E2%80%93-AI4I-mit-Jupyter-erkunden">¶</a></h1><p><strong>Status: APPROVED (26.10.2026).</strong> Initiale Implementierung und automatisierte Prüfung:
+Codex. Die beiden abschließenden Markdown-Zellen wurden vom Studierenden verfasst;
+ihre Freigabe wurde ausdrücklich bestätigt. Merge-Freigabe steht weiterhin aus.</p>
 <p>Ziel: einen Datensatz laden, eine begrenzte deskriptive Übersicht erstellen und
 Notebook-Zelltypen sowie HTML/PDF-Exporte verwenden.</p>
 <p>Quelle der Aufgabe: <a href="https://noxthot.github.io/ws26_industrial_datascience_manuscript/1_act1/6_self_study_session1.html">Industrial Data Science, Exercise 10.2</a>.
@@ -8331,7 +8332,50 @@ Der alternative nbconvert-PDF-Weg über LaTeX ist nicht erforderlich.</p>
 <li>Kannst du den Unterschied zwischen Code, Markdown und Raw im Notebook nachvollziehen?</li>
 <li>Sind HTML/PDF einschließlich Tabellen und Grafik lesbar, und lässt sich die Ausführung reproduzieren?</li>
 </ol>
-<p><strong>Keine studentische Freigabe dokumentiert. Keine automatische Abgabe.</strong></p>
+<p><strong>Studentische Freigabe am 26.10.2026 ausdrücklich bestätigt. Kein Merge und keine automatische Abgabe.</strong></p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=538f0ea8">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Selbst-erkl%C3%A4ren-k%C3%B6nnen-%E2%80%93-Aufgabe-10.2">Selbst erklären können – Aufgabe 10.2<a class="anchor-link" href="#Selbst-erkl%C3%A4ren-k%C3%B6nnen-%E2%80%93-Aufgabe-10.2">¶</a></h2><p><strong>1. Warum Originaleinheiten beibehalten und UDI nicht als Zeit interpretieren?</strong></p>
+<p>Die Originaleinheiten ermöglichen eine physikalisch sinnvolle Interpretation und verhindern Verwechslungen. UDI ist lediglich eine eindeutige Zeilenkennung und enthält keine Zeitinformation. Deshalb darf die Darstellung nicht als zeitlicher Verlauf interpretiert werden.</p>
+<p><strong>2. Stimmen Spalten, Tabellen, Statistik und Achsen überein?</strong></p>
+<p>Die vier Spalten UDI, Torque [Nm], Rotational speed [rpm] und Air temperature [K] sind vorhanden. Die ersten zehn Beobachtungen und die deskriptive Statistik werden angezeigt. Die Grafik stellt das Drehmoment über UDI mit korrekt beschrifteten Achsen dar.</p>
+<p><strong>3. Unterschied zwischen Code, Markdown und Raw?</strong></p>
+<p>Code-Zellen führen Python-Befehle aus und erzeugen Ergebnisse. Markdown-Zellen enthalten formatierte Texte und Erklärungen. Raw-Zellen enthalten unverarbeiteten Text, der nicht als Python-Code ausgeführt wird.</p>
+<p><strong>4. Sind HTML/PDF lesbar und die Ergebnisse reproduzierbar?</strong></p>
+<p>Die bereitgestellten Exporte enthalten Tabellen, statistische Kennzahlen und die Grafik. Die PDF-Darstellung ist lesbar. Laut Codex wurden alle sechs Code-Zellen erfolgreich ausgeführt und die automatisierten Prüfungen bestanden.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f87c0c98">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Human-Review-%E2%80%93-Aufgabe-10.2">Human Review – Aufgabe 10.2<a class="anchor-link" href="#Human-Review-%E2%80%93-Aufgabe-10.2">¶</a></h2><p><strong>Status:</strong> APPROVED<br/>
+<strong>KI-Unterstützung:</strong> Codex<br/>
+<strong>Prüfung:</strong> Studentischer Human Review</p>
+<h3 id="Pr%C3%BCfergebnisse">Prüfergebnisse<a class="anchor-link" href="#Pr%C3%BCfergebnisse">¶</a></h3><ol>
+<li>Der AI4I-Datensatz enthält 10.000 Beobachtungen. Die vier ausgewählten Spalten und ihre Einheiten wurden kontrolliert.</li>
+<li>Die Vorschau zeigt die ersten zehn Zeilen. Die deskriptive Statistik ist vollständig und nachvollziehbar.</li>
+<li>Das durchschnittliche Drehmoment beträgt 39,987 Nm. Der kleinste Wert beträgt 3,8 Nm, der größte 76,6 Nm.</li>
+<li>Die Drehmomentgrafik ist korrekt beschriftet und zeigt deutliche Schwankungen. UDI wird richtigerweise nicht als Zeitachse interpretiert.</li>
+<li>Die Unterschiede zwischen Code-, Markdown- und Raw-Zellen sind nachvollziehbar.</li>
+<li>Die HTML- und PDF-Exporte wurden auf Lesbarkeit und Vollständigkeit geprüft.</li>
+<li>Codex meldet 13 erfolgreiche Tests und zwei bestandene GitHub-Actions-Läufe.</li>
+</ol>
+<h3 id="Bewertung">Bewertung<a class="anchor-link" href="#Bewertung">¶</a></h3><p>Die Ergebnisse sind plausibel, die Dokumentation verständlich und die Aufgabenanforderungen nach Prüfung erfüllt.</p>
+<p>Keine Korrekturen erforderlich.</p>
+<p><strong>Human Review: Approved</strong></p>
 </div>
 </div>
 </div>
