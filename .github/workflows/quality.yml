@@ -1,0 +1,51 @@
+name: Exercise quality checks
+
+on:
+  push:
+    branches: ['exercise/**']
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: qa-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  python-and-notebooks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      PLAYWRIGHT_BROWSERS_PATH: ${{ github.workspace }}/.tools/playwright
+      JUPYTER_CONFIG_DIR: ${{ github.workspace }}/.jupyter
+      JUPYTER_DATA_DIR: ${{ github.workspace }}/.local/share/jupyter
+      JUPYTER_RUNTIME_DIR: ${{ github.workspace }}/.local/share/jupyter/runtime
+      IPYTHONDIR: ${{ github.workspace }}/.local/ipython
+      MPLCONFIGDIR: ${{ github.workspace }}/.tools/matplotlib
+      QA_HEAD: ${{ github.event.pull_request.head.sha || github.sha }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version-file: .python-version
+      - name: Install pinned uv and locked environment
+        run: |
+          python -m pip install uv==0.13.5
+          uv sync --locked
+      - name: Check new commit disclosure format
+        run: uv run --locked python scripts/check_commit_messages.py --base origin/main --head "$QA_HEAD"
+      - name: Run numerical and QA tests
+        run: uv run --locked python -m unittest discover -s tests -v
+      - name: Execute Exercise 10.1
+        run: uv run --locked python sessions/ch10/aufgabe_10_1.py --output outputs/tooling-smoke/heart.png
+      - name: Validate and execute tracked notebooks if present
+        run: uv run --locked python scripts/validate_notebooks.py
+      - name: Install notebook PDF browser
+        run: uv run --locked playwright install --with-deps chromium
+      - name: Execute synthetic notebook and verify HTML/PDF exports
+        run: uv run --locked python scripts/check_notebook_tools.py
