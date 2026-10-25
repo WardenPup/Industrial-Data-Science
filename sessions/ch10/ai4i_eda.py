@@ -18,8 +18,12 @@ def iqr_summary(values: pd.DataFrame) -> pd.DataFrame:
     q1, q3 = values.quantile(0.25), values.quantile(0.75)
     spread = q3 - q1
     lower, upper = q1 - 1.5 * spread, q3 + 1.5 * spread
+    # Decimal measurements on a theoretical fence must not be flagged because
+    # 12.8 and 12.800000000000011 differ in floating-point representation.
+    tolerance = 1e-10
+    flagged = (values < lower - tolerance) | (values > upper + tolerance)
     return pd.DataFrame({"q1": q1, "q3": q3, "lower_fence": lower, "upper_fence": upper,
-                         "flagged_count": ((values < lower) | (values > upper)).sum(),
+                         "flagged_count": flagged.sum(),
                          "skewness": values.skew(), "minimum": values.min(), "maximum": values.max()})
 
 
