@@ -118,3 +118,40 @@ Current exercise status: APPROVED; merge authorization remains withheld.
 Fresh hosted CI results are shown in PR #1. The student text is unchanged; AI
 status reconciliation and a terminology clarification are recorded separately.
 No merging, deletion, submission or Exercise 10.2 work has been performed.
+
+## Approved 10.1 merge and start of 10.2 (2026-10-26)
+
+The user explicitly authorized merging PR #1 and starting Exercise 10.2.
+Both current-head GitHub checks were verified successful before the merge.
+PR #1 was merged using a merge commit `5c2ac0d`, preserving all original commits
+and genuine student review contributions. Local main was fast-forwarded to it.
+Branch `exercise/10.2` starts from that synchronized main.
+
+Exercise 10.1: approved and merged. Exercise 10.2: requirements analysis underway;
+no human approval. Exercise 10.3: not started. Earlier status paragraphs above
+describe their historical stage, not the current merge authorization.
+
+## Exercise 10.2 technical handover (2026-10-26)
+
+Current status: AWAITING HUMAN REVIEW. Official requirements, source/license and
+acceptance criteria are documented. The executed AI4I notebook uses the official
+checksum-pinned CSV, exactly four selected columns, ten-row preview, basic statistics,
+torque plot and Code/Markdown/Raw cells. HTML and a visually checked 5-page PDF are
+generated along with PNG and statistics CSV. All 13 local tests and fresh notebook
+execution passed; the initial export defects and their corrections are disclosed
+in `reviews/exercise_10_2.md`. Actual computed results are in the notebook/outputs.
+No student review or approval of 10.2 has been received. Do not merge 10.2 or start 10.3.
+
+## Exercise 10.2 positive review and explicit approval (2026-10-26)
+
+The student confirmed the dataset shape, selected-column completeness, ten-row
+preview, plausible statistics, mean/range of torque, axis labels, UDI semantics,
+cell-type understanding and PDF readability; no corrections were requested.
+The student also explicitly confirmed authorship and approval in both added
+notebook Markdown cells. Original wording is preserved verbatim.
+
+Current exercise status: APPROVED. Merge authorization: NOT GRANTED.
+All 13 local tests, pinned-data integrity, fresh sequential notebook execution,
+statistics/export checks and six-page PDF inspection passed. Review findings
+and automated evidence are recorded separately in `reviews/exercise_10_2.md`.
+PR #2 is prepared for final review after hosted checks; no merge or 10.3 work.

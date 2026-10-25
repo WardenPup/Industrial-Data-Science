@@ -40,7 +40,11 @@ jobs:
       - name: Check new commit disclosure format
         run: uv run --locked python scripts/check_commit_messages.py --base origin/main --head "$QA_HEAD"
       - name: Run numerical and QA tests
-        run: uv run --locked python -m unittest discover -s tests -v
+        # Raw data are deliberately not committed; fetch the checksum-pinned source.
+        # The notebook itself executes offline after this explicit acquisition step.
+        run: |
+          uv run --locked python scripts/download_ai4i.py
+          uv run --locked python -m unittest discover -s tests -v
       - name: Execute Exercise 10.1
         run: uv run --locked python sessions/ch10/aufgabe_10_1.py --output outputs/tooling-smoke/heart.png
       - name: Validate and execute tracked notebooks if present
@@ -49,3 +53,5 @@ jobs:
         run: uv run --locked playwright install --with-deps chromium
       - name: Execute synthetic notebook and verify HTML/PDF exports
         run: uv run --locked python scripts/check_notebook_tools.py
+      - name: Execute Exercise 10.2 and verify required exports
+        run: uv run --locked python scripts/build_exercise_10_2.py

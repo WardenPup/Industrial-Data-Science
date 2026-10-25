@@ -1,0 +1,17 @@
+{% extends 'lab/index.html.j2' %}
+{% block html_head_css %}
+{{ super() }}
+<style>
+pre, .highlight pre, .jp-InputArea-editor pre {
+  white-space: pre-wrap !important;
+  overflow-wrap: anywhere !important;
+  word-break: break-word;
+}
+.jp-InputArea-editor, .jp-OutputArea-output { overflow: visible !important; }
+@media print {
+  h1, h2, h3 { break-after: avoid-page; }
+  .jp-RenderedHTMLCommon table, .jp-OutputArea-child { break-inside: avoid-page; }
+  .jp-RenderedHTMLCommon table { font-size: 12px; }
+}
+</style>
+{% endblock html_head_css %}

@@ -1,6 +1,6 @@
 # Industrial Data Science – Self-Study Kapitel 10–12
 
-Lokales Lernprojekt. Aufgabe 10.1 ist implementiert; weitere Aufgaben folgen einzeln.
+Lokales Lernprojekt. Aufgabe 10.1 ist freigegeben und gemergt; 10.2 ist nach Human Review freigegeben und wartet auf Merge-Erlaubnis.
 Die offizielle Aufgabenstellung hat Vorrang vor eigenen Zusammenfassungen.
 
 ## Start in PowerShell
@@ -18,6 +18,7 @@ Es ändert keinen globalen PATH. Danach:
 ```powershell
 .\scripts\uv.cmd sync --locked
 .\scripts\uv.cmd run --locked python sessions/ch10/aufgabe_10_1.py
+.\scripts\uv.cmd run --locked python scripts/download_ai4i.py
 .\scripts\uv.cmd run --locked python -m unittest discover -s tests -v
 ```
 
@@ -58,8 +59,26 @@ Der getrennte `--to pdf`-Exporter benötigt Pandoc/XeLaTeX und ist hier nicht ei
 Quarto und dessen HTML/PDF-Werkzeugkette werden für Aufgabe 10.4 separat eingerichtet.
 Notebook-Server nur lokal verwenden; automatisch erzeugte Zugangstoken nicht veröffentlichen.
 
-Aufgabe 10.2 wird erst nach Review von 10.1 begonnen. Der Infrastrukturtest enthält
-keine AI4I-Daten und ist keine Lösung zu 10.2.
+## Aufgabe 10.2 reproduzieren
+
+```powershell
+.\scripts\uv.cmd run --locked python scripts/download_ai4i.py
+.\scripts\uv.cmd run --offline --locked python scripts/build_exercise_10_2.py
+.\scripts\uv.cmd run --offline --locked python scripts/validate_notebooks.py
+```
+
+Notebook: [ai4i_explore.ipynb](sessions/ch10/ai4i_explore.ipynb).
+Ausgaben unter `outputs/ch10/exercise_10_2/`: `ai4i_explore.html`, `ai4i_explore.pdf`,
+`torque_over_udi.png` und `summary_statistics.csv`.
+Das Buildskript führt einen frischen Kernel aus und aktualisiert das Notebook
+mit echten Ausgaben. JupyterLab wurde lokal gestartet und per authentifiziertem
+HTTP-Aufruf geprüft; danach wurde der temporäre Server gestoppt.
+Rohdaten sind nicht enthalten: Download aus UCI mit fester SHA256-Prüfung,
+Herkunft und CC-BY-4.0-Lizenz unter `data/raw/README.md`.
+UDI ist kein Zeitstempel; die 10.000 synthetischen Zeilen erlauben keine
+unbegründeten Aussagen über reale Maschinen oder Kausalität.
+
+Der ursprüngliche Infrastrukturtest ist weiterhin synthetisch und getrennt von 10.2.
 
 ## VS Code
 
@@ -74,10 +93,10 @@ Für die IDE-Erweiterung ist eine eigene Anmeldung in VS Code erforderlich.
 ## Aufbau
 
 - `AGENTS.md`: dauerhafte Arbeitsregeln für KI-Unterstützung.
-- `sessions/ch10/`: Skript und erläuterte Lösung zu 10.1.
+- `sessions/ch10/`: freigegebene 10.1-Lösung und 10.2-Notebook mit Datenprüfung.
 - `sessions/ch11/`, `sessions/ch12/`: vorbereitete Kapitel mit Quellenlinks.
 - `tests/`: mathematische Prüfungen und echter PNG-Export.
-- `outputs/ch10/`: erzeugte Herzkurve.
+- `outputs/ch10/`: erzeugte Herzkurve sowie 10.2-HTML/PDF, Grafik und Statistik.
 - `data/raw/`, `data/processed/`: spätere Originaldaten und Ableitungen.
 - `docs/`: Status, Umgebung und wiederverwendbarer Arbeitsauftrag.
 - `scripts/`: Bootstrap, uv-Wrapper und Notebook-/Export-Werkzeugtest.
@@ -90,13 +109,15 @@ Virtuelle Umgebungen, Browser, Caches, Zugangsdaten und Rohdaten sind nicht Teil
 Use `exercise/<number>` branches and the cycle documented in
 [Human-AI workflow](docs/HUMAN_AI_WORKFLOW.md). Start review records from
 [the template](reviews/TEMPLATE.md). The current [10.1 review](reviews/exercise_10_1.md)
-records genuine provenance, technical evidence and pending human decisions.
+records genuine provenance, technical evidence and explicit approval.
+The [10.2 review](reviews/exercise_10_2.md) records explicit student approval;
+merge permission remains withheld.
 Conventional Commits include explicit AI-Assistance and Human-Review metadata.
 Configure the editor template with `git config --local commit.template .gitmessage`.
 
 GitHub Actions runs Python and QA tests, the 10.1 script, prospective commit-message
 checks, tracked notebook validation/execution and a synthetic HTML/PDF export check.
-No tracked notebooks currently exist: that check reports SKIP, not a notebook pass.
+The tracked 10.2 notebook is executed in a fresh kernel; required exports are also checked.
 Green checks never imply student approval. The workflow neither approves nor merges.
 The original solution already exists on main; its published history is preserved.
 

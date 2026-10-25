@@ -4,7 +4,10 @@ Status: APPROVED
 Human review: Approved
 Approval recorded: 2026-10-26 (Europe/Berlin), based on the student's explicit
 written approval below and confirmation in the current request.
-Merge authorization: Not granted. Exercise 10.2 remains unstarted.
+Merge authorization: Explicitly granted in the subsequent user request on 2026-10-26.
+PR #1 merged as `5c2ac0d` after both head checks passed; original commits preserved.
+Exercise 10.2 subsequently authorized on its own branch; historical text below
+records earlier stages and is not a withdrawal of the later permission.
 
 ## Requirements and acceptance criteria
 
