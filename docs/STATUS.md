@@ -118,3 +118,15 @@ Current exercise status: APPROVED; merge authorization remains withheld.
 Fresh hosted CI results are shown in PR #1. The student text is unchanged; AI
 status reconciliation and a terminology clarification are recorded separately.
 No merging, deletion, submission or Exercise 10.2 work has been performed.
+
+## Approved 10.1 merge and start of 10.2 (2026-10-26)
+
+The user explicitly authorized merging PR #1 and starting Exercise 10.2.
+Both current-head GitHub checks were verified successful before the merge.
+PR #1 was merged using a merge commit `5c2ac0d`, preserving all original commits
+and genuine student review contributions. Local main was fast-forwarded to it.
+Branch `exercise/10.2` starts from that synchronized main.
+
+Exercise 10.1: approved and merged. Exercise 10.2: requirements analysis underway;
+no human approval. Exercise 10.3: not started. Earlier status paragraphs above
+describe their historical stage, not the current merge authorization.
