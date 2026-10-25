@@ -5,8 +5,8 @@ This is a task inventory in our own words, not a copy of the manuscript.
 
 | Exercise | Required outcome | Current scope |
 |---|---|---|
-| 10.1 | Install uv, initialize an isolated Python project, install NumPy and Matplotlib, plot the specified parametric curve and explain environment management | Implemented; numerical and image checks required before commit |
-| 10.2 | Notebook with AI4I data, specified columns, first ten rows, statistics, torque line plot, different cell types, HTML/PDF exports | Blocked on user review of 10.1; no solution started |
+| 10.1 | Install uv, initialize an isolated Python project, install NumPy and Matplotlib, plot the specified parametric curve and explain environment management | Human-approved; PR #1 merged on 2026-10-26 |
+| 10.2 | Notebook with AI4I data, specified columns, first ten rows, statistics, torque line plot, different cell types, HTML/PDF exports | Technically validated; AWAITING HUMAN REVIEW |
 | 10.3 | Seaborn distribution, relationship and advanced plots; reasoned observations | Not started |
 | 10.4 | Quarto report and notebook rendering to HTML/PDF, chunk options and presentation | Not started; Quarto/Pandoc/TeX setup deferred to this exercise |
 
@@ -16,5 +16,6 @@ For 10.1 the exact mathematical requirements are
 The script uses `numpy.linspace` over one complete period, plots x against y,
 and preserves equal axis scaling. No empirical dataset or experimental result is involved.
 
-Jupyter installation and a synthetic export check are workspace infrastructure,
-not a start on Exercise 10.2. No AI4I dataset is downloaded or analyzed.
+The original synthetic export check remains separate from Exercise 10.2.
+AI4I acquisition and the 10.2 notebook were subsequently implemented after explicit
+authorization. See `docs/EXERCISE_10_2_REQUIREMENTS.md` and `reviews/exercise_10_2.md`.

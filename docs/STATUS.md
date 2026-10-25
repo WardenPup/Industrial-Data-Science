@@ -130,3 +130,14 @@ Branch `exercise/10.2` starts from that synchronized main.
 Exercise 10.1: approved and merged. Exercise 10.2: requirements analysis underway;
 no human approval. Exercise 10.3: not started. Earlier status paragraphs above
 describe their historical stage, not the current merge authorization.
+
+## Exercise 10.2 technical handover (2026-10-26)
+
+Current status: AWAITING HUMAN REVIEW. Official requirements, source/license and
+acceptance criteria are documented. The executed AI4I notebook uses the official
+checksum-pinned CSV, exactly four selected columns, ten-row preview, basic statistics,
+torque plot and Code/Markdown/Raw cells. HTML and a visually checked 5-page PDF are
+generated along with PNG and statistics CSV. All 13 local tests and fresh notebook
+execution passed; the initial export defects and their corrections are disclosed
+in `reviews/exercise_10_2.md`. Actual computed results are in the notebook/outputs.
+No student review or approval of 10.2 has been received. Do not merge 10.2 or start 10.3.
