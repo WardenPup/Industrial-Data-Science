@@ -155,3 +155,12 @@ All 13 local tests, pinned-data integrity, fresh sequential notebook execution,
 statistics/export checks and six-page PDF inspection passed. Review findings
 and automated evidence are recorded separately in `reviews/exercise_10_2.md`.
 PR #2 is prepared for final review after hosted checks; no merge or 10.3 work.
+
+## Authorized 10.2 merge and 10.3 start (2026-10-26)
+
+The student explicitly authorized merging PR #2 and starting 10.3. Both current
+head checks were successful; the documented approval and authored answers were
+confirmed before merging. Merge commit `40b31c6` preserves all development and
+review commits. Local main was synchronized; `exercise/10.3` starts from it.
+10.2 is approved and merged. 10.3 requirements are documented; no human approval.
+10.4 has not been started. Earlier paragraphs reflect their historical stages.
