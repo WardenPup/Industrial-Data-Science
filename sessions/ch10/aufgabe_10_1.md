@@ -81,3 +81,11 @@ Weil x(t) und y(t) gemeinsam eine zweidimensionale Kurve beschreiben. t ist nur 
 
 4. ## Warum sind gleiche Achsenskalierung und eine vollständige Periode sinnvoll?
 Gleiche Achsenskalierung verhindert Verzerrungen der Herzform. Eine vollständige Periode stellt sicher, dass die gesamte Kurve dargestellt und geschlossen wird.
+
+## Herkunft und ergänzende KI-Klarstellung (26.10.2026)
+
+Die vier Antworten oben wurden vom Studierenden selbst ergänzt und von Codex
+unverändert übernommen. Codex hat ihre Aussagen gegen Implementierung und
+erneut ausgeführte Prüfungen abgeglichen. Kleine begriffliche Präzisierung zu
+Antwort 1: uv erstellt die isolierte Umgebung; `.venv` ist das Verzeichnis,
+das diese Umgebung enthält. Die ursprüngliche Antwort bleibt unverändert.

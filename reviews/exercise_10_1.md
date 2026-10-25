@@ -1,7 +1,10 @@
 # Exercise 10.1 review
 
-Status: AWAITING_HUMAN_REVIEW
-Human review: Pending
+Status: APPROVED
+Human review: Approved
+Approval recorded: 2026-10-26 (Europe/Berlin), based on the student's explicit
+written approval below and confirmation in the current request.
+Merge authorization: Not granted. Exercise 10.2 remains unstarted.
 
 ## Requirements and acceptance criteria
 
@@ -63,17 +66,23 @@ No tracked exercise notebook, AI4I analysis or Exercise 10.2 is claimed as teste
 Hosted GitHub Actions results are pending until push; local YAML parsing alone
 does not prove hosted execution. See the PR checks for the current hosted result.
 
-Technical validation is complete for this local change set. Human review is pending.
+Technical validation for the workflow-adoption change set was completed before
+human review. The subsequent student review and fresh validation are recorded below.
 
 ## Human feedback
 
-No exercise review feedback received. The request to add QA authorizes technical
-work; it is not approval of the mathematical solution or generated code.
+The student subsequently added the German verification and explicit approval
+preserved below, and four answers in `sessions/ch10/aufgabe_10_1.md`.
+The current request confirms that these are the student's manual contributions.
+The original text was committed separately in `42cebaf` before AI status updates.
+No additional student observations or independently measured results are inferred.
 
 ## Revisions
 
-No human-review-driven revisions. QA infrastructure and test-fixture corrections
-were made by Codex as technical implementation work, not as invented student feedback.
+No code corrections were requested by the student. Codex reconciled stale
+AI-written pending-status summaries after receiving approval. The student's
+review and answers remain verbatim. QA infrastructure and earlier fixture
+corrections remain AI technical work, not student contributions.
 
 ## Remaining review questions
 
@@ -84,7 +93,46 @@ were made by Codex as technical implementation work, not as invented student fee
 
 ## Approval
 
-Not granted; no approval date. Exercise 10.2 remains unstarted.
+The student's explicit "Human Review: Approved" is accepted after fresh checks.
+Approval is recorded on 2026-10-26; the earlier manual review's exact time was
+not supplied and is not invented. This approval does not authorize merging.
+
+## AI validation after human review (2026-10-26)
+
+Codex compared both manually changed files against Git HEAD before editing.
+The official task was freshly retrieved. The formula, `linspace` interval and
+1001 samples, finite/closed/symmetric coordinates, equal aspect ratio, Agg backend,
+output path and 160-DPI save configuration support the student's statements.
+The PNG is 1120 × 1120; Pillow reports 159.9946 DPI because PNG density is stored
+in integer pixels/metre, consistent with a requested 160 DPI.
+Visual inspection confirmed the complete heart and readable labels.
+
+Actual commands, all exit 0 unless explicitly described as a skip:
+
+| Command | Result |
+|---|---|
+| `scripts/uv.cmd sync --offline --locked` | 103 installed packages checked |
+| `scripts/uv.cmd run --offline --locked python -m unittest discover -s tests -v` | All 9 tests passed |
+| `scripts/uv.cmd run --offline --locked python sessions/ch10/aufgabe_10_1.py` | Required PNG generated |
+| `scripts/uv.cmd run --offline --locked python scripts/validate_notebooks.py` | Explicit SKIP: no tracked notebooks |
+| `scripts/uv.cmd run --offline --locked python scripts/check_notebook_tools.py` | Synthetic kernel output 4; HTML and readable one-page PDF exported |
+| `scripts/uv.cmd run --offline --locked python scripts/check_commit_messages.py --base origin/main` | All 3 preceding QA commits passed before the review commit |
+
+The image size and DPI were additionally asserted using Pillow in a local Python
+command. The fresh official-source comparison confirms all Exercise 10.1
+requirements: uv project and isolation, NumPy/Matplotlib, prescribed parametric
+plot and an explanation of the environment. No empirical result is claimed.
+
+Discrepancies reported before proceeding: stale AI-written Pending/Not granted
+summaries conflicted with the new approval and were reconciled here. The student's
+wording that `.venv` creates the environment is a small terminology imprecision:
+uv creates it; `.venv` contains it. A separate AI clarification was appended to
+the solution, preserving the original answer. No mathematical discrepancy found.
+The known kernel local-TCP warning persists; execution/export succeeded.
+Hosted checks for the new commits must be read from PR #1, not inferred from
+older successful runs. No merge or Exercise 10.2 work has been performed.
+
+## Original student contribution (preserved verbatim)
 
 
 Human Review – Aufgabe 10.1
