@@ -1,7 +1,9 @@
 # Exercise 10.2 review
 
-Status: AWAITING HUMAN REVIEW
-Human review: Pending
+Status: APPROVED
+Human review: Approved
+Approval recorded: 2026-10-26 (Europe/Berlin).
+Merge authorization: Not granted.
 
 ## Requirements
 
@@ -15,7 +17,8 @@ PR #1 was merged only after the user's explicit permission and verification
 of both successful GitHub checks. Original commits and student text are preserved.
 
 Codex performs requirements analysis, notebook implementation and automated
-verification for 10.2. No student review of this exercise has been received.
+verification for 10.2. The student subsequently supplied the confirmed review
+below and authored the two added notebook Markdown cells; their wording is preserved.
 
 ## Automated verification
 
@@ -73,9 +76,35 @@ Hosted CI for the final branch is recorded separately in the draft PR after push
 
 ## Student feedback and revisions
 
-No feedback or review-driven revisions received. The implementation request
-is authorization to work, not approval of the eventual solution.
+### Confirmed student findings (2026-10-26)
+
+The student confirmed in the current request:
+
+- 10,000 observations and four selected columns.
+- No missing values in the selected columns.
+- First ten rows displayed correctly.
+- Descriptive statistics are plausible.
+- Mean torque: approximately 39.987 Nm.
+- Torque range: 3.8–76.6 Nm.
+- The torque plot has correctly labeled axes.
+- UDI is a row identifier, not a timestamp.
+- Code, Markdown and Raw cell types are understood.
+- PDF tables and visualization are readable.
+- Results appear correct and understandable; no corrections currently requested.
+
+The student additionally confirmed authorship of both local notebook Markdown
+additions (self-explanation answers and Human Review section) and explicitly
+confirmed that their APPROVED wording constitutes final exercise approval.
+These cells remain verbatim. No code revisions were requested or manufactured.
+
+Scope: the list above records human observations, not Codex's automated checks.
+The student's notebook explicitly attributes the earlier test/CI report to Codex;
+we do not infer independent human execution of tests, checksum verification,
+fresh-kernel reproducibility or CI inspection. Their HTML/PDF comments remain
+as authored, without expanding them into additional activities.
 
 ## Approval
 
-Not granted. Do not merge 10.2, start 10.3 or submit coursework.
+Explicit student approval received and recorded on 2026-10-26. This is separate
+from merge authorization, which remains withheld. Do not merge 10.2, start 10.3
+or submit coursework.
