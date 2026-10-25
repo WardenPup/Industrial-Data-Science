@@ -89,3 +89,32 @@ standardmäßig `.tools/matplotlib`. Die Abschlussprüfung lief ohne diese Fehle
 - Remote `https://github.com/WardenPup/Industrial-Data-Science.git` geprüft: keine
   vorhandenen Referenzen. Lokales Repository mit Branch `main` und `origin` initialisiert.
 - Aufgabe 10.2 bleibt bis zum ausdrücklichen Review von 10.1 unbegonnen.
+
+## Human-AI QA adoption
+
+Workflow adoption is on `exercise/10.1`. Baseline `d243632` remains unchanged on main.
+The supplied responsible-AI rules are appended to AGENTS.md; review templates,
+PR checklist, Conventional Commit disclosure checks and read-only CI are added.
+The configured commit editor template is `.gitmessage` (local Git setting).
+Repository authentication and push permission were verified with existing credential
+management; no tokens were written to the project or displayed.
+
+Local checks: nine tests pass, Exercise 10.1 executes, the synthetic notebook
+executes and exports HTML/PDF, and tracked-notebook validation explicitly skips
+because no notebooks are tracked. Detailed commands, failures and limitations are
+in `reviews/exercise_10_1.md`. Hosted CI must be inspected separately in the draft PR.
+
+Status at workflow adoption: AWAITING_HUMAN_REVIEW. No earlier stages were fabricated.
+
+## Human review completion (2026-10-26)
+
+The student manually supplied verification, explicit approval and four explanation
+answers. Their exact additions are preserved in review commit `42cebaf`.
+Codex then checked the official requirements, reran all nine local tests, regenerated
+the heart and verified PNG dimensions/DPI, and reran the synthetic notebook exports.
+Tracked-notebook validation explicitly skips because no notebooks are tracked.
+
+Current exercise status: APPROVED; merge authorization remains withheld.
+Fresh hosted CI results are shown in PR #1. The student text is unchanged; AI
+status reconciliation and a terminology clarification are recorded separately.
+No merging, deletion, submission or Exercise 10.2 work has been performed.

@@ -85,6 +85,21 @@ Für die IDE-Erweiterung ist eine eigene Anmeldung in VS Code erforderlich.
 GitHub-Commit/Push nur bei ausdrücklichem Auftrag; nie automatische Universitätsabgabe.
 Virtuelle Umgebungen, Browser, Caches, Zugangsdaten und Rohdaten sind nicht Teil des Commits.
 
+## Human-AI review
+
+Use `exercise/<number>` branches and the cycle documented in
+[Human-AI workflow](docs/HUMAN_AI_WORKFLOW.md). Start review records from
+[the template](reviews/TEMPLATE.md). The current [10.1 review](reviews/exercise_10_1.md)
+records genuine provenance, technical evidence and pending human decisions.
+Conventional Commits include explicit AI-Assistance and Human-Review metadata.
+Configure the editor template with `git config --local commit.template .gitmessage`.
+
+GitHub Actions runs Python and QA tests, the 10.1 script, prospective commit-message
+checks, tracked notebook validation/execution and a synthetic HTML/PDF export check.
+No tracked notebooks currently exist: that check reports SKIP, not a notebook pass.
+Green checks never imply student approval. The workflow neither approves nor merges.
+The original solution already exists on main; its published history is preserved.
+
 ## Quellen
 
 - [Offizielle Session 1 / Kapitel 10](https://noxthot.github.io/ws26_industrial_datascience_manuscript/1_act1/6_self_study_session1.html), abgerufen 25.10.2026.

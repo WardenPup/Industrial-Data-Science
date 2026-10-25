@@ -69,3 +69,23 @@ Den tatsächlich ausgeführten Prüfstand dokumentiert `docs/STATUS.md`.
 2. Was unterscheidet `pyproject.toml`, `uv.lock` und `.venv`?
 3. Warum wird x gegen y und nicht t gegen y geplottet?
 4. Warum sind gleiche Achsenskalierung und eine vollständige Periode sinnvoll?
+
+1. ## Warum schützt .venv vor Paketkonflikten zwischen Projekten?
+.venv erstellt eine isolierte Python-Umgebung. Jedes Projekt kann dadurch eigene Paketversionen verwenden, ohne andere Projekte zu beeinflussen.
+
+2. ## Was unterscheidet pyproject.toml, uv.lock und .venv?
+pyproject.toml definiert die Projektabhängigkeiten, uv.lock speichert die exakt aufgelösten Paketversionen und .venv enthält die tatsächlich installierten Pakete.
+
+3. ## Warum wird x gegen y und nicht t gegen y geplottet?
+Weil x(t) und y(t) gemeinsam eine zweidimensionale Kurve beschreiben. t ist nur der Parameter, der die Position auf der Kurve bestimmt. Ein Plot von t gegen y würde nicht die Herzform darstellen.
+
+4. ## Warum sind gleiche Achsenskalierung und eine vollständige Periode sinnvoll?
+Gleiche Achsenskalierung verhindert Verzerrungen der Herzform. Eine vollständige Periode stellt sicher, dass die gesamte Kurve dargestellt und geschlossen wird.
+
+## Herkunft und ergänzende KI-Klarstellung (26.10.2026)
+
+Die vier Antworten oben wurden vom Studierenden selbst ergänzt und von Codex
+unverändert übernommen. Codex hat ihre Aussagen gegen Implementierung und
+erneut ausgeführte Prüfungen abgeglichen. Kleine begriffliche Präzisierung zu
+Antwort 1: uv erstellt die isolierte Umgebung; `.venv` ist das Verzeichnis,
+das diese Umgebung enthält. Die ursprüngliche Antwort bleibt unverändert.
