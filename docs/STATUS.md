@@ -164,3 +164,16 @@ confirmed before merging. Merge commit `40b31c6` preserves all development and
 review commits. Local main was synchronized; `exercise/10.3` starts from it.
 10.2 is approved and merged. 10.3 requirements are documented; no human approval.
 10.4 has not been started. Earlier paragraphs reflect their historical stages.
+
+## Exercise 10.3 technical handover (2026-10-26)
+
+Current status: AWAITING HUMAN REVIEW. All ten required Seaborn figure groups
+are generated with actual notebook outputs and embedded in HTML. The three
+measurement distributions, pairwise relationships, correlation, regression,
+speed-binned stripplot and torque countplot use all 10000 verified observations.
+Actual interpretations and scientific limits are in the notebook and review record.
+All 18 local tests pass; both tracked notebooks execute in fresh kernels.
+Offline HTML rendering and all plot checksums were verified, with visual checks
+of every PNG. The genuine IQR boundary correction is disclosed and regression-tested.
+No PDF is required by 10.3 and none was generated. No approval of 10.3, merge,
+student feedback or 10.4 work is claimed. Hosted CI results belong to draft PR #3.
