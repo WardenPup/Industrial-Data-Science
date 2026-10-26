@@ -155,3 +155,49 @@ All 13 local tests, pinned-data integrity, fresh sequential notebook execution,
 statistics/export checks and six-page PDF inspection passed. Review findings
 and automated evidence are recorded separately in `reviews/exercise_10_2.md`.
 PR #2 is prepared for final review after hosted checks; no merge or 10.3 work.
+
+## Authorized 10.2 merge and 10.3 start (2026-10-26)
+
+The student explicitly authorized merging PR #2 and starting 10.3. Both current
+head checks were successful; the documented approval and authored answers were
+confirmed before merging. Merge commit `40b31c6` preserves all development and
+review commits. Local main was synchronized; `exercise/10.3` starts from it.
+10.2 is approved and merged. 10.3 requirements are documented; no human approval.
+10.4 has not been started. Earlier paragraphs reflect their historical stages.
+
+## Exercise 10.3 technical handover (2026-10-26)
+
+Current status: AWAITING HUMAN REVIEW. All ten required Seaborn figure groups
+are generated with actual notebook outputs and embedded in HTML. The three
+measurement distributions, pairwise relationships, correlation, regression,
+speed-binned stripplot and torque countplot use all 10000 verified observations.
+Actual interpretations and scientific limits are in the notebook and review record.
+All 18 local tests pass; both tracked notebooks execute in fresh kernels.
+Offline HTML rendering and all plot checksums were verified, with visual checks
+of every PNG. The genuine IQR boundary correction is disclosed and regression-tested.
+No PDF is required by 10.3 and none was generated. No approval of 10.3, merge,
+student feedback or 10.4 work is claimed. Hosted CI results belong to draft PR #3.
+
+## Exercise 10.3 student review received (2026-10-26)
+
+The student supplied their own positive evaluation and scientific interpretations
+in `reviews/exercise_10_3.md`, preserved verbatim in commit `6c850a1` with
+Human-Review: Feedback provided and Review-Source: Student-authored review file.
+They explicitly authorized recording approval once final checks pass, without
+authorizing merge. Fresh local tests (18), sequential execution (12 code cells),
+all ten images/HTML, independent Pearson/Spearman/IQR/bin checks and official
+requirement coverage pass. No technical corrections or invented review are needed.
+The previously pending original PR workflow has succeeded. Approval remains
+conditional until current-head hosted CI is verified; no 10.4 work or merge.
+
+## Exercise 10.3 conditional approval fulfilled (2026-10-26)
+
+The student explicitly confirmed that APPROVED may be recorded once final
+checks pass. Both runs for validated head `be8c81e` succeeded: 40250697129
+(branch) and 40250701155 (PR). The earlier pending PR workflow also succeeded.
+The original student review, its interpretations and hard line breaks remain
+unchanged; no independent human test execution is inferred.
+
+Current status: APPROVED. Merge authorization: NOT GRANTED.
+The approval/status documentation commit is checked separately before final PR
+readiness. No implementation correction, merge, new PR or 10.4 work is performed.

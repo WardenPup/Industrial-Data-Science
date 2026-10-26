@@ -1,6 +1,7 @@
 # Industrial Data Science – Self-Study Kapitel 10–12
 
-Lokales Lernprojekt. Aufgabe 10.1 ist freigegeben und gemergt; 10.2 ist nach Human Review freigegeben und wartet auf Merge-Erlaubnis.
+Lokales Lernprojekt. Aufgaben 10.1 und 10.2 sind freigegeben und gemergt;
+10.3 ist nach studentischer Prüfung und erfolgreicher CI freigegeben; Merge-Erlaubnis steht aus.
 Die offizielle Aufgabenstellung hat Vorrang vor eigenen Zusammenfassungen.
 
 ## Start in PowerShell
@@ -80,6 +81,23 @@ unbegründeten Aussagen über reale Maschinen oder Kausalität.
 
 Der ursprüngliche Infrastrukturtest ist weiterhin synthetisch und getrennt von 10.2.
 
+## Aufgabe 10.3 reproduzieren
+
+```powershell
+.\scripts\uv.cmd sync --locked
+.\scripts\uv.cmd run --locked python scripts/download_ai4i.py
+.\scripts\uv.cmd run --offline --locked python scripts/build_exercise_10_3.py
+.\scripts\uv.cmd run --offline --locked python -m unittest discover -s tests -v
+```
+
+[Seaborn-Notebook](sessions/ch10/ai4i_seaborn.ipynb) und HTML unter
+`outputs/ch10/exercise_10_3/ai4i_seaborn.html`; dort liegen auch zehn PNG-Figuren,
+Korrelations-/IQR-Tabellen, Bin-Häufigkeiten, Grenzen und ein Bildmanifest.
+Die drei Histogramme, Boxplots und Violinplots sind jeweils als drei Teilachsen
+zusammengefasst. Die offizielle 10.3-Aufgabe verlangt keinen PDF-Export.
+[Review 10.3](reviews/exercise_10_3.md): APPROVED nach bestätigter CI-Bedingung.
+Kein Merge ohne ausdrückliche Erlaubnis. Keine 10.4-Arbeit.
+
 ## VS Code
 
 Ordner über **Datei → Ordner öffnen** öffnen. Als Interpreter
@@ -111,13 +129,13 @@ Use `exercise/<number>` branches and the cycle documented in
 [the template](reviews/TEMPLATE.md). The current [10.1 review](reviews/exercise_10_1.md)
 records genuine provenance, technical evidence and explicit approval.
 The [10.2 review](reviews/exercise_10_2.md) records explicit student approval;
-merge permission remains withheld.
+PR #2 was subsequently merged after explicit authorization.
 Conventional Commits include explicit AI-Assistance and Human-Review metadata.
 Configure the editor template with `git config --local commit.template .gitmessage`.
 
 GitHub Actions runs Python and QA tests, the 10.1 script, prospective commit-message
 checks, tracked notebook validation/execution and a synthetic HTML/PDF export check.
-The tracked 10.2 notebook is executed in a fresh kernel; required exports are also checked.
+Both tracked notebooks are executed in fresh kernels; required exports are also checked.
 Green checks never imply student approval. The workflow neither approves nor merges.
 The original solution already exists on main; its published history is preserved.
 

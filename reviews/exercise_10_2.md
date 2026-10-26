@@ -3,7 +3,10 @@
 Status: APPROVED
 Human review: Approved
 Approval recorded: 2026-10-26 (Europe/Berlin).
-Merge authorization: Not granted.
+Merge authorization: Explicitly granted in the subsequent user request on 2026-10-26.
+PR #2 merged as `40b31c6` after successful current-head checks. Original student
+cells and review history are preserved; later authorization supersedes historical
+statements below that merge permission was withheld.
 
 ## Requirements
 

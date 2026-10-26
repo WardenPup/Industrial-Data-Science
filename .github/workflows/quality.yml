@@ -55,3 +55,5 @@ jobs:
         run: uv run --locked python scripts/check_notebook_tools.py
       - name: Execute Exercise 10.2 and verify required exports
         run: uv run --locked python scripts/build_exercise_10_2.py
+      - name: Execute Exercise 10.3 and verify all required plots and HTML
+        run: uv run --locked python scripts/build_exercise_10_3.py

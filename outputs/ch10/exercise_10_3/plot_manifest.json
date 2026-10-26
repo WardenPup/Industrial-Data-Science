@@ -1,0 +1,62 @@
+[
+  {
+    "file": "01_line.png",
+    "width": 1556,
+    "height": 576,
+    "sha256": "c7ad2c226d5f40c225bcc10bac202331fb5499a85eed5098cce8a0c24f694690"
+  },
+  {
+    "file": "02_histograms.png",
+    "width": 1976,
+    "height": 576,
+    "sha256": "ee09c49bc731df47d32653f658f0ea6c86e920b057dce4423e99d3fe86f2c039"
+  },
+  {
+    "file": "03_boxplots.png",
+    "width": 1976,
+    "height": 576,
+    "sha256": "efdab5cd2d4535ecd1733d320a8e5de85e7cc97c1a13aba6ae65ebb93acca7a1"
+  },
+  {
+    "file": "04_violins.png",
+    "width": 1976,
+    "height": 576,
+    "sha256": "c99edef43e57f78bd6ea2bb4c0936836df98a89e74d0f8a028c8b2470a6b6f9a"
+  },
+  {
+    "file": "05_scatter.png",
+    "width": 1276,
+    "height": 856,
+    "sha256": "fe736f0404229bf65fd6ad08b55728415cab971e7cd4ae4adb980c74bb292e2f"
+  },
+  {
+    "file": "06_pairplot.png",
+    "width": 1160,
+    "height": 1204,
+    "sha256": "08390b1bee41fd5ff52506cb3630dfa7d266cafc47eef31d8b0d85f98624e178"
+  },
+  {
+    "file": "07_heatmap.png",
+    "width": 937,
+    "height": 856,
+    "sha256": "91a66765ae79571afc83e947503cf5c8b22fcd1ba3a346a25250c417dcb3f75a"
+  },
+  {
+    "file": "08_joint_regression.png",
+    "width": 953,
+    "height": 1012,
+    "sha256": "326e256f63eb6f9519f878b6ff18469c97b26cd17fd893a0d0209e58f7939143"
+  },
+  {
+    "file": "09_strip.png",
+    "width": 1276,
+    "height": 716,
+    "sha256": "8d0292558a7ff3195784bd147787b0584e92f00369baff94138bc1830b61bf00"
+  },
+  {
+    "file": "10_count.png",
+    "width": 1696,
+    "height": 716,
+    "sha256": "836e3f26553fb0bf4532e46a2c7fa85d2b0d3f4740ccc9fb4bbb47d1842066a7"
+  }
+]

@@ -1,0 +1,4 @@
+,Torque [Nm],Rotational speed [rpm],Air temperature [K]
+Torque [Nm],1.0,-0.9164741739092678,-0.011765485299413805
+Rotational speed [rpm],-0.9164741739092678,1.0,0.013731766391799608
+Air temperature [K],-0.011765485299413805,0.013731766391799608,1.0
