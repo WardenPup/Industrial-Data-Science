@@ -1,5 +1,21 @@
 # Arbeitsstand – 26.10.2026
 
+## Neuester Stand: 11.1 integriert; 11.2 in Bearbeitung
+
+Der Studierende hat den Merge von PR #5 ausdrücklich genehmigt. Codex bestätigte
+die dokumentierte fachliche Freigabe, Konfliktfreiheit und beide erfolgreichen
+aktuellen Head-Checks ef7451f (Push 40346910024, PR 40346921112). Regulärer Merge:
+`b7543e048a4aafac7fa2ad5ba4d18c46e72d2f68`. Lokales main mit GitHub synchronisiert.
+b44bcd8 und ef7451f sind erhaltene Vorfahren; vollständige studentische Originaltexte
+und freigegebene Resultate bleiben bestehen. **Aufgabe 11.1 vollständig abgeschlossen.**
+
+Danach `exercise/11.2` von diesem main angelegt. Offizielle 11.2-Aufgabe und
+Kapitel-5-Methoden am 26.10.2026 gelesen; Anforderungen separat dokumentiert.
+Status 11.2 zunächst DRAFT, Umsetzung/technische Prüfung folgen. Keine Freigabe,
+kein Merge von 11.2, keine 11.3 und keine Universitätseinreichung.
+
+Die folgenden Abschnitte beschreiben frühere Arbeitsstände.
+
 ## Neuester Stand: main synchronisiert, Aufgabe 11.1 zur Prüfung
 
 Der Studierende autorisierte ausdrücklich die Veröffentlichung von a7fcd21 und
