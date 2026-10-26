@@ -1,3 +1,68 @@
+## 26.10.2026 – 12.4: finaler Prüfzeitpunkt korrigiert
+
+Wissenschaftlich APPROVED, finale Merge-Autorisierung vorhanden; Merge bleibt bis
+zur erfolgreichen korrigierten Head-CI gesperrt. Beide 5db5bd5-CI-Läufe schlugen am
+neu ergänzten globalen Laufzeit-Nachcheck fehl (40415223685/40415228525), nicht an
+vorangehenden numerischen Vergleichen. Prüfannahme auf CNN-Trainingsgrenze präzisiert,
+Zustände nach Predict/externen Kontrollen separat protokolliert. Keine Modell- oder
+Parameteränderung und keine Lockerung numerischer Reproduktionsschwellen. Ursache
+der plattformabhängigen Zahlenabweichung weiter nicht bewiesen. Kein Merge erfolgt.
+
+## 26.10.2026 – 12.4 finale Merge-Autorisierung erhalten
+
+Student ausdrücklich: „wenn du fertig bist. kannst du es mergen“.
+Wissenschaftlich APPROVED; regulärer PR-#12-Merge nach erfolgreicher vollständiger
+Abschlussprüfung autorisiert. Bedingungen: beide erfolgreichen CI-Läufe am
+endgültigen Head, keine Konflikte/offenen Reviewblocker, erhaltene Originalhistorie.
+Die technische Verifikation c4a310d und der Originalreview d9e4000 bleiben erhalten.
+Freigabe separat dokumentiert; neue abschließende Head-CI vor Merge erforderlich.
+Kein automatischer Universitätsupload und keine weitere Aufgabe beauftragt.
+
+## 26.10.2026 – 12.4: wissenschaftlicher Review technisch abgeglichen
+
+Status: SCIENTIFICALLY APPROVED – TECHNICALLY VALIDATED – AWAITING FINAL MERGE AUTHORIZATION.
+Originalreview vollständig unverändert separat in d9e4000 gesichert. Sämtliche
+Reviewzahlen einschließlich mittlerer/maximaler Fehler bestätigt. 64 Tests erneut
+bestanden (7,145 s), frischer dreizelliger Notebook-Lauf, zweiter Fit/126 Vorhersagen,
+Nachbar-/Baumaggregation und CNN-Rücktransformation geprüft. Beide PNGs visuell,
+HTML offline 900/1400 px, zwölf Artefakthashes und acht alte ZIPs bestätigt.
+Keine Modell-/Ergebnis-/Grafikänderung; bekannte CNN-Plattformgrenze ohne behauptete
+Ursache offengelegt. Aktuelle CI und PR-Ready-Vorbereitung folgen nach Push.
+Keine finale Merge-Autorisierung, kein Merge/main-Eingriff oder Universitätseinreichung.
+
+## 26.10.2026 – 12.4: plattformspezifische CNN-Grenze offengelegt
+
+Erster PR-CI-Lauf 40411236019 am 3f2eb74 erfolgreich, jedoch CNN unter Linux
+RMSE/MAE 3,625036/2,613754 statt Windows 3,614675/2,608054 kWh. Beide Plattformen
+bestehen Wiederholungsprüfung innerhalb 1e-10; keine plattformübergreifende Identität
+behauptet. Statischen Windows-Zahlenabsatz im Notebook entfernt; berechnete Tabelle/
+Ergebnistext bleiben maßgeblich. Keine Modell-/Parameteranpassung. Erneuter frischer
+Windows-Build/Offline-Check erfolgreich; aktualisierte Head-CI folgt als separater Fix.
+Status weiterhin AWAITING HUMAN REVIEW; wissenschaftliche Freigabe ausstehend.
+
+## 26.10.2026 – Aufgabe 12.4 technisch validiert
+
+Status: AWAITING HUMAN REVIEW. Ausschließlich die drei offiziellen Regressoren:
+DTW-3-NN, Time Series Forest und CNN, gegebene 95/42-Splits, 24 × 144 Eingaben,
+TRAIN-only-Skalierung, keine TEST-Optimierung. RMSE 3,509225/2,109183/3,614675 kWh,
+MAE 2,711349/1,685254/2,608054 kWh. 64 Tests bestanden (6,921 s), drei frische
+Codezellen, zweiter vollständiger Fit/126 Vorhersagen und unabhängige Metrik-/Modell-
+Rechnungen bestätigt. Zwei Grafiken visuell, HTML offline 900/1400 px, elf Hashes
+und acht bisherige ZIPs geprüft. Quellenabweichung 137 statt beschriebenen 138
+transparent, bestehende Reviews/Ergebnisse/Umgebung unverändert. KI-Beiträge und
+konkrete Human-Reviewfragen dokumentiert. Draft PR/Head-CI folgen. Kein Merge/Upload.
+
+## 26.10.2026 – Aufgabe 12.3 final integriert; 12.4 begonnen
+
+Finale studentische Merge-Autorisierung für PR #11 ausdrücklich erhalten.
+Unveränderter Head efc7d46, beide Head-CI 40407972537/40407978296 erfolgreich,
+Ready, konfliktfrei, keine offenen Reviewpunkte; Originalreview fb85fa2 und gesamte
+technische Reviewhistorie geprüft/erhalten. Regulärer Merge-Commit:
+2e330476318d5b4cb6673e859bea23707ed151fc. main mit origin/main synchronisiert,
+Arbeitsbaum sauber. Finale Genehmigung hier und im Merge-Commit dokumentiert.
+12.4 auf exercise/12.4 zur Implementierung/technischen Prüfung bis Human Review
+beauftragt. Offizielle Anforderungen separat vor Training festgelegt. Kein Upload.
+
 ## 26.10.2026 – Aufgabe 12.3: Human Review technisch abgeglichen
 
 Status: SCIENTIFICALLY APPROVED – TECHNICALLY VALIDATED – AWAITING FINAL MERGE AUTHORIZATION.

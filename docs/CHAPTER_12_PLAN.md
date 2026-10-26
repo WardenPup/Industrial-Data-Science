@@ -1,3 +1,10 @@
+## Fortschreibung – nach PR #11
+
+12.3 nach expliziter finaler Freigabe regulär als 2e33047 integriert.
+12.4 jetzt auf exercise/12.4 bis zum Human Review autorisiert. Exakte Anforderungen
+und vorab festgelegte Modelle: EXERCISE_12_4_REQUIREMENTS.md. Frühere Planstände
+unten bleiben als Historie erhalten; keine automatische Freigabe/Einreichung.
+
 ## Fortschreibung – nach PR #10
 
 12.2 am 26.10.2026 ausdrücklich final autorisiert und regulär als a216fdc gemergt.
