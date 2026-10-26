@@ -4,8 +4,10 @@ Self-Study Exercises – Chapters 10–12
 
 Wintersemester 2026/27
 
-**Studentischer Autor:** Nicolas Jacobs  
-**Hochschule:** MCI  
+**Studentischer Autor:** Nicolas Jacobs
+
+**Hochschule:** MCI
+
 **Erstellt:** 27.10.2026 (Europe/Berlin)
 
 Zwölf wissenschaftlich freigegebene und in main integrierte Lösungen. Die hier
@@ -69,8 +71,8 @@ Die neuen Kapitel-12-ZIPs enthalten freigegebene wissenschaftliche Dateien und
 die für eigenständige Reproduktion erforderlichen Daten/Module/Referenzdateien.
 
 Zwei Quellen-Metadaten benötigen die im bestehenden Manifest erwarteten CRLF-Bytes:
-12.3 forest_reference.json ausschließlich in der Paketkopie, 12.4 appliances_source.json
-zusätzlich als technischer Folgecommit 7eb767f auf dem Vorbereitungsbranch.
+12.3 forest_reference.json (763cd15) und 12.4 appliances_source.json (7eb767f),
+auch als technische Folgecommits auf dem Vorbereitungsbranch.
 JSON-Werte, Rohdaten und wissenschaftliche Ergebnisse ändern sich dadurch nicht.
 Die ursprünglichen Reviews bleiben unverändert. Details stehen im Paketmanifest.
 
@@ -82,3 +84,5 @@ in chapter_10/, chapter_11/ und chapter_12/, nicht der gesamte Projektordner.
 Die ergänzte Paketfassung und konkrete Lehrveranstaltungs-/KI-/Datenweitergaberegeln
 sind vor dem Upload studentisch zu bestätigen. Diese organisatorische Prüfung
 ändert die dokumentierten wissenschaftlichen Freigaben nicht.
+
+ist freigegeben

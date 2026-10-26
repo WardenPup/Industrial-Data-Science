@@ -1,3 +1,24 @@
+## 27.10.2026 – Kapitel 12 integriert; finale Abgabe vorbereitet
+
+PR #12 nach ausdrücklicher Freigabe regulär gemergt: 1d8c583186dfa8a9691204a6902a50f10c086a74.
+Push/PR-CI am Head 98641c9 erfolgreich (40416791685/40416798514), anschließend
+64 Tests auf synchronisiertem main bestanden. Alle zwölf PRs und erfolgreichen
+letzten Head-Läufe erneut über GitHub bestätigt. Originalreviews/Historie erhalten.
+
+Finale Aufbereitung auf submission/final-preparation: zwölf lokale ZIPs, alle
+entpackt/CRC/SHA geprüft, 11 Notebooks mit 70 Codezellen frisch und Herzskript ausgeführt;
+49 CSV-Vergleiche, HTML offline 900/1400 px, 47 PNGs/21 PDF-Seiten gesichtet.
+Acht Original-ZIPs und alle alten Mitglieder unverändert; Einstiegshilfen ergänzt.
+Zwei reine Quellen-Metadaten-Zeilenendenkorrekturen (7eb767f/763cd15), keine
+Änderung wissenschaftlicher Ergebnisse. Alle 53 Kapitel-12-Git-Artefakthashes stimmen.
+Keine unabhängige Neuinstallation; alte Lockfiles erhalten, aktuelle Umgebung genutzt.
+
+submission/final/README.md und SUBMISSION_CHECKLIST.md enthalten exakte Dateien
+und Grenzen. Wissenschaftlich 12/12 APPROVED/in main; organisatorische Freigabe
+der ergänzten Paketfassungen und konkrete Kurs-/KI-/Datenbedingungen noch PENDING.
+Status SUBMISSION PREPARATION INCOMPLETE bis zur studentischen Abschlussentscheidung.
+Vorbereitungs-PR bleibt Draft/ungemergt. Keine Hochschuleinreichung durchgeführt.
+
 ## 26.10.2026 – 12.4: finaler Prüfzeitpunkt korrigiert
 
 Wissenschaftlich APPROVED, finale Merge-Autorisierung vorhanden; Merge bleibt bis
