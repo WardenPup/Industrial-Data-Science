@@ -1,0 +1,16 @@
+{
+  "source_retrieved": "2026-10-26",
+  "ai_assistance": "Codex",
+  "human_review": "AWAITING HUMAN REVIEW",
+  "data_sha256": "6310fd9e1fb081929f29715716dca3c433780a09d69c3a422df253a2d9aca494",
+  "sequential_code_cells": 4,
+  "embedded_html_images": 2,
+  "files": {
+    "sessions/ch11/production_smoothing.ipynb": "d4665a2fd631c0e059e06381bcb17c23876e8061a1788edc4cd53f68a1bcf924",
+    "outputs/ch11/exercise_11_1/production_smoothing.html": "7b0e4541533ff866a4d3ae935d996e283a0e350e3e456dd108c0d4551ddf0457",
+    "outputs/ch11/exercise_11_1/01_original_and_gaps.png": "dc545c8325727e320d8c56fff0dfd11d77f3a0aef09853c29ec096337db8570a",
+    "outputs/ch11/exercise_11_1/02_smoothing_comparison.png": "32253ada14562ad35c07b7576b82637cd231467839054d137fc0d57c2368a1d0",
+    "outputs/ch11/exercise_11_1/summary.json": "ee44c553d6d42c230fabb0460c1a076cc121870c56c0c0d7aaf19ec8536907f3",
+    "data/processed/exercise_11_1_smoothed.csv": "6b56874ef3d27621f4e7645e94530566dc022caaa3936eb541e32312299f96b8"
+  }
+}

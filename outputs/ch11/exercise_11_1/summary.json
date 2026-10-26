@@ -1,0 +1,10 @@
+{
+  "rows": 1044,
+  "missing_original": 367,
+  "missing_smoothed": 367,
+  "same_missing_mask": true,
+  "window_weeks": 5,
+  "centered": true,
+  "observed_windows_with_at_most_two_values": 6,
+  "data_sha256": "6310fd9e1fb081929f29715716dca3c433780a09d69c3a422df253a2d9aca494"
+}

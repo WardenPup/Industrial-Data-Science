@@ -3,3 +3,5 @@
 /outputs/ch10/exercise_10_4/*.html -text
 /reports/exercise_10_4/paper.qmd -text
 /reports/exercise_10_4/notebook_presentation.ipynb -text
+/sessions/ch11/production_smoothing.ipynb -text
+/outputs/ch11/exercise_11_1/* -text
