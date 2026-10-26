@@ -68,6 +68,17 @@ Bekannte lokale Jupyter-Warnung: TCP-Kernelkommunikation unverschlüsselt.
 STL- und Schwellenwahl bleiben Annahmen; Kandidaten sind keine bewiesenen Messfehler.
 Die wissenschaftliche Freigabe ist dokumentiert, Merge-Autorisierung bleibt ausstehend.
 
+### Plattformübergreifende CI-Korrektur
+Die ersten Head-Läufe 40366278175/40366285690 scheiterten ausschließlich an einer
+zu engen Prüfung des Rekonstruktionsrundungsfehlers (Abstand zum lokalen Wert
+kleiner 1e-16). Notebook, 26 Kandidaten und Offline-HTML waren erfolgreich.
+Der Reviewcheck verwendet nun 16 × float64-Maschinengenauigkeit × maximale
+Datengröße als absolute Schranke. Das prüft numerische Rekonstruktionskonsistenz,
+ohne identische Rundungsreste verschiedener Plattformen zu verlangen. Die lokale
+Angabe 9,9475983006e-14 bleibt korrekt. Keine Änderung der Berechnung oder Daten.
+CI meldete außerdem IPython-Temporärverzeichnis-Fallback, Jupyter-TCP-Warnung,
+setup-python@v5/Node-20-Deprecation und Ubuntu-Runner-Migrationshinweis.
+
 # Human Review – Exercise 11.4
 
 **Datum:** 26.10.2026  

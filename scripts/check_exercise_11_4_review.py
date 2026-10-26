@@ -53,7 +53,9 @@ def main():
     for key,value in values.items(): np.testing.assert_allclose(summary[key],value,rtol=1e-12,atol=1e-12)
     for key,value in {'observations':1044,'missing':0,'outlier_candidates':26,'negative_candidates':26,'positive_candidates':0}.items(): assert values[key]==value
     for key,value in {'fraction_percent':2.4904,'residual_mean':-4.541,'residual_std_ddof1':26.820,'lower':-85.002,'upper':75.920}.items(): assert abs(values[key]-value)<.0005
-    assert abs(values['reconstruction_max_abs']-9.95e-14)<1e-16
+    # Floating-point operation order can differ across platforms.
+    reconstruction_tolerance=16*np.finfo(float).eps*max(1.,float(np.abs(source).max()))
+    assert values['reconstruction_max_abs'] <= reconstruction_tolerance
     notebook=nbformat.read(ROOT/'sessions/ch11/production_outliers.ipynb',4)
     environment=dict(table=table,candidates=candidates,lower=lower,upper=upper,sns=sns,plt=plt,OUT=output,display=lambda *args:None)
     for cell,y in [(notebook.cells[2],'pieces'),(notebook.cells[3],'residual')]:
