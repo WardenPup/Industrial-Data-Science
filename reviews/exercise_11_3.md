@@ -1,8 +1,10 @@
 # Aufgabe 11.3 – Human-AI-Review
 
-Status: **AWAITING HUMAN REVIEW** (26.10.2026).
-Noch kein studentisches Feedback, keine wissenschaftliche Freigabe und keine
-Merge-Erlaubnis für 11.3. Keine Universitätseinreichung.
+Status: **APPROVED – AWAITING FINAL MERGE AUTHORIZATION** (26.10.2026).
+Positiver studentischer Originalreview unverändert unten dokumentiert. Keine
+grundlegenden methodischen Korrekturen angefordert; technische Nachprüfung
+bestanden. Merge-Erlaubnis ausstehend, keine Universitätseinreichung. Die
+Erstprüfungsabschnitte sind historisch; aktueller KI-Nachweis nach dem Review.
 
 ## Anforderungen und KI-Beitrag
 
@@ -389,3 +391,87 @@ Keine grundlegenden methodischen Korrekturen erforderlich.
 Die abschließende technische Nachprüfung und die GitHub-Freigabe bleiben Teil des dokumentierten Human-AI-Workflows.
 
 Pull Request #7 darf erst nach ausdrücklicher Merge-Autorisierung in `main` integriert werden.
+
+
+---
+
+## KI-Nachprüfung nach studentischem Review – 26.10.2026
+
+Der vollständige studentische Originalblock ist wortgetreu und als ursprüngliche
+Bytefolge erhalten. Gegen aadd2a3 wurden ausschließlich 287 Zeilen angehängt;
+separater Reviewcommit 1a903cb. Codex führte das Committen mit unverändert
+konfigurierter Git-Identität aus, ohne Autor-/Committerüberschreibung. Der
+Studierende bestätigte die positive fachliche Beurteilung und verlangte keine
+grundlegenden methodischen Korrekturen. Keine zusätzlichen studentischen Tests
+oder Beobachtungen behauptet. Es wurde keine technisch unzutreffende Aussage
+festgestellt, die eine separate Korrekturanmerkung erfordern würde.
+
+### Verfahrens- und Parameterprüfung
+
+Der tatsächliche STL-Konstruktoraufruf wurde mit einem transparenten Aufruf-Spy
+kontrolliert: period=52, seasonal=13, trend=101, low_pass=53, robust=True.
+Fit: inner_iter=2, outer_iter=15. Eine direkte STL-Referenz mit diesen expliziten
+Einstellungen bestätigt die Komponenten. Diese API-Gegenprüfung ist kein
+unabhängiger Algorithmus und kein Genauigkeitsnachweis gegen unbekannte Werte.
+
+Beide linearen Interpolationen werden separat mit NumPy interp berechnet:
+vorläufig auf der lückenhaften Eingabe und nach Saisonabzug erneut nur anhand
+der 677 ursprünglichen Stützstellen. Nach Saisonabzug bleiben exakt die 367
+ursprünglichen NaNs erhalten. Saison wird zurückaddiert; an bekannten Wochen
+werden die ursprünglichen Medianwerte explizit eingesetzt. Die Prüfung bestätigt
+alle sieben geforderten Schritte, ohne Änderung des wissenschaftlichen Codes.
+Notebook und Dokumentation benennen Additivität, 52-Wochen-Näherung und LOESS-
+Fenster ausdrücklich als nicht optimierte Modellannahmen. Robustheit ist keine
+Garantie einer richtigen Rekonstruktion.
+
+### Tatsächlich neu berechnete Ergebnisse
+
+| Kennzahl | Ergebnis |
+|---|---:|
+| Wochen insgesamt | 1.044 |
+| Ursprüngliche Lücken / nach Saisonabzug | jeweils 367, identische Maske |
+| Bekannte Werte exakt erhalten | 677 |
+| NaNs nach Vorfüllung / final | jeweils 0 |
+| Negative Ergänzungen | 0 |
+| Maximaler additiver Rekonstruktionsrest | 1,1368683772161603e-13 |
+| Mittlere absolute Methodendifferenz an Fehlstellen | 9,746198652352929 |
+| Maximale absolute Methodendifferenz an Fehlstellen | 75,2469305103034 |
+| Erste längste Lücke | 23 Wochen, 11.12.2011–13.05.2012 |
+
+Einheit der drei Differenz-/Restgrößen: Stück pro Woche. Die Differenzen sind
+keine Fehler gegen unbekannte Ground Truth. Der Langlückenvergleich bestätigt
+den zunächst negativen und später überwiegend positiven Unterschied gegenüber
+der linearen Schätzung. Alle dargestellten Linienpfade wurden gegen die
+zugrunde liegenden Werte geprüft; bekannte und ergänzte Werte bleiben getrennt.
+Subjektive menschliche Plausibilitätsurteile werden nicht als bewiesene
+Imputationsgenauigkeit ausgegeben.
+
+### Ausgeführte Befehle und Ergebnisse
+
+- `scripts/uv.cmd sync --offline --locked`: 117 Pakete aufgelöst, 113 installierte geprüft.
+- `scripts/uv.cmd run --offline --locked python -m unittest discover -s tests -v`:
+  37 Tests, 1,992 s, OK.
+- `scripts/uv.cmd run --offline --locked python scripts/build_exercise_11_3.py`:
+  sieben Codezellen im frischen Kernel sequenziell 1–7; vier echte eingebettete
+  PNGs, Rohdaten-/Eingabehash und sämtliche Stufeninvarianten erfolgreich geprüft.
+- `scripts/uv.cmd run --offline --locked python scripts/check_exercise_11_3_review.py`:
+  tatsächliche Parameter, separate Interpolations-/STL-Referenzen, exakter
+  Erhalt bekannter Werte, CSV/JSON, gespeicherte Notebooktabelle, Linienpfade,
+  Langlücke und alle zehn Exportmanifesthashes erfolgreich geprüft.
+  Ergebnisdatei: outputs/ch11/exercise_11_3/human_review_verification.json.
+- `scripts/uv.cmd run --offline --locked python scripts/check_exercise_11_3_html.py`:
+  offline bei 900/1400 px, vier geladene Bilder, keine Seitenfehler/Überläufe.
+- Alle vier PNGs erneut visuell geprüft: Titel, Datum, Einheiten, Legenden,
+  Lückentrennung und unterschiedliche Komponentenskalen korrekt; bytegleich zu
+  aadd2a3. HTML-Freigabehinweise visuell kontrolliert. Wissenschaftliche Inhalte,
+  Berechnungsmodule, Rohdaten und gesperrte Umgebung unverändert.
+
+Bekannter lokaler Jupyter-TCP-Hinweis beim Kernelstart; keine Test-, Notebook-
+oder Exportfehler. Kein zusätzlicher technischer Blocker. Abhängigkeit von
+Vorfüllung, Fenstern, Jahresnäherung, Rändern und langen Lücken bleibt sichtbar;
+keine Genauigkeitsrangliste, Unsicherheitsintervalle oder Echtzeitprognose.
+
+Status: APPROVED – AWAITING FINAL MERGE AUTHORIZATION. Aktuelle GitHub-Checks
+werden am neuen Head geprüft und mit ihren tatsächlichen Resultaten im PR
+verlinkt; erst danach PR bereit für finalen Merge-Review. Keine 11.4, kein Merge
+und keine Universitätseinreichung. Frühere Aufgaben und Originalreviews bleiben erhalten.

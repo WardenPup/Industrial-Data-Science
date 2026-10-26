@@ -71,3 +71,4 @@ jobs:
         run: |
           uv run --locked python scripts/build_exercise_11_3.py
           uv run --locked python scripts/check_exercise_11_3_html.py
+          uv run --locked python scripts/check_exercise_11_3_review.py

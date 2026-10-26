@@ -1,6 +1,6 @@
 # Arbeitsstand – 26.10.2026
 
-## Neuester Stand: 11.2 integriert; 11.3 zur fachlichen Prüfung
+## Neuester Stand: 11.2 integriert; 11.3 fachlich freigegeben
 
 Der Studierende autorisierte den regulären Merge von PR #6 ausdrücklich.
 Aktueller Head 00842a1, Ziel main, Konfliktfreiheit und alle Head-Checks vorab
@@ -16,9 +16,16 @@ Anforderungen separat dokumentiert. Zwei Imputationsstufen mit additiver STL
 implementiert; 37 Tests bestanden, sieben Codezellen frisch sequenziell,
 vier Grafiken visuell und HTML offline bei 900/1400 px geprüft. Saisonabzug
 erhält 367 Lücken, Endergebnis ergänzt sie vollständig und bewahrt 677 Werte.
-Status: **AWAITING HUMAN REVIEW**. Details und konkrete Reviewfragen:
-[Review 11.3](../reviews/exercise_11_3.md). Keine fachliche Freigabe, kein Merge
-von 11.3, keine 11.4 und keine Universitätseinreichung. Draft-PR und Head-CI folgen.
+Status: **APPROVED – AWAITING FINAL MERGE AUTHORIZATION**. Positiver studentischer
+Originalreview vom 26.10.2026 unverändert separat als 1a903cb gesichert; keine
+grundlegende methodische Korrektur angefordert. Erneut 37 Tests erfolgreich
+(1,992 s), sieben Codezellen frisch sequenziell, vier bytegleiche Grafiken visuell
+und HTML offline bei 900/1400 px geprüft. Tatsächlicher STL-Aufruf 52/13/101/53,
+robust True; alle Stufen, gespeicherte Werte, Tabellen und zehn Manifesthashes
+gegen separate Referenzen geprüft. Keine technische Reviewabweichung festgestellt.
+Details: [Review 11.3](../reviews/exercise_11_3.md). PR #7 wird erst nach aktuellen
+erfolgreichen Head-Checks für finalen Merge-Review bereitgestellt. Merge-Erlaubnis
+ausstehend; keine 11.4 und keine Universitätseinreichung.
 Die nachfolgenden Abschnitte sind historische Arbeitsstände.
 
 ## Neuester Stand: 11.1 integriert; 11.2 fachlich freigegeben

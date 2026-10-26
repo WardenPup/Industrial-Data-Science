@@ -227,7 +227,9 @@ und PCHIP. Sieben Grafiken, HTML, Lückentabelle und Methodendiagnostik liegen u
 
 Auf ausdrücklichen Folgeauftrag: [Notebook](sessions/ch11/production_stl_imputation.ipynb),
 [Anforderungen](docs/EXERCISE_11_3_REQUIREMENTS.md), [Review](reviews/exercise_11_3.md).
-Status: **AWAITING HUMAN REVIEW**. Freigegebene 11.1-/11.2-Dateien bleiben erhalten.
+Status: **APPROVED – AWAITING FINAL MERGE AUTHORIZATION** nach positivem
+studentischem Review vom 26.10.2026 und erneuter technischer Prüfung.
+Freigegebene 11.1-/11.2-Dateien bleiben erhalten; kein Merge ohne ausdrückliche Erlaubnis.
 
 ```powershell
 scripts/uv.cmd sync --locked
