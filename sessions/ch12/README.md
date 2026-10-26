@@ -16,7 +16,7 @@ HTML und CSV/JSON/PNG: `outputs/ch12/exercise_12_3`; Export: `scripts/build_exer
 Status SCIENTIFICALLY APPROVED – TECHNICALLY VALIDATED – AWAITING FINAL MERGE AUTHORIZATION. 12.4: AppliancesEnergy, 95 TRAIN/42 TEST mit 24 × 144; DTW-3-NN-, Forest- und CNN-Regressor.
 Notebook `appliances_regression.ipynb`; Export `scripts/build_exercise_12_4.py`;
 Originaldaten explizit über `scripts/download_appliances.py`, danach offline.
-Ausgaben `outputs/ch12/exercise_12_4`; Status AWAITING HUMAN REVIEW.
+Ausgaben `outputs/ch12/exercise_12_4`; Status SCIENTIFICALLY APPROVED – TECHNICALLY VALIDATED – AWAITING FINAL MERGE AUTHORIZATION.
 Quelle/Lizenz: `docs/APPLIANCES_SOURCE.md`; keine Universitätseinreichung.
 Vergleich nutzt freigegebene Git-Referenz 50d3a01; Hashes und aktuelle wissenschaftliche
 Werte werden geprüft, laufzeitabhängige Fit/Predict-Spalten nicht als Ergebnisse verglichen.

@@ -1,3 +1,15 @@
+## 26.10.2026 – 12.4: wissenschaftlicher Review technisch abgeglichen
+
+Status: SCIENTIFICALLY APPROVED – TECHNICALLY VALIDATED – AWAITING FINAL MERGE AUTHORIZATION.
+Originalreview vollständig unverändert separat in d9e4000 gesichert. Sämtliche
+Reviewzahlen einschließlich mittlerer/maximaler Fehler bestätigt. 64 Tests erneut
+bestanden (7,145 s), frischer dreizelliger Notebook-Lauf, zweiter Fit/126 Vorhersagen,
+Nachbar-/Baumaggregation und CNN-Rücktransformation geprüft. Beide PNGs visuell,
+HTML offline 900/1400 px, zwölf Artefakthashes und acht alte ZIPs bestätigt.
+Keine Modell-/Ergebnis-/Grafikänderung; bekannte CNN-Plattformgrenze ohne behauptete
+Ursache offengelegt. Aktuelle CI und PR-Ready-Vorbereitung folgen nach Push.
+Keine finale Merge-Autorisierung, kein Merge/main-Eingriff oder Universitätseinreichung.
+
 ## 26.10.2026 – 12.4: plattformspezifische CNN-Grenze offengelegt
 
 Erster PR-CI-Lauf 40411236019 am 3f2eb74 erfolgreich, jedoch CNN unter Linux

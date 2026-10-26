@@ -284,4 +284,4 @@ Notebook: `sessions/ch12/appliances_regression.ipynb`; HTML: `outputs/ch12/exerc
 Originaldaten: `scripts/download_appliances.py`; Reproduktion: `scripts/build_exercise_12_4.py`.
 Drei feste Verfahren (DTW-3-NN, Time Series Forest, CNN), identische 95/42 Originalsplits,
 TRAIN-only-Skalierung, RMSE/MAE in kWh. KI-Unterstützung: Codex.
-Status: **AWAITING HUMAN REVIEW**. Reviewbericht: `reviews/exercise_12_4.md`.
+Status: **SCIENTIFICALLY APPROVED – TECHNICALLY VALIDATED – AWAITING FINAL MERGE AUTHORIZATION**. Reviewbericht: `reviews/exercise_12_4.md`.

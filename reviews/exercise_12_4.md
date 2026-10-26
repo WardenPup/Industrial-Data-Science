@@ -261,3 +261,77 @@ Die abschließende technische Prüfung soll insbesondere die Datenintegrität, Z
 Der Originalreview soll unverändert archiviert werden. Technische Ergänzungen sind separat zu dokumentieren.
 
 **Dieser Human Review erteilt keine Autorisierung zum Merge, zur Änderung früherer Aufgaben oder zur Universitätseinreichung.**
+altext
+oben, separat in d9e4000 gesichert. Auch frühere technische Berichte bleiben vollständig
+erhalten. Keine weiteren studentischen Ausführungen oder Freigaben behauptet.
+Keine Merge-Autorisierung; PR #12 darf nicht gemergt werden.
+
+### Code- und Zahlenabgleich
+Offizielle Exercise 12.4 erneut mit implementierten DTW-kNN-, Forest- und CNN-
+Regressoren abgeglichen. Keine zusätzliche Methode/Seed-Studie. Gegebene 95 TRAIN-
+und 42 TEST-Fälle mit 24 × 144 endlichen Werten, Zielzuordnung case=0…41 bestätigt.
+Alle Methoden werden gegen dieselben 42 ursprünglichen kWh-Zielwerte ausgewertet.
+`fit_regressors` nimmt nur TRAIN-Eingaben/-Ziele an; sämtliche 24 Kanalstatistiken
+werden daraus bestimmt. TEST erhält nur transform/predict; TEST-Ziele gelangen
+nicht in Optimierung oder Verlust. Der CNN-Zielmittelwert 14,1655789474 und die
+Populationsstandardabweichung 4,2899583401 stammen ausschließlich aus TRAIN.
+Rücktransformation vor allen Metriken und beim separaten Gewichts-Ladetest geprüft.
+Konfiguration bereits vor Training in 4e0f381 festgelegt, keine TEST-Parametersuche
+im geprüften Code. Ursprünglicher Benchmark-Split ist keine belegte Zukunftsvalidierung.
+
+Aus allen 126 gespeicherten Vorhersagen unabhängig mit NumPy rekonstruiert:
+| Methode | RMSE | MAE | Mittel Vorhersage−Ist | Max. absoluter Fehler |
+|---|---:|---:|---:|---:|
+| DTW-3-NN | 3,5092246163 | 2,7113492063 | −0,2648412698 | 10,390000 |
+| Forest | 2,1091826331 | 1,6852535714 | −0,0777416667 | 6,338100 |
+| CNN | 3,6146750395 | 2,6080539167 | −0,8255793428 | 11,011297 |
+Alle Werte in kWh. Sämtliche numerischen Aussagen des Human Reviews bestätigt;
+keine sachliche Diskrepanz. Forest auf diesem Split kleinster RMSE/MAE/Maximalfehler;
+kNN kleinerer RMSE als CNN, aber CNN kleinerer MAE. Kein allgemeines Modellranking.
+TRAIN-Verlust 1,0031529276→0,0061136114, mit sichtbaren Schwankungen; ausschließlich
+TRAIN, kein Nachweis von Generalisierung oder Overfitting. Quellenabweichung
+138 beschriebene versus 137 tatsächliche Fälle bleibt ausdrücklich dokumentiert.
+
+### Tatsächlich erneut ausgeführte technische Prüfungen
+Projektstamm, `scripts/uv.cmd run --offline --locked`:
+- `python -m unittest discover -s tests -q`: 64 Tests bestanden, 7,145 s.
+- `python scripts/build_exercise_12_4.py`: drei Codezellen im frischen Kernel
+  sequenziell ausgeführt, zwei eingebettete PNGs dekodiert. Zweiter vollständiger
+  Fit reproduziert alle 126 Vorhersagen und 60 Verlustwerte (atol/rtol 1e-10).
+  Alle Nachbarzielmittel (k=3, uniform, DTW window=0,1) sowie die Mittel sämtlicher
+  200 Forest-Bäume für alle 42 TEST-Fälle nachgerechnet. Gespeicherte CNN-Gewichte
+  ohne Pickle geladen, alle rücktransformierten Vorhersagen geprüft.
+  5.553 tatsächliche Parameter, CPU, Seed 42, 60 Epochen bestätigt.
+- `python scripts/check_exercise_12_4_html.py`: offline 900/1400 px, beide Bilder
+  geladen, keine Seitenfehler oder horizontaler Überlauf.
+- Beide Grafiken visuell geprüft: Beschriftungen, kWh-Einheiten, gemeinsame Skala,
+  Identitätsgeraden und ausschließlich TRAIN-Verlust korrekt. Keine Grafikkorrektur nötig.
+- Neue review_verification.json protokolliert Mean-Bias/Maximalfehler, Umgebung und
+  Reproduzierbarkeitsgrenzen; zwölf aktuelle Artefakthashes separat geprüft.
+  Beide Original-.ts-SHA256 stimmen. Keine erneute Netzwerkbeschaffung behauptet.
+- Sechs wissenschaftliche Artefakte (PNGs, Kennzahlen, Vorhersagen, Verlauf, Gewichte)
+  bytegleich zu d407b55. Frühere Kapiteldateien/Reviews/Umgebung unverändert,
+  acht Kapitel-10/11-Abgabe-ZIPs per SHA256 und CRC bestätigt.
+
+### Plattformbefund und Grenzen
+Historisches Linux-PR-Protokoll 40412456174 erneut gelesen: PyTorch 2.9.1+cpu,
+CNN RMSE/MAE 3,626400/2,613485. Windows erneut 3,614675/2,608054. Beide verwenden
+dieselbe Implementierung und denselben Parameterplan auf CPU; kein GPU-Vergleich.
+Lokal Windows AMD64: torch 2.9.1+cpu, Intra-Op num_threads=1, Inter-Op=4 (Default),
+deterministic_algorithms=True, MKLDNN aktiviert. Die Ein-Thread-Einstellung bezieht
+sich auf Intra-Op; eine pauschale Ein-Thread-Garantie für alle internen Aktivitäten
+wird nicht behauptet. CPU/Build-/Threadinformationen stehen in review_verification.json.
+`torch.manual_seed(42)` initialisiert das Netz, separater DataLoader-Generator mit
+Seed 42, num_workers=0; Forest random_state=42. Keine weitere Seed-Studie.
+
+Innerhalb desselben Runtimes besteht die vollständige Wiederholungsprüfung;
+exakte Gleichheit zwischen Plattformen oder unterschiedlichen Runnern ist nicht belegt.
+PyTorch 2.9 weist ausdrücklich auf diese Grenze hin:
+https://docs.pytorch.org/docs/2.9/notes/randomness.html (gelesen 26.10.2026).
+Mögliche Build-/Hardware-/Gleitkommaeffekte sind keine nachgewiesene konkrete Ursache.
+Die Differenz wurde weder verschwiegen noch durch Parameteränderungen angeglichen.
+Tatsächliche lokale Warnung: Jupyter-TCP unverschlüsselt; keine numerischen,
+Notebook- oder HTML-Fehler. Historische CI meldete temporären IPython-Ordner.
+Kleine Trainingsmenge, ein Split, fehlende unabhängige Validierung und keine
+Signifikanz bleiben Grenzen. Neue aktuelle Head-CI wird nach Push separat im PR
+belegt; Ready for review nur bei Erfolg. Kein Merge, weitere Aufgabe oder Upload.

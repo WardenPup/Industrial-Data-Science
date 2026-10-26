@@ -64,8 +64,10 @@ def main():
     saved=pd.read_csv(output/"predictions.csv")
     np.testing.assert_array_equal(saved.case,np.arange(42));np.testing.assert_array_equal(saved.true_kwh,y_test)
     metrics=pd.read_csv(output/"metrics.csv").set_index("method")
+    review_metrics=[]
     for method,column in [("DTW 3-NN","knn_kwh"),("Time Series Forest","forest_kwh"),("CNN","cnn_kwh")]:
         error=saved[column].to_numpy()-y_test
+        review_metrics.append(dict(method=method,rmse=float(np.sqrt(np.mean(error**2))),mae=float(np.mean(np.abs(error))),mean_prediction_minus_true=float(error.mean()),max_absolute_error=float(np.abs(error).max())))
         np.testing.assert_allclose(metrics.loc[method,["rmse","mae"]].to_numpy(dtype=float),[np.sqrt(np.mean(error**2)),np.mean(np.abs(error))],atol=1e-12)
     summary=json.loads((output/"summary.json").read_text())
     mean=x_train.mean(axis=(0,2),keepdims=True);scale=x_train.std(axis=(0,2),keepdims=True)
@@ -95,12 +97,38 @@ def main():
         model.load_state_dict({key:torch.from_numpy(weights[key].copy()) for key in weights.files})
     with torch.inference_mode():z=model(torch.from_numpy(prepared)).numpy().astype(float)
     np.testing.assert_allclose(z*summary["train_target_scale"]+summary["train_target_mean"],saved.cnn_kwh,atol=1e-10,rtol=1e-10)
+    # Reconcile authentic human-review statements, without changing model outputs.
+    assert summary["knn_config"]==study.KNN_CONFIG and summary["forest_config"]==study.FOREST_CONFIG
+    assert len(forest.estimators_)==200 and forest.n_cases_==95
+    assert sum(p.numel() for p in fitted["models"]["CNN"].parameters())==5553
+    assert all(p.device.type=="cpu" for p in fitted["models"]["CNN"].parameters())
+    assert torch.get_num_threads()==1 and torch.are_deterministic_algorithms_enabled() and torch.initial_seed()==42
+    np.testing.assert_allclose(fitted["target_scaler"],[y_train.mean(),y_train.std()],atol=1e-12)
+    assert review_metrics[1]["max_absolute_error"]<min(review_metrics[0]["max_absolute_error"],review_metrics[2]["max_absolute_error"])
+    assert metrics.loc["DTW 3-NN","rmse"]<metrics.loc["CNN","rmse"]
+    assert metrics.loc["CNN","mae"]<metrics.loc["DTW 3-NN","mae"]
+    import platform
+    windows_reference=[[3.509225,2.711349,-.264841],[2.109183,1.685254,-.077742],[3.614675,2.608054,-.825579]]
+    if platform.system()=="Windows":
+        np.testing.assert_allclose([[r[k] for k in ["rmse","mae","mean_prediction_minus_true"]] for r in review_metrics],windows_reference,atol=5e-7,rtol=0)
+    review_report={"verified_date":"2026-10-26","ai_assistance":"Codex","student_extra_execution_claimed":False,
+        "metrics_from_all_126_predictions":review_metrics,"sign_convention":"prediction minus true, kWh",
+        "runtime":{"platform":platform.platform(),"machine":platform.machine(),"processor":platform.processor(),
+        "torch":torch.__version__,"device":"cpu","num_threads":torch.get_num_threads(),"interop_threads":torch.get_num_interop_threads(),
+        "deterministic_algorithms":torch.are_deterministic_algorithms_enabled(),"initial_seed":torch.initial_seed(),
+        "mkldnn_enabled":torch.backends.mkldnn.enabled,"torch_build":torch.__config__.show()},
+        "reproducibility_scope":"Second full fit in the same runtime, atol/rtol 1e-10; no cross-platform numerical identity claimed",
+        "historical_linux_cnn":{"rmse":3.626400,"mae":2.613485,"runs":[40412448258,40412456174]},
+        "platform_difference_cause_proven":False,"cnn_train_loss_first":float(history.train_standardized_mse.iloc[0]),"cnn_train_loss_last":float(history.train_standardized_mse.iloc[-1])}
+    (output/"review_verification.json").write_text(json.dumps(review_report,indent=2)+"\n",encoding="utf-8")
+    print("Runtime:",json.dumps({k:review_report["runtime"][k] for k in ["platform","torch","device","num_threads","interop_threads","deterministic_algorithms","initial_seed","mkldnn_enabled"]}))
+    print(pd.DataFrame(review_metrics).to_string(index=False))
     print(metrics.to_string())
     nbformat.write(notebook,source)
     destination=output/"appliances_regression.html";destination.write_text(str(page),encoding="utf-8")
     from importlib.metadata import version
-    files=[source,destination,ROOT/"sessions/ch12/regression.py",ROOT/"sessions/ch12/appliances_source.json",output/"summary.json",output/"cnn_weights.npz"]+sorted(output.glob("*.csv"))+[output/(name+".png") for name in FIGURES]
-    manifest={"validated_date":"2026-10-26","ai_assistance":"Codex","human_review":"AWAITING HUMAN REVIEW","merge_authorized":False,"raw_sha256":SOURCE["files"],"seed":SEED,"epochs":EPOCHS,"sequential_code_cells":len(code),"embedded_images":len(images),"all_126_predictions_reproduced":True,"independent_knn_target_mean":True,"independent_forest_tree_mean":True,"saved_cnn_predictions_checked":True,"repeat_fit_seconds":fitted["fit_seconds"],"repeat_predict_seconds":seconds,"packages":{name:version(name) for name in ["aeon","numpy","scikit-learn","torch"]},"files":{p.relative_to(ROOT).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in files}}
+    files=[source,destination,ROOT/"sessions/ch12/regression.py",ROOT/"sessions/ch12/appliances_source.json",output/"summary.json",output/"cnn_weights.npz",output/"review_verification.json"]+sorted(output.glob("*.csv"))+[output/(name+".png") for name in FIGURES]
+    manifest={"validated_date":"2026-10-26","ai_assistance":"Codex","human_review":"SCIENTIFICALLY APPROVED – TECHNICALLY VALIDATED – AWAITING FINAL MERGE AUTHORIZATION","merge_authorized":False,"raw_sha256":SOURCE["files"],"seed":SEED,"epochs":EPOCHS,"sequential_code_cells":len(code),"embedded_images":len(images),"all_126_predictions_reproduced":True,"independent_knn_target_mean":True,"independent_forest_tree_mean":True,"saved_cnn_predictions_checked":True,"repeat_fit_seconds":fitted["fit_seconds"],"repeat_predict_seconds":seconds,"packages":{name:version(name) for name in ["aeon","numpy","scikit-learn","torch"]},"files":{p.relative_to(ROOT).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in files}}
     (output/"validation_manifest.json").write_text(json.dumps(manifest,indent=2)+"\n",encoding="utf-8")
     print("PASS: fresh 3-cell notebook, 2 decoded images, TRAIN-only scalers, all 126 repeated predictions, independent RMSE/MAE, neighbor and tree means, saved CNN weights")
 
