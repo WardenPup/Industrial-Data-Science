@@ -1,0 +1,817 @@
+{
+  "checked": "2026-10-27",
+  "ai_assistance": "Codex",
+  "scientific_approvals": 12,
+  "merged_exercises": 12,
+  "validated_archives": 12,
+  "student_approval_of_supplemented_packages": "PENDING; no new student approval fabricated",
+  "uploaded": false,
+  "tests": {
+    "command": "scripts/uv.cmd run --offline --locked python -m unittest discover -s tests -q",
+    "passed": 64,
+    "seconds": 6.7
+  },
+  "fresh_notebooks": 11,
+  "fresh_code_cells": 70,
+  "script_executions": 1,
+  "scientific_csv_comparisons": 49,
+  "pdf_visual_pages": 21,
+  "scientific_pngs_visually_inspected": 47,
+  "clean_dependency_reinstallation": "NOT RUN",
+  "quarto_latex_rerender_this_final_round": "NOT RUN; approved PDFs preserved and rendered with Poppler",
+  "committed_chapter_12_manifest_entries_verified": 53,
+  "deterministic_archive_rebuild": "PASS; all twelve SHA256 identical",
+  "reports": [
+    {
+      "exercise": "10.1",
+      "zip_sha256": "72af7ee1d323b1dea7f004c9fce386a24035500669f54d507af07b2113177fe8",
+      "archive_crc_and_member_hashes": "PASS",
+      "original_member_preservation": "PASS",
+      "notebooks": 0,
+      "pdfs": [],
+      "python_spec": "3.12.15",
+      "privacy_findings": [],
+      "offline_html": [],
+      "execution": {
+        "command": [
+          "python.exe",
+          "sessions/ch10/aufgabe_10_1.py"
+        ],
+        "returncode": 0,
+        "seconds": 4.225,
+        "shared_existing_environment": true,
+        "clean_dependency_installation": "NOT RUN",
+        "warnings": [],
+        "scientific_csv_comparison": [],
+        "fresh_notebook_cells": {}
+      },
+      "same_executed_scientific_member_bytes": true
+    },
+    {
+      "exercise": "10.2",
+      "zip_sha256": "841a8b10e2cf8de9499d6a21f8b677b087b3eb32600c3b7504f8367023e831bc",
+      "archive_crc_and_member_hashes": "PASS",
+      "original_member_preservation": "PASS",
+      "notebooks": 1,
+      "pdfs": [
+        {
+          "file": "outputs/ch10/exercise_10_2/ai4i_explore.pdf",
+          "pages": 6
+        }
+      ],
+      "python_spec": "3.12.15",
+      "privacy_findings": [],
+      "offline_html": [
+        {
+          "html": "outputs/ch10/exercise_10_2/ai4i_explore.html",
+          "width": 900,
+          "images": 1,
+          "all_images_loaded": true,
+          "page_errors": [],
+          "failed_requests": [
+            {
+              "url_type": "https",
+              "failure": "net::ERR_INTERNET_DISCONNECTED"
+            },
+            {
+              "url_type": "https",
+              "failure": "net::ERR_INTERNET_DISCONNECTED"
+            }
+          ],
+          "horizontal_page_overflow": false
+        },
+        {
+          "html": "outputs/ch10/exercise_10_2/ai4i_explore.html",
+          "width": 1400,
+          "images": 1,
+          "all_images_loaded": true,
+          "page_errors": [],
+          "failed_requests": [
+            {
+              "url_type": "https",
+              "failure": "net::ERR_INTERNET_DISCONNECTED"
+            },
+            {
+              "url_type": "https",
+              "failure": "net::ERR_INTERNET_DISCONNECTED"
+            }
+          ],
+          "horizontal_page_overflow": false
+        }
+      ],
+      "execution": {
+        "command": [
+          "python.exe",
+          "scripts/build_exercise_10_2.py"
+        ],
+        "returncode": 0,
+        "seconds": 15.85,
+        "shared_existing_environment": true,
+        "clean_dependency_installation": "NOT RUN",
+        "warnings": [
+          "<project>\\.venv\\Lib\\site-packages\\IPython\\paths.py:67: UserWarning: IPython parent '<project>\\.tools\\final_submission_qa\\10_2\\exercise_10_2\\.local' is not a writable location, using a temp directory.",
+          "<project>\\.venv\\Lib\\site-packages\\IPython\\paths.py:67: UserWarning: IPython parent '<project>\\.tools\\final_submission_qa\\10_2\\exercise_10_2\\.local' is not a writable location, using a temp directory.",
+          "[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption."
+        ],
+        "scientific_csv_comparison": [
+          "outputs/ch10/exercise_10_2/summary_statistics.csv"
+        ],
+        "fresh_notebook_cells": {
+          "sessions/ch10/ai4i_explore.ipynb": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        }
+      },
+      "same_executed_scientific_member_bytes": true
+    },
+    {
+      "exercise": "10.3",
+      "zip_sha256": "84381fabc5ef99d5e634487d7753d9e73a8a14e87bb5e9b3222447c4cc28b3a4",
+      "archive_crc_and_member_hashes": "PASS",
+      "original_member_preservation": "PASS",
+      "notebooks": 1,
+      "pdfs": [],
+      "python_spec": "3.12.15",
+      "privacy_findings": [],
+      "offline_html": [
+        {
+          "html": "outputs/ch10/exercise_10_3/ai4i_seaborn.html",
+          "width": 900,
+          "images": 10,
+          "all_images_loaded": true,
+          "page_errors": [],
+          "failed_requests": [
+            {
+              "url_type": "https",
+              "failure": "net::ERR_INTERNET_DISCONNECTED"
+            },
+            {
+              "url_type": "https",
+              "failure": "net::ERR_INTERNET_DISCONNECTED"
+            }
+          ],
+          "horizontal_page_overflow": false
+        },
+        {
+          "html": "outputs/ch10/exercise_10_3/ai4i_seaborn.html",
+          "width": 1400,
+          "images": 10,
+          "all_images_loaded": true,
+          "page_errors": [],
+          "failed_requests": [
+            {
+              "url_type": "https",
+              "failure": "net::ERR_INTERNET_DISCONNECTED"
+            },
+            {
+              "url_type": "https",
+              "failure": "net::ERR_INTERNET_DISCONNECTED"
+            }
+          ],
+          "horizontal_page_overflow": false
+        }
+      ],
+      "execution": {
+        "command": [
+          "python.exe",
+          "scripts/build_exercise_10_3.py"
+        ],
+        "returncode": 0,
+        "seconds": 18.884,
+        "shared_existing_environment": true,
+        "clean_dependency_installation": "NOT RUN",
+        "warnings": [
+          "<project>\\.venv\\Lib\\site-packages\\IPython\\paths.py:67: UserWarning: IPython parent '<project>\\.tools\\final_submission_qa\\10_3\\exercise_10_3\\.local' is not a writable location, using a temp directory.",
+          "<project>\\.venv\\Lib\\site-packages\\IPython\\paths.py:67: UserWarning: IPython parent '<project>\\.tools\\final_submission_qa\\10_3\\exercise_10_3\\.local' is not a writable location, using a temp directory.",
+          "[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption."
+        ],
+        "scientific_csv_comparison": [
+          "outputs/ch10/exercise_10_3/iqr_summary.csv",
+          "outputs/ch10/exercise_10_3/pearson.csv",
+          "outputs/ch10/exercise_10_3/spearman.csv",
+          "outputs/ch10/exercise_10_3/speed_bin_counts.csv",
+          "outputs/ch10/exercise_10_3/torque_bin_counts.csv"
+        ],
+        "fresh_notebook_cells": {
+          "sessions/ch10/ai4i_seaborn.ipynb": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ]
+        }
+      },
+      "same_executed_scientific_member_bytes": true
+    },
+    {
+      "exercise": "10.4",
+      "zip_sha256": "da69e333b3a4b0b7a55c70835db6611325714a25ef21fe3df94536186f1d547e",
+      "archive_crc_and_member_hashes": "PASS",
+      "original_member_preservation": "PASS",
+      "notebooks": 1,
+      "pdfs": [
+        {
+          "file": "outputs/ch10/exercise_10_4/notebook_presentation.pdf",
+          "pages": 10
+        },
+        {
+          "file": "outputs/ch10/exercise_10_4/paper.pdf",
+          "pages": 5
+        }
+      ],
+      "python_spec": "3.12.15",
+      "privacy_findings": [],
+      "offline_html": [
+        {
+          "html": "outputs/ch10/exercise_10_4/notebook_presentation.html",
+          "width": 900,
+          "images": 10,
+          "all_images_loaded": true,
+          "page_errors": [],
+          "failed_requests": [],
+          "horizontal_page_overflow": false
+        },
+        {
+          "html": "outputs/ch10/exercise_10_4/notebook_presentation.html",
+          "width": 1400,
+          "images": 10,
+          "all_images_loaded": true,
+          "page_errors": [],
+          "failed_requests": [],
+          "horizontal_page_overflow": false
+        },
+        {
+          "html": "outputs/ch10/exercise_10_4/paper.html",
+          "width": 900,
+          "images": 3,
+          "all_images_loaded": true,
+          "page_errors": [],
+          "failed_requests": [],
+          "horizontal_page_overflow": false
+        },
+        {
+          "html": "outputs/ch10/exercise_10_4/paper.html",
+          "width": 1400,
+          "images": 3,
+          "all_images_loaded": true,
+          "page_errors": [],
+          "failed_requests": [],
+          "horizontal_page_overflow": false
+        }
+      ],
+      "execution": {
+        "command": [
+          "python.exe",
+          "<project>\\scripts\\execute_submission_notebook.py",
+          "reports/exercise_10_4/notebook_presentation.ipynb"
+        ],
+        "returncode": 0,
+        "seconds": 15.536,
+        "shared_existing_environment": true,
+        "clean_dependency_installation": "NOT RUN",
+        "warnings": [
+          "<project>\\.venv\\Lib\\site-packages\\IPython\\paths.py:67: UserWarning: IPython parent '<project>\\.tools\\final_submission_qa\\10_4\\exercise_10_4\\.local' is not a writable location, using a temp directory.",
+          "<project>\\.venv\\Lib\\site-packages\\IPython\\paths.py:67: UserWarning: IPython parent '<project>\\.tools\\final_submission_qa\\10_4\\exercise_10_4\\.local' is not a writable location, using a temp directory.",
+          "[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption."
+        ],
+        "scientific_csv_comparison": [
+          "outputs/ch10/exercise_10_4/notebook_figures/iqr_summary.csv",
+          "outputs/ch10/exercise_10_4/notebook_figures/pearson.csv",
+          "outputs/ch10/exercise_10_4/notebook_figures/spearman.csv",
+          "outputs/ch10/exercise_10_4/notebook_figures/speed_bin_counts.csv",
+          "outputs/ch10/exercise_10_4/notebook_figures/torque_bin_counts.csv"
+        ],
+        "fresh_notebook_cells": {
+          "reports/exercise_10_4/notebook_presentation.ipynb": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ]
+        },
+        "executed_notebook": "reports/exercise_10_4/notebook_presentation.ipynb",
+        "fresh_cells_confirmed_by_helper_log": 14
+      },
+      "same_executed_scientific_member_bytes": true
+    },
+    {
+      "exercise": "11.1",
+      "zip_sha256": "4107306c29963cb42957820c8e60b63f2dd1a4e2ad3afbd845be47763406748c",
+      "archive_crc_and_member_hashes": "PASS",
+      "original_member_preservation": "PASS",
+      "notebooks": 1,
+      "pdfs": [],
+      "python_spec": "3.12.15",
+      "privacy_findings": [],
+      "offline_html": [
+        {
+          "html": "outputs/ch11/exercise_11_1/production_smoothing.html",
+          "width": 900,
+          "images": 2,
+          "all_images_loaded": true,
+          "page_errors": [],
+          "failed_requests": [],
+          "horizontal_page_overflow": false
+        },
+        {
+          "html": "outputs/ch11/exercise_11_1/production_smoothing.html",
+          "width": 1400,
+          "images": 2,
+          "all_images_loaded": true,
+          "page_errors": [],
+          "failed_requests": [],
+          "horizontal_page_overflow": false
+        }
+      ],
+      "execution": {
+        "command": [
+          "python.exe",
+          "scripts/build_exercise_11_1.py"
+        ],
+        "returncode": 0,
+        "seconds": 13.758,
+        "shared_existing_environment": true,
+        "clean_dependency_installation": "NOT RUN",
+        "warnings": [
+          "<project>\\.venv\\Lib\\site-packages\\IPython\\paths.py:67: UserWarning: IPython parent '<project>\\.tools\\final_submission_qa\\11_1\\.local' is not a writable location, using a temp directory.",
+          "<project>\\.venv\\Lib\\site-packages\\IPython\\paths.py:67: UserWarning: IPython parent '<project>\\.tools\\final_submission_qa\\11_1\\.local' is not a writable location, using a temp directory.",
+          "[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption."
+        ],
+        "scientific_csv_comparison": [
+          "data/processed/exercise_11_1_smoothed.csv"
+        ],
+        "fresh_notebook_cells": {
+          "sessions/ch11/production_smoothing.ipynb": [
+            1,
+            2,
+            3,
+            4
+          ]
+        }
+      },
+      "same_executed_scientific_member_bytes": true
+    },
+    {
+      "exercise": "11.2",
+      "zip_sha256": "a3d73cf8ddad91749092dbe0051acc9291487a7a773c28ae1a0faaeb42681526",
+      "archive_crc_and_member_hashes": "PASS",
+      "original_member_preservation": "PASS",
+      "notebooks": 1,
+      "pdfs": [],
+      "python_spec": "3.12.15",
+      "privacy_findings": [],
+      "offline_html": [
+        {
+          "html": "outputs/ch11/exercise_11_2/production_imputation.html",
+          "width": 900,
+          "images": 7,
+          "all_images_loaded": true,
+          "page_errors": [],
+          "failed_requests": [],
+          "horizontal_page_overflow": false
+        },
+        {
+          "html": "outputs/ch11/exercise_11_2/production_imputation.html",
+          "width": 1400,
+          "images": 7,
+          "all_images_loaded": true,
+          "page_errors": [],
+          "failed_requests": [],
+          "horizontal_page_overflow": false
+        }
+      ],
+      "execution": {
+        "command": [
+          "python.exe",
+          "scripts/build_exercise_11_2.py"
+        ],
+        "returncode": 0,
+        "seconds": 20.695,
+        "shared_existing_environment": true,
+        "clean_dependency_installation": "NOT RUN",
+        "warnings": [
+          "<project>\\.venv\\Lib\\site-packages\\IPython\\paths.py:67: UserWarning: IPython parent '<project>\\.tools\\final_submission_qa\\11_2\\.local' is not a writable location, using a temp directory.",
+          "<project>\\.venv\\Lib\\site-packages\\IPython\\paths.py:67: UserWarning: IPython parent '<project>\\.tools\\final_submission_qa\\11_2\\.local' is not a writable location, using a temp directory.",
+          "[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption."
+        ],
+        "scientific_csv_comparison": [
+          "outputs/ch11/exercise_11_2/gaps.csv",
+          "outputs/ch11/exercise_11_2/method_summary.csv",
+          "data/processed/exercise_11_2_imputed.csv"
+        ],
+        "fresh_notebook_cells": {
+          "sessions/ch11/production_imputation.ipynb": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        }
+      },
+      "same_executed_scientific_member_bytes": true
+    },
+    {
+      "exercise": "11.3",
+      "zip_sha256": "8c4442d0a47efa5db940b6f3134de9fd72e4aa90f6fecd9db56f0058c990913f",
+      "archive_crc_and_member_hashes": "PASS",
+      "original_member_preservation": "PASS",
+      "notebooks": 1,
+      "pdfs": [],
+      "python_spec": "3.12.15",
+      "privacy_findings": [],
+      "offline_html": [
+        {
+          "html": "outputs/ch11/exercise_11_3/production_stl_imputation.html",
+          "width": 900,
+          "images": 4,
+          "all_images_loaded": true,
+          "page_errors": [],
+          "failed_requests": [],
+          "horizontal_page_overflow": false
+        },
+        {
+          "html": "outputs/ch11/exercise_11_3/production_stl_imputation.html",
+          "width": 1400,
+          "images": 4,
+          "all_images_loaded": true,
+          "page_errors": [],
+          "failed_requests": [],
+          "horizontal_page_overflow": false
+        }
+      ],
+      "execution": {
+        "command": [
+          "python.exe",
+          "scripts/build_exercise_11_3.py"
+        ],
+        "returncode": 0,
+        "seconds": 18.316,
+        "shared_existing_environment": true,
+        "clean_dependency_installation": "NOT RUN",
+        "warnings": [
+          "<project>\\.venv\\Lib\\site-packages\\IPython\\paths.py:67: UserWarning: IPython parent '<project>\\.tools\\final_submission_qa\\11_3\\.local' is not a writable location, using a temp directory.",
+          "<project>\\.venv\\Lib\\site-packages\\IPython\\paths.py:67: UserWarning: IPython parent '<project>\\.tools\\final_submission_qa\\11_3\\.local' is not a writable location, using a temp directory.",
+          "[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption."
+        ],
+        "scientific_csv_comparison": [
+          "outputs/ch11/exercise_11_3/components.csv",
+          "outputs/ch11/exercise_11_3/stage_missing_counts.csv",
+          "data/processed/exercise_11_3_stages.csv"
+        ],
+        "fresh_notebook_cells": {
+          "sessions/ch11/production_stl_imputation.ipynb": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        }
+      },
+      "same_executed_scientific_member_bytes": true
+    },
+    {
+      "exercise": "11.4",
+      "zip_sha256": "6a126ebc424dffe8dd2dd562e08f5da1cb83348b3de9b65c206c2c2cce5c4d6f",
+      "archive_crc_and_member_hashes": "PASS",
+      "original_member_preservation": "PASS",
+      "notebooks": 1,
+      "pdfs": [],
+      "python_spec": "3.12.15",
+      "privacy_findings": [],
+      "offline_html": [
+        {
+          "html": "outputs/ch11/exercise_11_4/production_outliers.html",
+          "width": 900,
+          "images": 2,
+          "all_images_loaded": true,
+          "page_errors": [],
+          "failed_requests": [],
+          "horizontal_page_overflow": false
+        },
+        {
+          "html": "outputs/ch11/exercise_11_4/production_outliers.html",
+          "width": 1400,
+          "images": 2,
+          "all_images_loaded": true,
+          "page_errors": [],
+          "failed_requests": [],
+          "horizontal_page_overflow": false
+        }
+      ],
+      "execution": {
+        "command": [
+          "python.exe",
+          "scripts/build_exercise_11_4.py"
+        ],
+        "returncode": 0,
+        "seconds": 15.202,
+        "shared_existing_environment": true,
+        "clean_dependency_installation": "NOT RUN",
+        "warnings": [
+          "<project>\\.venv\\Lib\\site-packages\\IPython\\paths.py:67: UserWarning: IPython parent '<project>\\.tools\\final_submission_qa\\11_4\\.local' is not a writable location, using a temp directory.",
+          "<project>\\.venv\\Lib\\site-packages\\IPython\\paths.py:67: UserWarning: IPython parent '<project>\\.tools\\final_submission_qa\\11_4\\.local' is not a writable location, using a temp directory.",
+          "[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption."
+        ],
+        "scientific_csv_comparison": [
+          "outputs/ch11/exercise_11_4/components.csv",
+          "outputs/ch11/exercise_11_4/outlier_candidates.csv"
+        ],
+        "fresh_notebook_cells": {
+          "sessions/ch11/production_outliers.ipynb": [
+            1,
+            2,
+            3
+          ]
+        }
+      },
+      "same_executed_scientific_member_bytes": true
+    },
+    {
+      "exercise": "12.1",
+      "zip_sha256": "08e84851e56234efae37b71e0b367fc300b5e67d0f7df8c15431571faf7849ac",
+      "archive_crc_and_member_hashes": "PASS",
+      "original_member_preservation": "not applicable; approved Chapter 12 files",
+      "notebooks": 1,
+      "pdfs": [],
+      "python_spec": "3.12.15",
+      "privacy_findings": [],
+      "offline_html": [
+        {
+          "html": "outputs/ch12/exercise_12_1/gesture_clustering.html",
+          "width": 900,
+          "images": 4,
+          "all_images_loaded": true,
+          "page_errors": [],
+          "failed_requests": [],
+          "horizontal_page_overflow": false
+        },
+        {
+          "html": "outputs/ch12/exercise_12_1/gesture_clustering.html",
+          "width": 1400,
+          "images": 4,
+          "all_images_loaded": true,
+          "page_errors": [],
+          "failed_requests": [],
+          "horizontal_page_overflow": false
+        }
+      ],
+      "execution": {
+        "command": [
+          "python.exe",
+          "scripts/build_exercise_12_1.py"
+        ],
+        "returncode": 0,
+        "seconds": 26.539,
+        "shared_existing_environment": true,
+        "clean_dependency_installation": "NOT RUN",
+        "warnings": [
+          "<project>\\.venv\\Lib\\site-packages\\IPython\\paths.py:67: UserWarning: IPython parent '<project>\\.tools\\final_submission_qa\\12_1\\.local' is not a writable location, using a temp directory.",
+          "<project>\\.venv\\Lib\\site-packages\\IPython\\paths.py:67: UserWarning: IPython parent '<project>\\.tools\\final_submission_qa\\12_1\\.local' is not a writable location, using a temp directory.",
+          "[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption."
+        ],
+        "scientific_csv_comparison": [
+          "outputs/ch12/exercise_12_1/assignments.csv",
+          "outputs/ch12/exercise_12_1/centers.csv",
+          "outputs/ch12/exercise_12_1/counts_0_TEST.csv",
+          "outputs/ch12/exercise_12_1/counts_0_TRAIN.csv",
+          "outputs/ch12/exercise_12_1/counts_1_TEST.csv",
+          "outputs/ch12/exercise_12_1/counts_1_TRAIN.csv",
+          "outputs/ch12/exercise_12_1/lengths.csv",
+          "outputs/ch12/exercise_12_1/metrics.csv",
+          "outputs/ch12/exercise_12_1/msm_example.csv"
+        ],
+        "fresh_notebook_cells": {
+          "sessions/ch12/gesture_clustering.ipynb": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      },
+      "same_executed_scientific_member_bytes": true
+    },
+    {
+      "exercise": "12.2",
+      "zip_sha256": "9c5ca785c672a1c6ddcfec4d88146240bab023aad87a1f60a97f8f15e65668d6",
+      "archive_crc_and_member_hashes": "PASS",
+      "original_member_preservation": "not applicable; approved Chapter 12 files",
+      "notebooks": 1,
+      "pdfs": [],
+      "python_spec": "3.12.15",
+      "privacy_findings": [],
+      "offline_html": [
+        {
+          "html": "outputs/ch12/exercise_12_2/uwave_classification.html",
+          "width": 900,
+          "images": 2,
+          "all_images_loaded": true,
+          "page_errors": [],
+          "failed_requests": [],
+          "horizontal_page_overflow": false
+        },
+        {
+          "html": "outputs/ch12/exercise_12_2/uwave_classification.html",
+          "width": 1400,
+          "images": 2,
+          "all_images_loaded": true,
+          "page_errors": [],
+          "failed_requests": [],
+          "horizontal_page_overflow": false
+        }
+      ],
+      "execution": {
+        "command": [
+          "python.exe",
+          "scripts/build_exercise_12_2.py"
+        ],
+        "returncode": 0,
+        "seconds": 40.211,
+        "shared_existing_environment": true,
+        "clean_dependency_installation": "NOT RUN",
+        "warnings": [
+          "<project>\\.venv\\Lib\\site-packages\\IPython\\paths.py:67: UserWarning: IPython parent '<project>\\.tools\\final_submission_qa\\12_2\\.local' is not a writable location, using a temp directory.",
+          "<project>\\.venv\\Lib\\site-packages\\IPython\\paths.py:67: UserWarning: IPython parent '<project>\\.tools\\final_submission_qa\\12_2\\.local' is not a writable location, using a temp directory.",
+          "[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption."
+        ],
+        "scientific_csv_comparison": [
+          "outputs/ch12/exercise_12_2/classification_report.csv",
+          "outputs/ch12/exercise_12_2/cnn_training.csv",
+          "outputs/ch12/exercise_12_2/confusion_cnn.csv",
+          "outputs/ch12/exercise_12_2/confusion_knn.csv",
+          "outputs/ch12/exercise_12_2/metrics.csv",
+          "outputs/ch12/exercise_12_2/predictions.csv"
+        ],
+        "fresh_notebook_cells": {
+          "sessions/ch12/uwave_classification.ipynb": [
+            1,
+            2,
+            3
+          ]
+        }
+      },
+      "same_executed_scientific_member_bytes": true
+    },
+    {
+      "exercise": "12.3",
+      "zip_sha256": "323e2ffcc5fcabf414b7c56eed889386e7cf235aaab89888ead8ebace30c20ae",
+      "archive_crc_and_member_hashes": "PASS",
+      "original_member_preservation": "not applicable; approved Chapter 12 files",
+      "notebooks": 1,
+      "pdfs": [],
+      "python_spec": "3.12.15",
+      "privacy_findings": [],
+      "offline_html": [
+        {
+          "html": "outputs/ch12/exercise_12_3/uwave_forest.html",
+          "width": 900,
+          "images": 2,
+          "all_images_loaded": true,
+          "page_errors": [],
+          "failed_requests": [],
+          "horizontal_page_overflow": false
+        },
+        {
+          "html": "outputs/ch12/exercise_12_3/uwave_forest.html",
+          "width": 1400,
+          "images": 2,
+          "all_images_loaded": true,
+          "page_errors": [],
+          "failed_requests": [],
+          "horizontal_page_overflow": false
+        }
+      ],
+      "execution": {
+        "command": [
+          "python.exe",
+          "scripts/build_exercise_12_3.py"
+        ],
+        "returncode": 0,
+        "seconds": 40.282,
+        "shared_existing_environment": true,
+        "clean_dependency_installation": "NOT RUN",
+        "warnings": [
+          "<project>\\.venv\\Lib\\site-packages\\IPython\\paths.py:67: UserWarning: IPython parent '<project>\\.tools\\final_submission_qa\\12_3\\.local' is not a writable location, using a temp directory.",
+          "<project>\\.venv\\Lib\\site-packages\\IPython\\paths.py:67: UserWarning: IPython parent '<project>\\.tools\\final_submission_qa\\12_3\\.local' is not a writable location, using a temp directory.",
+          "[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption."
+        ],
+        "scientific_csv_comparison": [
+          "outputs/ch12/exercise_12_2/classification_report.csv",
+          "outputs/ch12/exercise_12_2/confusion_cnn.csv",
+          "outputs/ch12/exercise_12_2/confusion_knn.csv",
+          "outputs/ch12/exercise_12_2/metrics.csv",
+          "outputs/ch12/exercise_12_2/predictions.csv",
+          "outputs/ch12/exercise_12_3/classification_report.csv",
+          "outputs/ch12/exercise_12_3/confusion_forest.csv",
+          "outputs/ch12/exercise_12_3/forest_probabilities.csv",
+          "outputs/ch12/exercise_12_3/metrics.csv",
+          "outputs/ch12/exercise_12_3/paired_comparison.csv",
+          "outputs/ch12/exercise_12_3/predictions.csv"
+        ],
+        "fresh_notebook_cells": {
+          "sessions/ch12/uwave_forest.ipynb": [
+            1,
+            2,
+            3
+          ]
+        }
+      },
+      "same_executed_scientific_member_bytes": true
+    },
+    {
+      "exercise": "12.4",
+      "zip_sha256": "1c346c4ddd61228b91f48bebd8106788e53b809c1621f5c356747053f9643dfd",
+      "archive_crc_and_member_hashes": "PASS",
+      "original_member_preservation": "not applicable; approved Chapter 12 files",
+      "notebooks": 1,
+      "pdfs": [],
+      "python_spec": "3.12.15",
+      "privacy_findings": [],
+      "offline_html": [
+        {
+          "html": "outputs/ch12/exercise_12_4/appliances_regression.html",
+          "width": 900,
+          "images": 2,
+          "all_images_loaded": true,
+          "page_errors": [],
+          "failed_requests": [],
+          "horizontal_page_overflow": false
+        },
+        {
+          "html": "outputs/ch12/exercise_12_4/appliances_regression.html",
+          "width": 1400,
+          "images": 2,
+          "all_images_loaded": true,
+          "page_errors": [],
+          "failed_requests": [],
+          "horizontal_page_overflow": false
+        }
+      ],
+      "execution": {
+        "command": [
+          "python.exe",
+          "scripts/build_exercise_12_4.py"
+        ],
+        "returncode": 0,
+        "seconds": 48.257,
+        "shared_existing_environment": true,
+        "clean_dependency_installation": "NOT RUN",
+        "warnings": [
+          "<project>\\.venv\\Lib\\site-packages\\IPython\\paths.py:67: UserWarning: IPython parent '<project>\\.tools\\final_submission_qa\\12_4\\.local' is not a writable location, using a temp directory.",
+          "<project>\\.venv\\Lib\\site-packages\\IPython\\paths.py:67: UserWarning: IPython parent '<project>\\.tools\\final_submission_qa\\12_4\\.local' is not a writable location, using a temp directory.",
+          "[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption."
+        ],
+        "scientific_csv_comparison": [
+          "outputs/ch12/exercise_12_4/cnn_training.csv",
+          "outputs/ch12/exercise_12_4/metrics.csv",
+          "outputs/ch12/exercise_12_4/predictions.csv"
+        ],
+        "fresh_notebook_cells": {
+          "sessions/ch12/appliances_regression.ipynb": [
+            1,
+            2,
+            3
+          ]
+        }
+      },
+      "same_executed_scientific_member_bytes": true
+    }
+  ],
+  "final_project_test_rerun": {
+    "returncode": 0,
+    "output": "----------------------------------------------------------------------\nRan 64 tests in 7.242s\n\nOK"
+  }
+}
