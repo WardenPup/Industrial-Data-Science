@@ -1,9 +1,14 @@
 # Kapitel 12 – Self study, Session 3
 
-12.1 implementiert mit KI-Unterstützung (Codex), technisch validiert; TECHNICALLY_VALIDATED – AWAITING FINAL HUMAN APPROVAL.
-Notebook: gesture_clustering.ipynb. Expliziter Datenabruf aus dem Projektstamm:
-`uv run --locked python scripts/download_gestures.py`.
-Ausführung/Export: `uv run --locked python scripts/build_exercise_12_1.py`.
 Quelle: https://noxthot.github.io/ws26_industrial_datascience_manuscript/1_act1/8_self_study_session3.html
-Anforderungen: docs/EXERCISE_12_1_REQUIREMENTS.md; Review: reviews/exercise_12_1.md.
-12.2–12.4 nur im Prioritätsplan analysiert, nicht begonnen.
+
+12.1: STUDENT APPROVED, PR #9 regulär integriert. Notebook gesture_clustering.ipynb,
+Datenabruf scripts/download_gestures.py, Export scripts/build_exercise_12_1.py.
+Originaler Human Review bleibt unverändert erhalten.
+
+12.2: KI-gestützte Implementierung durch Codex, studentisch wissenschaftlich freigegeben;
+APPROVED – AWAITING FINAL MERGE AUTHORIZATION.
+Notebook uwave_classification.ipynb; Datenabruf scripts/download_uwave.py;
+Export scripts/build_exercise_12_2.py. Alle Skripte vom Projektstamm mit uv ausführen.
+Anforderungen: docs/EXERCISE_12_2_REQUIREMENTS.md; Review: reviews/exercise_12_2.md.
+12.3–12.4 nicht begonnen.

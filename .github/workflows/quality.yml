@@ -46,6 +46,7 @@ jobs:
           uv run --locked python scripts/download_ai4i.py
           uv run --locked python scripts/download_production.py
           uv run --locked python scripts/download_gestures.py
+          uv run --locked python scripts/download_uwave.py
           uv run --locked python -m unittest discover -s tests -v
       - name: Execute Exercise 10.1
         run: uv run --locked python sessions/ch10/aufgabe_10_1.py --output outputs/tooling-smoke/heart.png
@@ -83,3 +84,8 @@ jobs:
           uv run --locked python scripts/build_exercise_12_1.py
           uv run --locked python scripts/check_exercise_12_1_html.py
           uv run --locked python scripts/check_exercise_12_1_review.py
+      - name: Execute Exercise 12.2 and verify classification metrics and offline HTML
+        run: |
+          uv run --locked python scripts/build_exercise_12_2.py
+          uv run --locked python scripts/check_exercise_12_2_html.py
+          uv run --locked python scripts/check_exercise_12_2_review.py

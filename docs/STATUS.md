@@ -1,3 +1,37 @@
+## 26.10.2026 – Aufgabe 12.2: wissenschaftlich freigegeben, technisch nachgeprüft
+
+Status: APPROVED – AWAITING FINAL MERGE AUTHORIZATION.
+Originalreview separat in a958b4b erhalten; keine zusätzlichen Human-Tests behauptet.
+52 Tests erneut bestanden (6,813 s), Notebook frisch/sequenziell, beide Abbildungen
+visuell und HTML offline geprüft. TRAIN-only-Fits instrumentiert, alle 640 Vorhersagen,
+Metriken, Klassenberichte, Gewichte und zwölf Artefakthashes bestätigt. 291/271 korrekt;
+Accuracy 0,909375/0,846875. Wissenschaftliche Grenzen und separater KI-Hinweis zur
+ursprünglichen festen Länge dokumentiert. Ein Windows-Dateizugriffsfehler beim erneuten
+Export wurde offengelegt; vollständige Wiederholung erfolgreich und protokolliert.
+PR #10 erst nach erfolgreicher Head-CI bereit; kein Merge, keine 12.3 oder Einreichung.
+
+## 26.10.2026 – Aufgabe 12.2 technisch validiert
+
+Status: AWAITING HUMAN REVIEW. Originales multivariates UWave-Archiv vollständig:
+120 TRAIN-/320 TEST-Gesten, drei Kanäle, 315 Abtastpositionen. Gemeinsame TRAIN-only-
+Skalierung; vorab festgelegte DTW-3-NN/CNN-Hyperparameter, keine Testoptimierung.
+Accuracy 0,909375/0,846875, Macro-F1 0,908593/0,846505. 52 Tests erfolgreich,
+drei frische Notebook-Codezellen, zwei Abbildungen visuell und HTML offline geprüft.
+Vorhersagen exakt reproduziert, Metriken/gespeicherte CNN-Gewichte unabhängig geprüft.
+Frühere Fachdateien, Originalreviews und acht Abgabe-ZIPs unverändert. KI-Beiträge,
+Katalogabweichung, Umgebungsanpassung und Grenzen transparent dokumentiert.
+Keine studentische Freigabe von 12.2; 12.3 unbegonnen; keine Einreichung.
+
+## 26.10.2026 – Aufgabe 12.1 abgeschlossen; 12.2 begonnen
+
+12.1: STUDENT APPROVED, finale fachliche/technische Freigabe ausdrücklich erteilt.
+Freigabevermerk 96d58be nach 5e96c4c/06765d8; neue Head-CI 40394307160 und
+40394315059 erfolgreich, keine Reviewkommentare/offenen Threads, konfliktfrei.
+PR #9 auf Ready gesetzt und regulär gemergt: 7be3f3a15d9f110b6c1dcf58bac2c2e5b1180633.
+Lokales main synchronisiert. Originalreview und alle Entwicklungscommits erhalten.
+12.2 auf exercise/12.2 ausdrücklich zur Umsetzung bis zum Review autorisiert;
+Anforderungen gelesen, keine Freigabe für 12.2 und kein Beginn von 12.3.
+
 ## 26.10.2026 – Aufgabe 12.1: positives Feedback, Abschlussprüfung erfolgreich
 
 Status: TECHNICALLY_VALIDATED – AWAITING FINAL HUMAN APPROVAL.

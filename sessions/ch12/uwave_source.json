@@ -1,0 +1,46 @@
+{
+  "url": "https://www.timeseriesclassification.com/aeon-toolkit/UWaveGestureLibrary.zip",
+  "archive_sha256": "c6a771794bb14a815e204307b7d7e85d7a8291ddb16626cb9460aa5a75b6e042",
+  "files": {
+    "UWaveGestureLibrary_TRAIN.ts": "cb7cd8cb995775d30dacbfd5c2a9cb3a80dfbd186fd444294bae70c9162dead1",
+    "UWaveGestureLibrary_TEST.ts": "517dbc817c3f181c64727a84ee8bd0cedd3554346042898b9107010b690c331a"
+  },
+  "splits": {
+    "TRAIN": {
+      "shape": [
+        120,
+        3,
+        315
+      ],
+      "labels": [
+        "1.0",
+        "2.0",
+        "3.0",
+        "4.0",
+        "5.0",
+        "6.0",
+        "7.0",
+        "8.0"
+      ],
+      "missing": 0
+    },
+    "TEST": {
+      "shape": [
+        320,
+        3,
+        315
+      ],
+      "labels": [
+        "1.0",
+        "2.0",
+        "3.0",
+        "4.0",
+        "5.0",
+        "6.0",
+        "7.0",
+        "8.0"
+      ],
+      "missing": 0
+    }
+  }
+}
