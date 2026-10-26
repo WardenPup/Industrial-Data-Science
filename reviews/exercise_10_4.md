@@ -1000,3 +1000,20 @@ Aufgabe 10.4: **APPROVED, in main integriert, vollständig abgeschlossen**.
 Die Einreichung selbst ist **NICHT AUTORISIERT und NICHT ERFOLGT**. Kapitel 11
 wurde nicht begonnen. Historische Aussagen über ausstehende Freigaben beschreiben
 den damaligen Stand. Der finale GitHub-/Mergeerfolg impliziert keine Hochschulabgabe.
+
+
+### Zusätzlicher direkter main-Push: noch nicht autorisiert
+
+Die wissenschaftlichen Merges sind auf GitHub erfolgreich vorhanden: #3 als
+7bb6055, #4 als 740ed55. Der lokale Abschlusscommit `a7fcd21` dokumentiert danach
+Kapitelstatus, Paketaufbereitung und Nachweise; seine wissenschaftlichen Dateien
+sind gegenüber 740ed55 unverändert. Die automatische Freigabeprüfung hat den
+zusätzlichen direkten Push dieses neuen Dokumentationscommits auf main abgelehnt:
+Die ausdrückliche bisherige Push-Freigabe belege Arbeitsbranch/PR, nicht diesen
+zusätzlichen main-Push. Es wurde kein Umgehungsweg verwendet.
+
+Die Abschlussdokumentation einschließlich dieses Hinweises bleibt lokal committed;
+GitHub-main enthält den erfolgreichen wissenschaftlichen Merge 740ed55. Für die
+zusätzlichen lokalen Abschlusscommits ist eine ausdrückliche direkte main-Push-
+Bestätigung erforderlich. Alle vier geprüften ZIPs liegen unabhängig davon lokal
+bereit; keine Universitätseinreichung ist erfolgt oder autorisiert.
