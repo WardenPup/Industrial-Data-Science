@@ -1,6 +1,7 @@
-# Wissenschaftlicher Erstentwurf – Aufgabe 10.4
+# Überarbeitete wissenschaftliche Reviewfassung – Aufgabe 10.4
 
-Status: **AWAITING HUMAN REVIEW**. Keine studentische Endredaktion behauptet.
+Status: **AWAITING FINAL HUMAN APPROVAL**. Studentisches PDF-Review vom
+26.10.2026 erhalten; Korrekturen durch Codex. Finale Freigabe ausstehend.
 
 `paper.qmd` ist der kurze, direkt editierbare Bericht. Die ergänzende
 `notebook_presentation.ipynb` ist eine eigenständige Präsentationskopie der
@@ -50,3 +51,6 @@ HTML demonstriert einklappbaren Code; im Hauptteil ist Code verborgen.
 Mathematik wird für HTML als MathML und im PDF mit LuaLaTeX gesetzt.
 Die endgültige Abbildungsauswahl, fachliche Interpretation und sprachliche
 Überarbeitung müssen im studentischen Review bestätigt oder geändert werden.
+
+Notebookprüfung und Builder nacheinander ausführen: Beide erzeugen dieselben
+Notebook-Abbildungen. Ein paralleler Lauf verursachte einen Dateizugriffskonflikt.

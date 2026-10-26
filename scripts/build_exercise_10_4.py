@@ -41,8 +41,12 @@ def main():
             subprocess.run([quarto, 'render', str(source), '--to', fmt, '--execute'],
                            cwd=ROOT, env=env, check=True)
             OUTPUT.mkdir(parents=True, exist_ok=True)
-            shutil.copy2(PROJECT / '_rendered' / f'{source.stem}.{fmt}',
-                         OUTPUT / f'{source.stem}.{fmt}')
+            # Replace the finished file atomically: an open PDF viewer can hold
+            # a memory mapping that prevents CopyFile2 overwriting it in place.
+            target = OUTPUT / f'{source.stem}.{fmt}'
+            temporary = target.with_suffix(target.suffix + '.tmp')
+            shutil.copy2(PROJECT / '_rendered' / target.name, temporary)
+            temporary.replace(target)
     assert paper_hash == hashlib.sha256(sources[0].read_bytes()).hexdigest()
     # Quarto --execute intentionally persists real outputs in this presentation
     # copy. Its source cells, and the original 10.3 notebook, must stay intact.
@@ -71,7 +75,7 @@ def main():
         assert 'LuaTeX' in producer, producer
         text = ' '.join(' '.join(p.extract_text() for p in reader.pages).split())
         # PDF extraction may insert spaces between strongly kerned capital letters.
-        assert 'AWAITINGHUMANREVIEW' in ''.join(text.split())
+        assert 'AWAITINGFINALHUMANAPPROVAL' in ''.join(text.split())
         assert 'Drehmoment' in text and len(text) > 3000
         # QMD plots can be vector PDF graphics, so raster XObjects alone do not
         # count figures. Check generated LaTeX inclusions and captions as well.
@@ -82,6 +86,11 @@ def main():
             assert all(f'Abbildung {i}' in text for i in range(1, 4))
         else:
             assert image_total >= image_count, (stem, image_total)
+            for heading in ['6. Paarweise Beziehungen', '7. Pearson-', '8. Jointplot']:
+                matching = [p for p in reader.pages if heading in p.extract_text()]
+                assert len(matching) == 1 and len(list(matching[0].images)) >= 1, heading
+            assert 'Spearman-Rangkorrelation' in text
+            assert 'Pearson-Korrelation' in text
         for path in [html_path, pdf_path]:
             entry = {'file': path.name, 'bytes': path.stat().st_size,
                      'sha256': hashlib.sha256(path.read_bytes()).hexdigest()}

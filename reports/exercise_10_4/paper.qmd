@@ -1,6 +1,6 @@
 ---
 title: "Drehmoment, Drehzahl und Lufttemperatur im AI4I-Datensatz"
-subtitle: "Explorative Analyse · Aufgabe 10.4 · KI-Erstentwurf"
+subtitle: "Explorative Analyse · Aufgabe 10.4 · Überarbeitete Reviewfassung"
 abstract: |
   Diese Arbeit untersucht Verteilungen, statistisch auffällige Werte und paarweise
   Zusammenhänge von Drehmoment, Drehzahl und Lufttemperatur im synthetischen
@@ -15,8 +15,8 @@ abstract: |
   IQR-Markierungen kennzeichnen ungewöhnliche Randwerte, begründen aber weder
   Messfehler noch deren Entfernung. Die Ergebnisse beschreiben den vorliegenden
   synthetischen Datensatz. Sie erlauben keine kausalen Aussagen und keine
-  ungeprüfte Übertragung auf reale Maschinen. Der Text ist ein KI-gestützter
-  Erstentwurf und bedarf studentischer Prüfung und Überarbeitung.
+  ungeprüfte Übertragung auf reale Maschinen. Der KI-gestützte Text wurde nach studentischem Review überarbeitet;
+  die abschließende fachliche Freigabe steht aus.
 ---
 
 ```{python}
@@ -72,8 +72,8 @@ Dabei bezeichnet $Q_p$ das empirische Quantil zum Anteil $p$, hier mit linearer
 Interpolation berechnet. Werte unter $Q_{0{,}25}-1{,}5\,IQR$ oder über
 $Q_{0{,}75}+1{,}5\,IQR$ werden markiert [@nistbox]. Die Grenzen besitzen jeweils
 die Einheit der untersuchten Größe. Werte genau auf einer Grenze zählen nicht
-als auffällig. Eine numerische Toleranz von $10^{-10}$ verhindert zusätzliche
-Markierungen durch Gleitkomma-Rundung; sie verändert die fachliche Regel nicht.
+als auffällig. Eine kleine Rechentoleranz schützt exakte Grenzwerte vor
+Rundungsfehlern; technische Einzelheiten stehen im Begleitnotebook.
 Die Markierungen lösen keine Datenbereinigung aus.
 
 Für Beobachtungspaare $(x_i,y_i)$ wird der Pearson-Koeffizient berechnet:
@@ -150,7 +150,7 @@ einzelne Beobachtungen verdecken.
 
 ```{python}
 #| label: tbl-correlations
-#| tbl-cap: "Paarweise Korrelationen der drei Messgrößen; vier Nachkommastellen, n = 10.000."
+#| tbl-cap: "Pearson- und Spearman-Korrelationen der drei Messgrößen; vier Nachkommastellen, n = 10.000."
 #| output: asis
 display(Markdown(correlation_table(pearson, spearman)))
 ```
@@ -211,12 +211,11 @@ zusätzliche reale Daten und eine eigenständige Validierung erforderlich.
 
 # Transparenz und Reproduzierbarkeit
 
-**AWAITING HUMAN REVIEW.** Codex erstellte Code, Abbildungsauswahl und diesen
-redigierbaren Textentwurf. Eine studentische Autorschaft, Textüberarbeitung oder
-Freigabe dieses Berichts wird nicht behauptet. Abschließende Auswahl und
-Interpretation der Abbildungen sowie sprachliche und fachliche Überarbeitung
-liegen beim Studierenden. Die lokalen Prüfungen und offenen Reviewfragen sind
-im separaten Projektprotokoll dokumentiert.
+**AWAITING FINAL HUMAN APPROVAL.** Codex erstellte den Entwurf und setzte die
+Korrekturwünsche aus dem studentischen PDF-Review vom 26.10.2026 um. Das Review
+bewertet Methoden und Abbildungsauswahl positiv; die abschließende Freigabe
+der überarbeiteten Fassung steht aus. KI-Beiträge und Prüfungen sind im
+Projektprotokoll getrennt vom unveränderten studentischen Review dokumentiert.
 
 Berechnungen erfolgen mit den gesperrten Python-Abhängigkeiten des Projekts.
 Der Bericht lädt die Originaldaten über die geprüfte Ladefunktion aus 10.2 und
