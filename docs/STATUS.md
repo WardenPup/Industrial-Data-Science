@@ -1,3 +1,12 @@
+## 26.10.2026 – Aufgabe 12.1 technisch validiert
+
+Status: AWAITING HUMAN REVIEW. GesturePebbleZ1, unveränderte originale Splits;
+gemeinsames Resampling/Z-Normalisierung, euklidisches Zeitreihen-k-Means und KASBA.
+45 Tests erfolgreich, fünf frische Notebook-Codezellen, vier Grafiken visuell und
+HTML offline 900/1400 px geprüft. Test-ARI 0,489671/0,948216, keine Testlabeloptimierung.
+KI-Beiträge, Modellannahmen und Grenzen dokumentiert. Keine studentische Freigabe.
+12.2 nicht begonnen. Draft PR wird vorbereitet; keine Abgabe oder neuer Merge.
+
 ## 26.10.2026 – Kapitel 11 integriert und Abgabepakete verifiziert
 
 PR #8 regulär gemergt: d117c40d303a2b2d9c47c8bd2a15ff1d8a3d1f3c.

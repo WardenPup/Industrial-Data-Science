@@ -33,6 +33,10 @@ def closure(texts):
 
 
 def main():
+    # Refuse mixed snapshots after later exercises change the environment.
+    protected=["sessions/ch11","outputs/ch11","reviews","pyproject.toml","uv.lock",".python-version"]
+    if subprocess.check_output(["git","diff",SNAPSHOT,"--",*protected],cwd=ROOT):
+        raise RuntimeError("Packaging requires the approved snapshot; use a separate checkout of "+SNAPSHOT)
     DEST.mkdir(parents=True,exist_ok=True)
     records=[]
     for i,name in enumerate(NOTEBOOKS,1):
