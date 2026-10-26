@@ -149,3 +149,284 @@ Eigener Branch `exercise/10.4`, abhängig vom unverändert erhaltenen 10.3-Stand
 eine neue Pull Request oder Universitätseinreichung genehmigt. Lokale Commits
 tragen `AI-Assistance: Codex` und `Human-Review: Pending`.
 Keine Freigabe von 10.4, kein fingiertes Review, keine Historienumschreibung.
+
+
+# Human Review – Aufgabe 10.4
+
+**Datum:** 26.10.2026  
+**Aufgabe:** Wissenschaftlicher Bericht mit Quarto und LaTeX  
+**Geprüfte Dokumente:** `paper.pdf`, `notebook_presentation.pdf`  
+**KI-Unterstützung:** Codex  
+**Review-Status:** CHANGES REQUESTED – Fachlich positiv, kleinere Überarbeitungen erforderlich
+
+---
+
+## 1. Ziel und Umfang der Prüfung
+
+Ziel des Human Reviews ist die fachliche, wissenschaftliche und gestalterische Kontrolle der für Aufgabe 10.4 erstellten Dokumente.
+
+Dabei wurde besonders darauf geachtet, dass der wissenschaftliche Bericht nicht nur die technischen Anforderungen erfüllt, sondern die angewandten Methoden und Ergebnisse verständlich erklärt.
+
+Ein weiteres Ziel ist eine kompakte und nachvollziehbare Darstellung ohne unnötige Wiederholungen oder übermäßig komplexe Formulierungen.
+
+Die Prüfung umfasst die beiden bereitgestellten PDF-Dokumente. Eine eigenständige lokale Ausführung sämtlicher Berechnungen wurde im Rahmen dieses Reviews nicht durchgeführt.
+
+## 2. Wissenschaftlicher Aufbau des Papers
+
+Der Hauptbericht umfasst fünf Seiten und besitzt eine nachvollziehbare wissenschaftliche Gliederung:
+
+- Zusammenfassung und Fragestellung
+- Daten und Methoden
+- Ergebnisse
+- Diskussion und Grenzen
+- Fazit
+- Transparenz, Reproduzierbarkeit und Literatur
+
+Die Struktur ist für den Umfang der Aufgabe angemessen.
+
+Besonders positiv ist, dass eine konkrete Fragestellung formuliert wird. Dadurch ergibt sich ein erkennbarer Zusammenhang zwischen Datenauswahl, Methodik und Ergebnissen.
+
+Der Umfang ist sinnvoll begrenzt. Die Arbeit konzentriert sich auf drei ausgewählte Messgrößen und ihre statistischen Beziehungen, statt sämtliche verfügbaren Analysen unkommentiert zu übernehmen.
+
+**Bewertung:** Aufbau und Umfang überzeugen. Keine grundlegende Umstrukturierung erforderlich.
+
+## 3. Datengrundlage und Nachvollziehbarkeit
+
+Der verwendete AI4I-Datensatz wird einschließlich Herkunft und synthetischer Natur beschrieben.
+
+Im Paper werden 10.000 Beobachtungen und die vier Spalten UDI, Drehmoment, Drehzahl und Lufttemperatur angegeben.
+
+Die physikalischen Einheiten sind korrekt zugeordnet:
+
+- Drehmoment: Nm
+- Drehzahl: rpm
+- Lufttemperatur: K
+
+Die Behandlung von UDI als Zeilenkennung und nicht als Zeitvariable ist wissenschaftlich richtig.
+
+Positiv ist außerdem die Dokumentation einer SHA256-Integritätsprüfung und der Tatsache, dass keine Beobachtungen aufgrund statistischer Auffälligkeiten entfernt werden.
+
+Die Datengrundlage ist ausreichend dokumentiert. Die angegebenen Datenkennzahlen stimmen mit den zuvor bereitgestellten Ergebnissen aus den Aufgaben 10.2 und 10.3 überein.
+
+**Bewertung:** Fachlich nachvollziehbar und für eine reproduzierbare explorative Analyse geeignet.
+
+## 4. Methodik und mathematische Darstellung
+
+### 4.1 Deskriptive Statistik
+
+Die Kombination aus Histogrammen, Boxplots, Streudiagramm und Korrelationskoeffizienten ist sinnvoll gewählt.
+
+Jede Methode erfüllt einen erkennbaren Zweck:
+
+Histogramme beschreiben Verteilungen, Boxplots zeigen Lage und Streuung, das Streudiagramm veranschaulicht paarweise Beziehungen und Korrelationen fassen bestimmte statistische Eigenschaften numerisch zusammen.
+
+### 4.2 Interquartilsabstand
+
+Die Formel
+
+IQR = Q0,75 − Q0,25
+
+ist korrekt und verständlich eingeführt.
+
+Die verwendete 1,5-IQR-Regel wird nachvollziehbar erklärt. Die Unterscheidung zwischen statistisch auffälligen Werten und tatsächlich fehlerhaften Messungen ist besonders wichtig und wurde richtig umgesetzt.
+
+Auch die Behandlung von Grenzwerten und numerischen Rundungseffekten ist dokumentiert.
+
+### 4.3 Pearson- und Spearman-Korrelation
+
+Die mathematische Definition des Pearson-Korrelationskoeffizienten ist korrekt dargestellt.
+
+Die zusätzliche Verwendung der Spearman-Rangkorrelation ist sinnvoll, da zwischen Drehzahl und Drehmoment kein streng linearer Zusammenhang vorliegt.
+
+Positiv ist die Erklärung, dass ein Unterschied zwischen Pearson und Spearman allein keinen formalen Nachweis von Nichtlinearität darstellt.
+
+**Bewertung:** Die statistischen Methoden sind passend gewählt, korrekt erklärt und nicht unnötig kompliziert.
+
+## 5. Prüfung der Abbildungen im Paper
+
+### Abbildung 1 – Histogramme
+
+Die drei Histogramme sind vollständig, gut lesbar und mit den richtigen Einheiten versehen.
+
+Das Drehmoment zeigt eine annähernd symmetrische Verteilung mit Schwerpunkt um 40 Nm.
+
+Die Drehzahl besitzt eine deutlich rechtsschiefe Verteilung mit wenigen sehr hohen Beobachtungswerten.
+
+Die Lufttemperatur zeigt mehrere Häufigkeitsbereiche und keine einfache, eindeutig glockenförmige Struktur.
+
+Die Interpretation im Text stimmt qualitativ mit den Darstellungen überein.
+
+### Abbildung 2 – Boxplots
+
+Die Boxplots stellen Median, Quartile und mögliche Ausreißer übersichtlich dar.
+
+Die im Bericht genannten Ergebnisse sind:
+
+- Drehmoment: 64 markierte Werte außerhalb der IQR-Grenzen
+- Drehzahl: 418 markierte Werte
+- Lufttemperatur: keine markierten Werte
+
+Die dargestellten Unterschiede passen zu den Verteilungsformen.
+
+Die Argumentation, dass besonders eine rechtsschiefe Verteilung zahlreiche Werte oberhalb der IQR-Grenze erzeugen kann, ist nachvollziehbar.
+
+### Abbildung 3 – Drehmoment und Drehzahl
+
+Diese Abbildung liefert aus meiner Sicht die wichtigste Erkenntnis des Papers.
+
+Die Punktwolke zeigt einen ausgeprägten negativen, gekrümmten Zusammenhang zwischen Drehzahl und Drehmoment.
+
+Die zusätzliche Darstellung der Lufttemperatur über eine kontinuierliche Farbskala ist sinnvoll. Eine klare temperaturabhängige Trennung ist nicht erkennbar.
+
+Die Abbildung unterstützt die spätere Korrelationsanalyse.
+
+**Bewertung:** Die Auswahl von genau drei Abbildungen ist gelungen. Weitere Diagramme würden den Hauptbericht eher verlängern als wesentlich verbessern.
+
+## 6. Prüfung der statistischen Ergebnisse
+
+Die Korrelationswerte wurden anhand der angegebenen Tabellen und zuvor bereitgestellten Analyseergebnisse verglichen.
+
+| Variablenpaar | Pearson | Spearman |
+|---|---:|---:|
+| Drehmoment / Drehzahl | -0,8750 | -0,9165 |
+| Drehmoment / Lufttemperatur | -0,0138 | -0,0118 |
+| Drehzahl / Lufttemperatur | 0,0227 | 0,0137 |
+
+Die Zahlen sind konsistent mit den bisherigen Analyseergebnissen.
+
+Der starke negative Zusammenhang zwischen Drehmoment und Drehzahl wird richtig interpretiert.
+
+Bei der Lufttemperatur wird korrekt zwischen sehr geringer paarweiser Korrelation und tatsächlicher statistischer Unabhängigkeit unterschieden.
+
+Aus den Ergebnissen werden keine unzulässigen kausalen Schlüsse gezogen.
+
+**Bewertung:** Die Zahlen sind plausibel und die Interpretation ist wissenschaftlich angemessen.
+
+## 7. Diskussion und wissenschaftliche Grenzen
+
+Dieser Abschnitt ist besonders wichtig für die Qualität der Arbeit.
+
+Positiv sind folgende Punkte:
+
+1. Der synthetische Ursprung der Daten wird ausdrücklich berücksichtigt.
+2. Die beobachtete Drehmoment-Drehzahl-Beziehung wird nicht als neu entdecktes physikalisches Gesetz dargestellt.
+3. Korrelation wird nicht mit Kausalität gleichgesetzt.
+4. Statistisch auffällige Werte werden nicht automatisch als Maschinenfehler interpretiert.
+5. Die Übertragbarkeit auf reale industrielle Prozesse wird begrenzt.
+6. UDI wird nicht für zeitliche Aussagen verwendet.
+7. Die Untersuchung behauptet keine Vorhersage von Maschinenausfällen.
+
+Die Diskussion geht dadurch über eine bloße Beschreibung von Grafiken hinaus.
+
+**Bewertung:** Wissenschaftlich überzeugend und für die Lehrveranstaltung angemessen.
+
+## 8. Schreibstil und Verständlichkeit
+
+Der Hauptbericht ist überwiegend klar, präzise und sachlich formuliert.
+
+Die verwendeten Fachbegriffe sind passend. Es werden keine unnötig komplexen Modelle eingeführt und die zentralen Ergebnisse sind verständlich erklärt.
+
+Die Gliederung ist kompakt. Größere inhaltliche Wiederholungen sind nicht erkennbar.
+
+Einzelne Stellen wirken allerdings noch etwas technisch beziehungsweise wie eine automatisch erstellte Projektdokumentation.
+
+Insbesondere die Abschnitte zu numerischer Toleranz, technischen Ausführungsdetails und KI-Transparenz sollten sprachlich noch einmal auf Lesbarkeit geprüft werden.
+
+Diese Angaben sind wichtig, müssen aber nicht ausführlicher als notwendig im eigentlichen wissenschaftlichen Argument erscheinen.
+
+**Verbesserungswunsch:** Eine abschließende studentische Sprachredaktion vornehmen, ohne die fachlichen Inhalte zu verändern. Natürlichere Formulierungen bevorzugen und nicht weiter verlängern.
+
+## 9. Layout, LaTeX und PDF-Ausgabe
+
+### Hauptbericht
+
+Das fünfseitige PDF ist insgesamt sauber gesetzt.
+
+Positiv:
+- Einheitliche Typografie
+- Korrekte mathematische Darstellung
+- Nummerierte Abbildungen
+- Beschriftete Tabellen
+- Verständliche Kapitelstruktur
+- Einheitliche physikalische Einheiten
+- Literaturverzeichnis
+
+Die Formeln sind gut lesbar und sinnvoll in den Text eingebettet.
+
+Die Abbildungen sind ausreichend groß. Es sind keine wesentlichen Überlagerungen oder abgeschnittenen Grafiken erkennbar.
+
+### Notebook-Präsentation
+
+Das zweite PDF enthält sämtliche zehn Analysen und ist als technische Ergänzung sinnvoll.
+
+Allerdings ist das Layout nicht überall gleich gut.
+
+Insbesondere entstehen durch die Anordnung der größeren Grafiken teilweise umfangreiche freie Seitenbereiche. Auf Seite 4 und Seite 5 ist die Trennung zwischen Text und zugehörigem Pairplot deutlich sichtbar.
+
+Die Notebook-Präsentation ist daher inhaltlich vollständiger als gestalterisch optimiert.
+
+**Verbesserungswunsch:** Seitenumbrüche und Abbildungspositionen optimieren, damit Text und zugehörige Grafiken möglichst zusammenbleiben.
+
+Der Hauptbericht sollte dabei unverändert kompakt bleiben.
+
+## 10. Transparenz und KI-Unterstützung
+
+Die Beteiligung von Codex wird ausdrücklich dokumentiert.
+
+Der Bericht unterscheidet zwischen KI-gestützter Erstellung und noch ausstehender studentischer Prüfung.
+
+Das entspricht dem angestrebten transparenten Human-AI-Workflow.
+
+Für die finale Fassung ist jedoch eine Aktualisierung erforderlich:
+
+Die derzeitigen Hinweise auf einen nicht geprüften KI-Erstentwurf beziehungsweise `AWAITING HUMAN REVIEW` müssen nach tatsächlicher studentischer Überarbeitung und Freigabe angepasst werden.
+
+Dabei soll die KI-Unterstützung weiterhin offen angegeben bleiben.
+
+**Bewertung:** Gute Transparenz, abschließende Aktualisierung erforderlich.
+
+## 11. Konkrete Korrekturwünsche
+
+Vor der endgültigen Freigabe werden folgende Anpassungen empfohlen:
+
+**Korrektur 1 – Präsentationslayout**
+
+Seitenumbrüche und Grafikplatzierung in `notebook_presentation.pdf` verbessern, insbesondere im Bereich des Pairplots.
+
+**Korrektur 2 – Korrelationskennzeichnung**
+
+Die Tabellen der Korrelationsanalyse eindeutig als Pearson- beziehungsweise Spearman-Korrelation kennzeichnen. Die Koeffizienten dürfen nicht miteinander verwechselt werden.
+
+**Korrektur 3 – Abschließende Textredaktion**
+
+Einzelne technisch oder automatisch wirkende Formulierungen im Hauptbericht vereinfachen. Wiederholungen vermeiden und den Umfang von fünf Seiten möglichst beibehalten.
+
+**Korrektur 4 – Review-Status**
+
+Nach Umsetzung des menschlichen Feedbacks die Review-Hinweise in beiden Dokumenten entsprechend dem tatsächlich erreichten Freigabestatus aktualisieren.
+
+**Korrektur 5 – Abschließende Validierung**
+
+Nach Änderungen beide Dokumente erneut rendern, Tabellen und Abbildungen prüfen und sämtliche relevanten automatisierten Tests ausführen.
+
+## 12. Gesamtbewertung und Entscheidung
+
+Die fachliche Qualität des Hauptberichts ist gut. Die verwendeten Methoden sind passend, die Visualisierungen verständlich und die wichtigsten statistischen Aussagen korrekt eingeordnet.
+
+Besonders positiv ist die kritische Diskussion der Grenzen synthetischer Daten sowie der Verzicht auf unbegründete kausale Schlussfolgerungen.
+
+Der Bericht ist mit fünf Seiten angemessen kompakt und enthält ausreichend mathematische und wissenschaftliche Substanz.
+
+Die begleitende Notebook-Präsentation dokumentiert die vollständige EDA, benötigt jedoch kleinere Verbesserungen hinsichtlich Seitenlayout und Kennzeichnung.
+
+**Entscheidung: CHANGES REQUESTED**
+
+Die wissenschaftlichen Inhalte werden grundsätzlich positiv bewertet. Es sind keine grundlegenden methodischen Änderungen erforderlich.
+
+Nach Umsetzung der genannten Korrekturen und erneuter erfolgreicher technischer Validierung kann Aufgabe 10.4 zur abschließenden studentischen Freigabe vorgelegt werden.
+
+**PR #4 darf bis dahin nicht gemergt werden.**
+
+---
+
+**Review-Grundlage:** Manuelle Begutachtung der bereitgestellten PDF-Dokumente und Abgleich der ausgewiesenen Kennzahlen. Automatisierte Tests, lokale Reproduzierbarkeit und GitHub-Actions-Ergebnisse sind separat durch Codex zu bestätigen.
