@@ -1,0 +1,35 @@
+{
+  "quarto": "1.10.19",
+  "python": "3.12.15",
+  "engine": "lualatex",
+  "source_sha256": {
+    "paper.qmd": "5c2c48d3e7ffbb2ebbf42f78130e3288683cc6b1d790f2349634470c2c19762a",
+    "notebook_presentation.ipynb": "c1ca63f17851f9c95cd4c51c0ca88b9be506c678ad1b77a22e82017dcc20fa70"
+  },
+  "exports": [
+    {
+      "file": "paper.html",
+      "bytes": 1950177,
+      "sha256": "49b3069413e7acfd371d26b0eff204a5eb3a4d967d6430179f055d969d76a131"
+    },
+    {
+      "file": "paper.pdf",
+      "bytes": 189309,
+      "sha256": "80b4cf5c5bfcf7bf01e619c89445e8135d15181575db12fd07217b982ffba7fc",
+      "pages": 5,
+      "producer": "LuaTeX-1.24.0"
+    },
+    {
+      "file": "notebook_presentation.html",
+      "bytes": 3416182,
+      "sha256": "3376a47bed68b00dadd2e9cdfa418d2c052ecc05e5563c950fd6c19a84842f67"
+    },
+    {
+      "file": "notebook_presentation.pdf",
+      "bytes": 1410466,
+      "sha256": "b4625da20b454678a119fee9512e27de0697cec630ee6b2c3c4e4c78d04642d9",
+      "pages": 10,
+      "producer": "LuaTeX-1.24.0"
+    }
+  ]
+}

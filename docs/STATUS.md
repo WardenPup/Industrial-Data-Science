@@ -201,3 +201,105 @@ unchanged; no independent human test execution is inferred.
 Current status: APPROVED. Merge authorization: NOT GRANTED.
 The approval/status documentation commit is checked separately before final PR
 readiness. No implementation correction, merge, new PR or 10.4 work is performed.
+
+## Exercise 10.4 scientific first draft (2026-10-26)
+
+The explicit Scientific Writing Policy request starts 10.4 on its own branch
+`exercise/10.4`, based on approved 10.3 head `c9c58ab`. PR #3 remains unmerged;
+no merge authorization has been inferred. Earlier paragraphs are historical.
+
+Current status: **AWAITING HUMAN REVIEW**. The editable German QMD contains a
+127-word abstract, three selected figure groups, a correlation table, useful
+LaTeX mathematics, source citations, limitations and AI disclosure. The paper
+has five pages including references. A separate ten-page notebook companion
+retains all ten EDA groups without changing the original 10.3 notebook/review.
+
+Both sources render freshly through Quarto 1.10.19 to HTML and LuaLaTeX PDF.
+All four exports pass structural checks; all 15 PDF pages were visually inspected.
+Offline HTML at 1400/900 px fits its figures and tables. All 21 tests pass;
+12 companion code cells execute sequentially from a fresh kernel. The actual
+corrections, commands, package revisions and limits are in `reviews/exercise_10_4.md`.
+MiKTeX first-run initialization did not complete; supported Quarto TinyTeX
+v2026.10 was installed without system-PATH changes and completed the PDF builds.
+
+The student must still revise text, select final figures and confirm interpretations.
+No 10.4 approval, push, new PR, hosted CI, main merge or university submission is
+claimed. TeX package revisions are recorded but the TeX environment is not hermetic.
+
+
+## Aufgabe 10.4 – studentisches Review und Korrekturen (26.10.2026)
+
+Aktueller Status: **AWAITING FINAL HUMAN APPROVAL**. Das tatsächlich erhaltene
+studentische PDF-Review mit CHANGES REQUESTED ist unverändert in `4c7d4ef`
+gesichert. Codex bearbeitet die gezielten Korrekturen: Präsentationsumbrüche,
+explizite Pearson-/Spearman-Beschriftungen, kurze Sprachredaktion und wahrheitsgemäße
+Statushinweise. Keine Änderung der Berechnungen oder der wissenschaftlichen Grenzen.
+Die finale Freigabe steht aus; kein Merge und keine Arbeit an Kapitel 11.
+
+Die Remote-Prüfung widerspricht der Übergabeannahme: PR #4 existiert derzeit
+nicht, PR #3 ist weiterhin offen, main steht auf `40b31c6`. Vor diesem Auftrag
+war exercise/10.4 ausschließlich lokal. Ein neuer PR wird nicht angelegt.
+Die bestehenden Actions prüfen Python/Notebooks; Quarto/LaTeX wird lokal geprüft.
+Abschließende tatsächliche Prüfungen und Push-/CI-Stand stehen im Reviewprotokoll.
+
+
+### Git-/CI-Stand nach lokaler Validierung
+
+Lokale Korrekturen: `908688c`, zusätzliche Prüferkorrektur: `a54fa97`,
+Prüfnachweise/Exporte: `d6d5b85`; studentisches Review: `4c7d4ef`.
+Die automatische Freigabeprüfung hat den kombinierten Commit-/Push-Aufruf vor
+Ausführung abgelehnt: Das GitHub-Ziel sei nicht als vertrauenswürdig bestätigt
+und die ausdrückliche Freigabe für genau diesen Push/dieses Ziel nicht belegt.
+Der lokale Commit wurde danach separat ausgeführt. **Kein Push erfolgt.**
+Für den Upload von `exercise/10.4` nach
+`https://github.com/WardenPup/Industrial-Data-Science.git` ist deshalb eine
+zusätzliche ausdrückliche Nutzerbestätigung erforderlich. Kein neuer Hosted-
+CI-Lauf wird behauptet; PR #4 fehlt weiterhin. Finale fachliche Freigabe und
+Merge sind dadurch nicht erteilt. Aktueller Status: **AWAITING FINAL HUMAN APPROVAL**.
+
+
+## Aufgabe 10.4 – zweites Human Review und lokale Abschlussprüfung (26.10.2026)
+
+Zweite tatsächliche Reviewrunde fachlich positiv (`8bb9094`), beide studentischen
+Reviewtexte unverändert. Kein grundlegender Text-/Methodenänderungsbedarf.
+`fc9a0c3` hält die deskriptive Statistik auf Seite 2 und die gesamte Torque-
+Häufigkeitstabelle auf Seite 9 zusammen; 10 Notebookseiten, 5 Paperseiten.
+Alle zehn Analysen und Erläuterungen erhalten, Berechnungs-AST unverändert.
+22 Tests, drei frische Notebookausführungen, vier Quarto-Exporte, Offline-HTML-
+Prüfungen, SHA256 und Sichtprüfung aller 15 PDF-Seiten erfolgreich.
+
+Status vor GitHub-Integration: lokal technisch validiert; Hosted CI und finale
+Merge-Freigabe ausstehend. Der neue Auftrag bestätigt ausdrücklich den Push zum
+bestehenden Remote und einen Draft-PR gegen main. PR #3 bleibt offen; kein Merge,
+keine Arbeit an Kapitel 11 und keine Universitätseinreichung. Aktuelle Nachweise
+und Grenzen stehen im Reviewprotokoll; ältere Statusabschnitte sind historisch.
+
+
+## Aufgabe 10.4 – technisch validiert, Merge-Freigabe ausstehend (26.10.2026)
+
+**TECHNICALLY_VALIDATED.** Beide studentischen Reviewrunden bleiben wortgetreu
+getrennt erhalten; wissenschaftliche Beurteilung positiv. Die finalen kleinen
+Tabellenumbrüche sind lokal vollständig geprüft, Berechnungen unverändert.
+GitHub PR #4: https://github.com/WardenPup/Industrial-Data-Science/pull/4 .
+Der Head `a48975287429cae4405e8bdb8e55cbe9a60b7511` hat beide Hosted-Läufe tatsächlich bestanden:
+- pull_request: 40314359996 – SUCCESS – https://github.com/WardenPup/Industrial-Data-Science/actions/runs/40314359996
+- push: 40314355102 – SUCCESS – https://github.com/WardenPup/Industrial-Data-Science/actions/runs/40314355102
+
+GitHub meldet keine Mergekonflikte. Alle sechs manifestierten Quellen/Exporte
+auf dem Remote stimmen bytegenau mit der geprüften lokalen Fassung überein.
+Die Git-Zeilenendenkorrektur ist im Review offen dokumentiert. Der PR wird nach
+Prüfung des nachfolgenden Dokumentationscommits zur finalen Mergeprüfung bereit
+markiert. **Finale Projekt-/Merge-Autorisierung bleibt PENDING.** Kein Merge,
+keine Universitätseinreichung, keine Arbeit an Kapitel 11. Quarto-/TeX-Prüfung
+lokal, keine neue Quarto-CI behauptet. Frühere Statusabschnitte sind historisch.
+
+
+## Kapitel 10 – endgültige Freigabe und angeordnete Mergereihenfolge (26.10.2026)
+
+Der Studierende erteilt ausdrücklich die finale wissenschaftliche Freigabe für
+10.4 und autorisiert die regulären Merges von #3 und #4 in dieser Reihenfolge,
+vorbehaltlich erfolgreicher Prüfungen. 10.4: APPROVED; Freigabedatum 26.10.2026.
+PR #3 ist nach beiden erfolgreichen Head-Checks als `7bb6055` gemergt; main
+synchronisiert. PR #4 wird nach Freigabedokumentation und Statusaktualisierung
+der Exporte erneut geprüft. Bisherige Reviewtexte und sämtliche Commits bleiben
+erhalten. Keine Universitätseinreichung und keine Arbeit an Kapitel 11.

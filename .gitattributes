@@ -1,0 +1,5 @@
+# Exercise 10.4 manifests hash exact rendered/source bytes. Preserve those bytes
+# across Git checkout/add instead of applying platform newline conversion.
+/outputs/ch10/exercise_10_4/*.html -text
+/reports/exercise_10_4/paper.qmd -text
+/reports/exercise_10_4/notebook_presentation.ipynb -text

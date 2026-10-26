@@ -1,0 +1,241 @@
+---
+title: "Drehmoment, Drehzahl und Lufttemperatur im AI4I-Datensatz"
+subtitle: "Explorative Analyse · Aufgabe 10.4 · Freigegebene Fassung"
+abstract: |
+  Diese Arbeit untersucht Verteilungen, statistisch auffällige Werte und paarweise
+  Zusammenhänge von Drehmoment, Drehzahl und Lufttemperatur im synthetischen
+  AI4I-Datensatz. Grundlage sind 10.000 vollständige Beobachtungen; die
+  Zeilenkennung UDI wird nicht als Zeitvariable verwendet. Histogramme und
+  Boxplots beschreiben die Verteilungen, ein Streudiagramm zeigt die gemeinsame
+  Struktur von Drehmoment und Drehzahl. Pearson- und Spearman-Korrelationen
+  ergänzen die visuelle Auswertung. Das Drehmoment ist annähernd symmetrisch,
+  während die Drehzahl deutlich rechtsschief verteilt ist. Zwischen beiden
+  Größen besteht ein starker negativer, gekrümmter Zusammenhang. Die
+  Lufttemperatur weist dagegen nur geringe paarweise Korrelationen auf.
+  IQR-Markierungen kennzeichnen ungewöhnliche Randwerte, begründen aber weder
+  Messfehler noch deren Entfernung. Die Ergebnisse beschreiben den vorliegenden
+  synthetischen Datensatz. Sie erlauben keine kausalen Aussagen und keine
+  ungeprüfte Übertragung auf reale Maschinen. Der KI-gestützte Text wurde nach studentischem Review überarbeitet
+  und am 26.10.2026 fachlich freigegeben.
+---
+
+```{python}
+#| include: false
+from pathlib import Path
+import sys
+ROOT = next(p for p in [Path.cwd(), *Path.cwd().parents] if (p / 'pyproject.toml').exists())
+sys.path.insert(0, str(ROOT))
+from IPython.display import Markdown, display
+from sessions.ch10.report_10_4 import report_data, distributions, boxes, relationship, correlation_table
+data, statistics, pearson, spearman, iqr = report_data()
+```
+
+# Fragestellung
+
+Wie unterscheiden sich die Verteilungen von Drehmoment, Drehzahl und
+Lufttemperatur, und welche paarweisen Zusammenhänge sind in den Daten sichtbar?
+Diese Frage wird deskriptiv untersucht. Ziel ist eine begründete Auswahl von
+Darstellungen und Kennzahlen, keine Vorhersage von Maschinenausfällen. Drei
+Abbildungen verbinden Verteilungsform, Randwerte und gemeinsame Struktur. Eine
+Tabelle beziffert die Korrelationen, ohne denselben Befund zusätzlich als
+Heatmap zu wiederholen.
+
+# Daten und Methoden
+
+Verwendet wird der öffentlich verfügbare AI4I 2020 Predictive Maintenance Dataset
+aus dem UCI-Repositorium [@ai4i]. Er enthält synthetisch erzeugte Daten und steht
+unter CC BY 4.0. Aus 14 vorhandenen Spalten werden UDI, Drehmoment in Nm,
+Drehzahl in rpm und Lufttemperatur in K geladen. Alle 10.000 Zeilen bleiben
+erhalten; in diesen vier Spalten fehlen keine Werte. Die Dateiintegrität wird
+vor dem Laden mit einer festgelegten SHA256-Prüfsumme kontrolliert. UDI ist eine
+Zeilenkennung, kein Zeitstempel. Die Auswertung enthält daher keine zeitlichen
+Trendaussagen.
+
+Histogramme mit jeweils 30 gleich breiten Klassen zeigen die Verteilungsform.
+Die Klassenbildung ist eine Darstellungsentscheidung und kein statistischer
+Nachweis einer bestimmten Verteilungsfamilie. Boxplots ergänzen Median, Quartile
+und Randwerte.
+
+```{=latex}
+\begin{samepage}
+```
+
+Der Interquartilsabstand ist
+
+$$IQR = Q_{0{,}75}-Q_{0{,}25}.$$
+
+```{=latex}
+\end{samepage}
+```
+
+Dabei bezeichnet $Q_p$ das empirische Quantil zum Anteil $p$, hier mit linearer
+Interpolation berechnet. Werte unter $Q_{0{,}25}-1{,}5\,IQR$ oder über
+$Q_{0{,}75}+1{,}5\,IQR$ werden markiert [@nistbox]. Die Grenzen besitzen jeweils
+die Einheit der untersuchten Größe. Werte genau auf einer Grenze zählen nicht
+als auffällig. Eine kleine Rechentoleranz schützt exakte Grenzwerte vor
+Rundungsfehlern; technische Einzelheiten stehen im Begleitnotebook.
+Die Markierungen lösen keine Datenbereinigung aus.
+
+Für Beobachtungspaare $(x_i,y_i)$ wird der Pearson-Koeffizient berechnet:
+
+$$r_{xy}=\frac{\sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y})}
+{\sqrt{\sum_{i=1}^{n}(x_i-\bar{x})^2\sum_{i=1}^{n}(y_i-\bar{y})^2}}.$$
+
+Hier ist $n=10\,000$; $\bar{x}$ und $\bar{y}$ sind die jeweiligen arithmetischen
+Mittelwerte. Für Drehmoment und Drehzahl haben $x_i$ und $y_i$ die Einheiten Nm
+und rpm; $r_{xy}$ ist einheitenlos. Pearson misst lineare Zusammenhänge
+[@pearson]. Ergänzend wird Spearmans Rangkorrelation $\rho_s$ berechnet, also
+die Pearson-Korrelation der Ränge mit mittleren Rängen bei Bindungen. Sie
+erfasst monotone Zusammenhänge auch dann, wenn diese gekrümmt sind [@spearman].
+Beide Maße werden als deskriptive Kennzahlen verwendet; Signifikanztests oder
+Konfidenzintervalle werden nicht als Nachweis einer realen Grundgesamtheit
+interpretiert.
+
+# Ergebnisse
+
+```{python}
+#| label: fig-distributions
+#| out-width: "100%"
+#| fig-cap: "Verteilungen der drei Messgrößen (je 10.000 Werte, 30 Klassen). Die Achsen sind je Teilbild eigenständig skaliert; Balkenhöhen zeigen absolute Häufigkeiten."
+#| fig-width: 7
+#| fig-height: 2.7
+distributions(data)
+```
+
+@fig-distributions zeigt für das Drehmoment eine annähernd symmetrische,
+glockenförmige Verteilung. Der Mittelwert beträgt 39,987 Nm, der beobachtete
+Bereich reicht von 3,8 bis 76,6 Nm. Das Erscheinungsbild allein beweist keine
+Normalverteilung. Die Drehzahl besitzt einen deutlich längeren rechten Rand;
+hohe Drehzahlen kommen seltener vor. Die Lufttemperatur zeigt eine unregelmäßige
+Häufigkeitsstruktur. Eine geringe Schiefe würde hier nicht genügen, um eine
+Normalverteilung anzunehmen, da Schiefe weder Mehrgipfligkeit noch lokale
+Häufungen vollständig beschreibt.
+
+```{python}
+#| label: fig-boxes
+#| out-width: "100%"
+#| fig-cap: "Boxplots mit Median, mittleren 50 Prozent und 1,5-IQR-Regel. Einzelpunkte außerhalb der Whisker bleiben Bestandteil der Analyse; überlagerte Punkte sind nicht einzeln abzählbar."
+#| fig-width: 7
+#| fig-height: 2.5
+boxes(data)
+```
+
+Die ergänzenden Boxplots in @fig-boxes verdichten die Verteilungen auf Lage und
+Streuung. Beim Drehmoment liegen die Quartile bei 33,2 und 46,8 Nm; daraus
+folgen ein IQR von 13,6 Nm und Grenzen von 12,8 und 67,2 Nm. Genau 64 Werte
+liegen außerhalb dieser Grenzen. Für die Drehzahl ergeben sich Quartile von
+1.423 und 1.612 rpm, ein IQR von 189 rpm und Grenzen von 1.139,5 und
+1.895,5 rpm. Hier werden 418 Werte markiert, sämtlich oberhalb der oberen
+Grenze. Die Lufttemperatur hat einen IQR von 3,2 K und keine Markierungen.
+Die unterschiedlichen Anzahlen spiegeln die verschiedenen Verteilungsformen
+wider. Insbesondere kann eine rechtsschiefe Verteilung viele hohe Werte
+außerhalb einer symmetrisch definierten IQR-Grenze erzeugen.
+
+```{python}
+#| label: fig-relationship
+#| out-width: "100%"
+#| fig-cap: "Drehmoment und Drehzahl für sämtliche 10.000 Beobachtungen. Transparenz vermindert Überdeckung, die Farbe kodiert die Lufttemperatur in K; es erfolgt keine Stichprobenauswahl."
+#| fig-width: 6.4
+#| fig-height: 3.4
+relationship(data)
+```
+
+@fig-relationship zeigt einen ausgeprägten negativen Zusammenhang: Größere
+Drehzahlen gehen im Datensatz überwiegend mit geringerem Drehmoment einher.
+Die Punktwolke verläuft gekrümmt und hat eine erkennbare Streuung. Eine einzelne
+Gerade würde diese Form nur unvollständig beschreiben. Die Temperaturfarben
+überlagern sich weitgehend; eine klare Trennung nach Lufttemperatur ist in
+dieser Projektion nicht erkennbar. Dichtebereiche können trotz Transparenz
+einzelne Beobachtungen verdecken.
+
+```{python}
+#| label: tbl-correlations
+#| tbl-cap: "Pearson- und Spearman-Korrelationen der drei Messgrößen; vier Nachkommastellen, n = 10.000."
+#| output: asis
+display(Markdown(correlation_table(pearson, spearman)))
+```
+
+Die Kennzahlen in @tbl-correlations stützen den visuellen Befund. Für
+Drehmoment und Drehzahl ist Pearson mit $r=-0{,}8750$ stark negativ.
+Spearman fällt mit $\rho_s=-0{,}9165$ im Betrag noch größer aus. Dies passt zu
+einem überwiegend monotonen, aber nicht streng linearen Zusammenhang. Die
+Differenz der beiden Kennzahlen allein ist allerdings kein Test auf
+Nichtlinearität; die Interpretation beruht auch auf der Punktwolke.
+Die Pearson-Korrelationen mit der Lufttemperatur sind mit $-0{,}0138$ für
+Drehmoment und $0{,}0227$ für Drehzahl gering. Auch die Rangkorrelationen
+liegen nahe null. Daraus folgt keine statistische Unabhängigkeit: Andere
+nichtmonotone, bedingte oder mehrdimensionale Beziehungen bleiben möglich.
+
+# Diskussion und Grenzen
+
+Die Kombination der Darstellungen ist informativer als eine isolierte
+Korrelationszahl. Histogramme zeigen Formunterschiede, Boxplots machen die
+IQR-Regel nachvollziehbar, und das Streudiagramm zeigt die Krümmung hinter dem
+starken negativen Koeffizienten. Deshalb werden weder weitere Varianten
+derselben Verteilungsdarstellung noch eine zusätzliche Korrelationsheatmap in
+den kurzen Bericht aufgenommen. Die vollständige EDA bleibt im begleitenden
+Notebook erhalten.
+
+Der synthetische Ursprung ist die wesentliche Einschränkung. Das UCI-Repositorium
+beschreibt ausdrücklich die Erzeugungsregeln der Variablen, unter anderem eine
+Kopplung der Drehzahl an eine vorgegebene Leistung [@ai4i]. Die beobachtete
+Struktur darf daher nicht als unabhängig entdecktes Naturgesetz oder als
+Bestätigung eines realen Maschinenmechanismus dargestellt werden. Diese
+Quelleninformation erklärt die Konstruktion des Datensatzes; die vorliegende
+Analyse selbst identifiziert keine Ursache. Für reale Anlagen wären Herkunft,
+Messverfahren, Betriebszustände und mögliche Störgrößen gesondert zu prüfen.
+
+Ebenso wenig sind die IQR-Markierungen diagnostizierte Fehler oder Ausfälle.
+Die hier betrachteten vier Spalten enthalten keine Auswertung der vorhandenen
+Ausfallkennzeichen. Ein Zusammenhang zwischen Randwerten und tatsächlichen
+Ausfällen wird daher nicht untersucht. Das Beibehalten aller Beobachtungen
+verhindert eine nachträgliche Verengung der Verteilungen durch unbegründetes
+Entfernen gerade jener Werte, die beschrieben werden sollen.
+
+Weitere Grenzen liegen in der Klassenwahl der Histogramme und der Überdeckung
+im Streudiagramm. Drei ausgewählte Messgrößen bilden außerdem nicht sämtliche
+Variablen des Datensatzes ab. Es werden weder zeitliche Dynamiken noch
+Vorhersagegüte oder Übertragbarkeit geprüft. Die große Zeilenzahl ersetzt keine
+repräsentative Stichprobe realer Maschinen und garantiert keine unabhängigen
+Beobachtungen. Die Aussagen bleiben deshalb auf die beschriebenen Daten und
+Methoden begrenzt.
+
+# Fazit
+
+Die EDA zeigt eine rechtsschiefe Drehzahlverteilung und einen starken negativen,
+gekrümmten Zusammenhang zwischen Drehzahl und Drehmoment. Die Lufttemperatur
+besitzt nur geringe paarweise lineare und monotone Korrelationen mit beiden
+Größen. IQR-Markierungen beschreiben Randwerte, ohne ihre Ursache zu bestimmen.
+Für eine belastbare Anwendung außerhalb dieses synthetischen Datensatzes wären
+zusätzliche reale Daten und eine eigenständige Validierung erforderlich.
+
+# Transparenz und Reproduzierbarkeit
+
+**APPROVED (26.10.2026).** Codex erstellte den Entwurf und setzte die
+Korrekturwünsche aus zwei studentischen PDF-Reviews um. Der Studierende hat
+die wissenschaftlichen Inhalte am 26.10.2026 ausdrücklich freigegeben.
+KI-Beiträge und technische Prüfungen sind im Projektprotokoll getrennt
+von den unveränderten studentischen Reviews dokumentiert.
+
+Berechnungen erfolgen mit den gesperrten Python-Abhängigkeiten des Projekts.
+Der Bericht lädt die Originaldaten über die geprüfte Ladefunktion aus 10.2 und
+verwendet die IQR-Methode aus 10.3. Quarto führt die QMD aus und erzeugt HTML
+sowie PDF über LuaLaTeX. Das begleitende Notebook macht den vollständigen
+Analyseweg zugänglich. Ein Beispiel für einklappbaren Code steht ausschließlich
+in der HTML-Fassung; im PDF bleibt der Code verborgen.
+
+::: {.content-visible when-format="html"}
+```{python}
+#| echo: true
+#| code-fold: true
+#| code-summary: Datenprüfung und Mittelwert nachvollziehen
+assert data.shape == (10000, 4)
+assert not data.isna().any().any()
+print(f"Mittleres Drehmoment: {data['Torque [Nm]'].mean():.5f} Nm")
+```
+:::
+
+# Literatur
+
+::: {#refs}
+:::

@@ -135,9 +135,25 @@ Configure the editor template with `git config --local commit.template .gitmessa
 
 GitHub Actions runs Python and QA tests, the 10.1 script, prospective commit-message
 checks, tracked notebook validation/execution and a synthetic HTML/PDF export check.
-Both tracked notebooks are executed in fresh kernels; required exports are also checked.
+All tracked notebooks are executed in fresh kernels; required exports are also checked.
 Green checks never imply student approval. The workflow neither approves nor merges.
 The original solution already exists on main; its published history is preserved.
+
+## Wissenschaftlicher Quarto-Bericht (10.4)
+
+Der editierbare deutsche Erstentwurf liegt unter
+[`reports/exercise_10_4/paper.qmd`](reports/exercise_10_4/paper.qmd).
+Eine separate Präsentationskopie erhält die vollständige EDA aus 10.3.
+[Render-Anleitung](reports/exercise_10_4/README.md),
+[Anforderungen](docs/EXERCISE_10_4_REQUIREMENTS.md) und
+[offene Reviewfragen](reviews/exercise_10_4.md) dokumentieren die Trennung von
+KI-Erstentwurf, tatsächlichen technischen Prüfungen und studentischer Redaktion.
+Status: **APPROVED** nach zwei studentischen PDF-Reviews,
+KI-gestützten Korrekturen und erfolgreicher technischer Prüfung.
+Finale wissenschaftliche Freigabe und bedingte Merge-Erlaubnis: 26.10.2026. Die Exporte liegen unter
+`outputs/ch10/exercise_10_4/`; PDF wird über Quarto und LuaLaTeX erzeugt.
+Die bestehenden Actions prüfen Python und Notebooks. Die zusätzliche Quarto-/TeX-
+Exportprüfung erfolgt lokal und ist nicht Bestandteil der bisherigen CI.
 
 ## Quellen
 
