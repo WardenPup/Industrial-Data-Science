@@ -1,3 +1,13 @@
+## 26.10.2026 – 12.4: plattformspezifische CNN-Grenze offengelegt
+
+Erster PR-CI-Lauf 40411236019 am 3f2eb74 erfolgreich, jedoch CNN unter Linux
+RMSE/MAE 3,625036/2,613754 statt Windows 3,614675/2,608054 kWh. Beide Plattformen
+bestehen Wiederholungsprüfung innerhalb 1e-10; keine plattformübergreifende Identität
+behauptet. Statischen Windows-Zahlenabsatz im Notebook entfernt; berechnete Tabelle/
+Ergebnistext bleiben maßgeblich. Keine Modell-/Parameteranpassung. Erneuter frischer
+Windows-Build/Offline-Check erfolgreich; aktualisierte Head-CI folgt als separater Fix.
+Status weiterhin AWAITING HUMAN REVIEW; wissenschaftliche Freigabe ausstehend.
+
 ## 26.10.2026 – Aufgabe 12.4 technisch validiert
 
 Status: AWAITING HUMAN REVIEW. Ausschließlich die drei offiziellen Regressoren:

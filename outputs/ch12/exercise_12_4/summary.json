@@ -88,14 +88,14 @@
   "train_target_mean": 14.165578947368422,
   "train_target_scale": 4.289958340072405,
   "fit_seconds": {
-    "DTW 3-NN": 0.027182099991478026,
-    "Time Series Forest": 7.258757299990975,
-    "CNN": 4.037345999997342
+    "DTW 3-NN": 0.037440899992361665,
+    "Time Series Forest": 6.306584499994642,
+    "CNN": 3.568248000010499
   },
   "predict_seconds": {
-    "DTW 3-NN": 1.030393599998206,
-    "Time Series Forest": 0.8431469999923138,
-    "CNN": 0.0030488000047625974
+    "DTW 3-NN": 0.9156791999994311,
+    "Time Series Forest": 0.5858277000079397,
+    "CNN": 0.004610200005117804
   },
   "negative_predictions": {
     "DTW 3-NN": 0,

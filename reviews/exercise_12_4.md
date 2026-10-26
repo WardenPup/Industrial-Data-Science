@@ -85,3 +85,28 @@ und unbekannte zeitliche Split-Zuordnung begrenzen die Übertragbarkeit; keine K
 
 Studentisches Feedback und Freigabe stehen aus. Status AWAITING HUMAN REVIEW.
 Keine weitere Aufgabe beginnen, keine automatische Freigabe/kein Merge/kein Upload.
+
+## KI-Nachtrag – tatsächliche plattformübergreifende CI-Beobachtung
+
+Der erste PR-CI-Lauf 40411236019 am Head 3f2eb74 bestand vollständig. Im tatsächlichen
+Linux-Protokoll: DTW RMSE/MAE 3,509225/2,711349, Forest 2,109183/1,685254,
+CNN 3,625036/2,613754 kWh. Lokal Windows: CNN 3,614675/2,608054 kWh.
+Die jeweils zweite vollständige Ausführung auf derselben Plattform bestand die
+Vorhersage-/Verlustvergleichstoleranz 1e-10. Plattformübergreifende numerische
+Identität ist damit nicht belegt; identischer Seed allein garantiert sie nicht.
+Die Ursache der konkreten Differenz wurde nicht isoliert nachgewiesen. Keine
+Parameter oder Modellvorhersagen wurden angepasst, um die Plattformwerte anzugleichen.
+
+Ein fest eingetragener Windows-Zahlenabsatz im Notebook wurde entfernt, damit
+Linux-Exporte keine veralteten Vergleichszahlen im Fließtext enthalten. Dynamische
+Metriktabelle und Ergebnistext zeigen stets den tatsächlich berechneten Lauf.
+Windows-Notebook/HTML wurden nach dieser Präzisierung erneut frisch geprüft.
+Dies ist eine dokumentierte Reproduzierbarkeitsgrenze, keine Seed-/Validierungsstudie.
+CI warnte zusätzlich über nicht beschreibbares .local (IPython nutzt temporären
+Ordner) und unverschlüsselten Jupyter-TCP-Transport; keine numerischen Testfehler.
+Der Push-Lauf dieses alten Heads wartete bei der Browserinstallation; sein Erfolg
+wird hier nicht behauptet. Neue aktuelle Head-CI wird im PR separat nachgeprüft.
+
+Zusätzliche Human-Reviewfrage: Ist die auf beiden Plattformen qualitativ gleiche
+Rangfolge mit offengelegter CNN-Zahlendifferenz für diesen begrenzten Vergleich
+angemessen eingeordnet? Keine allgemeine oder bitgenaue Reproduktion behauptet.

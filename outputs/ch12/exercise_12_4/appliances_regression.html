@@ -7503,8 +7503,8 @@ Keine separate Validierung, kein Early Stopping oder Tuning nach TEST-Ergebnisse
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>TRAIN/TEST: (95, 24, 144) (42, 24, 144)
-Fit-Zeiten: {'DTW 3-NN': 0.027182099991478026, 'Time Series Forest': 7.258757299990975, 'CNN': 4.037345999997342}
-Predict-Zeiten: {'DTW 3-NN': 1.030393599998206, 'Time Series Forest': 0.8431469999923138, 'CNN': 0.0030488000047625974}
+Fit-Zeiten: {'DTW 3-NN': 0.037440899992361665, 'Time Series Forest': 6.306584499994642, 'CNN': 3.568248000010499}
+Predict-Zeiten: {'DTW 3-NN': 0.9156791999994311, 'Time Series Forest': 0.5858277000079397, 'CNN': 0.004610200005117804}
 </pre>
 </div>
 </div>
@@ -7628,11 +7628,12 @@ perfekte Vorhersagen. Gleiche Skalen erlauben einen direkten grafischen Vergleic
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Einordnung-und-Grenzen">Einordnung und Grenzen<a class="anchor-link" href="#Einordnung-und-Grenzen">¶</a></h2><p>In diesem Lauf erzielt der Forest RMSE 2,1092 kWh und MAE 1,6853 kWh, jeweils
-weniger als die beiden anderen Modelle. Beim RMSE folgt DTW-3-NN (3,5092) vor
-CNN (3,6147 kWh); beim MAE liegt CNN (2,6081) vor kNN (2,7113 kWh).
-Die Reihenfolge hängt somit auch vom Fehlermaß ab. Große Abweichungen gehen im
-RMSE stärker ein. Das ist eine Beobachtung dieses Splits, kein Überlegenheitsnachweis.</p>
+<h2 id="Einordnung-und-Grenzen">Einordnung und Grenzen<a class="anchor-link" href="#Einordnung-und-Grenzen">¶</a></h2><p>Die Reihenfolge kann vom Fehlermaß abhängen: RMSE gewichtet große Abweichungen
+stärker als MAE. Die Tabelle und der berechnete Ergebnistext geben die Werte des
+jeweiligen Laufs wieder. Ein Ergebnis auf diesem Split ist kein allgemeiner
+Überlegenheitsnachweis. Deterministische Wiederholungen wurden innerhalb derselben
+Plattform geprüft; zwischen Windows und Linux wurden leicht abweichende CNN-Werte
+beobachtet. Ein fester Seed garantiert keine plattformübergreifende Bitgleichheit.</p>
 <p>Die Fehler beschreiben Energie-Schätzungen aus vollständigen Sensorfenstern.
 Das Experiment belegt keine Vorhersage zukünftiger Zeiträume, keine Kausalität und
 keine Übertragbarkeit auf andere Häuser. Modelle können Eingabeähnlichkeit und lokale
