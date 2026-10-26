@@ -243,3 +243,11 @@ Medianreihe saisonbereinigt linear imputieren und Saison zurückaddieren.
 Vier Grafiken, HTML und Ergebnistabellen: `outputs/ch11/exercise_11_3/`.
 statsmodels ist im bestehenden uv-Lockfile ergänzt; keine globalen Python-Pakete.
 Keine Genauigkeitsbehauptung, keine 11.4 und kein Merge vor studentischem Review.
+
+### Aufgabe 11.4
+
+Originalproduktion: residualbasierte Ausreißerkandidaten mit robuster STL und
+Drei-Sigma-Regel. Notebook: `sessions/ch11/production_outliers.ipynb`;
+HTML: `outputs/ch11/exercise_11_4/production_outliers.html`.
+Ausführen: `scripts/uv.cmd run --offline --locked python scripts/build_exercise_11_4.py`.
+KI-Unterstützung: Codex; Status APPROVED – AWAITING FINAL MERGE AUTHORIZATION.

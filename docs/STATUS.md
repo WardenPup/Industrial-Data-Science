@@ -1,3 +1,26 @@
+## 26.10.2026 – Aufgabe 11.4 fachlich freigegeben und erneut verifiziert
+
+Status: APPROVED – AWAITING FINAL MERGE AUTHORIZATION.
+Studentischer Review unverändert separat committed; 40 Tests erneut erfolgreich,
+Notebook frisch ausgeführt, beide Grafiken visuell und HTML offline 900/1400 px geprüft.
+Alle 26 Kandidaten mit CSVs und Plot-Markern abgeglichen; keine Reviewdiskrepanz.
+KI-Beiträge und Werkzeugkorrekturen transparent im Review. Kein Merge/Upload.
+
+## 26.10.2026 – Aufgabe 11.4 technisch validiert
+
+Status: AWAITING HUMAN REVIEW. Originalspalte pieces, robuste STL und Drei-Sigma-
+Residuenregel: 26 Kandidaten von 1.044 Wochen, alle negativ. 40 Tests erfolgreich;
+frischer Notebook-Kernel, beide Grafiken visuell und HTML offline geprüft.
+Grenzen/Annahmen und KI-Beiträge dokumentiert; keine studentische Freigabe.
+
+## 26.10.2026 – Aufgabe 11.3 integriert; 11.4 begonnen
+
+PR #7 nach ausdrücklicher Merge-Freigabe und erfolgreichen Head-Checks regulär
+als a294bc572415c585d9dc699cb17eb4de994a8111 integriert. Review 1a903cb und
+Verifikation d203400 bleiben erhalten. Lokales main synchronisiert; wissenschaftliche
+Dateien gegenüber dem freigegebenen PR-Head unverändert. Aufgabe 11.4 wird auf
+exercise/11.4 bearbeitet; keine Freigabe oder Abgabe für 11.4 erfolgt.
+
 # Arbeitsstand – 26.10.2026
 
 ## Neuester Stand: 11.2 integriert; 11.3 fachlich freigegeben

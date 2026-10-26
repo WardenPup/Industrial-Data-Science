@@ -1,0 +1,27 @@
+{
+  "ai_assistance": "Codex",
+  "human_tests_claimed": false,
+  "values": {
+    "observations": 1044,
+    "missing": 0,
+    "outlier_candidates": 26,
+    "fraction_percent": 2.4904214559386975,
+    "negative_candidates": 26,
+    "positive_candidates": 0,
+    "residual_mean": -4.54095778298129,
+    "residual_std_ddof1": 26.82047937365444,
+    "lower": -85.00239590394462,
+    "upper": 75.92048033798203,
+    "reconstruction_max_abs": 9.947598300641403e-14
+  },
+  "actual_stl_config": {
+    "period": 52,
+    "seasonal": 13,
+    "trend": 101,
+    "low_pass": 53,
+    "robust": true
+  },
+  "candidate_csv_and_both_plot_offsets_match": true,
+  "manifest_files_checked": 7,
+  "reference_note": "Direct STL reference uses same library; threshold arithmetic independently recomputed with math.fsum."
+}
