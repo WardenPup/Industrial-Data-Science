@@ -1,0 +1,25 @@
+{
+  "observations": 1044,
+  "missing": 0,
+  "outlier_candidates": 26,
+  "fraction_percent": 2.4904214559386975,
+  "lower": -85.00239590394462,
+  "upper": 75.92048033798203,
+  "residual_mean": -4.54095778298129,
+  "residual_std_ddof1": 26.82047937365444,
+  "negative_candidates": 26,
+  "positive_candidates": 0,
+  "reconstruction_max_abs": 9.947598300641403e-14,
+  "raw_sha256": "6310fd9e1fb081929f29715716dca3c433780a09d69c3a422df253a2d9aca494",
+  "stl_config": {
+    "period": 52,
+    "seasonal": 13,
+    "trend": 101,
+    "low_pass": 53,
+    "robust": true
+  },
+  "fit_config": {
+    "inner_iter": 2,
+    "outer_iter": 15
+  }
+}

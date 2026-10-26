@@ -21,4 +21,16 @@ keine gesicherten Messfehler. Parameter und Grenzen siehe Notebook und Anforderu
 Noch nicht erhalten. Keine studentische Prüfung oder Freigabe behauptet.
 
 ## Technische Prüfung
-Ergebnisse werden nach tatsächlicher Ausführung dokumentiert. Kein Merge und keine Abgabe.
+Am 26.10.2026 tatsächlich ausgeführt (projektlokales uv, --offline --locked):
+- python -m unittest discover -s tests -v: 40 Tests erfolgreich, 2,740 s.
+- python scripts/build_exercise_11_4.py: frischer Kernel, drei sequenzielle Codezellen,
+  zwei dekodierte eingebettete Bilder, keine Ausführungsfehler. Grenzen unabhängig
+  mit NumPy nachgerechnet; additive Identität und unveränderte Eingabe geprüft.
+- python scripts/check_exercise_11_4_html.py: offline bei 900/1400 px, beide Bilder
+  geladen, keine Seitenfehler und kein horizontaler Überlauf.
+- Beide PNGs visuell geprüft: lesbare Titel, Achsen, Einheiten und Marker;
+  Residuenlegende nach außen verschoben, damit sie keine Kandidaten verdeckt.
+- Rohdaten-SHA256 und sieben Artefaktchecksummen im validation_manifest.json.
+- Warnung: lokaler Jupyter-Kernel kommuniziert über unverschlüsseltes TCP;
+  keine Ausführungsfehler. Keine neue Abhängigkeit.
+Kein Merge und keine Abgabe. GitHub-CI wird nach Push separat geprüft.

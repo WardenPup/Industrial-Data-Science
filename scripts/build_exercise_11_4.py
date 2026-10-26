@@ -1,4 +1,4 @@
-"""Fresh STL notebook execution, additive/mask checks and offline static HTML."""
+"""Fresh outlier notebook execution, raw-data/threshold checks and static HTML."""
 
 import asyncio
 import base64

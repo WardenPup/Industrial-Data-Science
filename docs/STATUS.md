@@ -1,3 +1,10 @@
+## 26.10.2026 – Aufgabe 11.4 technisch validiert
+
+Status: AWAITING HUMAN REVIEW. Originalspalte pieces, robuste STL und Drei-Sigma-
+Residuenregel: 26 Kandidaten von 1.044 Wochen, alle negativ. 40 Tests erfolgreich;
+frischer Notebook-Kernel, beide Grafiken visuell und HTML offline geprüft.
+Grenzen/Annahmen und KI-Beiträge dokumentiert; keine studentische Freigabe.
+
 ## 26.10.2026 – Aufgabe 11.3 integriert; 11.4 begonnen
 
 PR #7 nach ausdrücklicher Merge-Freigabe und erfolgreichen Head-Checks regulär

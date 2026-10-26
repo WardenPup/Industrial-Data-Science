@@ -1,0 +1,28 @@
+{
+  "source_retrieved": "2026-10-26",
+  "ai_assistance": "Codex",
+  "human_review": "AWAITING HUMAN REVIEW",
+  "raw_sha256": "6310fd9e1fb081929f29715716dca3c433780a09d69c3a422df253a2d9aca494",
+  "stl_config": {
+    "period": 52,
+    "seasonal": 13,
+    "trend": 101,
+    "low_pass": 53,
+    "robust": true
+  },
+  "fit_config": {
+    "inner_iter": 2,
+    "outer_iter": 15
+  },
+  "sequential_code_cells": 3,
+  "embedded_images": 2,
+  "files": {
+    "sessions/ch11/production_outliers.ipynb": "d18f3d9801b8b6d749f25e0f59e1b9ea550e83bfa0aa5137851a3260e8cb5a28",
+    "outputs/ch11/exercise_11_4/production_outliers.html": "f394029ef3e95a30a2d9b2825ac224bf81828ee404e9fc728a64743f3302fe90",
+    "outputs/ch11/exercise_11_4/components.csv": "3f4b6a6c7cb46c297cb3fb3b5e13861255919bce4c102771bb6a7974c6725f1b",
+    "outputs/ch11/exercise_11_4/outlier_candidates.csv": "fd301bbe4ca073ca5a581d07544eafdf72f1099c5af9b42e7e8221a0fb34f478",
+    "outputs/ch11/exercise_11_4/summary.json": "016423eec7f83648cbdb7d1d89a8f01e3e1ed50ee1316a7f330b4ad143cc1b32",
+    "outputs/ch11/exercise_11_4/01_original_outliers.png": "538dd668a73324d845ec4170bd7e54a6ef9c917050db34a57959dd32b26479b7",
+    "outputs/ch11/exercise_11_4/02_residual_thresholds.png": "4ef4d03b188437fa32d4682c1cd88b9ed483d46d6ba211756cdeab2fbb47ae2f"
+  }
+}
