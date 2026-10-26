@@ -854,3 +854,21 @@ Repository. Der Connector selbst konnte es nicht lesen (422).
 PR #4 existiert vor dem Push noch nicht; PR #3 ist offen. Die genehmigte
 10.3-Vorgeschichte ist deshalb Bestandteil dieses Branches. Keine Änderung
 an main oder an PR #3 wird vorgenommen. Hosted CI steht vor dem Push noch aus.
+
+
+### GitHub-Upload und gefundene Zeilenendenabweichung
+
+Push und Draft-PR #4 wurden am 26.10.2026 tatsächlich erfolgreich erstellt:
+https://github.com/WardenPup/Industrial-Data-Science/pull/4 . GitHub meldet
+`mergeable: true`; main und PR #3 bleiben unverändert. Push-/PR-Checks wurden
+für `7709ce2` ausgelöst, ihr Erfolg wird vor Abschluss separat überprüft.
+
+Der Bytevergleich mit den Remote-Blobs zeigte eine echte Abweichung für die
+HTML-Exporte: Git hatte CRLF in LF umgewandelt, während das Manifest die
+ursprünglichen Renderbytes bezeichnete. PDFs waren bereits byteidentisch.
+Die Ausgaben waren darstellerisch unverändert; für eine exakte Manifestprüfung
+reichte das dennoch nicht. Die neue, eng begrenzte `.gitattributes`-Regel erhält
+für beide HTML-Exporte und beide manifestierten Quelldateien die vorhandenen
+Bytes (`-text`). Der nächste Commit enthält genau die bereits lokal geprüften
+Dateibytes; kein wissenschaftlicher Inhalt und kein Export werden neu erzeugt.
+Lokale SHA256 bleiben unverändert. Der Remote-Abgleich wird danach wiederholt.
