@@ -1,5 +1,31 @@
 # Arbeitsstand – 26.10.2026
 
+## Neuester Stand: main synchronisiert, Aufgabe 11.1 zur Prüfung
+
+Der Studierende autorisierte ausdrücklich die Veröffentlichung von a7fcd21 und
+2338b2f. Beide wurden nach Remote-/Diff-/Ancestry-/Sauberkeitsprüfung regulär per
+Fast-forward auf origin/main gepusht. GitHub und lokales main: vollständige SHA
+`2338b2f636854f00dd9bc2bccb0bcbb64a1a68df`. Die frühere Push-Sperre unten ist
+damit historisch erledigt. Alle vier Kapitel-10-ZIPs samt SHA256 und Checkliste
+erneut unverändert geprüft; wissenschaftliche Lösungen/Reviews unangetastet.
+
+Auf ausdrücklichen Auftrag wurde danach `exercise/11.1` angelegt. Offizielle
+Aufgabe gelesen; rollender 5-Wochen-Median mit Mittelwertvergleich, exakte
+Lückenmaske, Notebook und eigenständiges HTML implementiert. 27 Tests bestanden,
+vier Codezellen frisch sequenziell ausgeführt; zwei Grafiken visuell kontrolliert,
+HTML offline bei 900/1400 px geprüft. Details: [Review 11.1](../reviews/exercise_11_1.md).
+Status: **APPROVED**, wissenschaftliches Review vom 26.10.2026 unverändert
+gesichert (b44bcd8). Keine methodischen Korrekturen angefordert. Anschließende
+technische Prüfung: erneut 27 Tests bestanden (2,191 s), vier Codezellen frisch
+sequenziell ausgeführt, alle 1.044 Fenster unabhängig gegen Median/Mittelwert
+geprüft; 367 Lücken und identische Masken, sämtliche numerischen Reviewaussagen
+bestätigt. Beide Grafiken visuell und HTML offline bei 900/1400 px erneut geprüft.
+PR #5 wird nach erfolgreichen aktuellen Head-Checks für den finalen Merge-Review
+vorbereitet. **Merge-Autorisierung weiterhin ausstehend**, kein Merge erfolgt.
+11.2–11.4 und Kapitel 12 nicht begonnen; keine Universitätseinreichung.
+
+Die nachfolgenden Kapitel-10-Abschnitte dokumentieren den damaligen Verlauf.
+
 ## Aktueller Abschlussstand: Kapitel 10 vollständig freigegeben und integriert
 
 | Aufgabe | Fachliche Freigabe | Integration in main | Abgabedatei |
