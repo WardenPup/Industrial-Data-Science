@@ -1,7 +1,7 @@
 project:
   type: default
   output-dir: ../../outputs/ch10/exercise_10_4
-  execute-dir: ../../
+  execute-dir: project
   render:
     - paper.qmd
     - notebook_presentation.ipynb
@@ -14,6 +14,7 @@ execute:
   warning: false
 format:
   html:
+    css: styles.css
     embed-resources: true
     code-fold: true
     code-summary: Python-Code anzeigen

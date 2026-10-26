@@ -11,6 +11,10 @@ __pycache__/
 .jupyter/
 .local/
 .cache/
+.quarto/
+reports/exercise_10_4/*_files/
+reports/exercise_10_4/*.tex
+reports/exercise_10_4/*.pdf
 .tmp/
 tmp/
 temp/

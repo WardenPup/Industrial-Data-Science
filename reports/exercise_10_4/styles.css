@@ -1,0 +1,7 @@
+/* Matplotlib and IPython PNG outputs must fit the reading column. */
+.cell-output-display img, .quarto-figure img {
+  max-width: 100%;
+  height: auto;
+}
+pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+table { font-size: 0.9em; }

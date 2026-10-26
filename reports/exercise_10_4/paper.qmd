@@ -23,8 +23,7 @@ abstract: |
 #| include: false
 from pathlib import Path
 import sys
-ROOT = Path.cwd()
-assert (ROOT / 'pyproject.toml').exists(), 'Render from the project root'
+ROOT = next(p for p in [Path.cwd(), *Path.cwd().parents] if (p / 'pyproject.toml').exists())
 sys.path.insert(0, str(ROOT))
 from IPython.display import Markdown, display
 from sessions.ch10.report_10_4 import report_data, distributions, boxes, relationship, correlation_table
@@ -72,7 +71,7 @@ Für Beobachtungspaare $(x_i,y_i)$ wird der Pearson-Koeffizient berechnet:
 $$r_{xy}=\frac{\sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y})}
 {\sqrt{\sum_{i=1}^{n}(x_i-\bar{x})^2\sum_{i=1}^{n}(y_i-\bar{y})^2}}.$$
 
-Hier ist $n=10.000$; $\bar{x}$ und $\bar{y}$ sind die jeweiligen arithmetischen
+Hier ist $n=10\,000$; $\bar{x}$ und $\bar{y}$ sind die jeweiligen arithmetischen
 Mittelwerte. Für Drehmoment und Drehzahl haben $x_i$ und $y_i$ die Einheiten Nm
 und rpm; $r_{xy}$ ist einheitenlos. Pearson misst lineare Zusammenhänge
 [@pearson]. Ergänzend wird Spearmans Rangkorrelation $\rho_s$ berechnet, also
@@ -86,6 +85,7 @@ interpretiert.
 
 ```{python}
 #| label: fig-distributions
+#| out-width: "100%"
 #| fig-cap: "Verteilungen der drei Messgrößen (je 10.000 Werte, 30 Klassen). Die Achsen sind je Teilbild eigenständig skaliert; Balkenhöhen zeigen absolute Häufigkeiten."
 #| fig-width: 7
 #| fig-height: 2.7
@@ -103,6 +103,7 @@ Häufungen vollständig beschreibt.
 
 ```{python}
 #| label: fig-boxes
+#| out-width: "100%"
 #| fig-cap: "Boxplots mit Median, mittleren 50 Prozent und 1,5-IQR-Regel. Einzelpunkte außerhalb der Whisker bleiben Bestandteil der Analyse; überlagerte Punkte sind nicht einzeln abzählbar."
 #| fig-width: 7
 #| fig-height: 2.5
@@ -122,6 +123,7 @@ außerhalb einer symmetrisch definierten IQR-Grenze erzeugen.
 
 ```{python}
 #| label: fig-relationship
+#| out-width: "100%"
 #| fig-cap: "Drehmoment und Drehzahl für sämtliche 10.000 Beobachtungen. Transparenz vermindert Überdeckung, die Farbe kodiert die Lufttemperatur in K; es erfolgt keine Stichprobenauswahl."
 #| fig-width: 6.4
 #| fig-height: 3.4
