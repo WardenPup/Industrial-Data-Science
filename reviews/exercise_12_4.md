@@ -335,3 +335,22 @@ Notebook- oder HTML-Fehler. Historische CI meldete temporären IPython-Ordner.
 Kleine Trainingsmenge, ein Split, fehlende unabhängige Validierung und keine
 Signifikanz bleiben Grenzen. Neue aktuelle Head-CI wird nach Push separat im PR
 belegt; Ready for review nur bei Erfolg. Kein Merge, weitere Aufgabe oder Upload.
+
+
+---
+
+## KI-Vermerk – ausdrückliche finale Merge-Autorisierung, 26.10.2026
+
+Der Student hat nach der wissenschaftlichen Freigabe ausdrücklich beauftragt:
+„wenn du fertig bist. kannst du es mergen“.
+Dies autorisiert den regulären Merge von PR #12 nach vollständig erfolgreicher
+technischer Abschlussprüfung einschließlich beider Checks am endgültigen Head.
+Die frühere ausstehende Merge-Autorisierung ist damit für diesen Abschluss ersetzt;
+der Originalreview und sämtliche früheren Berichte bleiben unverändert erhalten.
+
+Wissenschaftlicher Status: APPROVED. Finale Merge-Autorisierung: erteilt, unter
+Bedingung erfolgreicher aktueller Head-CI und fehlender Konflikte/Reviewblocker.
+Codex dokumentiert diese tatsächlich erhaltene Entscheidung; kein zusätzlicher
+studentischer Test behauptet. Kein Squash/Rebase, keine Universitätseinreichung.
+Der tatsächliche Merge wird erst nach Erfüllung der Bedingungen ausgeführt und
+mit seinem vollständigen SHA im PR und Abschlussbericht dokumentiert.
