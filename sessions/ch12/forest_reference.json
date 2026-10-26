@@ -1,0 +1,10 @@
+{
+  "approved_commit": "50d3a014fb42b055b12e60188df2df82ea5918f5",
+  "files": {
+    "outputs/ch12/exercise_12_2/predictions.csv": "cc3b8c9bb99b638252d14e6be6a4c37ff24030ec60dfa08d212031abc1189ee4",
+    "outputs/ch12/exercise_12_2/metrics.csv": "6124101ade4ec81ba32bdf78edcb85eb03493a9e4f86714b2a371a4457fcc232",
+    "outputs/ch12/exercise_12_2/classification_report.csv": "50540e60b539d37b793cf37f4292e6d649ff7d14ed5b7e2c6fdf7920afe898b0",
+    "outputs/ch12/exercise_12_2/confusion_knn.csv": "9c163676eabdac56fc84c5b9efa74f8530dd6471f0ddd927ccdc043622a277aa",
+    "outputs/ch12/exercise_12_2/confusion_cnn.csv": "8109fa0922baba17ff0e326d9adcc530f0cbff04fc0752dc990374e293fc9990"
+  }
+}
