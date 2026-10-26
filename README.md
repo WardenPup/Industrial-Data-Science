@@ -208,7 +208,8 @@ Aufgabe 11.1 selbst enthält keine Imputation; diese folgt separat in 11.2.
 Auf ausdrücklichen Folgeauftrag implementiert: [Notebook](sessions/ch11/production_imputation.ipynb),
 [Anforderungen](docs/EXERCISE_11_2_REQUIREMENTS.md), [Review](reviews/exercise_11_2.md).
 Status: **APPROVED**, studentisches Review vom 26.10.2026 und anschließende
-technische Prüfung dokumentiert. Die Merge-Erlaubnis steht aus.
+technische Prüfung dokumentiert. PR #6 nach ausdrücklicher Erlaubnis regulär
+als 84085f5 gemergt.
 Die vorausgehende 11.1-Lösung bleibt unverändert.
 
 ```powershell
@@ -220,4 +221,23 @@ scripts/uv.cmd run --offline --locked python scripts/check_exercise_11_2_html.py
 Verglichen werden Forward/Backward Fill, lineare Interpolation, Polynome Grad 2/5
 und PCHIP. Sieben Grafiken, HTML, Lückentabelle und Methodendiagnostik liegen unter
 `outputs/ch11/exercise_11_2/`; die vollständige Ableitung unter `data/processed/`.
-Keine Bearbeitung von 11.3, kein Merge oder Upload ohne ausdrückliche Erlaubnis.
+11.2 bleibt als freigegebene Lösung erhalten; keine automatische Universitätseinreichung.
+
+## Aufgabe 11.3 – STL-gestützte Imputation
+
+Auf ausdrücklichen Folgeauftrag: [Notebook](sessions/ch11/production_stl_imputation.ipynb),
+[Anforderungen](docs/EXERCISE_11_3_REQUIREMENTS.md), [Review](reviews/exercise_11_3.md).
+Status: **AWAITING HUMAN REVIEW**. Freigegebene 11.1-/11.2-Dateien bleiben erhalten.
+
+```powershell
+scripts/uv.cmd sync --locked
+scripts/uv.cmd run --locked python scripts/download_production.py
+scripts/uv.cmd run --offline --locked python scripts/build_exercise_11_3.py
+scripts/uv.cmd run --offline --locked python scripts/check_exercise_11_3_html.py
+```
+
+Vorläufig linear ergänzen, mit STL zerlegen, die ursprüngliche lückenhafte
+Medianreihe saisonbereinigt linear imputieren und Saison zurückaddieren.
+Vier Grafiken, HTML und Ergebnistabellen: `outputs/ch11/exercise_11_3/`.
+statsmodels ist im bestehenden uv-Lockfile ergänzt; keine globalen Python-Pakete.
+Keine Genauigkeitsbehauptung, keine 11.4 und kein Merge vor studentischem Review.
