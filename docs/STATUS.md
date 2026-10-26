@@ -1,5 +1,21 @@
 # Arbeitsstand – 26.10.2026
 
+## Neuester Stand: 11.2 integriert; 11.3 in Bearbeitung
+
+Der Studierende autorisierte den regulären Merge von PR #6 ausdrücklich.
+Aktueller Head 00842a1, Ziel main, Konfliktfreiheit und alle Head-Checks vorab
+bestätigt (Push 40354532276, PR 40354542238 erfolgreich). Datenprüfung erneut:
+367 Ergänzungen und 677 unveränderte Werte je Methode; Grenzen sichtbar.
+Regulärer Merge und synchronisiertes main:
+`84085f5fa4387a833aa13ba20ce29d0930ff4359`.
+452843a und 00842a1 samt vollständigem Review bleiben erhaltene Vorfahren.
+**11.2 APPROVED und vollständig integriert.**
+
+Danach exercise/11.3 angelegt; genaue Aufgabe und STL-Kapitel gelesen und
+Anforderungen separat dokumentiert. Status zunächst DRAFT; keine fachliche
+Freigabe, kein Merge von 11.3, keine 11.4 und keine Universitätseinreichung.
+Die nachfolgenden Abschnitte sind historische Arbeitsstände.
+
 ## Neuester Stand: 11.1 integriert; 11.2 fachlich freigegeben
 
 Der Studierende hat den Merge von PR #5 ausdrücklich genehmigt. Codex bestätigte
