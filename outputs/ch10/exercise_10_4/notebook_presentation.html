@@ -2281,6 +2281,8 @@ table { font-size: 0.9em; }
 <pre><code>Daten: 10000 Zeilen, drei Messgrößen; Seaborn 0.13.2
 SHA256: dc6630cd9b1f0f853922fad78a1b6436570d3f1ec863f1dd5c4340ac56bc8a8e</code></pre>
 </div>
+</div>
+<div id="bb7d195e" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div>
 
@@ -2353,7 +2355,7 @@ SHA256: dc6630cd9b1f0f853922fad78a1b6436570d3f1ec863f1dd5c4340ac56bc8a8e</code><
 <section id="drehmoment-über-udi" class="level2">
 <h2 class="anchored" data-anchor-id="drehmoment-über-udi">1. Drehmoment über UDI</h2>
 <p>Die Linie verbindet alle Beobachtungen in Originalreihenfolge. <code>estimator=None</code> verhindert Aggregation; es wird kein Unsicherheitsband dargestellt. Dichte Schwankungen über eine Zeilenkennung dürfen nicht als zeitlicher Prozess interpretiert werden.</p>
-<div id="14c05488" class="cell" data-execution_count="2">
+<div id="14c05488" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -2366,7 +2368,7 @@ SHA256: dc6630cd9b1f0f853922fad78a1b6436570d3f1ec863f1dd5c4340ac56bc8a8e</code><
 <section id="verteilungen-histogramme" class="level2">
 <h2 class="anchored" data-anchor-id="verteilungen-histogramme">2. Verteilungen – Histogramme</h2>
 <p>Je Messgröße werden 30 Bins verwendet. Anzahl und Grenzen der Bins beeinflussen den visuellen Eindruck. Die x-Achsen behalten ihre Einheiten und eigenen Skalen; die y-Achsen zählen Beobachtungen, nicht Wahrscheinlichkeitsdichten.</p>
-<div id="0aba19c4" class="cell" data-execution_count="3">
+<div id="0aba19c4" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -2380,7 +2382,7 @@ SHA256: dc6630cd9b1f0f853922fad78a1b6436570d3f1ec863f1dd5c4340ac56bc8a8e</code><
 <h2 class="anchored" data-anchor-id="boxplots-und-auffällige-werte">3. Boxplots und auffällige Werte</h2>
 <p>Boxplots verdichten Median, Quartile und Streuung. Punkte außerhalb der 1,5-IQR-Zäune sind hier <strong>heuristisch auffällig</strong>, nicht automatisch fehlerhaft. Die jeweilige Messgröße erhält eine eigene Achse mit Originaleinheit.</p>
 <p>Numerische Randfälle: Die Berechnung nutzt eine absolute Toleranz von 1e-10 in der jeweiligen Einheit; der Boxplot verwendet <code>whis=1.5+1e-12</code>, um Werte auf den theoretischen Zäunen nicht durch Rundungsfehler als außerhalb zu zeigen. Diese Änderungen sind gegenüber der Messauflösung vernachlässigbar. Bei Torque liegen vier Werte auf 12,8 und einer auf 67,2 Nm; sie gelten nicht als Ausreißer.</p>
-<div id="7154e113" class="cell" data-execution_count="4">
+<div id="7154e113" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -2438,7 +2440,7 @@ SHA256: dc6630cd9b1f0f853922fad78a1b6436570d3f1ec863f1dd5c4340ac56bc8a8e</code><
 <section id="violinplots-im-vergleich-zu-boxplots" class="level2">
 <h2 class="anchored" data-anchor-id="violinplots-im-vergleich-zu-boxplots">4. Violinplots im Vergleich zu Boxplots</h2>
 <p>Die Violinbreite ist eine Kernel-Dichteschätzung (KDE), keine Anzahl einzelner Beobachtungen. Bandbreite und Stichprobe beeinflussen die Form. <code>cut=0</code> begrenzt die Darstellung auf beobachtete Werte; innere Quartile ergänzen die Dichte. Gegenüber Boxplots wird Verteilungsform sichtbar, aber auch geglättet und damit von einer zusätzlichen Modellierungsentscheidung abhängig.</p>
-<div id="1104f379" class="cell" data-execution_count="5">
+<div id="1104f379" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -2451,7 +2453,7 @@ SHA256: dc6630cd9b1f0f853922fad78a1b6436570d3f1ec863f1dd5c4340ac56bc8a8e</code><
 <section id="torque-gegen-rotational-speed-temperatur-als-farbe" class="level2">
 <h2 class="anchored" data-anchor-id="torque-gegen-rotational-speed-temperatur-als-farbe">5. Torque gegen Rotational speed – Temperatur als Farbe</h2>
 <p><code>sns.scatterplot</code> bildet Drehzahl auf x, Drehmoment auf y und Lufttemperatur auf die kontinuierliche Farbskala ab. Transparenz begrenzt die Überlagerung aller 10.000 Punkte. Die Farblegende zeigt Kelvin; Farbunterschiede beweisen keinen Einfluss der Temperatur.</p>
-<div id="bfeec351" class="cell" data-execution_count="6">
+<div id="bfeec351" class="cell" data-execution_count="7">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -2464,7 +2466,7 @@ SHA256: dc6630cd9b1f0f853922fad78a1b6436570d3f1ec863f1dd5c4340ac56bc8a8e</code><
 <section id="paarweise-beziehungen" class="level2">
 <h2 class="anchored" data-anchor-id="paarweise-beziehungen">6. Paarweise Beziehungen</h2>
 <p><code>sns.pairplot</code> zeigt alle drei Messgrößen, ihre paarweisen Punktwolken und Histogramme auf der Diagonalen. Unterschiedliche Achsenskalierungen sind nötig, weil Einheiten und Wertebereiche verschieden sind. Alle Beobachtungen werden verwendet; dichte Bereiche können sich weiterhin überdecken.</p>
-<div id="cdbf56d4" class="cell" data-execution_count="7">
+<div id="cdbf56d4" class="cell" data-execution_count="8">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -2477,7 +2479,7 @@ SHA256: dc6630cd9b1f0f853922fad78a1b6436570d3f1ec863f1dd5c4340ac56bc8a8e</code><
 <section id="pearson--und-spearman-korrelation" class="level2">
 <h2 class="anchored" data-anchor-id="pearson--und-spearman-korrelation">7. Pearson- und Spearman-Korrelation</h2>
 <p>Pearson misst den linearen Zusammenhang. Die <strong>Pearson-Heatmap</strong> verwendet die feste Skala −1 bis +1 und annotiert alle Koeffizienten. Das stärkste Paar wird nach dem Betrag der Off-Diagonale gewählt. Die nachfolgende Tabelle zeigt ausdrücklich <strong>Spearman-Rangkorrelationen</strong>. Spearman ergänzt die Betrachtung monotoner, möglicherweise nichtlinearer Muster. Keine Korrelation belegt Kausalität.</p>
-<div id="e8440087" class="cell" data-execution_count="8">
+<div id="e8440087" class="cell" data-execution_count="9">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -2539,7 +2541,7 @@ SHA256: dc6630cd9b1f0f853922fad78a1b6436570d3f1ec863f1dd5c4340ac56bc8a8e</code><
 <section id="jointplot-mit-regressionsgerade" class="level2">
 <h2 class="anchored" data-anchor-id="jointplot-mit-regressionsgerade">8. Jointplot mit Regressionsgerade</h2>
 <p>Torque wird gegen Air temperature geplottet, inklusive Randverteilungen. Die Gerade ist eine deskriptive lineare Zusammenfassung, kein Kausalmodell. Ein Konfidenzband wird weggelassen (<code>ci=None</code>), da hier keine ungeprüfte Unabhängigkeitsannahme in eine inferenzstatistische Aussage übersetzt werden soll.</p>
-<div id="854e7989" class="cell" data-execution_count="9">
+<div id="854e7989" class="cell" data-execution_count="10">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -2552,7 +2554,7 @@ SHA256: dc6630cd9b1f0f853922fad78a1b6436570d3f1ec863f1dd5c4340ac56bc8a8e</code><
 <section id="stripplot-nach-drehzahl-bins" class="level2">
 <h2 class="anchored" data-anchor-id="stripplot-nach-drehzahl-bins">9. Stripplot nach Drehzahl-Bins</h2>
 <p><code>pd.cut</code> teilt den beobachteten Drehzahlbereich in drei Intervalle gleicher Breite, benannt low/medium/high. Das sind <strong>keine Quantile</strong>; Gruppengrößen dürfen sich stark unterscheiden. Die exakten Grenzen und Häufigkeiten werden ausgegeben. Alle Drehmomentwerte erscheinen als Punkte, Farbe und x-Position kennzeichnen denselben Bin. Jitter (Seed 42) dient ausschließlich der Darstellung.</p>
-<div id="1106fe31" class="cell" data-execution_count="10">
+<div id="1106fe31" class="cell" data-execution_count="11">
 <div class="cell-output cell-output-display">
 <div>
 
@@ -2608,7 +2610,7 @@ SHA256: dc6630cd9b1f0f853922fad78a1b6436570d3f1ec863f1dd5c4340ac56bc8a8e</code><
 <section id="countplot-der-torque-intervalle" class="level2">
 <h2 class="anchored" data-anchor-id="countplot-der-torque-intervalle">10. Countplot der Torque-Intervalle</h2>
 <p>Die zehn Intervalle gleicher Breite decken alle Drehmomentwerte ab; die Intervallgrenzen sind zusätzlich als JSON gespeichert. <code>pd.cut</code> erweitert bei ganzzahliger Bin-Anzahl den Rand leicht, damit die Extremwerte eingeschlossen sind. Der Countplot zählt alle 10.000 Zeilen ohne Filterung.</p>
-<div id="10e9f8b6" class="cell" data-execution_count="11">
+<div id="10e9f8b6" class="cell" data-execution_count="12">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -2616,6 +2618,8 @@ SHA256: dc6630cd9b1f0f853922fad78a1b6436570d3f1ec863f1dd5c4340ac56bc8a8e</code><
 </figure>
 </div>
 </div>
+</div>
+<div id="ce1ad56c" class="cell" data-execution_count="13">
 <div class="cell-output cell-output-display">
 <div>
 
@@ -2682,7 +2686,7 @@ SHA256: dc6630cd9b1f0f853922fad78a1b6436570d3f1ec863f1dd5c4340ac56bc8a8e</code><
 <section id="beobachtungen-tatsächlich-berechnete-kennzahlen" class="level2">
 <h2 class="anchored" data-anchor-id="beobachtungen-tatsächlich-berechnete-kennzahlen">Beobachtungen – tatsächlich berechnete Kennzahlen</h2>
 <p>Die folgende Tabelle ergänzt die visuelle Beurteilung mit reproduzierbaren Kennzahlen. IQR-Flags werden nicht entfernt. Skewness beschreibt Asymmetrie, ist aber weder Normalitätstest noch Beleg einer bestimmten Verteilung.</p>
-<div id="f3d4d130" class="cell" data-execution_count="12">
+<div id="f3d4d130" class="cell" data-execution_count="14">
 <div class="cell-output cell-output-display">
 <div>
 

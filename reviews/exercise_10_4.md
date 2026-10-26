@@ -778,3 +778,79 @@ Pull Request #4 bleibt bis zur abschließenden technischen und studentischen Fre
 ---
 
 **Prüfbasis:** Überarbeitete PDF-Fassungen, visueller und inhaltlicher Dokumentenvergleich, Validierungsmanifest und von Codex gemeldete lokale Testergebnisse. Die Prüfung ersetzt keine eigenständige erneute Ausführung der gesamten Analyse.
+
+
+## Codex: Abschlusszyklus nach Human Review Runde 2 (26.10.2026)
+
+Die zweite studentische Reviewrunde ist unverändert in `8bb9094` gesichert.
+Runde 1 bleibt als eigener Abschnitt wortgetreu erhalten. Die positive fachliche
+Beurteilung gilt für die abschließende technische Validierung; eine endgültige
+Projekt-/Merge-Freigabe wird nicht daraus abgeleitet. Die tatsächliche studentische
+Prüfung betrifft PDFs, Dokumentvergleich und Manifest, keine unabhängige vollständige
+Testausführung. Die folgenden Angaben stammen von Codex.
+
+### Gezielte Korrektur und Abgleich
+
+`fc9a0c3` ergänzt ausschließlich zwei LaTeX-Seitenumbrüche direkt vor der
+deskriptiven Statistik und der Torque-Häufigkeitstabelle. Dafür werden zwei
+Codezellen geteilt; nun 14 lückenlos ausgeführte Codezellen. Die Statistik steht
+vollständig auf Seite 2, die zehn Countplot-Klassen vollständig auf Seite 9.
+Die Präsentation behält zehn Seiten, alle zehn Analysen und deren Erläuterungen.
+Der Python-Berechnungsbaum (AST) ist identisch zur vorher geprüften Fassung.
+Der gesamte Paperquelltext ist unverändert und das PDF bleibt fünf Seiten lang.
+Die positive Bewertung der Formeln, Zahlen, Korrelationen und wissenschaftlichen
+Grenzen wurde mit Quellen und neu gerenderten Ausgaben abgeglichen.
+
+Große Darstellungen auf Seiten 4 und 7 lassen weiterhin Weißraum. Weitere
+Verdichtung würde große Grafikgruppen oder ihre Erklärungen trennen; deshalb
+bleibt die lesbare, inhaltlich korrekte Fassung erhalten. Es werden keine Analysen,
+Werte oder Erläuterungen zur Layoutverkürzung entfernt.
+
+### Tatsächlich ausgeführte lokale Prüfungen
+
+Vom Projektstamm, nacheinander, jeweils mit
+`scripts/uv.cmd run --offline --locked python`:
+
+| Aufruf | Tatsächliches Ergebnis |
+|---|---|
+| `-m unittest discover -s tests -v` | 22 Tests, 2,651 s, OK |
+| `scripts/validate_notebooks.py` | alle drei getrackten Notebooks in frischen Kerneln erfolgreich |
+| `scripts/build_exercise_10_4.py` | vier Exporte erfolgreich; 5/10 PDF-Seiten; 3/10 HTML-Abbildungen und LaTeX-Einbindungen; 14 sequenzielle Notebookzellen |
+| `scripts/check_exercise_10_4_html.py` | beide HTML-Dateien offline bei 900/1400 px; alle Bilder dekodiert, Seiten/Bilder/Tabellen passend; Code aufklappbar; vier Quellen und Abstractumfang geprüft |
+
+Die numerischen Tests prüfen alle sechs gerundeten Pearson-/Spearman-Werte,
+vergleichen unabhängig mit NumPy/SciPy und kontrollieren IQR-Grenzen mit
+Dezimalarithmetik. Quarto-/PDF-Strukturprüfungen bestätigen Formeln, Abbildungs-
+beschriftungen, Quellen und die getrennten Korrelationskennzeichnungen.
+Alle 15 PDF-Seiten mit Poppler neu gerendert und von Codex visuell geprüft:
+Tabellen, Formeln, Diagramme, Bildunterschriften und Literatur lesbar, keine
+abgeschnittenen Inhalte. Statistik-/Counttabelle zusätzlich per Textextraktion
+vollständig auf Seite 2/9 nachgewiesen. Keine neue studentische Sichtprüfung
+oder endgültige Freigabe dieser letzten Layoutfassung behauptet.
+
+Daten-SHA256 erneut erfolgreich:
+`dc6630cd9b1f0f853922fad78a1b6436570d3f1ec863f1dd5c4340ac56bc8a8e`.
+Das aktualisierte Manifest passt zu allen vier Exporten und beiden Quelldateien.
+Ein zusätzlicher Bytevergleich von Git-Text und Arbeitsdatei schlug allein wegen
+LF/CRLF fehl; der zeilenendenbereinigte Vergleich bestätigt unveränderten Papertext.
+Beide Human-Review-Blöcke sind wortgleich erhalten; ursprüngliche Erklärungen
+im Notebook ebenfalls. Aufgabenquelle: gespeicherter offizieller Abruf vom
+26.10.2026 (`.tools/chapter10-10_4.html`), erneut vollständig für 10.4 gelesen.
+
+Bekannte Warnung: lokaler Jupyter-Kernel über unverschlüsselten TCP-Transport.
+TeX-Pakete bleiben dokumentiert, aber nicht hermetisch gesperrt. GitHub Actions
+prüft Python/Notebooks und bisherige Exporte, keinen Quarto-/LuaLaTeX-Build.
+Keine neuen wissenschaftlichen oder technischen Fehler im lokalen Abschlusslauf.
+
+### Ausdrückliche GitHub-Autorisierung
+
+Der aktuelle Auftrag erlaubt ausdrücklich den Push von `exercise/10.4` nach
+`https://github.com/WardenPup/Industrial-Data-Science.git`, Draft-PR-Erstellung
+gegen main und die Bereitschaftsmarkierung nach erfolgreichen Checks.
+Die frühere automatische Push-Ablehnung ist historisch; die zusätzliche
+Zielbestätigung liegt jetzt vor. Fetch- und Push-URL wurden exakt verglichen.
+Der Credential-Manager-Zugang bestätigt Zugriff auf genau dieses private
+Repository. Der Connector selbst konnte es nicht lesen (422).
+PR #4 existiert vor dem Push noch nicht; PR #3 ist offen. Die genehmigte
+10.3-Vorgeschichte ist deshalb Bestandteil dieses Branches. Keine Änderung
+an main oder an PR #3 wird vorgenommen. Hosted CI steht vor dem Push noch aus.

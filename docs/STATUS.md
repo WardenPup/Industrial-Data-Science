@@ -256,3 +256,20 @@ Für den Upload von `exercise/10.4` nach
 zusätzliche ausdrückliche Nutzerbestätigung erforderlich. Kein neuer Hosted-
 CI-Lauf wird behauptet; PR #4 fehlt weiterhin. Finale fachliche Freigabe und
 Merge sind dadurch nicht erteilt. Aktueller Status: **AWAITING FINAL HUMAN APPROVAL**.
+
+
+## Aufgabe 10.4 – zweites Human Review und lokale Abschlussprüfung (26.10.2026)
+
+Zweite tatsächliche Reviewrunde fachlich positiv (`8bb9094`), beide studentischen
+Reviewtexte unverändert. Kein grundlegender Text-/Methodenänderungsbedarf.
+`fc9a0c3` hält die deskriptive Statistik auf Seite 2 und die gesamte Torque-
+Häufigkeitstabelle auf Seite 9 zusammen; 10 Notebookseiten, 5 Paperseiten.
+Alle zehn Analysen und Erläuterungen erhalten, Berechnungs-AST unverändert.
+22 Tests, drei frische Notebookausführungen, vier Quarto-Exporte, Offline-HTML-
+Prüfungen, SHA256 und Sichtprüfung aller 15 PDF-Seiten erfolgreich.
+
+Status vor GitHub-Integration: lokal technisch validiert; Hosted CI und finale
+Merge-Freigabe ausstehend. Der neue Auftrag bestätigt ausdrücklich den Push zum
+bestehenden Remote und einen Draft-PR gegen main. PR #3 bleibt offen; kein Merge,
+keine Arbeit an Kapitel 11 und keine Universitätseinreichung. Aktuelle Nachweise
+und Grenzen stehen im Reviewprotokoll; ältere Statusabschnitte sind historisch.

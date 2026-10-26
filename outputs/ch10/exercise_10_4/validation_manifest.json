@@ -4,30 +4,30 @@
   "engine": "lualatex",
   "source_sha256": {
     "paper.qmd": "371c9b27cd6443033735d56bc0e8cdadd6c890166a179501d68708db26950736",
-    "notebook_presentation.ipynb": "5bfadb9120ace03ae8dd316093abf70f0e5f96df47570e8d3f4602b540e29d63"
+    "notebook_presentation.ipynb": "77aaaabab34009f9fd3d807831a0e1cfa13058516ed6c3cb1991be044e560cc4"
   },
   "exports": [
     {
       "file": "paper.html",
       "bytes": 1950249,
-      "sha256": "8d4393e1058e9022a1e23109c55d21749bda908177e5368597857641b6e9fe95"
+      "sha256": "2644e4f8fafc08f9bd5c77cbd85e884579069ce4944c0941ea7a4c10da2a54e6"
     },
     {
       "file": "paper.pdf",
       "bytes": 189783,
-      "sha256": "730f7f01506060170caaa269aaa7f7175fff254d44cad12f2df9d81d4ca0eb97",
+      "sha256": "4b379ec63737e7f73e6cadf64f0a597b1bea22a8b2fd682cc819c2567e619e42",
       "pages": 5,
       "producer": "LuaTeX-1.24.0"
     },
     {
       "file": "notebook_presentation.html",
-      "bytes": 3416154,
-      "sha256": "707e73c167842acc13b8c21c2eb53499fef56a49130c2945614c287a5d26b0a9"
+      "bytes": 3416290,
+      "sha256": "a5585bbc39d38bbb87d51c0bba9004cacba7328cbf32d8f5611d3ef954976a0f"
     },
     {
       "file": "notebook_presentation.pdf",
-      "bytes": 1411445,
-      "sha256": "4aa85a66159bdaba498328ff9ad58881a944f0a5f124627960733d7774e8481c",
+      "bytes": 1411206,
+      "sha256": "9d12af01b60021818e6f2b794eab458c395cad24811c24b27bbc933488b99efb",
       "pages": 10,
       "producer": "LuaTeX-1.24.0"
     }
