@@ -1,0 +1,24 @@
+{
+  "retrieved_date": "2026-10-26",
+  "ai_assistance": "Codex",
+  "human_review": "AWAITING HUMAN REVIEW",
+  "raw_sha256": "6310fd9e1fb081929f29715716dca3c433780a09d69c3a422df253a2d9aca494",
+  "approved_input_sha256": "7db834208a47d1045b94afb2a91b14497b5970699f9eb2dd93320dc54640388c",
+  "sequential_code_cells": 10,
+  "embedded_images": 7,
+  "files": {
+    "sessions/ch11/production_imputation.ipynb": "c79694155394e99872975348d531920aaf1860fcd75541f5339f4dcc65ae6fe2",
+    "outputs/ch11/exercise_11_2/production_imputation.html": "06437fe54a059e8f3800f36ceeededd4839462ae04c0604ac1c11ed3d8942630",
+    "data/processed/exercise_11_2_imputed.csv": "36db0a30375f4450acb646eb1de16cb1e011845f9460dd5f8dd26656eea05aad",
+    "outputs/ch11/exercise_11_2/method_summary.csv": "d8aa2d8812e9d35b3597cb05af8c6dacf5b20ed00ebec42307d7730e87fb25f1",
+    "outputs/ch11/exercise_11_2/gaps.csv": "feaa5fe995b19b2f306e57adca67b6d20cd63889c9f7b9de6c3d06b9b3d6de05",
+    "outputs/ch11/exercise_11_2/summary.json": "1fa5fc2f511d67ddb83998d1d0033f11ee76c9f429226bc3dc43880890879ea4",
+    "outputs/ch11/exercise_11_2/ffill.png": "8c7db7089be4e042b48328218bfeaba50fac49bdbf0a299333a3b286553cfff3",
+    "outputs/ch11/exercise_11_2/bfill.png": "b069f154f80d006fbe1200b870335147b3784b54d592c6b36200beb7201696a4",
+    "outputs/ch11/exercise_11_2/linear.png": "466432a0f256bf3aecf4d715b1f16c40aeb803303e2061c3aa54acd330122e2d",
+    "outputs/ch11/exercise_11_2/polynomial2.png": "a89bbeed8bc32c857696fae67a00979f0bfd72e6b58e33f888c0e5a554886d8c",
+    "outputs/ch11/exercise_11_2/polynomial5.png": "3532979f5716d802e560ca6958bdf002fe4a4a2cb33aeb4eb034e5f4c70ec802",
+    "outputs/ch11/exercise_11_2/pchip.png": "0f46f72439db0909d7733fcbb2edb1d9dc45968054e7c5b8600841ed9e3db17b",
+    "outputs/ch11/exercise_11_2/longest_gap_comparison.png": "53787068f906e61fb2b006e607dfddc8d492ebfa6bcacc6736c78079a2f9dd13"
+  }
+}

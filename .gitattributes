@@ -5,3 +5,5 @@
 /reports/exercise_10_4/notebook_presentation.ipynb -text
 /sessions/ch11/production_smoothing.ipynb -text
 /outputs/ch11/exercise_11_1/* -text
+/sessions/ch11/production_imputation.ipynb -text
+/outputs/ch11/exercise_11_2/* -text
