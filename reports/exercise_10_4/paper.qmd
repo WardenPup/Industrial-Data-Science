@@ -1,6 +1,6 @@
 ---
 title: "Drehmoment, Drehzahl und Lufttemperatur im AI4I-Datensatz"
-subtitle: "Explorative Analyse · Aufgabe 10.4 · Überarbeitete Reviewfassung"
+subtitle: "Explorative Analyse · Aufgabe 10.4 · Freigegebene Fassung"
 abstract: |
   Diese Arbeit untersucht Verteilungen, statistisch auffällige Werte und paarweise
   Zusammenhänge von Drehmoment, Drehzahl und Lufttemperatur im synthetischen
@@ -15,8 +15,8 @@ abstract: |
   IQR-Markierungen kennzeichnen ungewöhnliche Randwerte, begründen aber weder
   Messfehler noch deren Entfernung. Die Ergebnisse beschreiben den vorliegenden
   synthetischen Datensatz. Sie erlauben keine kausalen Aussagen und keine
-  ungeprüfte Übertragung auf reale Maschinen. Der KI-gestützte Text wurde nach studentischem Review überarbeitet;
-  die abschließende fachliche Freigabe steht aus.
+  ungeprüfte Übertragung auf reale Maschinen. Der KI-gestützte Text wurde nach studentischem Review überarbeitet
+  und am 26.10.2026 fachlich freigegeben.
 ---
 
 ```{python}
@@ -211,11 +211,11 @@ zusätzliche reale Daten und eine eigenständige Validierung erforderlich.
 
 # Transparenz und Reproduzierbarkeit
 
-**AWAITING FINAL HUMAN APPROVAL.** Codex erstellte den Entwurf und setzte die
-Korrekturwünsche aus dem studentischen PDF-Review vom 26.10.2026 um. Das Review
-bewertet Methoden und Abbildungsauswahl positiv; die abschließende Freigabe
-der überarbeiteten Fassung steht aus. KI-Beiträge und Prüfungen sind im
-Projektprotokoll getrennt vom unveränderten studentischen Review dokumentiert.
+**APPROVED (26.10.2026).** Codex erstellte den Entwurf und setzte die
+Korrekturwünsche aus zwei studentischen PDF-Reviews um. Der Studierende hat
+die wissenschaftlichen Inhalte am 26.10.2026 ausdrücklich freigegeben.
+KI-Beiträge und technische Prüfungen sind im Projektprotokoll getrennt
+von den unveränderten studentischen Reviews dokumentiert.
 
 Berechnungen erfolgen mit den gesperrten Python-Abhängigkeiten des Projekts.
 Der Bericht lädt die Originaldaten über die geprüfte Ladefunktion aus 10.2 und

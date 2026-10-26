@@ -919,3 +919,23 @@ nochmals geprüft; die gemeinsame 10.3-Vorgeschichte wird nicht dupliziert.
 Aktive 10.4-Dokumente erhalten ausschließlich wahrheitsgemäße Freigabehinweise;
 wissenschaftliche Aussagen und Berechnungen werden nicht geändert. Diese
 Statusredaktion erhält vor dem Merge eigene Render-, Sicht- und CI-Prüfungen.
+
+
+### Validierung der wahrheitsgemäßen Freigabefassung vor Merge #4
+
+Am 26.10.2026 nach `7bb0464` tatsächlich erneut ausgeführt:
+- 22 automatisierte Tests: OK (1,322 s).
+- Alle drei Notebooks nacheinander in frischen Kerneln: PASS.
+- Quarto 1.10.19 / LuaLaTeX: vier Exporte, 5 Paperseiten / 10 Notebookseiten,
+  3/10 Abbildungen, 14 sequenzielle Notebookcodezellen: PASS.
+- Beide HTML-Dateien offline bei 900/1400 px: PASS.
+- Alle 15 PDF-Seiten mit Poppler gerendert und von Codex visuell kontrolliert:
+  Freigabevermerk, Formeln, Tabelle, Korrelationen, Abbildungen und Quellen lesbar.
+- Alle Quellen-/Export-SHA256 stimmen mit dem aktualisierten Manifest überein.
+- Python-Codeblöcke der QMD unverändert; Notebook-Berechnungs-AST unverändert.
+- Beide vollständigen studentischen Reviewrunden unverändert erhalten.
+
+Die Änderungen betreffen ausschließlich echte Freigabehinweise und die Bezeichnung
+von Reviewfragen als Lernfragen. Wissenschaftliche Aussagen bleiben unverändert.
+Der bekannte lokale TCP-Kernelhinweis besteht; kein Test-/Renderfehler trat auf.
+Der daraus erzeugte Head erhält vor dem autorisierten Merge erneut beide CI-Läufe.

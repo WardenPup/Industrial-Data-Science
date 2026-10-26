@@ -75,7 +75,7 @@ def main():
         assert 'LuaTeX' in producer, producer
         text = ' '.join(' '.join(p.extract_text() for p in reader.pages).split())
         # PDF extraction may insert spaces between strongly kerned capital letters.
-        assert 'AWAITINGFINALHUMANAPPROVAL' in ''.join(text.split())
+        assert 'APPROVED(26.10.2026)' in ''.join(text.split())
         assert 'Drehmoment' in text and len(text) > 3000
         # QMD plots can be vector PDF graphics, so raster XObjects alone do not
         # count figures. Check generated LaTeX inclusions and captions as well.

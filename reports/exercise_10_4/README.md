@@ -1,9 +1,8 @@
 # Überarbeitete wissenschaftliche Reviewfassung – Aufgabe 10.4
 
-Status: **TECHNICALLY_VALIDATED** nach zwei studentischen PDF-Reviews vom
-26.10.2026, Codex-Korrekturen und lokalen/GitHub-Prüfungen. Finale Projekt- und
-Merge-Freigabe ausstehend; die Exporte behalten den Hinweis auf ausstehende
-endgültige studentische Freigabe.
+Status: **APPROVED**. Endgültige wissenschaftliche Freigabe durch den Studierenden
+am 26.10.2026; regulärer Merge nach erfolgreichen aktuellen Checks autorisiert.
+Die Exporte nennen den tatsächlich erteilten Freigabestand. Keine Abgabe erfolgt.
 
 `paper.qmd` ist der kurze, direkt editierbare Bericht. Die ergänzende
 `notebook_presentation.ipynb` ist eine eigenständige Präsentationskopie der

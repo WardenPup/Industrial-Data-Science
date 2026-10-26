@@ -2200,14 +2200,7 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
-<style type="text/css">
-.cell-output-display img, .quarto-figure img {
-max-width: 100%;
-height: auto;
-}
-pre { white-space: pre-wrap; overflow-wrap: anywhere; }
-table { font-size: 0.9em; }
-</style>
+<style type="text/css">.cell-output-display img, .quarto-figure img {max-width: 100%;height: auto;}pre { white-space: pre-wrap; overflow-wrap: anywhere; }table { font-size: 0.9em; }</style>
 </head>
 
 <body class="quarto-light">
@@ -2234,7 +2227,7 @@ table { font-size: 0.9em; }
   <li><a href="#countplot-der-torque-intervalle" id="toc-countplot-der-torque-intervalle" class="nav-link" data-scroll-target="#countplot-der-torque-intervalle">10. Countplot der Torque-Intervalle</a></li>
   <li><a href="#beobachtungen-tatsächlich-berechnete-kennzahlen" id="toc-beobachtungen-tatsächlich-berechnete-kennzahlen" class="nav-link" data-scroll-target="#beobachtungen-tatsächlich-berechnete-kennzahlen">Beobachtungen – tatsächlich berechnete Kennzahlen</a></li>
   <li><a href="#beobachtete-muster-und-grenzen" id="toc-beobachtete-muster-und-grenzen" class="nav-link" data-scroll-target="#beobachtete-muster-und-grenzen">Beobachtete Muster und Grenzen</a></li>
-  <li><a href="#fragen-für-die-abschließende-freigabe" id="toc-fragen-für-die-abschließende-freigabe" class="nav-link" data-scroll-target="#fragen-für-die-abschließende-freigabe">Fragen für die abschließende Freigabe</a></li>
+  <li><a href="#lernfragen-zur-analyse" id="toc-lernfragen-zur-analyse" class="nav-link" data-scroll-target="#lernfragen-zur-analyse">Lernfragen zur Analyse</a></li>
   </ul></li>
   <li><a href="#grenzen-und-review" id="toc-grenzen-und-review" class="nav-link" data-scroll-target="#grenzen-und-review">Grenzen und Review</a></li>
   <li><a href="#literatur" id="toc-literatur" class="nav-link" data-scroll-target="#literatur">Literatur</a></li>
@@ -2265,12 +2258,12 @@ table { font-size: 0.9em; }
 
 <section id="einordnung" class="level1">
 <h1>Einordnung</h1>
-<p><strong>AWAITING FINAL HUMAN APPROVAL.</strong> Diese KI-erstellte Präsentationskopie ergänzt den kurzen wissenschaftlichen Bericht und enthält alle zehn Analysen aus 10.3. Codex hat sie nach dem studentischen PDF-Review vom 26.10.2026 überarbeitet; die abschließende Freigabe steht aus. Das Originalnotebook und das studentische Review von 10.3 bleiben unverändert. Die Freigabe von 10.3 gilt nicht als Freigabe dieser neuen Präsentation.</p>
+<p><strong>APPROVED (26.10.2026).</strong> Diese KI-erstellte Präsentationskopie ergänzt den kurzen wissenschaftlichen Bericht und enthält alle zehn Analysen aus 10.3. Codex hat sie nach zwei studentischen PDF-Reviews überarbeitet; der Studierende hat die wissenschaftlichen Inhalte am 26.10.2026 freigegeben. Das Originalnotebook und das studentische Review von 10.3 bleiben unverändert. Die Freigabe von 10.3 gilt nicht als Freigabe dieser neuen Präsentation.</p>
 <p>Daten: AI4I 2020, UCI, DOI 10.24432/C5HS5C, CC BY 4.0 <span class="citation" data-cites="ai4i">(<a href="#ref-ai4i" role="doc-biblioref"><em>AI4I 2020 Predictive Maintenance Dataset</em> 2020</a>)</span>. UDI bezeichnet Zeilen, keine Zeitpunkte. Alle 10.000 Beobachtungen werden verwendet.</p>
 <p>Der Hauptbericht demonstriert in HTML einklappbaren Code. In dieser Präsentationsfassung bleibt Code zugunsten der Lesbarkeit verborgen; die editierbare Notebookdatei enthält den vollständigen Quellcode. Die folgenden Verteilungen, Paarbeziehungen und Klassenanalysen sind explorativ. IQR-Markierungen sind keine nachgewiesenen Fehler oder Ausfälle.</p>
 <section id="vollständige-analysen-aus-aufgabe-10.3" class="level2">
 <h2 class="anchored" data-anchor-id="vollständige-analysen-aus-aufgabe-10.3">Vollständige Analysen aus Aufgabe 10.3</h2>
-<p>Die folgenden zehn Analysen übernehmen die geprüften Berechnungen aus 10.3. Diese neue Präsentationsfassung gehört zu 10.4 und wurde studentisch geprüft und von Codex korrigiert; die finale Freigabe steht aus. Die Originaldatei bleibt unter <code>sessions/ch10/ai4i_seaborn.ipynb</code> erhalten. Die Quelle ist der synthetische UCI-Datensatz AI4I 2020, DOI 10.24432/C5HS5C, CC BY 4.0.</p>
+<p>Die folgenden zehn Analysen übernehmen die geprüften Berechnungen aus 10.3. Diese neue Präsentationsfassung gehört zu 10.4 und wurde studentisch geprüft, von Codex korrigiert und am 26.10.2026 wissenschaftlich freigegeben. Die Originaldatei bleibt unter <code>sessions/ch10/ai4i_seaborn.ipynb</code> erhalten. Die Quelle ist der synthetische UCI-Datensatz AI4I 2020, DOI 10.24432/C5HS5C, CC BY 4.0.</p>
 <p>Reproduktion dieser Fassung vom Projektstamm: <code>scripts/uv.cmd run --offline --locked python scripts/build_exercise_10_4.py</code>. Quarto erzeugt HTML und PDF über LuaLaTeX; alle Berechnungen werden neu ausgeführt.</p>
 </section>
 <section id="daten-und-analyseentscheidungen" class="level2">
@@ -2744,8 +2737,8 @@ SHA256: dc6630cd9b1f0f853922fad78a1b6436570d3f1ec863f1dd5c4340ac56bc8a8e</code><
 </ol>
 <p>Die Daten sind synthetisch, UDI ist kein Zeitstempel. Es werden weder Kausalität, Signifikanz noch ein zugrunde liegender Mechanismus nachgewiesen. Regression und Korrelationsmatrizen sind rein deskriptiv. Die Freigabe der ursprünglichen Aufgabe 10.3 ersetzt kein Review dieser neuen Präsentationsfassung.</p>
 </section>
-<section id="fragen-für-die-abschließende-freigabe" class="level2">
-<h2 class="anchored" data-anchor-id="fragen-für-die-abschließende-freigabe">Fragen für die abschließende Freigabe</h2>
+<section id="lernfragen-zur-analyse" class="level2">
+<h2 class="anchored" data-anchor-id="lernfragen-zur-analyse">Lernfragen zur Analyse</h2>
 <ol type="1">
 <li>Sind alle verlangten Diagramme und alle drei Messgrößen vorhanden und lesbar?</li>
 <li>Wie unterscheiden sich Boxplot und Violinplot, und warum sind IQR-Flags keine bewiesenen Fehler?</li>
@@ -2753,12 +2746,12 @@ SHA256: dc6630cd9b1f0f853922fad78a1b6436570d3f1ec863f1dd5c4340ac56bc8a8e</code><
 <li>Wie beeinflussen gleiche Bin-Breiten, ungleiche Gruppengrößen, Jitter und KDE die Darstellung?</li>
 <li>Welche Schlussfolgerungen sind wegen synthetischer Daten und fehlender Zeitinformation nicht zulässig?</li>
 </ol>
-<p><strong>AWAITING FINAL HUMAN APPROVAL. Die Korrekturen nach dem studentischen Review sind noch nicht abschließend freigegeben.</strong></p>
+<p><strong>APPROVED (26.10.2026). Die wissenschaftlichen Inhalte wurden nach den studentischen Reviews ausdrücklich freigegeben.</strong></p>
 </section>
 </section>
 <section id="grenzen-und-review" class="level1">
 <h1>Grenzen und Review</h1>
-<p>Die starke inverse Drehmoment-Drehzahl-Beziehung ist deskriptiv. Die Daten sind synthetisch, eine Übertragung auf reale Maschinen oder ein Kausalitätsnachweis folgen daraus nicht. Schwache Temperaturkorrelationen beweisen keine Unabhängigkeit. Bei den Klassenplots beeinflussen die Grenzen die sichtbaren Häufigkeiten; Zeilen werden nicht entfernt. Die numerische IQR-Toleranz schützt exakte Grenzwerte vor Gleitkommafehlern. Diese Präsentationskopie wurde nach studentischem Review von Codex überarbeitet; die finale studentische Freigabe steht aus. <strong>AWAITING FINAL HUMAN APPROVAL</strong>.</p>
+<p>Die starke inverse Drehmoment-Drehzahl-Beziehung ist deskriptiv. Die Daten sind synthetisch, eine Übertragung auf reale Maschinen oder ein Kausalitätsnachweis folgen daraus nicht. Schwache Temperaturkorrelationen beweisen keine Unabhängigkeit. Bei den Klassenplots beeinflussen die Grenzen die sichtbaren Häufigkeiten; Zeilen werden nicht entfernt. Die numerische IQR-Toleranz schützt exakte Grenzwerte vor Gleitkommafehlern. Diese Präsentationskopie wurde nach studentischem Review von Codex überarbeitet und am 26.10.2026 wissenschaftlich freigegeben. <strong>APPROVED (26.10.2026)</strong>.</p>
 </section>
 <section id="literatur" class="level1">
 <h1>Literatur</h1>
