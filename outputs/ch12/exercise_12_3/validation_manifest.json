@@ -1,0 +1,54 @@
+{
+  "validated_date": "2026-10-26",
+  "ai_assistance": "Codex",
+  "human_review": "SCIENTIFICALLY APPROVED \u2013 TECHNICALLY VALIDATED \u2013 AWAITING FINAL MERGE AUTHORIZATION",
+  "merge_authorized": false,
+  "raw_sha256": {
+    "UWaveGestureLibrary_TRAIN.ts": "cb7cd8cb995775d30dacbfd5c2a9cb3a80dfbd186fd444294bae70c9162dead1",
+    "UWaveGestureLibrary_TEST.ts": "517dbc817c3f181c64727a84ee8bd0cedd3554346042898b9107010b690c331a"
+  },
+  "reference": {
+    "approved_commit": "50d3a014fb42b055b12e60188df2df82ea5918f5",
+    "files": {
+      "outputs/ch12/exercise_12_2/predictions.csv": "cc3b8c9bb99b638252d14e6be6a4c37ff24030ec60dfa08d212031abc1189ee4",
+      "outputs/ch12/exercise_12_2/metrics.csv": "6124101ade4ec81ba32bdf78edcb85eb03493a9e4f86714b2a371a4457fcc232",
+      "outputs/ch12/exercise_12_2/classification_report.csv": "50540e60b539d37b793cf37f4292e6d649ff7d14ed5b7e2c6fdf7920afe898b0",
+      "outputs/ch12/exercise_12_2/confusion_knn.csv": "9c163676eabdac56fc84c5b9efa74f8530dd6471f0ddd927ccdc043622a277aa",
+      "outputs/ch12/exercise_12_2/confusion_cnn.csv": "8109fa0922baba17ff0e326d9adcc530f0cbff04fc0752dc990374e293fc9990"
+    }
+  },
+  "config": {
+    "n_estimators": 200,
+    "n_intervals": "sqrt",
+    "min_interval_length": 3,
+    "time_limit_in_minutes": null,
+    "random_state": 42,
+    "n_jobs": 1
+  },
+  "sequential_code_cells": 3,
+  "embedded_images": 2,
+  "all_320_forest_predictions_reproduced": true,
+  "independent_tree_probability_aggregation": true,
+  "repeat_fit_seconds": 5.57745120000618,
+  "repeat_predict_seconds": 0.9086714000004577,
+  "packages": {
+    "aeon": "1.6.0",
+    "numpy": "2.3.5",
+    "scikit-learn": "1.9.1"
+  },
+  "files": {
+    "sessions/ch12/uwave_forest.ipynb": "38c308b2eec4c9e543b1dec78b8e007a0d6ae58bce6017aea38009f0164b274d",
+    "outputs/ch12/exercise_12_3/uwave_forest.html": "21b3db7cbb2ee16835b7f75a6ff7cc309dd362648121d90e458fcb913f67a6df",
+    "sessions/ch12/forest.py": "8a0c86aa2e0e1f255179d0187f29e7ccb9a8c9a5d853ae766e3dbb4a0c84b2fd",
+    "sessions/ch12/forest_reference.json": "86dc1d7846d1428e8f493b892a45cff1fd6afbe0d8e8e9fae3f704853722cfa7",
+    "outputs/ch12/exercise_12_3/summary.json": "0c7ac9ade7bd5d3a19aca9fb93dddbb1ef31ff80ec634761d06b642d70f433f3",
+    "outputs/ch12/exercise_12_3/classification_report.csv": "466aae20587e23a2b472b8046bf62137cc232fa2694982e01a7ee90f9eafc391",
+    "outputs/ch12/exercise_12_3/confusion_forest.csv": "b558ab1721f31b14834e0bb6f9751fe19869b120c108e87b5e0158e2bd02df1b",
+    "outputs/ch12/exercise_12_3/forest_probabilities.csv": "95a87d44afe30fcf75973b9169e1d35df06b5d69536b1a9dc7bb6618e867ed51",
+    "outputs/ch12/exercise_12_3/metrics.csv": "24a9350b8afc5f0ce885ae2c780661f576cc251c688783f6e4affef88e63101c",
+    "outputs/ch12/exercise_12_3/paired_comparison.csv": "8c960820ac305dca826d67324d17eb13f48fd19c6826076143a29c748eaba9bb",
+    "outputs/ch12/exercise_12_3/predictions.csv": "9917dd1f1fb181ddd1dac74e7951b47c17d21523dd667b6a296f95960f30b24a",
+    "outputs/ch12/exercise_12_3/01_interval.png": "820d45fbf594e3c5167e2f3160e6858831c490c7251d0c1a9d1c7cfb4fec46d7",
+    "outputs/ch12/exercise_12_3/02_comparison.png": "8e748247a24520247cd003d454422c8493e2f4d594bcd8419000735d887af432"
+  }
+}

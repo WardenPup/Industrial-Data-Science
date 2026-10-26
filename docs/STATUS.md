@@ -1,3 +1,38 @@
+## 26.10.2026 – Aufgabe 12.3: Human Review technisch abgeglichen
+
+Status: SCIENTIFICALLY APPROVED – TECHNICALLY VALIDATED – AWAITING FINAL MERGE AUTHORIZATION.
+Originalreview unverändert separat in fb85fa2 gesichert. Ein knapper Notebook-/HTML-
+Satz erklärt Kanal 3 = Python-Index 2; Modell und alle wissenschaftlichen Werte/Grafiken
+unverändert. 57 Tests erneut bestanden (6,710 s), frischer Kernel mit drei Codezellen,
+zweiter vollständiger Fit, Metriken/320 Wahrscheinlichkeiten/Paar- und Klassenfehler
+bestätigt. Beide PNGs visuell und HTML offline 900/1400 px geprüft; 13 Artefakthashes,
+Originaldaten/Referenzen und acht bestehende ZIPs bestätigt. Grenzen bleiben sichtbar.
+Aktuelle Head-CI nach Push im PR dokumentiert; Ready nur nach Erfolg. Keine finale
+Merge-Autorisierung, kein Merge, keine 12.4 und keine Universitätseinreichung.
+
+## 26.10.2026 – Aufgabe 12.3 technisch validiert
+
+Status: AWAITING HUMAN REVIEW – NOT MERGED. Offizieller aeon TimeSeriesForestClassifier,
+200 Bäume/Seed 42, unveränderte 120/320 Originalsplits, TRAIN-only-Skalierung.
+Forest 277/320 korrekt, Accuracy 0,865625, Macro-F1 0,863884: über CNN, unter DTW-3-NN.
+57 Tests erfolgreich (6,900 s), drei frische sequenzielle Codezellen, vollständiger
+zweiter Fit reproduziert; Metriken/Baumwahrscheinlichkeiten unabhängig nachgerechnet.
+Zwei PNGs visuell und HTML offline bei 900/1400 px geprüft; Rohdaten-, Referenz- und
+13 Artefakthashes bestätigt. Acht ZIPs und alle bestehenden Human Reviews unverändert.
+KI-Beiträge, Annahmen und Grenzen im Review dokumentiert. Keine studentische Freigabe;
+Draft PR und aktuelle Head-CI folgen. 12.4 unbegonnen, keine Einreichung.
+
+## 26.10.2026 – Aufgabe 12.2 regulär gemergt; 12.3 beauftragt
+
+Explizite finale studentische Merge-Autorisierung erhalten. Unveränderter Head
+50d3a01, beide CI-Läufe 40401653232/40401662685 erfolgreich, Ready/conflict-free,
+keine Reviewkommentare oder offenen Threads. PR #10 regulär mit Merge-Commit
+ a216fdcecbcea9760b3a2fceb6ae672c0b98ed36 integriert; main identisch mit origin/main,
+Arbeitsbaum sauber. Review a958b4b und Verifikation 50d3a01 vollständig erhalten.
+Originalreviews bleiben unverändert. Finale Autorisierung ist hier und im Merge-
+Commit dokumentiert. 12.3 auf exercise/12.3 bis zum Human Review autorisiert;
+Anforderungen separat festgelegt, 12.4 unbegonnen, keine Einreichung.
+
 ## 26.10.2026 – Aufgabe 12.2: wissenschaftlich freigegeben, technisch nachgeprüft
 
 Status: APPROVED – AWAITING FINAL MERGE AUTHORIZATION.

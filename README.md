@@ -268,3 +268,12 @@ Daten: `scripts/download_uwave.py`; frische Ausführung: `scripts/build_exercise
 KI-Unterstützung: Codex; APPROVED – AWAITING FINAL MERGE AUTHORIZATION. PyTorch 2.9.1 nur CPU, expliziter
 Paketindex in pyproject.toml. uv-Cache-Konfiguration aus uv.toml ebenfalls dorthin
 übernommen, um sich überlagernde Indexkonfigurationen zu vermeiden.
+
+### Aufgabe 12.3
+
+Notebook: `sessions/ch12/uwave_forest.ipynb`; HTML: `outputs/ch12/exercise_12_3/uwave_forest.html`.
+Reproduktion: `scripts/uv.cmd run --offline --locked python scripts/build_exercise_12_3.py`.
+200 aeon-Intervallbäume, Seed 42, gleiche Originalsplits und TRAIN-only-Skalierung wie 12.2.
+Forest 277/320 korrekt, Accuracy 0,865625, Macro-F1 0,863884: über CNN, unter DTW-3-NN
+auf diesem Split. Keine allgemeine Überlegenheit. KI-Unterstützung: Codex.
+Status: **SCIENTIFICALLY APPROVED – TECHNICALLY VALIDATED – AWAITING FINAL MERGE AUTHORIZATION**. Review: `reviews/exercise_12_3.md`.

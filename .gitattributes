@@ -18,3 +18,8 @@ outputs/ch12/exercise_12_1/* -text
 
 sessions/ch12/uwave_classification.ipynb -text
 outputs/ch12/exercise_12_2/* -text
+
+sessions/ch12/uwave_forest.ipynb -text
+outputs/ch12/exercise_12_3/* -text
+sessions/ch12/forest.py -text
+sessions/ch12/forest_reference.json -text

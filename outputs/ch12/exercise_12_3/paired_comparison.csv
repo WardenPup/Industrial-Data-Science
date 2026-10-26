@@ -1,0 +1,3 @@
+reference,both_correct,forest_only_correct,reference_only_correct,both_wrong
+DTW 3-NN,270,7,21,22
+CNN,261,16,10,33
