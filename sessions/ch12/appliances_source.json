@@ -1,0 +1,57 @@
+{
+  "retrieved_date": "2026-10-26",
+  "record": "https://zenodo.org/records/18484626",
+  "license": "CC-BY-4.0",
+  "urls": {
+    "AppliancesEnergy_TEST.ts": "https://zenodo.org/api/records/18484626/files/AppliancesEnergy_TEST.ts/content",
+    "AppliancesEnergy_TRAIN.ts": "https://zenodo.org/api/records/18484626/files/AppliancesEnergy_TRAIN.ts/content"
+  },
+  "files": {
+    "AppliancesEnergy_TEST.ts": "9a53cd61b5f006719186ce6f768caa06cc3deeabc70468fed62c8326e0ece41a",
+    "AppliancesEnergy_TRAIN.ts": "7eb6b7f765ee1bc590aecf9499e1581ef22aa492fe1a067efcb2a244c8ddcdcb"
+  },
+  "splits": {
+    "TRAIN": {
+      "shape": [
+        95,
+        24,
+        144
+      ],
+      "target_range": [
+        5.34,
+        26.28
+      ],
+      "metadata": {
+        "problemname": "appliancesenergy",
+        "timestamps": false,
+        "missing": false,
+        "univariate": false,
+        "equallength": true,
+        "classlabel": false,
+        "targetlabel": true,
+        "class_values": []
+      }
+    },
+    "TEST": {
+      "shape": [
+        42,
+        24,
+        144
+      ],
+      "target_range": [
+        9.33,
+        24.12
+      ],
+      "metadata": {
+        "problemname": "appliancesenergy",
+        "timestamps": false,
+        "missing": false,
+        "univariate": false,
+        "equallength": true,
+        "classlabel": false,
+        "targetlabel": true,
+        "class_values": []
+      }
+    }
+  }
+}
