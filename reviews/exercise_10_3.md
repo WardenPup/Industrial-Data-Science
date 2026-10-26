@@ -3,7 +3,8 @@
 Status: APPROVED
 Human review: Feedback provided
 Final approval: Recorded on 2026-10-26 after the student's explicitly
-authorized CI condition was satisfied. Merge authorization: Not granted.
+authorized CI condition was satisfied. Merge authorization: Explicitly granted on 2026-10-26; PR #3 merged as
+`7bb6055e4d824e42c0f663d37c98d1fba847f057` after both current-head checks passed.
 
 ## Requirements and provenance
 
@@ -242,3 +243,23 @@ Die Grenzen der Aussagekraft wurden berücksichtigt. Bei der fachlichen Prüfung
 **Human Review: Fachlich positiv.**
 
 Die endgültige Freigabe erfolgt nach erfolgreicher Kontrolle aller GitHub-Actions-Prüfungen. Bis dahin bleibt Pull Request #3 ungemergt.
+
+
+## Tatsächlich autorisierter Merge und Kapitelabschluss (26.10.2026)
+
+Der Studierende autorisierte im aktuellen Auftrag ausdrücklich den regulären
+Merge von 10.3 und danach 10.4, vorbehaltlich aktueller erfolgreicher Checks.
+Codex bestätigte die dokumentierte studentische Freigabe und beide erfolgreichen
+Checks für `c9c58ab85821e3f8cd24a3490d8c7c7d1bf4796b`. PR #3 wurde regulär als
+`7bb6055e4d824e42c0f663d37c98d1fba847f057` in main gemergt. Die vollständige
+Entwicklungs- und Reviewhistorie ist erhalten; keine Squash-/Rebase-Umschreibung.
+Die anschließende Integration von PR #4 dupliziert die gemeinsame Vorgeschichte
+nicht. Der studentische Originalreviewtext bleibt wortgetreu erhalten.
+
+Auf dem gemergten main nach beiden Merges: 22 Tests erfolgreich, alle drei
+Notebooks in frischen Kerneln erfolgreich, Herzskript und Offline-HTML-Prüfungen
+bestanden. Die 10.3-Abgabekopie wurde außerdem unabhängig vom ursprünglichen
+Projektordner entpackt und mit 12 Codezellen erfolgreich ausgeführt; zehn HTML-
+Abbildungen offline dekodiert. Diese Nachweise stammen von Codex, keine zusätzliche
+studentische Testausführung behauptet. Aufgabe 10.3 ist APPROVED und integriert.
+Keine Universitätseinreichung und keine Arbeit an Kapitel 11.

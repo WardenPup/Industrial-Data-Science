@@ -1,6 +1,6 @@
 # Aufgabe 10.4 – Human-AI-Review
 
-Status: **APPROVED**. Freigabe: 26.10.2026 (Europe/Berlin). Merge ausdrücklich autorisiert, vorbehaltlich aktueller erfolgreicher Prüfungen.
+Status: **APPROVED**. Freigabe: 26.10.2026 (Europe/Berlin). PR #4 nach erfolgreichen aktuellen Prüfungen regulär gemergt (`740ed55`).
 
 Der folgende Erstentwurfsnachweis ist historisch. Das unveränderte studentische
 Review vom 26.10.2026 und die anschließende KI-Korrektur sind unten dokumentiert.
@@ -939,3 +939,64 @@ Die Änderungen betreffen ausschließlich echte Freigabehinweise und die Bezeich
 von Reviewfragen als Lernfragen. Wissenschaftliche Aussagen bleiben unverändert.
 Der bekannte lokale TCP-Kernelhinweis besteht; kein Test-/Renderfehler trat auf.
 Der daraus erzeugte Head erhält vor dem autorisierten Merge erneut beide CI-Läufe.
+
+
+## Regulärer Merge, main-Prüfung und lokale Abgabevorbereitung (26.10.2026)
+
+Nach dem bereits erfolgreichen Merge von PR #3 wurden beide Läufe für den
+freigegebenen finalen 10.4-Head `608c0fa67088e5000967188e9abb9785204b70c3`
+tatsächlich vollständig erfolgreich geprüft:
+- Push: https://github.com/WardenPup/Industrial-Data-Science/actions/runs/40325527337
+- PR: https://github.com/WardenPup/Industrial-Data-Science/actions/runs/40325534101
+
+Die dokumentierte studentische Endfreigabe, beide vollständigen Reviewrunden,
+SHA-Schutz und Konfliktfreiheit waren vor dem Merge bestätigt. PR #4 wurde mit
+einem regulären Mergecommit `740ed55675d7b12830941700d860d3f5bd17a405` in main
+integriert. Lokales main wurde per Fast-forward synchronisiert. Sein Dateibaum
+ist bytegenau identisch mit dem geprüften 608c0fa-Head. Baseline d243632, die
+10.3-Commits, beide Reviewrunden und alle 10.4-Entwicklungsschritte sind weiterhin
+Vorfahren von main. Kein Force-Push, kein Squash, keine doppelten 10.3-Änderungen.
+
+Tatsächlich erneut auf gemergtem main ausgeführt:
+- `scripts/uv.cmd sync --offline --locked`: 111 Pakete aufgelöst, 107 installierte geprüft.
+- `scripts/uv.cmd run --offline --locked python -m unittest discover -s tests -v`:
+  22 Tests, 0,470 s, OK.
+- `scripts/uv.cmd run --offline --locked python scripts/validate_notebooks.py`:
+  alle drei Notebooks nacheinander in frischen Kerneln erfolgreich.
+- `scripts/uv.cmd run --offline --locked python sessions/ch10/aufgabe_10_1.py --output outputs/tooling-smoke/chapter10-heart.png`:
+  echte Herzgrafik erfolgreich erzeugt, kein Überschreiben der freigegebenen Grafik.
+- `scripts/uv.cmd run --offline --locked python scripts/check_exercise_10_4_html.py`:
+  beide HTML-Dateien offline bei 900/1400 px bestanden.
+
+Die Notebookprüfung erzeugte zwei zusätzliche PNG-Dateien neu (Pairplot und
+Jointplot). Ihre Bildbreiten unterschieden sich um 4 beziehungsweise 2 Pixel
+von den freigegebenen Git-Artefakten; Code, Daten und numerische Ergebnisse sind
+unverändert. Die Testvarianten sind unter `.tools/ch10-main-regenerated/` separat
+aufbewahrt und visuell geprüft. Anschließend wurden ausschließlich diese eigenen
+Testausgaben aus den bekannten freigegebenen Git-Blobs wiederhergestellt.
+Eine bitidentische PNG-Neuberechnung in allen Renderkontexten wird nicht behauptet.
+Die ZIPs werden aus dem geprüften Git-Snapshot gebaut und übernehmen deshalb
+keinen unkontrollierten Testzwischenstand. Keine fremden Änderungen verworfen.
+
+`scripts/prepare_chapter_10_submission.py --source-ref 740ed55675d7b12830941700d860d3f5bd17a405`
+wurde über die projektlokale uv-Umgebung tatsächlich ausgeführt. Vier ZIPs,
+CRC-/Pfad-/Inhalts-/SHA256-Prüfung, drei frische Notebookausführungen aus den
+entpackten Paketen (6/12/14 Codezellen), separater Herzskriptlauf, vier Offline-
+HTML-Prüfungen (1/10/3/10 Bilder) und vollständiges PDF-Rendering (6/5/10 Seiten)
+bestanden. Alle 21 PDF-Seiten der Paketquellen wurden visuell kontrolliert;
+die archivierten 10.4-PDFs entsprechen bytegenau der vorher geprüften Freigabefassung.
+Die finale Inhaltsliste und ZIP-Prüfsummen stehen unter
+`submission/chapter_10/CHECKLIST.md` und `submission_manifest.json`.
+
+In der Aufbereitung wurden zunächst zu allgemeine README-Sätze aufgabenspezifisch
+präzisiert; die endgültigen Archive wurden danach vollständig erneut geprüft.
+Nur direkt benötigte Lösungs-/Reproduktionsdateien, Abhängigkeitsspezifikationen,
+Exporte und unveränderte öffentliche UCI-Daten mit CC-BY-4.0-Nachweis sind enthalten.
+Keine virtuellen Umgebungen, Caches, Git-Metadaten, temporären Builds, Zugangsdaten
+oder Binärwerkzeuge. ZIP-Dateien bleiben lokal und Git-ignoriert; ihre Inhalte,
+Prüfsummen und Erstellung sind im Projekt nachvollziehbar dokumentiert.
+
+Aufgabe 10.4: **APPROVED, in main integriert, vollständig abgeschlossen**.
+Die Einreichung selbst ist **NICHT AUTORISIERT und NICHT ERFOLGT**. Kapitel 11
+wurde nicht begonnen. Historische Aussagen über ausstehende Freigaben beschreiben
+den damaligen Stand. Der finale GitHub-/Mergeerfolg impliziert keine Hochschulabgabe.

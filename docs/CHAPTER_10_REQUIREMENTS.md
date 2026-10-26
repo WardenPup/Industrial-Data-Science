@@ -7,8 +7,8 @@ This is a task inventory in our own words, not a copy of the manuscript.
 |---|---|---|
 | 10.1 | Install uv, initialize an isolated Python project, install NumPy and Matplotlib, plot the specified parametric curve and explain environment management | Human-approved; PR #1 merged on 2026-10-26 |
 | 10.2 | Notebook with AI4I data, specified columns, first ten rows, statistics, torque line plot, different cell types, HTML/PDF exports | Human-approved and merged as PR #2 |
-| 10.3 | Seaborn distribution, relationship and advanced plots; reasoned observations | Human review positive; explicit CI approval condition satisfied; APPROVED, merge permission withheld |
-| 10.4 | Quarto report and notebook rendering to HTML/PDF, chunk options and presentation | Not started; Quarto/Pandoc/TeX setup deferred to this exercise |
+| 10.3 | Seaborn distribution, relationship and advanced plots; reasoned observations | APPROVED; PR #3 merged on 2026-10-26 after explicit merge authorization and successful current-head checks |
+| 10.4 | Quarto report and notebook rendering to HTML/PDF, chunk options and presentation | APPROVED; QMD and companion HTML/PDF verified; PR #4 merged on 2026-10-26 after explicit final approval and successful current-head checks |
 
 For 10.1 the exact mathematical requirements are
 `x = 16*sin(t)**3` and
@@ -19,3 +19,5 @@ and preserves equal axis scaling. No empirical dataset or experimental result is
 The original synthetic export check remains separate from Exercise 10.2.
 AI4I acquisition and the 10.2 notebook were subsequently implemented after explicit
 authorization. See `docs/EXERCISE_10_2_REQUIREMENTS.md` and `reviews/exercise_10_2.md`.
+
+All four exercises are complete on main. Four local submission ZIPs are documented in `submission/chapter_10/CHECKLIST.md`; no university upload has occurred.

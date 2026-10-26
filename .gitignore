@@ -42,3 +42,4 @@ data/raw/*
 !data/raw/README.md
 data/processed/*
 !data/processed/README.md
+/submission/chapter_10/*.zip

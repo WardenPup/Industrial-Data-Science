@@ -1,0 +1,633 @@
+{
+  "source_commit": "740ed55675d7b12830941700d860d3f5bd17a405",
+  "prepared_date": "2026-10-26",
+  "uploaded": false,
+  "submission_authorized": false,
+  "rules": "User-supplied university rules: one file per exercise; ZIP for multiple files; HTML for every notebook; PDF where required.",
+  "official_assignment": "https://noxthot.github.io/ws26_industrial_datascience_manuscript/1_act1/6_self_study_session1.html",
+  "source_retrieved": "2026-10-26",
+  "qa_actor": "Codex",
+  "runtime_python": "3.12.15",
+  "packages": [
+    {
+      "exercise": "10.1",
+      "file": "Industrial_Data_Science_Exercise_10_1.zip",
+      "root": "exercise_10_1",
+      "bytes": 122803,
+      "sha256": "44b69fc222611034ed178a404a405e6132b353673154a91e48181e96d6256cdc",
+      "entries": [
+        {
+          "path": "exercise_10_1/.python-version",
+          "bytes": 8,
+          "sha256": "845c494b4a7e1a741db19fd42eda239d3ee03b65f08276008943349a3055c9cc"
+        },
+        {
+          "path": "exercise_10_1/README_ABGABE.md",
+          "bytes": 1889,
+          "sha256": "866eb5181907c143af6bc4f44c985035cceb718d7191a0fef6edfb446f37d2b2"
+        },
+        {
+          "path": "exercise_10_1/outputs/ch10/aufgabe_10_1_herz.png",
+          "bytes": 70516,
+          "sha256": "918c7150ddcaff0dabc87919137587388e3a14c8db5efbb302654d4d7ac61494"
+        },
+        {
+          "path": "exercise_10_1/pyproject.toml",
+          "bytes": 527,
+          "sha256": "045231f3617050ed5cb950f79f72a2a18a03073ef8e93172d1fcb0c98cc5ad32"
+        },
+        {
+          "path": "exercise_10_1/scripts/uv.cmd",
+          "bytes": 531,
+          "sha256": "f5e9664060d67fdd493b16d8f3e2d0b4e2ac3f410a4abdafb2fad679c6358188"
+        },
+        {
+          "path": "exercise_10_1/sessions/ch10/aufgabe_10_1.md",
+          "bytes": 4177,
+          "sha256": "4423d326d84100d8ddf74245e3a939afc34caf1730b66fdd628d49348c7ea4a2"
+        },
+        {
+          "path": "exercise_10_1/sessions/ch10/aufgabe_10_1.py",
+          "bytes": 1892,
+          "sha256": "8f96bf63e744eb5b636c188c99243a3c6f18b93e0d3f8a5ed8b4a3cccab139cc"
+        },
+        {
+          "path": "exercise_10_1/uv.lock",
+          "bytes": 163784,
+          "sha256": "763c5bd659cc8ae2be73ca192dc93e8596af70d45b1ef4b4fa8a4bf2abc345b1"
+        },
+        {
+          "path": "exercise_10_1/uv.toml",
+          "bytes": 24,
+          "sha256": "788bb37dfc37f588c605afbb058e51b06fabf82c58f275ce115a7099ae2664a9"
+        }
+      ]
+    },
+    {
+      "exercise": "10.2",
+      "file": "Industrial_Data_Science_Exercise_10_2.zip",
+      "root": "exercise_10_2",
+      "bytes": 796625,
+      "sha256": "61448bedeb510dec21e9e65d7e94989bf9956969e649abb3e3a8a73788da5c98",
+      "entries": [
+        {
+          "path": "exercise_10_2/.python-version",
+          "bytes": 8,
+          "sha256": "845c494b4a7e1a741db19fd42eda239d3ee03b65f08276008943349a3055c9cc"
+        },
+        {
+          "path": "exercise_10_2/README_ABGABE.md",
+          "bytes": 3076,
+          "sha256": "03bb87aa5683770c247ea368ca3001fe8656607a7599828d052bf58f1196b444"
+        },
+        {
+          "path": "exercise_10_2/data/raw/README.md",
+          "bytes": 1119,
+          "sha256": "a6481a6783571c5a0ad78c6628b38024152df78581bf82a8e355b64c045ead80"
+        },
+        {
+          "path": "exercise_10_2/data/raw/ai4i2020.csv",
+          "bytes": 522048,
+          "sha256": "dc6630cd9b1f0f853922fad78a1b6436570d3f1ec863f1dd5c4340ac56bc8a8e"
+        },
+        {
+          "path": "exercise_10_2/outputs/ch10/exercise_10_2/ai4i_explore.html",
+          "bytes": 453256,
+          "sha256": "db70247c9fd907ad07a7b0a984d1e095eef018bf38aa1dc6e421d8101a3d7623"
+        },
+        {
+          "path": "exercise_10_2/outputs/ch10/exercise_10_2/ai4i_explore.pdf",
+          "bytes": 223463,
+          "sha256": "723b11109ca734e4ac3fb67d9d2bbfb3392acc1d8c03bb9e76df1f7683ee07a2"
+        },
+        {
+          "path": "exercise_10_2/outputs/ch10/exercise_10_2/summary_statistics.csv",
+          "bytes": 371,
+          "sha256": "57ec77e8982f03a2c9524f290d0969d6444d8f37fa4c65f51c69374dde149e07"
+        },
+        {
+          "path": "exercise_10_2/outputs/ch10/exercise_10_2/torque_over_udi.png",
+          "bytes": 105968,
+          "sha256": "6c1df2983a33eb3027c041cf2d6bd13de5e0769f8bf5f89fb9420e0b8a14171d"
+        },
+        {
+          "path": "exercise_10_2/pyproject.toml",
+          "bytes": 527,
+          "sha256": "045231f3617050ed5cb950f79f72a2a18a03073ef8e93172d1fcb0c98cc5ad32"
+        },
+        {
+          "path": "exercise_10_2/scripts/build_exercise_10_2.py",
+          "bytes": 3009,
+          "sha256": "0413fb908f0a9c7e8bbcb728871276b40b8fef84924ae32e7f6e1f116c76dd3c"
+        },
+        {
+          "path": "exercise_10_2/scripts/uv.cmd",
+          "bytes": 531,
+          "sha256": "f5e9664060d67fdd493b16d8f3e2d0b4e2ac3f410a4abdafb2fad679c6358188"
+        },
+        {
+          "path": "exercise_10_2/scripts/validate_notebooks.py",
+          "bytes": 2203,
+          "sha256": "1fe1a7433f60ec57c77fdb3777556ac8df54f73504a3d15fb77f063e53baf3b5"
+        },
+        {
+          "path": "exercise_10_2/sessions/__init__.py",
+          "bytes": 27,
+          "sha256": "76958bcbf6dff8c3929bd3946da3259eabba3314e4409a3c57fd519e0d8a0dc2"
+        },
+        {
+          "path": "exercise_10_2/sessions/ch10/__init__.py",
+          "bytes": 28,
+          "sha256": "ed971cc8e7874462ad7c7bd78432ea0ff2521545a0cdabe87c9303087160805c"
+        },
+        {
+          "path": "exercise_10_2/sessions/ch10/ai4i_data.py",
+          "bytes": 1570,
+          "sha256": "cf26d04ab36b73b6a6459e1d152d468c1c18f00182e7d7d748af416931b7000c"
+        },
+        {
+          "path": "exercise_10_2/sessions/ch10/ai4i_explore.ipynb",
+          "bytes": 164074,
+          "sha256": "44a50d79c71e35c963752d3388cb93215368ae3b7fc5c545df8be031a9bf45fc"
+        },
+        {
+          "path": "exercise_10_2/templates/notebook_export.html.j2",
+          "bytes": 542,
+          "sha256": "b220b3d9fa6b4d90d1abcdca297d21d98e9ade82e615c85ebbdccd3570c42a65"
+        },
+        {
+          "path": "exercise_10_2/uv.lock",
+          "bytes": 163784,
+          "sha256": "763c5bd659cc8ae2be73ca192dc93e8596af70d45b1ef4b4fa8a4bf2abc345b1"
+        },
+        {
+          "path": "exercise_10_2/uv.toml",
+          "bytes": 24,
+          "sha256": "788bb37dfc37f588c605afbb058e51b06fabf82c58f275ce115a7099ae2664a9"
+        }
+      ]
+    },
+    {
+      "exercise": "10.3",
+      "file": "Industrial_Data_Science_Exercise_10_3.zip",
+      "root": "exercise_10_3",
+      "bytes": 5159585,
+      "sha256": "f94af58bb6e3b7a04a65ad470ab6f46d2fef1b88696c14441b0b6bda78872a3d",
+      "entries": [
+        {
+          "path": "exercise_10_3/.python-version",
+          "bytes": 8,
+          "sha256": "845c494b4a7e1a741db19fd42eda239d3ee03b65f08276008943349a3055c9cc"
+        },
+        {
+          "path": "exercise_10_3/README_ABGABE.md",
+          "bytes": 3026,
+          "sha256": "fdf5416ad4b3abf874a36c0ec9f65642186cc79b0c7ea9751e0591f9d089448f"
+        },
+        {
+          "path": "exercise_10_3/data/raw/README.md",
+          "bytes": 1119,
+          "sha256": "a6481a6783571c5a0ad78c6628b38024152df78581bf82a8e355b64c045ead80"
+        },
+        {
+          "path": "exercise_10_3/data/raw/ai4i2020.csv",
+          "bytes": 522048,
+          "sha256": "dc6630cd9b1f0f853922fad78a1b6436570d3f1ec863f1dd5c4340ac56bc8a8e"
+        },
+        {
+          "path": "exercise_10_3/outputs/ch10/exercise_10_3/01_line.png",
+          "bytes": 106062,
+          "sha256": "c7ad2c226d5f40c225bcc10bac202331fb5499a85eed5098cce8a0c24f694690"
+        },
+        {
+          "path": "exercise_10_3/outputs/ch10/exercise_10_3/02_histograms.png",
+          "bytes": 65867,
+          "sha256": "ee09c49bc731df47d32653f658f0ea6c86e920b057dce4423e99d3fe86f2c039"
+        },
+        {
+          "path": "exercise_10_3/outputs/ch10/exercise_10_3/03_boxplots.png",
+          "bytes": 68863,
+          "sha256": "efdab5cd2d4535ecd1733d320a8e5de85e7cc97c1a13aba6ae65ebb93acca7a1"
+        },
+        {
+          "path": "exercise_10_3/outputs/ch10/exercise_10_3/04_violins.png",
+          "bytes": 118956,
+          "sha256": "c99edef43e57f78bd6ea2bb4c0936836df98a89e74d0f8a028c8b2470a6b6f9a"
+        },
+        {
+          "path": "exercise_10_3/outputs/ch10/exercise_10_3/05_scatter.png",
+          "bytes": 229767,
+          "sha256": "fe736f0404229bf65fd6ad08b55728415cab971e7cd4ae4adb980c74bb292e2f"
+        },
+        {
+          "path": "exercise_10_3/outputs/ch10/exercise_10_3/06_pairplot.png",
+          "bytes": 472027,
+          "sha256": "08390b1bee41fd5ff52506cb3630dfa7d266cafc47eef31d8b0d85f98624e178"
+        },
+        {
+          "path": "exercise_10_3/outputs/ch10/exercise_10_3/07_heatmap.png",
+          "bytes": 58248,
+          "sha256": "91a66765ae79571afc83e947503cf5c8b22fcd1ba3a346a25250c417dcb3f75a"
+        },
+        {
+          "path": "exercise_10_3/outputs/ch10/exercise_10_3/08_joint_regression.png",
+          "bytes": 271754,
+          "sha256": "326e256f63eb6f9519f878b6ff18469c97b26cd17fd893a0d0209e58f7939143"
+        },
+        {
+          "path": "exercise_10_3/outputs/ch10/exercise_10_3/09_strip.png",
+          "bytes": 203084,
+          "sha256": "8d0292558a7ff3195784bd147787b0584e92f00369baff94138bc1830b61bf00"
+        },
+        {
+          "path": "exercise_10_3/outputs/ch10/exercise_10_3/10_count.png",
+          "bytes": 54059,
+          "sha256": "836e3f26553fb0bf4532e46a2c7fa85d2b0d3f4740ccc9fb4bbb47d1842066a7"
+        },
+        {
+          "path": "exercise_10_3/outputs/ch10/exercise_10_3/ai4i_seaborn.html",
+          "bytes": 2553075,
+          "sha256": "6c1f14b3eece5954db06374eb18cae05a64a5c65e6b5fd1b5bd4f27fbf96238d"
+        },
+        {
+          "path": "exercise_10_3/outputs/ch10/exercise_10_3/bin_edges.json",
+          "bytes": 331,
+          "sha256": "5808dee9ffdffa03bfc9f0b79d0729b5336555445699fe8fe3c285f889bf5d37"
+        },
+        {
+          "path": "exercise_10_3/outputs/ch10/exercise_10_3/iqr_summary.csv",
+          "bytes": 341,
+          "sha256": "6459ce304b3740c04bdaeb757b461af491ee2bd2acfafedb54624ec7954d3269"
+        },
+        {
+          "path": "exercise_10_3/outputs/ch10/exercise_10_3/pearson.csv",
+          "bytes": 247,
+          "sha256": "61e3f24416c08d79ca05e9faf9df113dbf627da64e273a9fd2e0e2a7eede29e2"
+        },
+        {
+          "path": "exercise_10_3/outputs/ch10/exercise_10_3/plot_manifest.json",
+          "bytes": 1590,
+          "sha256": "4e28ea2db090ba960f0cdbfa367cdee4da3e6499ebe8a8f083b4474c74ef83a7"
+        },
+        {
+          "path": "exercise_10_3/outputs/ch10/exercise_10_3/spearman.csv",
+          "bytes": 249,
+          "sha256": "f758df42bfd97e74b571995f8a6a9971e0cf64d0cb45c1f5dec3f2f74d4ec05e"
+        },
+        {
+          "path": "exercise_10_3/outputs/ch10/exercise_10_3/speed_bin_counts.csv",
+          "bytes": 45,
+          "sha256": "a3a29c032165c59ec045e691ff08f37738f94a3d473a0bd7cab54e38333e41f7"
+        },
+        {
+          "path": "exercise_10_3/outputs/ch10/exercise_10_3/torque_bin_counts.csv",
+          "bytes": 227,
+          "sha256": "e0c4e55b3bcfb6c5413da50b1e2410030beb26ef9b6ca4dc8edc9b62497a1fb9"
+        },
+        {
+          "path": "exercise_10_3/pyproject.toml",
+          "bytes": 527,
+          "sha256": "045231f3617050ed5cb950f79f72a2a18a03073ef8e93172d1fcb0c98cc5ad32"
+        },
+        {
+          "path": "exercise_10_3/scripts/build_exercise_10_3.py",
+          "bytes": 2901,
+          "sha256": "73e70b7e2aafcfe61c0ac5164a7007c067022417ad81d16b2e0b3a8609d92dc1"
+        },
+        {
+          "path": "exercise_10_3/scripts/uv.cmd",
+          "bytes": 531,
+          "sha256": "f5e9664060d67fdd493b16d8f3e2d0b4e2ac3f410a4abdafb2fad679c6358188"
+        },
+        {
+          "path": "exercise_10_3/scripts/validate_notebooks.py",
+          "bytes": 2203,
+          "sha256": "1fe1a7433f60ec57c77fdb3777556ac8df54f73504a3d15fb77f063e53baf3b5"
+        },
+        {
+          "path": "exercise_10_3/sessions/__init__.py",
+          "bytes": 27,
+          "sha256": "76958bcbf6dff8c3929bd3946da3259eabba3314e4409a3c57fd519e0d8a0dc2"
+        },
+        {
+          "path": "exercise_10_3/sessions/ch10/__init__.py",
+          "bytes": 28,
+          "sha256": "ed971cc8e7874462ad7c7bd78432ea0ff2521545a0cdabe87c9303087160805c"
+        },
+        {
+          "path": "exercise_10_3/sessions/ch10/ai4i_data.py",
+          "bytes": 1570,
+          "sha256": "cf26d04ab36b73b6a6459e1d152d468c1c18f00182e7d7d748af416931b7000c"
+        },
+        {
+          "path": "exercise_10_3/sessions/ch10/ai4i_eda.py",
+          "bytes": 2054,
+          "sha256": "6d3ded139515e06b4f8d5cb4ab6137ddd8dd5d01d9c49727408ec346a99fb88a"
+        },
+        {
+          "path": "exercise_10_3/sessions/ch10/ai4i_seaborn.ipynb",
+          "bytes": 2239761,
+          "sha256": "00d6adf40181ae83e866e235f7938ccf32ef359cd534a0ef4fc4470ef7305733"
+        },
+        {
+          "path": "exercise_10_3/templates/notebook_export.html.j2",
+          "bytes": 542,
+          "sha256": "b220b3d9fa6b4d90d1abcdca297d21d98e9ade82e615c85ebbdccd3570c42a65"
+        },
+        {
+          "path": "exercise_10_3/uv.lock",
+          "bytes": 163784,
+          "sha256": "763c5bd659cc8ae2be73ca192dc93e8596af70d45b1ef4b4fa8a4bf2abc345b1"
+        },
+        {
+          "path": "exercise_10_3/uv.toml",
+          "bytes": 24,
+          "sha256": "788bb37dfc37f588c605afbb058e51b06fabf82c58f275ce115a7099ae2664a9"
+        }
+      ]
+    },
+    {
+      "exercise": "10.4",
+      "file": "Industrial_Data_Science_Exercise_10_4.zip",
+      "root": "exercise_10_4",
+      "bytes": 7623096,
+      "sha256": "846f99b1f836f919d82f8bddf29727f22cd33b14c055e40922afaf34ac456a81",
+      "entries": [
+        {
+          "path": "exercise_10_4/.python-version",
+          "bytes": 8,
+          "sha256": "845c494b4a7e1a741db19fd42eda239d3ee03b65f08276008943349a3055c9cc"
+        },
+        {
+          "path": "exercise_10_4/README_ABGABE.md",
+          "bytes": 3376,
+          "sha256": "a6676f83056c89af32a40efdad693154b5be30ab3598ae6b82d79120d73bfc41"
+        },
+        {
+          "path": "exercise_10_4/data/raw/README.md",
+          "bytes": 1119,
+          "sha256": "a6481a6783571c5a0ad78c6628b38024152df78581bf82a8e355b64c045ead80"
+        },
+        {
+          "path": "exercise_10_4/data/raw/ai4i2020.csv",
+          "bytes": 522048,
+          "sha256": "dc6630cd9b1f0f853922fad78a1b6436570d3f1ec863f1dd5c4340ac56bc8a8e"
+        },
+        {
+          "path": "exercise_10_4/outputs/ch10/exercise_10_4/notebook_figures/01_line.png",
+          "bytes": 106062,
+          "sha256": "c7ad2c226d5f40c225bcc10bac202331fb5499a85eed5098cce8a0c24f694690"
+        },
+        {
+          "path": "exercise_10_4/outputs/ch10/exercise_10_4/notebook_figures/02_histograms.png",
+          "bytes": 57200,
+          "sha256": "ea662757d673fa25f6b2c17229f7175de8f5adb81b02a1ab7343ec98cd61588f"
+        },
+        {
+          "path": "exercise_10_4/outputs/ch10/exercise_10_4/notebook_figures/03_boxplots.png",
+          "bytes": 63230,
+          "sha256": "26d5c6983c520a1561168dff446125db63fdd105c500321d9d4d3fa04e6c34fc"
+        },
+        {
+          "path": "exercise_10_4/outputs/ch10/exercise_10_4/notebook_figures/04_violins.png",
+          "bytes": 102301,
+          "sha256": "4f41ed54633ba7a5c257562b2c54400329a42754fa0578b91edcc93a87f2886f"
+        },
+        {
+          "path": "exercise_10_4/outputs/ch10/exercise_10_4/notebook_figures/05_scatter.png",
+          "bytes": 229767,
+          "sha256": "fe736f0404229bf65fd6ad08b55728415cab971e7cd4ae4adb980c74bb292e2f"
+        },
+        {
+          "path": "exercise_10_4/outputs/ch10/exercise_10_4/notebook_figures/06_pairplot.png",
+          "bytes": 469611,
+          "sha256": "b47a8dcd2363085ef95906146740690551556b62ce5b848b23dd4172c4fbd8d0"
+        },
+        {
+          "path": "exercise_10_4/outputs/ch10/exercise_10_4/notebook_figures/07_heatmap.png",
+          "bytes": 58248,
+          "sha256": "91a66765ae79571afc83e947503cf5c8b22fcd1ba3a346a25250c417dcb3f75a"
+        },
+        {
+          "path": "exercise_10_4/outputs/ch10/exercise_10_4/notebook_figures/08_joint_regression.png",
+          "bytes": 272238,
+          "sha256": "b3627b40eb921c21a804060064d527fe43adbd0409c62bf4bef9f82c59e2e1a0"
+        },
+        {
+          "path": "exercise_10_4/outputs/ch10/exercise_10_4/notebook_figures/09_strip.png",
+          "bytes": 155200,
+          "sha256": "c236b2b99fc79d1c8aff220a4bf0afadc9757911240e3c425749b8d984b70b08"
+        },
+        {
+          "path": "exercise_10_4/outputs/ch10/exercise_10_4/notebook_figures/10_count.png",
+          "bytes": 53035,
+          "sha256": "661890f31cc66f0b4a8d9a3a6cb1acd9f6b9e135686a242b11c70d9c8e3300a9"
+        },
+        {
+          "path": "exercise_10_4/outputs/ch10/exercise_10_4/notebook_figures/bin_edges.json",
+          "bytes": 331,
+          "sha256": "5808dee9ffdffa03bfc9f0b79d0729b5336555445699fe8fe3c285f889bf5d37"
+        },
+        {
+          "path": "exercise_10_4/outputs/ch10/exercise_10_4/notebook_figures/iqr_summary.csv",
+          "bytes": 341,
+          "sha256": "6459ce304b3740c04bdaeb757b461af491ee2bd2acfafedb54624ec7954d3269"
+        },
+        {
+          "path": "exercise_10_4/outputs/ch10/exercise_10_4/notebook_figures/pearson.csv",
+          "bytes": 247,
+          "sha256": "61e3f24416c08d79ca05e9faf9df113dbf627da64e273a9fd2e0e2a7eede29e2"
+        },
+        {
+          "path": "exercise_10_4/outputs/ch10/exercise_10_4/notebook_figures/spearman.csv",
+          "bytes": 249,
+          "sha256": "f758df42bfd97e74b571995f8a6a9971e0cf64d0cb45c1f5dec3f2f74d4ec05e"
+        },
+        {
+          "path": "exercise_10_4/outputs/ch10/exercise_10_4/notebook_figures/speed_bin_counts.csv",
+          "bytes": 45,
+          "sha256": "a3a29c032165c59ec045e691ff08f37738f94a3d473a0bd7cab54e38333e41f7"
+        },
+        {
+          "path": "exercise_10_4/outputs/ch10/exercise_10_4/notebook_figures/torque_bin_counts.csv",
+          "bytes": 227,
+          "sha256": "e0c4e55b3bcfb6c5413da50b1e2410030beb26ef9b6ca4dc8edc9b62497a1fb9"
+        },
+        {
+          "path": "exercise_10_4/outputs/ch10/exercise_10_4/notebook_presentation.html",
+          "bytes": 3416182,
+          "sha256": "3376a47bed68b00dadd2e9cdfa418d2c052ecc05e5563c950fd6c19a84842f67"
+        },
+        {
+          "path": "exercise_10_4/outputs/ch10/exercise_10_4/notebook_presentation.pdf",
+          "bytes": 1410466,
+          "sha256": "b4625da20b454678a119fee9512e27de0697cec630ee6b2c3c4e4c78d04642d9"
+        },
+        {
+          "path": "exercise_10_4/outputs/ch10/exercise_10_4/paper.html",
+          "bytes": 1950177,
+          "sha256": "49b3069413e7acfd371d26b0eff204a5eb3a4d967d6430179f055d969d76a131"
+        },
+        {
+          "path": "exercise_10_4/outputs/ch10/exercise_10_4/paper.pdf",
+          "bytes": 189309,
+          "sha256": "80b4cf5c5bfcf7bf01e619c89445e8135d15181575db12fd07217b982ffba7fc"
+        },
+        {
+          "path": "exercise_10_4/outputs/ch10/exercise_10_4/tex_packages.tsv",
+          "bytes": 5118,
+          "sha256": "b0f30f08e4996d10bf973eff39972698700d8cf32daf7ad81ce85bcb5ca2ce7c"
+        },
+        {
+          "path": "exercise_10_4/outputs/ch10/exercise_10_4/validation_manifest.json",
+          "bytes": 1033,
+          "sha256": "39df6224d1230ddf6c217757549487bcf5db6508ee7c2515e10bda83d8c04118"
+        },
+        {
+          "path": "exercise_10_4/pyproject.toml",
+          "bytes": 527,
+          "sha256": "045231f3617050ed5cb950f79f72a2a18a03073ef8e93172d1fcb0c98cc5ad32"
+        },
+        {
+          "path": "exercise_10_4/reports/exercise_10_4/_quarto.yml",
+          "bytes": 638,
+          "sha256": "0a7eb3878daf89b3e28a26565d5b006382de889eb83a2cc52b041fe5ce600cbe"
+        },
+        {
+          "path": "exercise_10_4/reports/exercise_10_4/notebook_presentation.ipynb",
+          "bytes": 2132590,
+          "sha256": "c1ca63f17851f9c95cd4c51c0ca88b9be506c678ad1b77a22e82017dcc20fa70"
+        },
+        {
+          "path": "exercise_10_4/reports/exercise_10_4/paper.qmd",
+          "bytes": 12225,
+          "sha256": "5c2c48d3e7ffbb2ebbf42f78130e3288683cc6b1d790f2349634470c2c19762a"
+        },
+        {
+          "path": "exercise_10_4/reports/exercise_10_4/references.bib",
+          "bytes": 994,
+          "sha256": "6e2b8beec8bcfb2e74c42f62bdcbc17e3ab9e3f2b6252d60e1c9e5875b02237b"
+        },
+        {
+          "path": "exercise_10_4/reports/exercise_10_4/styles.css",
+          "bytes": 238,
+          "sha256": "57b428cadc907468f65a5ceaa933b403a7358c798291436309d1339c009cc880"
+        },
+        {
+          "path": "exercise_10_4/scripts/build_exercise_10_4.py",
+          "bytes": 5767,
+          "sha256": "67f22acd75a322e19b626a36a2db4d3a6de2c275ed2cf6fe2328246cce91bd15"
+        },
+        {
+          "path": "exercise_10_4/scripts/uv.cmd",
+          "bytes": 531,
+          "sha256": "f5e9664060d67fdd493b16d8f3e2d0b4e2ac3f410a4abdafb2fad679c6358188"
+        },
+        {
+          "path": "exercise_10_4/sessions/__init__.py",
+          "bytes": 27,
+          "sha256": "76958bcbf6dff8c3929bd3946da3259eabba3314e4409a3c57fd519e0d8a0dc2"
+        },
+        {
+          "path": "exercise_10_4/sessions/ch10/__init__.py",
+          "bytes": 28,
+          "sha256": "ed971cc8e7874462ad7c7bd78432ea0ff2521545a0cdabe87c9303087160805c"
+        },
+        {
+          "path": "exercise_10_4/sessions/ch10/ai4i_data.py",
+          "bytes": 1570,
+          "sha256": "cf26d04ab36b73b6a6459e1d152d468c1c18f00182e7d7d748af416931b7000c"
+        },
+        {
+          "path": "exercise_10_4/sessions/ch10/ai4i_eda.py",
+          "bytes": 2054,
+          "sha256": "6d3ded139515e06b4f8d5cb4ab6137ddd8dd5d01d9c49727408ec346a99fb88a"
+        },
+        {
+          "path": "exercise_10_4/sessions/ch10/report_10_4.py",
+          "bytes": 2349,
+          "sha256": "2d37b4c31a0c2223b34d04505e931c3faef906963104640f23100400513ee9f9"
+        },
+        {
+          "path": "exercise_10_4/uv.lock",
+          "bytes": 163784,
+          "sha256": "763c5bd659cc8ae2be73ca192dc93e8596af70d45b1ef4b4fa8a4bf2abc345b1"
+        },
+        {
+          "path": "exercise_10_4/uv.toml",
+          "bytes": 24,
+          "sha256": "788bb37dfc37f588c605afbb058e51b06fabf82c58f275ce115a7099ae2664a9"
+        }
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "exercise": "10.2",
+      "notebook": "sessions/ch10/ai4i_explore.ipynb",
+      "executed_cells": 6,
+      "result": "PASS"
+    },
+    {
+      "exercise": "10.3",
+      "notebook": "sessions/ch10/ai4i_seaborn.ipynb",
+      "executed_cells": 12,
+      "result": "PASS"
+    },
+    {
+      "exercise": "10.4",
+      "notebook": "reports/exercise_10_4/notebook_presentation.ipynb",
+      "executed_cells": 14,
+      "result": "PASS"
+    },
+    {
+      "exercise": "10.2",
+      "html": "outputs/ch10/exercise_10_2/ai4i_explore.html",
+      "decoded_images": 1,
+      "offline": true,
+      "result": "PASS"
+    },
+    {
+      "exercise": "10.2",
+      "pdf": "outputs/ch10/exercise_10_2/ai4i_explore.pdf",
+      "pages": 6,
+      "rendered_all_pages": true,
+      "result": "PASS"
+    },
+    {
+      "exercise": "10.3",
+      "html": "outputs/ch10/exercise_10_3/ai4i_seaborn.html",
+      "decoded_images": 10,
+      "offline": true,
+      "result": "PASS"
+    },
+    {
+      "exercise": "10.4",
+      "html": "outputs/ch10/exercise_10_4/notebook_presentation.html",
+      "decoded_images": 10,
+      "offline": true,
+      "result": "PASS"
+    },
+    {
+      "exercise": "10.4",
+      "html": "outputs/ch10/exercise_10_4/paper.html",
+      "decoded_images": 3,
+      "offline": true,
+      "result": "PASS"
+    },
+    {
+      "exercise": "10.4",
+      "pdf": "outputs/ch10/exercise_10_4/notebook_presentation.pdf",
+      "pages": 10,
+      "rendered_all_pages": true,
+      "result": "PASS"
+    },
+    {
+      "exercise": "10.4",
+      "pdf": "outputs/ch10/exercise_10_4/paper.pdf",
+      "pages": 5,
+      "rendered_all_pages": true,
+      "result": "PASS"
+    }
+  ]
+}

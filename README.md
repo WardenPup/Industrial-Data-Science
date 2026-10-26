@@ -1,7 +1,7 @@
 # Industrial Data Science – Self-Study Kapitel 10–12
 
-Lokales Lernprojekt. Aufgaben 10.1 und 10.2 sind freigegeben und gemergt;
-10.3 ist nach studentischer Prüfung und erfolgreicher CI freigegeben; Merge-Erlaubnis steht aus.
+Lokales Lernprojekt. Aufgaben 10.1–10.4 sind nach studentischen Reviews,
+ausdrücklichen Freigaben und technischen Prüfungen vollständig in main integriert.
 Die offizielle Aufgabenstellung hat Vorrang vor eigenen Zusammenfassungen.
 
 ## Start in PowerShell
@@ -96,7 +96,7 @@ Korrelations-/IQR-Tabellen, Bin-Häufigkeiten, Grenzen und ein Bildmanifest.
 Die drei Histogramme, Boxplots und Violinplots sind jeweils als drei Teilachsen
 zusammengefasst. Die offizielle 10.3-Aufgabe verlangt keinen PDF-Export.
 [Review 10.3](reviews/exercise_10_3.md): APPROVED nach bestätigter CI-Bedingung.
-Kein Merge ohne ausdrückliche Erlaubnis. Keine 10.4-Arbeit.
+PR #3 wurde nach ausdrücklicher Erlaubnis und erfolgreichen Head-Checks regulär gemergt.
 
 ## VS Code
 
@@ -150,7 +150,8 @@ Eine separate Präsentationskopie erhält die vollständige EDA aus 10.3.
 KI-Erstentwurf, tatsächlichen technischen Prüfungen und studentischer Redaktion.
 Status: **APPROVED** nach zwei studentischen PDF-Reviews,
 KI-gestützten Korrekturen und erfolgreicher technischer Prüfung.
-Finale wissenschaftliche Freigabe und bedingte Merge-Erlaubnis: 26.10.2026. Die Exporte liegen unter
+Finale wissenschaftliche Freigabe und Merge-Erlaubnis: 26.10.2026.
+PR #4 ist nach PR #3 regulär gemergt; sämtliche Reviewcommits sind erhalten. Die Exporte liegen unter
 `outputs/ch10/exercise_10_4/`; PDF wird über Quarto und LuaLaTeX erzeugt.
 Die bestehenden Actions prüfen Python und Notebooks. Die zusätzliche Quarto-/TeX-
 Exportprüfung erfolgt lokal und ist nicht Bestandteil der bisherigen CI.
@@ -162,3 +163,23 @@ Exportprüfung erfolgt lokal und ist nicht Bestandteil der bisherigen CI.
 - [nbconvert: Export-Abhängigkeiten](https://nbconvert.readthedocs.io/en/latest/install.html).
 - [Codex IDE-Erweiterung](https://learn.chatgpt.com/docs/codex/ide).
 - [OpenAI: Projektanweisungen mit AGENTS.md](https://developers.openai.com/cookbook/examples/codex/iterating-development-workflows-with-codex).
+
+
+## Kapitel 10 abgeben – noch kein Upload
+
+Vier geprüfte lokale ZIP-Dateien liegen unter `submission/chapter_10/`.
+Die [Abgabecheckliste](submission/chapter_10/CHECKLIST.md) nennt jede enthaltene
+Datei sowie ZIP-Größen und SHA256. [Abgaberegeln](docs/SUBMISSION_RULES_CHAPTER_10.md)
+unterscheiden die ausdrücklich mitgeteilten Hochschulregeln von den offiziellen
+Aufgabenquellen. Der reproduzierbare Packager liest den geprüften Git-Snapshot:
+
+```powershell
+scripts/uv.cmd run --offline --locked python scripts/prepare_chapter_10_submission.py --source-ref 740ed55675d7b12830941700d860d3f5bd17a405
+```
+
+Er prüft Archive und führt die entpackten Notebooks in der vorhandenen gesperrten
+Projektumgebung aus. Poppler und das vorhandene Playwright-Chromium werden für
+PDF-/Offline-HTML-QA benötigt. ZIPs enthalten direkt relevante Quellen, Exporte,
+Reproduktionsdateien und UCI-Daten mit Lizenz; keine installierten Werkzeuge.
+Die vorbereiteten ZIPs sind lokal Git-ignoriert und werden nicht automatisch
+an die Universität übermittelt. Kapitel 11 wurde nicht begonnen.

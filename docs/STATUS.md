@@ -1,4 +1,37 @@
-# Arbeitsstand – 25.10.2026
+# Arbeitsstand – 26.10.2026
+
+## Aktueller Abschlussstand: Kapitel 10 vollständig freigegeben und integriert
+
+| Aufgabe | Fachliche Freigabe | Integration in main | Abgabedatei |
+|---|---|---|---|
+| 10.1 | APPROVED, 26.10.2026 | PR #1, 5c2ac0d | Industrial_Data_Science_Exercise_10_1.zip |
+| 10.2 | APPROVED, 26.10.2026 | PR #2, 40b31c6 | Industrial_Data_Science_Exercise_10_2.zip |
+| 10.3 | APPROVED, 26.10.2026 | PR #3, 7bb6055 | Industrial_Data_Science_Exercise_10_3.zip |
+| 10.4 | APPROVED, 26.10.2026 | PR #4, 740ed55 | Industrial_Data_Science_Exercise_10_4.zip |
+
+PR #3 wurde vor #4 regulär gemergt, jeweils nach erfolgreichen aktuellen Checks.
+Alle Commit- und Reviewhistorien sind erhalten, kein Force-Push und kein Squash.
+Der geprüfte wissenschaftliche Paketquellstand ist
+`740ed55675d7b12830941700d860d3f5bd17a405`; nachfolgende Änderungen dokumentieren
+nur Abschluss und Paketaufbereitung, verändern keine wissenschaftlichen Lösungen.
+
+Prüfung auf gemergtem main: 22 Tests erfolgreich; alle drei Notebooks frisch
+sequenziell ausgeführt; Herzskript und Offline-HTML-Prüfungen bestanden.
+Vier lokale ZIPs vollständig geprüft, zusätzlich entpackte Notebook-Ausführung,
+Offline-HTML, PDF-Rendering und SHA256. Exakte Dateien/Inhalte/Größen/Prüfsummen:
+[Abgabecheckliste](../submission/chapter_10/CHECKLIST.md).
+ZIPs sind absichtlich nicht als Duplikate der Quelldateien in Git gespeichert.
+
+**Kapitel 10 abgeschlossen. Abgabe vorbereitet, nicht hochgeladen.**
+Universitätseinreichung bleibt ausdrücklich nicht autorisiert; Kapitel 11–12
+werden nicht bearbeitet. Bekannte Grenzen: nicht hermetisches TeX, geringe
+PNG-Layoutabweichungen bei isolierter Neuberechnung, lokaler TCP-Kernelhinweis.
+Keine offenen technischen Fehler. Portalgrößenlimits/Fristen wurden nicht mitgeteilt;
+die ausdrücklich vorgegebenen Abgaberegeln sind eingehalten.
+
+Die folgenden Abschnitte sind der unveränderte historische Arbeitsverlauf;
+frühere Freigabe-/Merge-Sperren wurden durch die später dokumentierten echten
+studentischen Entscheidungen ausdrücklich ersetzt.
 
 ## Aufgabe 10.1: technisch geprüft, fachliches Review ausstehend
 
