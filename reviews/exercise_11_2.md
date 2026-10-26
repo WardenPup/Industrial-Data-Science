@@ -90,3 +90,193 @@ keine unbelegte Genauigkeitsrangliste oder optimierte Parameterwahl.
 
 Keine Arbeit an 11.3. GitHub-CI wird am tatsächlichen neuen PR-Head geprüft;
 lokale Ergebnisse behaupten keinen erfolgreichen Actions-Lauf.
+
+
+# Human Review – Aufgabe 11.2
+
+**Datum:** 26.10.2026  
+**Aufgabe:** Vergleich von sechs Imputationsverfahren für fehlende Produktionsdaten  
+**KI-Unterstützung:** Codex  
+**Status:** APPROVED – Fachliche Prüfung abgeschlossen
+
+## 1. Ziel der Prüfung
+
+Ziel der Aufgabe ist der Vergleich von sechs Verfahren zur Imputation fehlender Wochenwerte in einer Produktionszeitreihe.
+
+Geprüft wurde insbesondere,
+
+- ob die ursprünglichen beobachteten Werte erhalten bleiben,
+- ob alle fehlenden Wochen ergänzt werden,
+- wie sich die verschiedenen Verfahren bei kurzen und langen Lücken verhalten,
+- und ob die Grenzen der Verfahren wissenschaftlich korrekt dokumentiert sind.
+
+Die Bewertung erfolgt bewusst qualitativ. Es liegt keine fehlerfreie Referenz für die fehlenden Wochen vor.
+
+## 2. Datenbasis und Integrität
+
+Die Aufgabe baut auf der in 11.1 freigegebenen geglätteten Zeitreihe mit Lücken auf.
+
+Die Zeitreihe umfasst insgesamt 1.044 Wochen. Davon fehlen 367 Wochen, während 677 Wochen beobachtet vorliegen.
+
+Laut technischer Validierung und begleitender Dokumentation gilt:
+
+- alle sechs Verfahren ergänzen die 367 fehlenden Wochen,
+- alle 677 ursprünglich vorhandenen Werte bleiben unverändert,
+- die Zeitachse bleibt vollständig erhalten,
+- die Imputationen sind von den beobachteten Werten klar unterscheidbar.
+
+Diese Bedingungen sind fachlich wesentlich und wurden erfüllt.
+
+## 3. Verwendete Verfahren
+
+Die sechs betrachteten Imputationsverfahren sind:
+
+1. Forward Fill  
+2. Backward Fill  
+3. Lineare Interpolation  
+4. PCHIP  
+5. Polynominterpolation Grad 2  
+6. Polynominterpolation Grad 5  
+
+Die Verfahren repräsentieren unterschiedliche Grundideen:
+
+- **Forward Fill** und **Backward Fill** übertragen vorhandene Nachbarwerte stufenförmig in Lücken.
+- **Lineare Interpolation** verbindet Stützstellen geradlinig.
+- **PCHIP** erzeugt eine glatte, formtreue Interpolation ohne unnötige Schwingungen.
+- **Polynominterpolation Grad 2 und 5** erzeugt glatte Kurven, kann jedoch stärker auf Randbedingungen und Lückenlängen reagieren.
+
+Die Auswahl der Verfahren ist für die Aufgabe sinnvoll und didaktisch gut geeignet.
+
+## 4. Prüfung der Visualisierungen
+
+Die bereitgestellten Grafiken sind verständlich beschriftet und methodisch sinnvoll aufgebaut.
+
+### 4.1 Gesamtvergleich der imputierten Wochen
+
+Für jedes Verfahren wird im oberen Teil die vollständige Originalreihe `pieces` gezeigt, darunter die freigegebene 5‑Wochen-Medianreihe mit Lücken, und im unteren Teil ausschließlich die ergänzten Wochen des jeweiligen Verfahrens.
+
+Diese Darstellung ist sehr hilfreich, weil die imputierten Werte nicht mit den beobachteten Werten vermischt werden.
+
+Die Originaldaten, die lückenhafte Ausgangsreihe und die ergänzten Werte sind visuell klar getrennt.
+
+### 4.2 Beobachtete Unterschiede zwischen den Verfahren
+
+#### Forward Fill
+
+Forward Fill erzeugt abschnittsweise konstante Plateaus, da fehlende Werte mit dem jeweils letzten bekannten Wert fortgeschrieben werden.
+
+Das Verfahren ist einfach und stabil, bildet jedoch innerhalb längerer Lücken keinerlei Zwischenentwicklung ab.
+
+#### Backward Fill
+
+Backward Fill zeigt dasselbe Prinzip in umgekehrter Richtung: Fehlende Wochen erhalten den jeweils nächsten späteren bekannten Wert.
+
+Auch hier entstehen konstante Stufen. Die Methode kann bei längeren Lücken zu unplausiblen frühzeitigen Sprüngen führen.
+
+#### Lineare Interpolation
+
+Die lineare Interpolation verbindet die bekannten Randpunkte durch gerade Linien.
+
+Das Verfahren ist leicht interpretierbar und erzeugt keine übermäßigen Schwingungen. Allerdings werden Krümmungen, saisonale Muster oder Zwischenereignisse in längeren Lücken nur sehr vereinfacht abgebildet.
+
+#### PCHIP
+
+PCHIP liefert glatte Verläufe, die den beobachteten Randverlauf gut aufnehmen und zugleich vergleichsweise zurückhaltend bleiben.
+
+Im Vergleich zur linearen Interpolation wirkt PCHIP natürlicher, ohne so stark zu überschwingen wie höhergradige Polynomverfahren.
+
+#### Polynom Grad 2
+
+Die quadratische Interpolation erzeugt glatte, gebogene Verläufe und reagiert bereits sichtbar stärker auf größere Lücken als lineare Verfahren.
+
+Sie bleibt jedoch insgesamt noch relativ kontrolliert.
+
+#### Polynom Grad 5
+
+Die Polynominterpolation fünften Grades zeigt die stärksten Krümmungen und die deutlichste Empfindlichkeit gegenüber Lückenstruktur und Randpunkten.
+
+In mehreren Lücken entstehen stärker ausgeprägte Bögen und lokale Verläufe, die zwar mathematisch glatt, aber nicht automatisch inhaltlich plausibel sind.
+
+## 5. Längste Lücke: 23 Wochen
+
+Die wichtigste Vergleichsgrafik zeigt die erste längste Lücke mit 23 Wochen.
+
+Hier werden die Verfahrensunterschiede besonders deutlich.
+
+### Beobachtungen
+
+- **Forward Fill** bleibt über fast die gesamte Lücke konstant auf dem letzten bekannten Niveau und springt erst am Ende auf den nächsten beobachteten Bereich.
+- **Backward Fill** setzt bereits zu Beginn der Lücke den späteren Zielwert und bleibt dann weitgehend konstant.
+- **Lineare Interpolation** verläuft als direkte Verbindung zwischen Anfangs- und Endniveau.
+- **PCHIP** folgt einem glatten ansteigenden Verlauf, der die Randwerte formtreu verbindet.
+- **Polynom Grad 2** zeigt ebenfalls einen glatten Anstieg mit merklicher Krümmung.
+- **Polynom Grad 5** fällt zunächst stark ab und steigt später wieder deutlich an. Dadurch entsteht ein ausgeprägter nichtmonotoner Verlauf mit erkennbarem Überschwingen.
+
+### Fachliche Bewertung
+
+Diese Grafik ist sehr gelungen, weil sie anschaulich macht, dass das Ergebnis der Imputation stark von der Methode abhängt.
+
+Gerade bei langen Lücken lässt sich nicht begründen, dass ein optisch glatter oder mathematisch anspruchsvollerer Verlauf automatisch besser ist.
+
+Besonders die Polynominterpolation fünften Grades illustriert nachvollziehbar die im Bericht erwähnte Gefahr von Überschwingern.
+
+## 6. Fachliche Interpretation
+
+Die Aufgabe wird fachlich korrekt interpretiert.
+
+Positiv ist insbesondere:
+
+1. Es wird **keine Genauigkeitsrangliste** behauptet.
+2. Es wird klar gemacht, dass ohne bekannte wahre Werte in den Lücken keine echte Genauigkeitsbewertung möglich ist.
+3. Die Unterschiede zwischen den Verfahren werden **qualitativ** diskutiert.
+4. Die lange Lücke wird als kritischer Fall besonders hervorgehoben.
+5. Mögliche Polynomüberschwinger werden nicht verschwiegen.
+
+Das ist wissenschaftlich sauber.
+
+Eine vollständig imputierte Zeitreihe ist nicht mit einer tatsächlich beobachteten Zeitreihe gleichzusetzen. Die Aufgabe behandelt diesen Punkt angemessen.
+
+## 7. Grenzen der Verfahren
+
+Die dokumentierten Grenzen sind fachlich angemessen und aus den Grafiken nachvollziehbar:
+
+- Lücken von bis zu 23 Wochen sind lang genug, dass alle Verfahren mit erheblicher Unsicherheit arbeiten.
+- Stufenverfahren wie Forward Fill und Backward Fill ignorieren Zwischenentwicklungen.
+- Lineare Interpolation kann saisonale oder gekrümmte Verläufe glätten.
+- PCHIP ist formtreu, aber ebenfalls nur eine Schätzung.
+- Höhergradige Polynome können unplausible Zwischenwerte oder starke Krümmungen erzeugen.
+- Eine qualitative Plausibilität ersetzt keine quantitative Gütebewertung.
+
+Diese Grenzen wurden insgesamt überzeugend berücksichtigt.
+
+## 8. Technische Validierung
+
+Laut Codex wurden folgende Prüfungen erfolgreich durchgeführt:
+
+| Prüfung | Ergebnis |
+|---|---|
+| Automatisierte Tests | 33 bestanden |
+| Notebook-Codezellen | 10 sequenziell ausgeführt |
+| Visualisierungen | 7 visuell geprüft |
+| HTML-Prüfung | 900 px und 1400 px bestanden |
+| GitHub Push-CI | erfolgreich |
+| GitHub PR-CI | erfolgreich |
+| Pull Request #6 | konfliktfrei, nicht gemergt |
+
+Diese technischen Prüfungen werden als KI-gestützte beziehungsweise automatisierte Validierung dokumentiert.
+
+Eine zusätzliche unabhängige lokale Testausführung durch den Studierenden wird nicht behauptet.
+
+## 9. Gesamtbewertung
+
+Die Aufgabe ist fachlich überzeugend umgesetzt.
+
+Die sechs Imputationsverfahren werden nachvollziehbar verglichen, ohne ihre Aussagekraft zu übertreiben. Die Integrität der vorhandenen Daten bleibt erhalten, alle fehlenden Wochen werden ergänzt und die Visualisierungen machen die methodischen Unterschiede gut sichtbar.
+
+Besonders positiv ist die explizite Darstellung der 23‑Wochen-Lücke und der Verzicht auf eine unbegründete Genauigkeitsrangliste.
+
+Bei der Durchsicht der bereitgestellten Ergebnisse wurden keine wesentlichen fachlichen Fehler festgestellt.
+
+**Human Review: APPROVED**
+
+Keine inhaltlichen Korrekturen erforderlich. Der Pull Request bleibt bis zur ausdrücklichen Merge-Freigabe ungemergt.
