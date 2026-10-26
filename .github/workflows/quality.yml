@@ -62,3 +62,8 @@ jobs:
         run: |
           uv run --locked python scripts/build_exercise_11_1.py
           uv run --locked python scripts/check_exercise_11_1_review.py
+      - name: Execute Exercise 11.2 and verify imputation outputs and offline HTML
+        run: |
+          uv run --locked python scripts/build_exercise_11_2.py
+          uv run --locked python scripts/check_exercise_11_2_html.py
+          uv run --locked python scripts/check_exercise_11_2_review.py

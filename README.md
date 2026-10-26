@@ -191,7 +191,7 @@ Kapitel-11-Start umfasst nur 11.1: [Notebook](sessions/ch11/production_smoothing
 [Anforderungen](docs/EXERCISE_11_1_REQUIREMENTS.md),
 [Review](reviews/exercise_11_1.md). Status: **APPROVED** nach positivem
 studentischem Review vom 26.10.2026 und erneuter technischer Prüfung.
-Die ausdrückliche Merge-Autorisierung steht weiterhin aus.
+PR #5 wurde nach ausdrücklicher Merge-Autorisierung regulär als b7543e0 integriert.
 
 ```powershell
 scripts/uv.cmd run --locked python scripts/download_production.py
@@ -201,4 +201,23 @@ scripts/uv.cmd run --offline --locked python scripts/build_exercise_11_1.py
 HTML und zwei Grafiken liegen unter `outputs/ch11/exercise_11_1/`, die abgeleitete
 CSV unter `data/processed/`. Median und Mittelwert werden mit fünf zentrierten
 Wochen verglichen; alle 367 ursprünglichen Lücken bleiben erhalten.
-Keine Imputation, keine Arbeit an 11.2 und kein Merge ohne ausdrückliche Erlaubnis.
+Aufgabe 11.1 selbst enthält keine Imputation; diese folgt separat in 11.2.
+
+## Aufgabe 11.2 – Methoden zur Imputation
+
+Auf ausdrücklichen Folgeauftrag implementiert: [Notebook](sessions/ch11/production_imputation.ipynb),
+[Anforderungen](docs/EXERCISE_11_2_REQUIREMENTS.md), [Review](reviews/exercise_11_2.md).
+Status: **APPROVED**, studentisches Review vom 26.10.2026 und anschließende
+technische Prüfung dokumentiert. Die Merge-Erlaubnis steht aus.
+Die vorausgehende 11.1-Lösung bleibt unverändert.
+
+```powershell
+scripts/uv.cmd run --locked python scripts/download_production.py
+scripts/uv.cmd run --offline --locked python scripts/build_exercise_11_2.py
+scripts/uv.cmd run --offline --locked python scripts/check_exercise_11_2_html.py
+```
+
+Verglichen werden Forward/Backward Fill, lineare Interpolation, Polynome Grad 2/5
+und PCHIP. Sieben Grafiken, HTML, Lückentabelle und Methodendiagnostik liegen unter
+`outputs/ch11/exercise_11_2/`; die vollständige Ableitung unter `data/processed/`.
+Keine Bearbeitung von 11.3, kein Merge oder Upload ohne ausdrückliche Erlaubnis.

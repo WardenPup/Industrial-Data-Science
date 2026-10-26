@@ -1,5 +1,33 @@
 # Arbeitsstand – 26.10.2026
 
+## Neuester Stand: 11.1 integriert; 11.2 fachlich freigegeben
+
+Der Studierende hat den Merge von PR #5 ausdrücklich genehmigt. Codex bestätigte
+die dokumentierte fachliche Freigabe, Konfliktfreiheit und beide erfolgreichen
+aktuellen Head-Checks ef7451f (Push 40346910024, PR 40346921112). Regulärer Merge:
+`b7543e048a4aafac7fa2ad5ba4d18c46e72d2f68`. Lokales main mit GitHub synchronisiert.
+b44bcd8 und ef7451f sind erhaltene Vorfahren; vollständige studentische Originaltexte
+und freigegebene Resultate bleiben bestehen. **Aufgabe 11.1 vollständig abgeschlossen.**
+
+Danach `exercise/11.2` von diesem main angelegt. Offizielle 11.2-Aufgabe und
+Kapitel-5-Methoden am 26.10.2026 gelesen; Anforderungen separat dokumentiert.
+11.2 ist technisch geprüft: sechs Imputationsvarianten, 33 Tests bestanden,
+zehn Codezellen frisch sequenziell, sieben Grafiken und eigenständiges HTML.
+Alle 367 Lücken ergänzt, 677 bekannte Werte erhalten; Rohdaten und freigegebene
+11.1-Lösung unverändert. HTML offline bei 900/1400 px geprüft. Details:
+[Review 11.2](../reviews/exercise_11_2.md).
+Status: **APPROVED** nach unverändert gesichertem studentischem Review vom
+26.10.2026 (452843a), ohne methodische Korrekturanforderung. Erneute Prüfung:
+33 Tests erfolgreich (0,581 s), zehn Codezellen frisch sequenziell, sieben Grafiken
+bytegleich zur geprüften Fassung und visuell kontrolliert; Offline-HTML 900/1400 px.
+Alle sechs Verfahren ergänzen 367 Werte und erhalten 677 bekannte Werte exakt;
+23-Wochen-Lücke und Polynomdiagnostik unabhängig nachgeprüft. Neuer Nachprüfer
+prüft gespeicherte Tabellen/CSV/JSON, Linienpfade und 13 Manifesthashes.
+PR #6 wird nach erfolgreichen aktuellen Head-Checks für finalen Merge-Review
+vorbereitet. **Merge-Erlaubnis ausstehend**; kein Merge, keine 11.3, kein Upload.
+
+Die folgenden Abschnitte beschreiben frühere Arbeitsstände.
+
 ## Neuester Stand: main synchronisiert, Aufgabe 11.1 zur Prüfung
 
 Der Studierende autorisierte ausdrücklich die Veröffentlichung von a7fcd21 und
