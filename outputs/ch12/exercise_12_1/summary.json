@@ -1,0 +1,57 @@
+{
+  "seed": 42,
+  "target_length": 128,
+  "train": 132,
+  "test": 172,
+  "missing": 0,
+  "raw_sha256": {
+    "GesturePebbleZ1_TRAIN.ts": "e885be50acbd32d666febb838769ec5d95851d6c201f2fb4c64ac8a08ad5f249",
+    "GesturePebbleZ1_TEST.ts": "6084d75d1e95be92fd7e4d07baa62cf41ae6fe6442d965d98a1c83470f431b6a"
+  },
+  "metrics": [
+    {
+      "method": "Euclidean k-means",
+      "split": "TRAIN",
+      "n": 132,
+      "ARI": 0.5451364162502652,
+      "NMI": 0.6690938830076679,
+      "clusters_used": 6,
+      "fit_seconds": 1.0167190999927698,
+      "predict_seconds": 0.0034881000028690323,
+      "n_iter": 10
+    },
+    {
+      "method": "Euclidean k-means",
+      "split": "TEST",
+      "n": 172,
+      "ARI": 0.4896710501680573,
+      "NMI": 0.5929632274540477,
+      "clusters_used": 6,
+      "fit_seconds": 1.0167190999927698,
+      "predict_seconds": 0.0034881000028690323,
+      "n_iter": 10
+    },
+    {
+      "method": "KASBA (MSM)",
+      "split": "TRAIN",
+      "n": 132,
+      "ARI": 0.8153240392324884,
+      "NMI": 0.8821195659815926,
+      "clusters_used": 6,
+      "fit_seconds": 1.1772862000070745,
+      "predict_seconds": 0.10525249999773223,
+      "n_iter": 6
+    },
+    {
+      "method": "KASBA (MSM)",
+      "split": "TEST",
+      "n": 172,
+      "ARI": 0.948215532685664,
+      "NMI": 0.9547529260143448,
+      "clusters_used": 6,
+      "fit_seconds": 1.1772862000070745,
+      "predict_seconds": 0.10525249999773223,
+      "n_iter": 6
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "retrieved_date": "2026-10-26",
+  "ai_assistance": "Codex",
+  "human_review": "Feedback provided; final human approval pending",
+  "scientific_review_date": "2026-10-26",
+  "merge_authorized": false,
+  "raw_sha256": {
+    "GesturePebbleZ1_TRAIN.ts": "e885be50acbd32d666febb838769ec5d95851d6c201f2fb4c64ac8a08ad5f249",
+    "GesturePebbleZ1_TEST.ts": "6084d75d1e95be92fd7e4d07baa62cf41ae6fe6442d965d98a1c83470f431b6a"
+  },
+  "seed": 42,
+  "resampled_length": 128,
+  "packages": {
+    "aeon": "1.6.0",
+    "numpy": "2.3.5",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.9.1",
+    "numba": "0.63.1"
+  },
+  "sequential_code_cells": 5,
+  "embedded_images": 4,
+  "files": {
+    "sessions/ch12/gesture_clustering.ipynb": "5569fce5ace3a6fed4f77dd6c8c1e65e38a5d185586b8a17564957462eca916f",
+    "outputs/ch12/exercise_12_1/gesture_clustering.html": "10e72951f050048264f4361a978682412cfab92e82b6f405804bb6515bdace97",
+    "outputs/ch12/exercise_12_1/assignments.csv": "04dba8f85526aabc4bcb103cdc3315d7c353283aea87792aa386b6e0b53eeb04",
+    "outputs/ch12/exercise_12_1/centers.csv": "70a9e8c4307d1386b44602a037d87554f7c72a6cc7a49f2ba1d60bfa576c64ef",
+    "outputs/ch12/exercise_12_1/counts_0_TEST.csv": "71961bfcf8d88e6e23d1e358e323759cad97a69cc2762dcb1c1e6c262dfe1011",
+    "outputs/ch12/exercise_12_1/counts_0_TRAIN.csv": "a928fcdecbaf113e93dbfba228d1378b965b52c7d5736e32a4ee57ea93b3a526",
+    "outputs/ch12/exercise_12_1/counts_1_TEST.csv": "0df9a63337c9cc3ee020b09ebeec6f10b89bfe53e1f9c144460396ac7c05421d",
+    "outputs/ch12/exercise_12_1/counts_1_TRAIN.csv": "b592ca7981b749708adafbea3b5334ab8e021b57f346469e9da1b06dc3bd3cbb",
+    "outputs/ch12/exercise_12_1/lengths.csv": "13ac17684c25be5e09ebfa29ca7d88288e74fbb2ce5c4cd0436ac0617ac1154b",
+    "outputs/ch12/exercise_12_1/metrics.csv": "b930b436b351799841c690f28ae919eaf254bbd83b372b79333751e1438c0bbc",
+    "outputs/ch12/exercise_12_1/msm_example.csv": "4edd7cbad311fbf68db12c817641a1e9f0662b5ba14415e971488103cc5b3d7d",
+    "outputs/ch12/exercise_12_1/summary.json": "e9286b1e5714f70698e0c18e51091e3962f06e005978ab0521b66127854a590c",
+    "outputs/ch12/exercise_12_1/01_data_exploration.png": "5947d5f8ae77319438f98b9046b04eedde14640129190476d3f09fa1d644c03f",
+    "outputs/ch12/exercise_12_1/02_cluster_centers.png": "b7f224534b0ab736b4213e13940899a274e3e91b670613e1fa2cfcec500d5165",
+    "outputs/ch12/exercise_12_1/03_class_cluster_counts.png": "3f03dc5556fb1abf9af901486369d0c34d4f99a4177ff96f7bb37020a70f523c",
+    "outputs/ch12/exercise_12_1/04_msm_example.png": "ae1e4a28c8cc6b4714fefb326cb4abab26086b9f94d6b223fd3a28abbbe07735"
+  }
+}
