@@ -550,3 +550,231 @@ zusätzliche ausdrückliche Nutzerbestätigung erforderlich. Kein neuer Hosted-
 CI-Lauf wird behauptet; PR #4 fehlt weiterhin. Finale fachliche Freigabe und
 Merge sind dadurch nicht erteilt. Aktueller Status: **AWAITING FINAL HUMAN APPROVAL**.
 `GitHub REST /actions/runs?branch=exercise%2F10.4`: am 26.10.2026 erfolgreich gelesen, leere Laufliste (`[]`). Keine CI-Ergebnisse fuer diesen Branch vorhanden.
+
+
+# Human Review – Aufgabe 10.4, Runde 2
+
+**Datum:** 26.10.2026  
+**Review:** Zweite fachliche und gestalterische Prüfung nach Korrekturzyklus  
+**Dokumente:** `paper.pdf`, `notebook_presentation.pdf`, `validation_manifest.json`  
+**KI-Unterstützung:** Codex  
+**Status:** Fachlich positiv – abschließende GitHub-Validierung und kleinere Layoutprüfung offen
+
+## 1. Ziel der zweiten Prüfung
+
+Nach dem ersten Human Review wurden Korrekturen an wissenschaftlichen Formulierungen, Korrelationsbeschriftungen und der Gestaltung der Notebook-Präsentation durchgeführt.
+
+Die zweite Prüfung untersucht, ob diese Korrekturen tatsächlich umgesetzt wurden und ob dabei neue Fehler oder Inkonsistenzen entstanden sind.
+
+Ziel bleibt ein verständliches wissenschaftliches Paper auf studentischem Niveau, das seine Ergebnisse nachvollziehbar erklärt und den Leser nicht durch unnötige mathematische Komplexität oder übermäßige Visualisierungen belastet.
+
+## 2. Überprüfung der Korrekturen
+
+### 2.1 Wissenschaftlicher Hauptbericht
+
+Der überarbeitete Bericht umfasst weiterhin fünf Seiten.
+
+Die ursprüngliche wissenschaftliche Struktur wurde erhalten. Die Fragestellung ist klar definiert und die verwendeten Methoden werden verständlich erläutert.
+
+Die ausführlichere Erklärung numerischer Rundungstoleranzen wurde im Haupttext reduziert und teilweise in die technische Dokumentation ausgelagert.
+
+Das verbessert die Lesbarkeit, ohne die Reproduzierbarkeit wesentlich einzuschränken.
+
+Die drei ausgewählten Abbildungen und die Korrelationstabelle bleiben erhalten.
+
+**Prüfergebnis:** Die Korrektur wurde sinnvoll umgesetzt. Eine erneute grundlegende Textüberarbeitung ist nicht erforderlich.
+
+### 2.2 Pearson- und Spearman-Korrelation
+
+Die zuvor missverständliche Beschriftung in der Notebook-Präsentation wurde korrigiert.
+
+Auf Seite 6 ist die Heatmap eindeutig als Pearson-Korrelation gekennzeichnet. Die darunterstehende Tabelle ist ausdrücklich als Spearman-Rangkorrelation beschriftet.
+
+Die wichtigsten Koeffizienten lauten:
+
+| Größenpaar | Pearson r | Spearman ρ |
+|---|---:|---:|
+| Drehmoment / Drehzahl | -0,8750 | -0,9165 |
+| Drehmoment / Lufttemperatur | -0,0138 | -0,0118 |
+| Drehzahl / Lufttemperatur | 0,0227 | 0,0137 |
+
+Die Kennzahlen stimmen zwischen Paper und Notebook-Präsentation überein.
+
+Die stärkere Spearman-Korrelation bei Drehmoment und Drehzahl ist mit der gekrümmten, überwiegend monoton fallenden Punktwolke vereinbar.
+
+Die Darstellung unterscheidet korrekt zwischen linearen und monotonen Zusammenhängen. Es wird kein unzulässiger Kausalitätsnachweis behauptet.
+
+**Prüfergebnis:** Die ursprüngliche Beanstandung ist vollständig behoben.
+
+### 2.3 Layout der Notebook-Präsentation
+
+Die zuvor getrennten Abschnitte wurden gestalterisch verbessert.
+
+Der Pairplot befindet sich nun gemeinsam mit seiner Erläuterung auf Seite 5. Die Korrelations-Heatmap und Spearman-Tabelle sind auf Seite 6 zusammengefasst. Der Jointplot ist gemeinsam mit seiner Beschreibung auf Seite 7 dargestellt.
+
+Diese Änderungen verbessern die inhaltliche Zuordnung.
+
+Es bestehen jedoch kleinere Layoutschwächen:
+
+- Die deskriptive Statistik wird zwischen Seite 1 und Seite 2 geteilt.
+- Die Häufigkeitstabelle des Countplots beginnt auf Seite 8 und wird auf Seite 9 fortgesetzt.
+- Auf einzelnen Seiten, insbesondere Seite 4 und Seite 7, bleibt verhältnismäßig viel ungenutzter Platz.
+
+Diese Punkte beeinträchtigen die wissenschaftliche Richtigkeit nicht, wirken aber gestalterisch noch nicht vollständig optimiert.
+
+**Prüfergebnis:** Wesentliche Verbesserung erreicht. Weitere kompakte Layoutoptimierung ist wünschenswert, sofern sie ohne zusätzliche Seiten oder komplexe Eingriffe möglich ist.
+
+## 3. Wissenschaftliche Prüfung
+
+### 3.1 Datenbasis
+
+Beide Dokumente verwenden den synthetischen AI4I-2020-Datensatz.
+
+Die angegebenen 10.000 Beobachtungen, drei untersuchten physikalischen Messgrößen und deren Einheiten sind konsistent.
+
+UDI wird weiterhin korrekt als Zeilenkennung bezeichnet und nicht als Zeitvariable behandelt.
+
+Es werden keine Beobachtungen ohne fachliche Begründung entfernt.
+
+### 3.2 Verteilungen
+
+Die drei Histogramme zeigen nachvollziehbare Verteilungsunterschiede.
+
+Das Drehmoment ist annähernd symmetrisch um einen Mittelwert von 39,987 Nm verteilt.
+
+Die Drehzahl besitzt einen deutlich ausgeprägten rechten Verteilungsschwanz.
+
+Die Lufttemperatur zeigt mehrere lokale Häufungen.
+
+Die Interpretationen beschränken sich auf beobachtete Verteilungen und behaupten keine unbelegte Normalverteilung.
+
+### 3.3 Ausreißerbehandlung
+
+Die IQR-Berechnungen und Ausreißerzahlen sind im Bericht und der Präsentation konsistent.
+
+- Drehmoment: IQR 13,6 Nm, 64 markierte Werte.
+- Drehzahl: IQR 189 rpm, 418 markierte Werte.
+- Lufttemperatur: IQR 3,2 K, keine markierten Werte.
+
+Die 1,5-IQR-Regel wird richtig als statistische Heuristik verwendet.
+
+Ein markierter Datenpunkt ist weder automatisch ein Messfehler noch ein nachgewiesener Maschinenausfall.
+
+Die Grenzwertbehandlung wurde auch nach den Korrekturen beibehalten.
+
+### 3.4 Zusammenhänge
+
+Das Streudiagramm zeigt weiterhin einen starken negativen Zusammenhang zwischen Drehzahl und Drehmoment.
+
+Die nichtlineare Form ist deutlich erkennbar und wird durch die beiden Korrelationskoeffizienten sinnvoll eingeordnet.
+
+Die Lufttemperatur weist dagegen nur sehr geringe paarweise lineare und monotone Korrelationen auf.
+
+Die Schlussfolgerung, dass daraus keine vollständige statistische Unabhängigkeit folgt, ist korrekt.
+
+### 3.5 Wissenschaftliche Grenzen
+
+Die Einschränkungen der Analyse sind weiterhin angemessen dokumentiert:
+
+- Der Datensatz ist synthetisch.
+- Korrelation ist kein Kausalitätsnachweis.
+- UDI enthält keine Zeitinformation.
+- IQR-Markierungen sind keine diagnostizierten Maschinenfehler.
+- Die Übertragbarkeit auf reale industrielle Anlagen ist nicht nachgewiesen.
+
+**Prüfergebnis:** Die fachlichen Kernaussagen sind konsistent und wissenschaftlich nachvollziehbar. Keine grundlegenden methodischen Fehler in den bereitgestellten Dokumenten festgestellt.
+
+## 4. Mathematische Darstellung und Quellen
+
+Die Formeln für den Interquartilsabstand und die Pearson-Korrelation sind korrekt in LaTeX gesetzt und lesbar.
+
+Die Verwendung der Spearman-Rangkorrelation wird verständlich erklärt.
+
+Die mathematische Tiefe ist für die Aufgabe angemessen. Zusätzliche Gleichungen würden den Bericht nicht wesentlich verbessern.
+
+Die Literaturangaben umfassen den AI4I-Datensatz, das NIST/SEMATECH-Handbuch und die SciPy-Dokumentation für Pearson und Spearman.
+
+Die verwendeten Referenzen passen zur beschriebenen Methodik.
+
+**Prüfergebnis:** Mathematische Darstellung und Quellenverwendung sind für den vorgesehenen Studienbericht angemessen.
+
+## 5. Schreibstil und wissenschaftliche Qualität
+
+Der Hauptbericht ist sprachlich sachlich und überwiegend präzise.
+
+Die Abschnitte bauen logisch aufeinander auf. Die Ergebnisse werden erklärt und nicht lediglich aufgezählt.
+
+Besonders positiv ist die begründete Auswahl von drei Abbildungen. Die vollständige EDA wird in der separaten Notebook-Präsentation dokumentiert, ohne den Hauptbericht unnötig zu verlängern.
+
+Die wissenschaftliche Diskussion geht über eine reine Beschreibung von Grafiken hinaus und berücksichtigt die Grenzen der Aussagekraft.
+
+Einzelne technische Hinweise zur Reproduzierbarkeit bleiben bewusst erhalten. Diese sind aufgrund des transparenten Human-AI-Workflows gerechtfertigt.
+
+**Prüfergebnis:** Das Verhältnis zwischen wissenschaftlicher Tiefe, Verständlichkeit und Umfang ist gelungen. Kein weiterer umfangreicher Textausbau empfohlen.
+
+## 6. Technische Validierung
+
+Laut Codex wurden nach der Überarbeitung folgende Prüfungen erfolgreich durchgeführt:
+
+| Prüfung | Gemeldetes Ergebnis |
+|---|---|
+| Automatisierte Tests | 22 bestanden |
+| Notebook-Validierung | 3 Notebooks frisch ausgeführt |
+| Quarto/LuaLaTeX | 4 Exporte erfolgreich |
+| HTML-Layoutprüfung | 900 und 1400 px bestanden |
+| PDF-Dokumente | 5 beziehungsweise 10 Seiten |
+
+Das bereitgestellte Validierungsmanifest nennt Quarto 1.10.19, Python 3.12.15 und LuaLaTeX.
+
+Die SHA256-Prüfsummen der beiden bereitgestellten PDF-Dateien stimmen mit den im Manifest dokumentierten Exportprüfsummen überein.
+
+Die erfolgreiche lokale Ausführung wird durch den Codex-Bericht dokumentiert. Eine zusätzliche unabhängige lokale Testausführung durch den Studierenden wird nicht behauptet.
+
+GitHub Actions ist für Aufgabe 10.4 noch nicht geprüft, da der Branch noch nicht auf das Remote-Repository gepusht wurde.
+
+## 7. Transparenz der Mensch-KI-Zusammenarbeit
+
+Die Dokumentation unterscheidet weiterhin zwischen:
+
+- dem ursprünglichen KI-gestützten Entwurf,
+- den studentischen fachlichen Korrekturwünschen,
+- den durch Codex umgesetzten Änderungen,
+- den technischen Validierungen und
+- der noch ausstehenden endgültigen Freigabe.
+
+Der Entwicklungsverlauf ist damit nachvollziehbar.
+
+Besonders wichtig ist, dass der erste Human Review erhalten bleibt und die zweite Prüfung als eigener tatsächlicher Review-Schritt dokumentiert wird.
+
+Die KI-Unterstützung soll auch in der endgültigen Fassung ausdrücklich sichtbar bleiben.
+
+## 8. Offene Punkte vor dem Abschluss
+
+Vor dem endgültigen Merge empfehle ich:
+
+1. Nach Möglichkeit die geteilten Tabellen der Notebook-Präsentation verbessern, sofern dies ohne wesentliche Layoutverschlechterung möglich ist.
+2. Die neue Reviewrunde getrennt vom ersten Human Review dokumentieren.
+3. Den bestehenden Branch auf das ausdrücklich freigegebene GitHub-Repository pushen.
+4. Pull Request #4 erstellen.
+5. Die GitHub-Actions-Prüfungen abwarten und auf tatsächlichen Erfolg kontrollieren.
+6. Abschließend bestätigen, dass die hochgeladenen beziehungsweise veröffentlichten Dateien mit der geprüften Fassung übereinstimmen.
+
+## 9. Gesamtbewertung
+
+Die zweite Prüfung zeigt eine klare Verbesserung gegenüber dem ursprünglichen Entwurf.
+
+Die wesentlichen fachlichen und sprachlichen Korrekturen wurden erfolgreich umgesetzt. Die zuvor missverständliche Korrelationsdarstellung ist nun eindeutig, die wissenschaftlichen Ergebnisse sind konsistent und die wichtigen Grafiken sind korrekt in den Bericht eingebunden.
+
+Das wissenschaftliche Paper erfüllt das angestrebte Ziel eines kurzen, verständlichen und methodisch nachvollziehbaren Studienberichts.
+
+Die noch vorhandenen Layoutschwächen der Notebook-Präsentation sind geringfügig und nicht wissenschaftlich kritisch.
+
+**Entscheidung: Fachlich positiv; endgültige Projektfreigabe nach erfolgreicher GitHub-Validierung.**
+
+Das Paper benötigt aus fachlicher Sicht keine grundlegenden Änderungen mehr.
+
+Pull Request #4 bleibt bis zur abschließenden technischen und studentischen Freigabe ungemergt.
+
+---
+
+**Prüfbasis:** Überarbeitete PDF-Fassungen, visueller und inhaltlicher Dokumentenvergleich, Validierungsmanifest und von Codex gemeldete lokale Testergebnisse. Die Prüfung ersetzt keine eigenständige erneute Ausführung der gesamten Analyse.
