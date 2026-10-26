@@ -1,3 +1,15 @@
+## 26.10.2026 – Aufgabe 12.2 technisch validiert
+
+Status: AWAITING HUMAN REVIEW. Originales multivariates UWave-Archiv vollständig:
+120 TRAIN-/320 TEST-Gesten, drei Kanäle, 315 Abtastpositionen. Gemeinsame TRAIN-only-
+Skalierung; vorab festgelegte DTW-3-NN/CNN-Hyperparameter, keine Testoptimierung.
+Accuracy 0,909375/0,846875, Macro-F1 0,908593/0,846505. 52 Tests erfolgreich,
+drei frische Notebook-Codezellen, zwei Abbildungen visuell und HTML offline geprüft.
+Vorhersagen exakt reproduziert, Metriken/gespeicherte CNN-Gewichte unabhängig geprüft.
+Frühere Fachdateien, Originalreviews und acht Abgabe-ZIPs unverändert. KI-Beiträge,
+Katalogabweichung, Umgebungsanpassung und Grenzen transparent dokumentiert.
+Keine studentische Freigabe von 12.2; 12.3 unbegonnen; keine Einreichung.
+
 ## 26.10.2026 – Aufgabe 12.1 abgeschlossen; 12.2 begonnen
 
 12.1: STUDENT APPROVED, finale fachliche/technische Freigabe ausdrücklich erteilt.

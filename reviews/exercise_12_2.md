@@ -34,4 +34,37 @@ TRAIN-Verlust belegt keine Generalisierung. Keine bewiesenen unbekannten Persone
 oder zukünftigen Daten im TEST. Keine physikalischen Einheiten oder Lizenz erfinden.
 
 ## Technische Validierung
-Wird nach tatsächlichen Prüfungen ergänzt. Keine studentischen Tests behauptet.
+Tatsächlich ausgeführt am 26.10.2026, projektlokales uv, --offline --locked:
+- `python -m unittest discover -s tests -v`: 52 Tests erfolgreich in 17,195 s;
+  darunter sieben neue Tests für Skalierung ohne TEST-Fit, fehlende/ungültige Werte,
+  Rohdatenchecksum, bekannte multivariate DTW-Nachbarn, CNN-Shape/5.000 Parameter,
+  Kreuzentropie/Lernschritt, Seed-Reproduktion, Fit/Predict-Grenze und Handmetriken.
+- `python scripts/build_exercise_12_2.py`: frischer Kernel, drei sequenzielle Codezellen,
+  zwei dekodierte eingebettete PNGs. Confusion-Matrizen manuell aus allen 320
+  Vorhersagen aufgebaut, Accuracy/Recall/Precision/Macro-F1 und Klassenberichte
+  daraus unabhängig nachgerechnet. TRAIN-Skalierer separat nachgerechnet.
+  Gespeicherte CNN-Gewichte ohne Pickle geladen und alle CNN-Vorhersagen bestätigt.
+- `python scripts/check_exercise_12_2_html.py`: offline bei 900/1400 px, zwei Bilder
+  geladen, keine Seitenfehler und kein horizontaler Überlauf.
+- Beide Abbildungen mit vier Teilplots visuell geprüft: Kanalbeispiel,
+  Trainingsverlust, beide korrekt beschrifteten Confusion-Matrizen mit gleicher Skala.
+- Alle 640 Modellvorhersagen stimmen exakt mit der ersten Ausführung überein;
+  keine Hyperparameter nach Kenntnis der Testergebnisse verändert.
+- Beide Rohdateihashes und zwölf Manifest-Artefakte geprüft. Alle acht Kapitel-10/11-
+  ZIPs unverändert (SHA256/CRC), frühere wissenschaftliche Ergebnisse und Reviews erhalten.
+
+CNN-Training: mittlere Kreuzentropie von etwa 2,0311 auf 0,003105 gesunken;
+das ist Trainingsoptimierung, keine separate Validierung. Auf TEST werden die
+Klassen 7.0/8.0 von kNN je 40/40, vom CNN je 36/40 richtig erkannt. Beide Methoden
+verwechseln elf Gesten von 4.0 mit 5.0; keine kausale Erklärung daraus abgeleitet.
+
+Umgebung: sieben notwendige neue Pakete (torch 2.9.1+cpu, filelock, fsspec,
+mpmath, networkx, setuptools, sympy), keine bestehenden Paketversionen geändert,
+keine CUDA-Pakete. CPU-Index explizit nur für torch. Cache-Konfiguration aus uv.toml
+nach pyproject.toml übernommen. Ein erster Konfigurationsversuch mit Index in uv.toml
+wurde von uv als undeclared index abgewiesen; korrigiert, danach locked/offline sync
+erfolgreich. uv meldete temporäre Cache-Rename-Retries, Installation erfolgreich.
+Tatsächliche Warnungen: Numba uint64→int64 bei DTW und lokale unverschlüsselte
+Jupyter-TCP-Kommunikation; keine fehlgeschlagenen numerischen Tests.
+
+Keine studentische Prüfung oder Freigabe behauptet. Wissenschaftlicher Review ausstehend.

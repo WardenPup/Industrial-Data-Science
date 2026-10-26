@@ -80,6 +80,7 @@ def main():
         np.testing.assert_allclose(metrics.loc[method,["accuracy","balanced_accuracy","macro_f1"]].to_numpy(dtype=float),[tp.sum()/matrix.sum(),recall.mean(),f1.mean()],atol=1e-12)
         r=reports[reports.method==method].set_index("class").loc[classes]
         np.testing.assert_allclose(r[["precision","recall","f1-score","support"]].to_numpy(dtype=float),np.array([precision,recall,f1,support]).T,atol=1e-12)
+    torch.set_num_threads(1)
     model=GestureCNN().eval()
     with np.load(output/"cnn_weights.npz",allow_pickle=False) as weights:
         model.load_state_dict({key:torch.from_numpy(weights[key].copy()) for key in weights.files})
