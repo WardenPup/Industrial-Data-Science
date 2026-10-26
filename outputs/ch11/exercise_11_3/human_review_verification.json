@@ -1,0 +1,21 @@
+{
+  "rows": 1044,
+  "missing_input_and_deseasonalized": 367,
+  "observed_exactly_preserved": 677,
+  "missing_final": 0,
+  "negative_imputed": 0,
+  "stl_invocation_config": {
+    "period": 52,
+    "seasonal": 13,
+    "trend": 101,
+    "low_pass": 53,
+    "robust": true
+  },
+  "reconstruction_max_abs": 1.1368683772161603e-13,
+  "mean_absolute_method_difference": 9.746198652352929,
+  "max_absolute_method_difference": 75.2469305103034,
+  "longest_gap_weeks": 23,
+  "longest_gap_start": "2011-12-11",
+  "longest_gap_end": "2012-05-13",
+  "saved_tables_stages_plot_paths_and_10_hashes": "PASS"
+}

@@ -16,6 +16,7 @@ dependencies = [
     "pandas>=2.2,<3",
     "seaborn>=0.13.2,<0.14",
     "scipy>=1.14,<2",
+    "statsmodels>=0.15,<0.16",
 ]
 
 [tool.uv]
