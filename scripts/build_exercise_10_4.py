@@ -90,7 +90,7 @@ def main():
                 matching = [p for p in reader.pages if heading in p.extract_text()]
                 assert len(matching) == 1 and len(list(matching[0].images)) >= 1, heading
             assert 'Spearman-Rangkorrelation' in text
-            assert 'Pearson-Korrelation' in text
+            assert 'Pearson-Heatmap' in text
         for path in [html_path, pdf_path]:
             entry = {'file': path.name, 'bytes': path.stat().st_size,
                      'sha256': hashlib.sha256(path.read_bytes()).hexdigest()}
