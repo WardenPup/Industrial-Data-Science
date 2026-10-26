@@ -80,6 +80,13 @@ def chapter12(i):
     files.update(p.relative_to(ROOT) for p in (ROOT / f"outputs/ch12/exercise_12_{i}").iterdir() if p.is_file())
     members = {p.as_posix(): (ROOT / p).read_bytes() for p in sorted(files)}
     adjustments = []
+    if i == 3:
+        name = "sessions/ch12/forest_reference.json"
+        original = subprocess.check_output(["git", "show", SNAPSHOT + ":" + name], cwd=ROOT)
+        if original != members[name]:
+            assert json.loads(original) == json.loads(members[name])
+            adjustments.append({"file": name, "change": "restore checksum-pinned line endings only",
+                                "before": sha(original), "after": sha(members[name])})
     if i == 4:
         name = "sessions/ch12/appliances_source.json"
         original = subprocess.check_output(["git", "show", SNAPSHOT + ":" + name], cwd=ROOT)
