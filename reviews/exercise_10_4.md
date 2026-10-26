@@ -1,6 +1,9 @@
 # Aufgabe 10.4 – Human-AI-Review
 
-Status: **AWAITING HUMAN REVIEW**.
+Status: **AWAITING FINAL HUMAN APPROVAL**.
+
+Der folgende Erstentwurfsnachweis ist historisch. Das unveränderte studentische
+Review vom 26.10.2026 und die anschließende KI-Korrektur sind unten dokumentiert.
 
 ## Auftrag und Herkunft
 
@@ -430,3 +433,104 @@ Nach Umsetzung der genannten Korrekturen und erneuter erfolgreicher technischer 
 ---
 
 **Review-Grundlage:** Manuelle Begutachtung der bereitgestellten PDF-Dokumente und Abgleich der ausgewiesenen Kennzahlen. Automatisierte Tests, lokale Reproduzierbarkeit und GitHub-Actions-Ergebnisse sind separat durch Codex zu bestätigen.
+
+
+## Codex: Bearbeitung des studentischen Reviews (26.10.2026)
+
+Das studentische Review im Abschnitt „Human Review – Aufgabe 10.4“ wurde
+unverändert in `4c7d4ef` übernommen. Seine positive Beurteilung ist keine finale
+Freigabe. Die folgenden Angaben stammen von Codex.
+
+- Korrektur 1: Pairplot mit Erklärung auf derselben Seite; eigene Seitenanfänge
+  für die großen Korrelations-/Jointplot-Abschnitte, kompakterer Satz nur im
+  Begleitnotebook. Alle zehn Analysen bleiben enthalten.
+- Korrektur 2: Paper-Tabelle nennt beide Verfahren in der Beschriftung. Im
+  Notebook ist die Heatmap ausdrücklich Pearson, die nachfolgende Matrix
+  ausdrücklich Spearman (auf vier Nachkommastellen gerundet). Berechnungen
+  bleiben unverändert. Ein zusätzlicher Test prüft alle sechs berichteten Werte.
+- Korrektur 3: Rechentoleranz und Transparenz im Paper kürzer formuliert;
+  technische Details bleiben im Begleitnotebook. Dies ist KI-Redaktion nach
+  studentischem Feedback, keine behauptete studentische Textautorschaft.
+- Korrektur 4: Beide Dokumente nennen `AWAITING FINAL HUMAN APPROVAL` und das
+  tatsächlich erfolgte PDF-Review. Keine finale Freigabe oder Merge-Erlaubnis.
+- Korrektur 5: Erneute lokale Prüfung und Rendernachweise folgen im Abschluss
+  dieses Protokolls. Die früheren Prüfzahlen oben gehören zum Erstentwurf.
+
+Aufgabenquelle: offizielle Session 1, URL in den Anforderungen; gespeicherter
+Originalabruf `.tools/chapter10-10_4.html` am 26.10.2026 erneut gelesen. Der
+aktuelle Webabruf war nicht erreichbar; kein neuer erfolgreicher Download behauptet.
+
+Tatsächliche Zwischenfehler: Der erste Quarto-Lauf scheiterte an den Sandbox-
+Rechten für den Benutzer-Logordner. Der autorisierte Lauf funktionierte.
+Ein versehentlich parallel gestarteter Notebooktest kollidierte mit Quarto beim
+Schreiben derselben PNG-Datei (OSError). Er wurde anschließend getrennt wiederholt:
+alle drei getrackten Notebooks erfolgreich. Diese Prüfung muss mit dem Builder
+nacheinander erfolgen. Der lokale TCP-Kernelhinweis besteht weiterhin.
+
+Remote-Bestandsaufnahme: Der Connector meldete für PR #4 HTTP 404. Der vorhandene
+Git-Credential-Manager-Zugang bestätigte anschließend: PRs #1 und #2 geschlossen,
+PR #3 offen, kein PR #4 und noch kein Remote-Branch exercise/10.4. Remote-main
+steht auf `40b31c6`. Die Annahme im Übergabeauftrag, 10.3 sei bereits gemergt,
+ist deshalb nicht als Tatsache übernommen. Kein neuer PR wird angelegt.
+
+
+Weitere tatsächliche Exportkorrektur: Windows meldete beim direkten Kopieren
+auf einen vorhandenen Export `WinError 1224` (offene Dateizuordnung). Der Builder
+schreibt deshalb eine temporäre Kopie und ersetzt den fertigen Export atomar.
+Die Layoutiteration behält alle zehn Analysen bei; Scatter-, Boxplot- und
+Stripplot-Erklärungen erhalten passende Seitenanfänge. Strip-/Countplot werden
+etwas flacher dargestellt, ohne Daten oder Klassen zu ändern.
+
+### Neue numerische und Herkunftsprüfungen
+
+- `scripts/uv.cmd run --offline --locked python -m unittest discover -s tests -v`:
+  22 Tests, OK (letzter Lauf: 0,496 s). Alle sechs gerundeten Pearson-/Spearman-
+  Werte stimmen; Vergleich mit NumPy/SciPy und exakte IQR-Grenzen weiter erfolgreich.
+- `scripts/uv.cmd run --offline --locked python scripts/validate_notebooks.py`:
+  nach dem kollidierten Parallelversuch getrennt ausgeführt; alle drei getrackten
+  Notebooks erfolgreich in frischen Kerneln. Weitere Prüfung des finalen Layout-
+  Quellstands wird unten festgehalten.
+- Herkunftsprüfung per Python/Git: Der vollständige studentische Reviewblock aus
+  `4c7d4ef` ist wortgleich enthalten. Keine Änderung an `sessions/ch10`, früheren
+  Reviews, Rohdaten-Dokumentation, `pyproject.toml` oder `uv.lock` gegenüber `eb4a0bd`.
+- Dateiliste und geänderte Code-/Paperquellen auf Zugangsdatenmuster geprüft:
+  keine Rohdaten, Zugangsdaten oder Binärwerkzeuge zum Commit vorgesehen.
+
+
+### Abschließender lokaler Nachweis der überarbeiteten Fassung
+
+Alle folgenden Prüfungen wurden nacheinander am letzten Quellstand ausgeführt:
+
+```text
+scripts/uv.cmd run --offline --locked python scripts/validate_notebooks.py
+  PASS: alle drei getrackten Notebooks frisch und fehlerfrei ausgeführt
+scripts/uv.cmd run --offline --locked python scripts/build_exercise_10_4.py
+  PASS paper: 3 HTML-Abbildungen, 5 PDF-Seiten, 3 LaTeX-Einbindungen
+  PASS notebook_presentation: 10 HTML-Abbildungen, 10 PDF-Seiten,
+       10 LaTeX-Einbindungen, 12 lückenlos ausgeführte Codezellen
+  PASS: Pairplot-, Korrelations- und Jointplot-Abschnitt mit Abbildung
+        auf derselben Seite; Pearson-/Spearman-Beschriftungen vorhanden
+scripts/uv.cmd run --offline --locked python scripts/check_exercise_10_4_html.py
+  PASS: beide HTML-Dateien offline bei 1400/900 px; alle Bilder dekodiert,
+        keine Seiten-/Bild-/Tabellenüberläufe; Code aufklappbar,
+        vier Quellen aufgelöst und Abstract innerhalb 100–150 Wörtern
+```
+
+Der zusätzliche Exporttest suchte zunächst einen rasterisierten Diagrammtitel
+im PDF-Fließtext und schlug deshalb nach erfolgreichem Rendern fehl. Der Prüfer
+wurde auf die tatsächlich extrahierbare Pearson-Kennzeichnung im Erklärungstext
+korrigiert (`a54fa97`); der vollständige anschließende Build besteht alle Prüfungen.
+
+Alle fünf Paperseiten und zehn Notebookseiten mit Poppler gerendert und von
+Codex visuell kontrolliert. Für die zuletzt unveränderten Notebookseiten 1–8
+bestätigte zusätzlich der PNG-Bytevergleich identische Darstellungen; Seiten
+9–10 und alle Paperseiten wurden erneut betrachtet. Formeln, Beschriftungen,
+Literatur und Diagramme sind lesbar. Keine studentische Sichtprüfung der neuen
+Fassung behauptet. Die Ausgangs-/Häufigkeitstabellen bleiben teilweise mehrseitig
+mit wiederholtem Kopf; große Diagramme lassen Restweißraum. Keine zusätzliche
+Seite gegenüber dem bisherigen 10-seitigen Begleitexport.
+
+`validation_manifest.json` stimmt mit allen vier finalen Exportdateien und
+beiden Quelldateien überein (SHA256 erneut geprüft). Die Quarto-/LuaLaTeX-Versionen
+bleiben unverändert. Die TeX-Umgebung bleibt nicht hermetisch; CI prüft keinen
+Quarto-/LaTeX-Export. Finale wissenschaftliche und sprachliche Freigabe offen.

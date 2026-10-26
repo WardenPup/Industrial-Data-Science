@@ -225,3 +225,19 @@ v2026.10 was installed without system-PATH changes and completed the PDF builds.
 The student must still revise text, select final figures and confirm interpretations.
 No 10.4 approval, push, new PR, hosted CI, main merge or university submission is
 claimed. TeX package revisions are recorded but the TeX environment is not hermetic.
+
+
+## Aufgabe 10.4 – studentisches Review und Korrekturen (26.10.2026)
+
+Aktueller Status: **AWAITING FINAL HUMAN APPROVAL**. Das tatsächlich erhaltene
+studentische PDF-Review mit CHANGES REQUESTED ist unverändert in `4c7d4ef`
+gesichert. Codex bearbeitet die gezielten Korrekturen: Präsentationsumbrüche,
+explizite Pearson-/Spearman-Beschriftungen, kurze Sprachredaktion und wahrheitsgemäße
+Statushinweise. Keine Änderung der Berechnungen oder der wissenschaftlichen Grenzen.
+Die finale Freigabe steht aus; kein Merge und keine Arbeit an Kapitel 11.
+
+Die Remote-Prüfung widerspricht der Übergabeannahme: PR #4 existiert derzeit
+nicht, PR #3 ist weiterhin offen, main steht auf `40b31c6`. Vor diesem Auftrag
+war exercise/10.4 ausschließlich lokal. Ein neuer PR wird nicht angelegt.
+Die bestehenden Actions prüfen Python/Notebooks; Quarto/LaTeX wird lokal geprüft.
+Abschließende tatsächliche Prüfungen und Push-/CI-Stand stehen im Reviewprotokoll.

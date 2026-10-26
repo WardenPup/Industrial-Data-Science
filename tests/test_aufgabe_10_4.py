@@ -20,6 +20,14 @@ class ReportClaims(unittest.TestCase):
             self.assertAlmostEqual(self.pearson.loc[a, b], np.corrcoef(self.data[a], self.data[b])[0, 1], places=12)
             self.assertAlmostEqual(self.spearman.loc[a, b], spearmanr(self.data[a], self.data[b]).statistic, places=12)
 
+    def test_reported_correlation_coefficients(self):
+        expected = [(TORQUE, SPEED, -0.8750, -0.9165),
+                    (TORQUE, AIR, -0.0138, -0.0118),
+                    (SPEED, AIR, 0.0227, 0.0137)]
+        for a, b, pearson, spearman in expected:
+            self.assertEqual(round(self.pearson.loc[a, b], 4), pearson)
+            self.assertEqual(round(self.spearman.loc[a, b], 4), spearman)
+
     def test_rounded_paper_values_and_decimal_fences(self):
         self.assertEqual(round(self.data[TORQUE].mean(), 3), 39.987)
         self.assertEqual((self.data[TORQUE].min(), self.data[TORQUE].max()), (3.8, 76.6))

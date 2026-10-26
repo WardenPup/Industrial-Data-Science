@@ -3,31 +3,31 @@
   "python": "3.12.15",
   "engine": "lualatex",
   "source_sha256": {
-    "paper.qmd": "2c6a182988c6afeb903475179928f2f106469906f314d2ea020381a7c99897bb",
-    "notebook_presentation.ipynb": "a05f4c9554b7082938d93e20fa23110f90d166dad7435e1bf084843c22d0c7a3"
+    "paper.qmd": "371c9b27cd6443033735d56bc0e8cdadd6c890166a179501d68708db26950736",
+    "notebook_presentation.ipynb": "5bfadb9120ace03ae8dd316093abf70f0e5f96df47570e8d3f4602b540e29d63"
   },
   "exports": [
     {
       "file": "paper.html",
-      "bytes": 1950473,
-      "sha256": "2b6ab36743fa6300d4626e4efefcd903424f78428ab5d003ba4ea5256a829147"
+      "bytes": 1950249,
+      "sha256": "8d4393e1058e9022a1e23109c55d21749bda908177e5368597857641b6e9fe95"
     },
     {
       "file": "paper.pdf",
-      "bytes": 189574,
-      "sha256": "fef7597bfab1942019cd2d26d01ce94828b502fae2a162bf1b83ab4d1a4fdb47",
+      "bytes": 189783,
+      "sha256": "730f7f01506060170caaa269aaa7f7175fff254d44cad12f2df9d81d4ca0eb97",
       "pages": 5,
       "producer": "LuaTeX-1.24.0"
     },
     {
       "file": "notebook_presentation.html",
-      "bytes": 3480479,
-      "sha256": "6d037a82205769e9b4ab4a9786a1f8ca86db704d3bb1ffe0bed2fc0ebb0c0a16"
+      "bytes": 3416154,
+      "sha256": "707e73c167842acc13b8c21c2eb53499fef56a49130c2945614c287a5d26b0a9"
     },
     {
       "file": "notebook_presentation.pdf",
-      "bytes": 1455725,
-      "sha256": "1b06001c0a96ccaf0ebf57299c8d264d9074414e3937dea0d16eaeb29ab41372",
+      "bytes": 1411445,
+      "sha256": "4aa85a66159bdaba498328ff9ad58881a944f0a5f124627960733d7774e8481c",
       "pages": 10,
       "producer": "LuaTeX-1.24.0"
     }
