@@ -1,3 +1,14 @@
+## 26.10.2026 – Kapitel 11 integriert und Abgabepakete verifiziert
+
+PR #8 regulär gemergt: d117c40d303a2b2d9c47c8bd2a15ff1d8a3d1f3c.
+Lokales main synchronisiert; eda8ed0, eb73b17 und f1f6f5d erhalten.
+Offizielles Kapitel 11 enthält genau 11.1–11.4; alle freigegeben und integriert.
+40 Tests auf main erfolgreich (2,827 s). Vier ZIPs unter submission/chapter_11,
+alle entpackt und frisch ausgeführt, identische Ergebnis-JSONs, HTML offline geprüft.
+Prüfsummen/Dateilisten in CHECKLIST.md und submission_manifest.json.
+Kapitel-10-ZIPs unverändert. Keine Einreichung. Kapitel-12-Plan dokumentiert;
+12.1 darf bis zum Human Review bearbeitet werden, 12.2 nicht begonnen.
+
 ## 26.10.2026 – Aufgabe 11.4 fachlich freigegeben und erneut verifiziert
 
 Status: APPROVED – AWAITING FINAL MERGE AUTHORIZATION.
