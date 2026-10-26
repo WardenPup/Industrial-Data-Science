@@ -89,3 +89,7 @@ jobs:
           uv run --locked python scripts/build_exercise_12_2.py
           uv run --locked python scripts/check_exercise_12_2_html.py
           uv run --locked python scripts/check_exercise_12_2_review.py
+      - name: Execute Exercise 12.3 and verify interval forest and offline HTML
+        run: |
+          uv run --locked python scripts/build_exercise_12_3.py
+          uv run --locked python scripts/check_exercise_12_3_html.py

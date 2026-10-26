@@ -1,3 +1,15 @@
+## 26.10.2026 – Aufgabe 12.3 technisch validiert
+
+Status: AWAITING HUMAN REVIEW – NOT MERGED. Offizieller aeon TimeSeriesForestClassifier,
+200 Bäume/Seed 42, unveränderte 120/320 Originalsplits, TRAIN-only-Skalierung.
+Forest 277/320 korrekt, Accuracy 0,865625, Macro-F1 0,863884: über CNN, unter DTW-3-NN.
+57 Tests erfolgreich (6,900 s), drei frische sequenzielle Codezellen, vollständiger
+zweiter Fit reproduziert; Metriken/Baumwahrscheinlichkeiten unabhängig nachgerechnet.
+Zwei PNGs visuell und HTML offline bei 900/1400 px geprüft; Rohdaten-, Referenz- und
+13 Artefakthashes bestätigt. Acht ZIPs und alle bestehenden Human Reviews unverändert.
+KI-Beiträge, Annahmen und Grenzen im Review dokumentiert. Keine studentische Freigabe;
+Draft PR und aktuelle Head-CI folgen. 12.4 unbegonnen, keine Einreichung.
+
 ## 26.10.2026 – Aufgabe 12.2 regulär gemergt; 12.3 beauftragt
 
 Explizite finale studentische Merge-Autorisierung erhalten. Unveränderter Head
