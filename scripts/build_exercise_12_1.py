@@ -77,7 +77,8 @@ def main():
     files = [source, destination] + sorted(output.glob("*.csv")) + [output / "summary.json"]
     files += [output / f"{name}.png" for name in FIGURES]
     from importlib.metadata import version
-    manifest={"retrieved_date":"2026-10-26","ai_assistance":"Codex","human_review":"AWAITING HUMAN REVIEW",
+    manifest={"retrieved_date":"2026-10-26","ai_assistance":"Codex","human_review":"Feedback provided; final human approval pending",
+              "scientific_review_date":"2026-10-26","merge_authorized":False,
               "raw_sha256":SOURCE["files"],"seed":SEED,"resampled_length":LENGTH,
               "packages":{name:version(name) for name in ["aeon","numpy","scipy","scikit-learn","numba"]},
               "sequential_code_cells":len(code),"embedded_images":len(images),

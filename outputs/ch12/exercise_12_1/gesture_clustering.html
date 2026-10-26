@@ -7375,7 +7375,9 @@ pre, .highlight pre, .jp-InputArea-editor pre {
 und <a href="https://www.aeon-toolkit.org/en/stable/api_reference/auto_generated/aeon.distances.msm_distance.html">MSM</a>:
 gelesen am 26.10.2026. Holder/Bagnall, <em>Rock the KASBA</em>,
 <a href="https://doi.org/10.1007/s10618-026-01189-9">2026</a>. Datenherkunft/Prüfsummen:
-<code>docs/GESTURE_PEBBLE_SOURCE.md</code>. KI-Unterstützung: Codex; AWAITING HUMAN REVIEW.</p>
+<code>docs/GESTURE_PEBBLE_SOURCE.md</code>. KI-Unterstützung: Codex (Implementierung/Tests), ChatGPT (Interpretationsunterstützung
+laut studentischem Review). Fachlicher Review vom 26.10.2026 positiv; abschließende
+Freigabe und Merge-Autorisierung ausstehend.</p>
 <h2 id="Ziel-und-Datenformat">Ziel und Datenformat<a class="anchor-link" href="#Ziel-und-Datenformat">¶</a></h2><p>GesturePebbleZ1 enthält pro Fall die z-Achse einer Smartwatch-Geste. Die ursprünglichen
 .ts-Dateien enthalten variabel lange Reihen, keine fehlenden Messwerte. TRAIN
 (erste Aufnahmesession) und TEST (zweite Session) umfassen dieselben vier Personen;
@@ -7545,8 +7547,8 @@ Inertia unterschiedlicher Distanzfunktionen wird nicht als gemeinsame Güte verg
 <td>0.54514</td>
 <td>0.66909</td>
 <td>6</td>
-<td>0.85570</td>
-<td>0.00288</td>
+<td>1.01672</td>
+<td>0.00349</td>
 <td>10</td>
 </tr>
 <tr>
@@ -7557,8 +7559,8 @@ Inertia unterschiedlicher Distanzfunktionen wird nicht als gemeinsame Güte verg
 <td>0.48967</td>
 <td>0.59296</td>
 <td>6</td>
-<td>0.85570</td>
-<td>0.00288</td>
+<td>1.01672</td>
+<td>0.00349</td>
 <td>10</td>
 </tr>
 <tr>
@@ -7569,8 +7571,8 @@ Inertia unterschiedlicher Distanzfunktionen wird nicht als gemeinsame Güte verg
 <td>0.81532</td>
 <td>0.88212</td>
 <td>6</td>
-<td>1.03938</td>
-<td>0.08969</td>
+<td>1.17729</td>
+<td>0.10525</td>
 <td>6</td>
 </tr>
 <tr>
@@ -7581,8 +7583,8 @@ Inertia unterschiedlicher Distanzfunktionen wird nicht als gemeinsame Güte verg
 <td>0.94822</td>
 <td>0.95475</td>
 <td>6</td>
-<td>1.03938</td>
-<td>0.08969</td>
+<td>1.17729</td>
+<td>0.10525</td>
 <td>6</td>
 </tr>
 </tbody>
@@ -7803,7 +7805,9 @@ enthalten und belegen keine allgemeine Geschwindigkeitsrangfolge.</p>
 <p>128 Positionen und separate Normalisierung reduzieren Dauer-/Amplitudeninformation;
 welche Information für Gesten wichtig ist, bleibt eine fachliche Reviewfrage.
 Ein Seed, k=6 und begrenzte Iterationen zeigen keine globale Optimalität oder
-Stabilität. Die Testsessions enthalten bekannte Personen, daher begrenzte externe
+Stabilität. Dass KASBA hier auf TEST höhere externe Werte als auf TRAIN erzielt,
+ist eine Beobachtung für diese beiden Stichproben und kein allgemeiner Vorteil
+auf ungesehenen Daten. Die Testsessions enthalten bekannte Personen, daher begrenzte externe
 Generalisation. Keine kausale Interpretation, keine Testlabeloptimierung und keine
 Aussage über andere Datensätze. Keine Veröffentlichung/Universitätsabgabe.</p>
 </div>

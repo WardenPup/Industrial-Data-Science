@@ -1,11 +1,13 @@
 # Aufgabe 12.1 – Human-AI Review
 
-Status: AWAITING HUMAN REVIEW
+Status: TECHNICALLY_VALIDATED – AWAITING FINAL HUMAN APPROVAL
 
 ## KI-Beitrag
 Codex analysierte die offizielle Aufgabe, implementierte Datenprüfung,
 Vorverarbeitung, euklidisches Zeitreihen-k-Means und KASBA/MSM, Notebook und Export.
-Kein studentischer Review und keine Freigabe für 12.1 vorliegend.
+Studentischer Review vom 26.10.2026 fachlich positiv; Wortlaut unten unverändert.
+ChatGPT-Unterstützung bei der Interpretation laut studentischer Angabe dokumentiert.
+Abschließende Freigabe und Merge-Autorisierung weiterhin ausstehend.
 
 ## Entscheidungen und Grenzen
 132 TRAIN-/172 TEST-Fälle, getrennte Aufnahmesessions derselben Personen.
@@ -59,6 +61,46 @@ meldete uint64→int64-Castwarnung bei der euklidischen Distanz. Keine fehlgesch
 numerischen Tests. uv meldete einmal einen temporären Cache-Rename-Retry, danach
 Installation erfolgreich. Keine zusätzlichen studentischen Tests behauptet.
 
+
+## KI-gestützte Abschlussprüfung nach dem tatsächlichen Human Review
+
+Am 26.10.2026 erneut ausgeführt, projektlokales uv mit `--offline --locked`:
+- `python -m unittest discover -s tests -q`: 45 Tests erfolgreich in 3,603 s.
+- `python scripts/build_exercise_12_1.py`: frischer Kernel, fünf sequenzielle
+  Codezellen, vier dekodierte eingebettete Bilder, keine Ausführungsfehler.
+- `python scripts/check_exercise_12_1_html.py`: offline 900/1400 px, alle Bilder
+  geladen, keine Seitenfehler und kein horizontaler Überlauf.
+- `python scripts/check_exercise_12_1_review.py`: gesamte MSM-Beispielmatrix
+  [[0,3],[1,2],[4,1]] mit Handwerten und aeon.msm_cost_matrix bestätigt; zusätzlich
+  drei vollständige Zufallsmatrizen bei unterschiedlichen Längen/Kosten verglichen.
+  Kein Ersatz der Clustering-Implementierung; Bibliotheksvergleich als Referenz.
+
+Tatsächliche Fit-/Predict-Aufrufe instrumentiert: beide Fits bekommen ausschließlich
+(132,1,128)-TRAIN-Daten ohne y/Labels; beide Predictions ausschließlich
+(172,1,128)-TEST-Daten. Keine Parameteranpassung anhand von Testlabels.
+Vorverarbeitung je Fall ohne globales Fitten von Statistiken. Alle 608 exportierten
+Zuordnungen exakt reproduziert; ARI/NMI unabhängig aus Zuordnungen nachgerechnet,
+auch bei permutierten Cluster-IDs unverändert. Alle vier Kreuztabellen stimmen.
+Längen 115–455/100–375 und fehlende Werte (0) erneut bestätigt.
+
+Test-ARI/NMI: euklidisch 0,489671/0,592963, KASBA 0,948216/0,954753.
+Train-ARI/NMI: euklidisch 0,545136/0,669094, KASBA 0,815324/0,882120.
+Alle numerischen Reviewangaben bestätigt; keine Diskrepanz festgestellt.
+Alle vier Grafiken erneut visuell geprüft. PNGs, Zuordnungen, Zentren, Längen,
+Kreuztabellen und MSM-CSV bytegleich zum geprüften Stand f37ea1e.
+16 Manifest-Artefakte und beide Rohdatei-SHA256 geprüft. Alle acht Kapitel-10/11-ZIPs
+per SHA256/CRC unverändert. Frühere wissenschaftliche Dateien und Umgebung unverändert.
+
+Notebook: nur KI-Transparenz/Reviewstand und Einordnung höherer Test- als Trainwerte
+präzisiert; keine Änderung der Berechnung. Laufzeitmessungen werden bei frischer
+Ausführung neu erzeugt. Unverschlüsselte lokale Jupyter-TCP-Kommunikation weiterhin
+als Warnung beobachtet. Keine neue numerische Warnung oder fehlgeschlagene Prüfung.
+
+Ein alternativer Clustering-Seed wurde in dieser Abschlussprüfung nicht untersucht;
+die vorgeschlagene Robustheitsstudie bleibt eine benannte Grenze, keine Pflichtkorrektur.
+Normalisierungs-/Resamplingverluste, k=6-Annahme und bekannte Personen in beiden
+Sessions bleiben ausdrücklich dokumentiert. Fachliches Feedback positiv; daraus
+wird keine abschließende studentische Freigabe oder Merge-Autorisierung abgeleitet.
 
 # Human Review – Exercise 12.1
 

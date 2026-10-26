@@ -1,0 +1,92 @@
+{
+  "ai_assistance": "Codex",
+  "human_independent_execution_claimed": false,
+  "full_msm_example_matrix": [
+    [
+      0.0,
+      3.0
+    ],
+    [
+      1.0,
+      2.0
+    ],
+    [
+      4.0,
+      1.0
+    ]
+  ],
+  "full_library_cost_matrices_checked": 4,
+  "runtime_fit_predict_calls": [
+    {
+      "method": "TimeSeriesKMeans",
+      "operation": "fit",
+      "shape": [
+        132,
+        1,
+        128
+      ],
+      "labels_supplied": false
+    },
+    {
+      "method": "TimeSeriesKMeans",
+      "operation": "predict",
+      "shape": [
+        172,
+        1,
+        128
+      ],
+      "labels_supplied": false
+    },
+    {
+      "method": "KASBA",
+      "operation": "fit",
+      "shape": [
+        132,
+        1,
+        128
+      ],
+      "labels_supplied": false
+    },
+    {
+      "method": "KASBA",
+      "operation": "predict",
+      "shape": [
+        172,
+        1,
+        128
+      ],
+      "labels_supplied": false
+    }
+  ],
+  "assignments_exactly_reproduced": true,
+  "metrics_recalculated": [
+    {
+      "method": "Euclidean k-means",
+      "split": "TRAIN",
+      "ARI": 0.5451364162502652,
+      "NMI": 0.6690938830076679
+    },
+    {
+      "method": "Euclidean k-means",
+      "split": "TEST",
+      "ARI": 0.4896710501680573,
+      "NMI": 0.5929632274540477
+    },
+    {
+      "method": "KASBA (MSM)",
+      "split": "TRAIN",
+      "ARI": 0.8153240392324884,
+      "NMI": 0.8821195659815926
+    },
+    {
+      "method": "KASBA (MSM)",
+      "split": "TEST",
+      "ARI": 0.948215532685664,
+      "NMI": 0.9547529260143448
+    }
+  ],
+  "cluster_id_permutation_invariance": true,
+  "all_four_cross_tables_match": true,
+  "manifest_hashes_checked": 16,
+  "limitations": "One seed; no stability study or new-person generalization. Library reference is not an independent reimplementation of aeon."
+}

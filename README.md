@@ -257,5 +257,5 @@ KI-Unterstützung: Codex; Status APPROVED – AWAITING FINAL MERGE AUTHORIZATION
 Gestenclustering: `sessions/ch12/gesture_clustering.ipynb`, Export unter
 `outputs/ch12/exercise_12_1/gesture_clustering.html`. Daten explizit mit
 `scripts/download_gestures.py` laden, dann `scripts/build_exercise_12_1.py`.
-KI-Unterstützung: Codex; AWAITING HUMAN REVIEW. Kapitel-11-ZIPs samt geprüfter
+KI-Unterstützung: Codex; TECHNICALLY_VALIDATED – AWAITING FINAL HUMAN APPROVAL. Kapitel-11-ZIPs samt geprüfter
 früherer Umgebung unter `submission/chapter_11/`; keine Einreichung erfolgt.
