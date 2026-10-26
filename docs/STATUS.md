@@ -201,3 +201,27 @@ unchanged; no independent human test execution is inferred.
 Current status: APPROVED. Merge authorization: NOT GRANTED.
 The approval/status documentation commit is checked separately before final PR
 readiness. No implementation correction, merge, new PR or 10.4 work is performed.
+
+## Exercise 10.4 scientific first draft (2026-10-26)
+
+The explicit Scientific Writing Policy request starts 10.4 on its own branch
+`exercise/10.4`, based on approved 10.3 head `c9c58ab`. PR #3 remains unmerged;
+no merge authorization has been inferred. Earlier paragraphs are historical.
+
+Current status: **AWAITING HUMAN REVIEW**. The editable German QMD contains a
+127-word abstract, three selected figure groups, a correlation table, useful
+LaTeX mathematics, source citations, limitations and AI disclosure. The paper
+has five pages including references. A separate ten-page notebook companion
+retains all ten EDA groups without changing the original 10.3 notebook/review.
+
+Both sources render freshly through Quarto 1.10.19 to HTML and LuaLaTeX PDF.
+All four exports pass structural checks; all 15 PDF pages were visually inspected.
+Offline HTML at 1400/900 px fits its figures and tables. All 21 tests pass;
+12 companion code cells execute sequentially from a fresh kernel. The actual
+corrections, commands, package revisions and limits are in `reviews/exercise_10_4.md`.
+MiKTeX first-run initialization did not complete; supported Quarto TinyTeX
+v2026.10 was installed without system-PATH changes and completed the PDF builds.
+
+The student must still revise text, select final figures and confirm interpretations.
+No 10.4 approval, push, new PR, hosted CI, main merge or university submission is
+claimed. TeX package revisions are recorded but the TeX environment is not hermetic.

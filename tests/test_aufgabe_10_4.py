@@ -32,6 +32,15 @@ class ReportClaims(unittest.TestCase):
             self.assertEqual(self.iqr.loc[column, 'flagged_count'], count)
         self.assertEqual(int((self.data[SPEED] < 1139.5).sum()), 0)
 
+    def test_published_quartiles_and_distribution_claims(self):
+        for column, q1, q3 in [(TORQUE, 33.2, 46.8), (SPEED, 1423.0, 1612.0),
+                               (AIR, 298.3, 301.5)]:
+            self.assertAlmostEqual(float(self.data[column].quantile(0.25)), q1)
+            self.assertAlmostEqual(float(self.data[column].quantile(0.75)), q3)
+        self.assertLess(abs(self.data[TORQUE].skew()), 0.1)
+        self.assertGreater(self.data[SPEED].skew(), 1.0)
+        self.assertLess(abs(self.data[AIR].skew()), 0.2)
+
 
 if __name__ == '__main__':
     unittest.main()
