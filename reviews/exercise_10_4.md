@@ -534,3 +534,19 @@ Seite gegenüber dem bisherigen 10-seitigen Begleitexport.
 beiden Quelldateien überein (SHA256 erneut geprüft). Die Quarto-/LuaLaTeX-Versionen
 bleiben unverändert. Die TeX-Umgebung bleibt nicht hermetisch; CI prüft keinen
 Quarto-/LaTeX-Export. Finale wissenschaftliche und sprachliche Freigabe offen.
+
+
+### Git-/CI-Stand nach lokaler Validierung
+
+Lokale Korrekturen: `908688c`, zusätzliche Prüferkorrektur: `a54fa97`,
+Prüfnachweise/Exporte: `d6d5b85`; studentisches Review: `4c7d4ef`.
+Die automatische Freigabeprüfung hat den kombinierten Commit-/Push-Aufruf vor
+Ausführung abgelehnt: Das GitHub-Ziel sei nicht als vertrauenswürdig bestätigt
+und die ausdrückliche Freigabe für genau diesen Push/dieses Ziel nicht belegt.
+Der lokale Commit wurde danach separat ausgeführt. **Kein Push erfolgt.**
+Für den Upload von `exercise/10.4` nach
+`https://github.com/WardenPup/Industrial-Data-Science.git` ist deshalb eine
+zusätzliche ausdrückliche Nutzerbestätigung erforderlich. Kein neuer Hosted-
+CI-Lauf wird behauptet; PR #4 fehlt weiterhin. Finale fachliche Freigabe und
+Merge sind dadurch nicht erteilt. Aktueller Status: **AWAITING FINAL HUMAN APPROVAL**.
+`GitHub REST /actions/runs?branch=exercise%2F10.4`: am 26.10.2026 erfolgreich gelesen, leere Laufliste (`[]`). Keine CI-Ergebnisse fuer diesen Branch vorhanden.

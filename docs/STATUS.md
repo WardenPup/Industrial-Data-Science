@@ -241,3 +241,18 @@ nicht, PR #3 ist weiterhin offen, main steht auf `40b31c6`. Vor diesem Auftrag
 war exercise/10.4 ausschließlich lokal. Ein neuer PR wird nicht angelegt.
 Die bestehenden Actions prüfen Python/Notebooks; Quarto/LaTeX wird lokal geprüft.
 Abschließende tatsächliche Prüfungen und Push-/CI-Stand stehen im Reviewprotokoll.
+
+
+### Git-/CI-Stand nach lokaler Validierung
+
+Lokale Korrekturen: `908688c`, zusätzliche Prüferkorrektur: `a54fa97`,
+Prüfnachweise/Exporte: `d6d5b85`; studentisches Review: `4c7d4ef`.
+Die automatische Freigabeprüfung hat den kombinierten Commit-/Push-Aufruf vor
+Ausführung abgelehnt: Das GitHub-Ziel sei nicht als vertrauenswürdig bestätigt
+und die ausdrückliche Freigabe für genau diesen Push/dieses Ziel nicht belegt.
+Der lokale Commit wurde danach separat ausgeführt. **Kein Push erfolgt.**
+Für den Upload von `exercise/10.4` nach
+`https://github.com/WardenPup/Industrial-Data-Science.git` ist deshalb eine
+zusätzliche ausdrückliche Nutzerbestätigung erforderlich. Kein neuer Hosted-
+CI-Lauf wird behauptet; PR #4 fehlt weiterhin. Finale fachliche Freigabe und
+Merge sind dadurch nicht erteilt. Aktueller Status: **AWAITING FINAL HUMAN APPROVAL**.
