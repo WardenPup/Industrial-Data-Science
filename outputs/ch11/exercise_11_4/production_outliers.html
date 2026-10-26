@@ -7373,7 +7373,7 @@ zählen und mit Seaborn darstellen. Quelle (abgerufen 26.10.2026):
 <a href="https://noxthot.github.io/ws26_industrial_datascience_manuscript/1_act1/7_self_study_session2.html">offizielle Aufgabe</a>.
 Die <a href="https://noxthot.github.io/ws26_industrial_datascience_manuscript/1_act1/2_1_timeseries_decomposition.html">Methodenquelle</a>
 zeigt die Drei-Sigma-Regel auf STL-Residuen. Datenherkunft und Lizenzgrenzen:
-<code>data/raw/PRODUCTION_SOURCE.md</code>. KI-Unterstützung: Codex; studentischer Review ausstehend.</p>
+<code>data/raw/PRODUCTION_SOURCE.md</code>. KI-Unterstützung: Codex; studentischer Review am 26.10.2026 fachlich positiv; finale Merge-Autorisierung ausstehend.</p>
 <h2 id="Mathematische-Idee-und-Annahmen">Mathematische Idee und Annahmen<a class="anchor-link" href="#Mathematische-Idee-und-Annahmen">¶</a></h2><p>Additiv: y = T + S + R. Als Kandidat gilt eine Woche genau dann, wenn
 R &lt; Mittelwert(R) − 3s oder R &gt; Mittelwert(R) + 3s, mit Stichprobenstandardabweichung
 s (ddof=1). Strikte Grenzen. Dadurch wird der saisonale Verlauf nicht bereits
@@ -7718,7 +7718,9 @@ Auch einzelne starke Abweichungen beeinflussen die Residuenstreuung. Die robuste
 STL reduziert deren Einfluss auf die Glättung, garantiert aber keine korrekte
 Klassifikation. Parameter, Randbereiche und die Näherung eines Jahres durch
 52 Wochen beeinflussen das Ergebnis. Es gibt keine verifizierten Fehlerlabels;
-Sensitivität und Spezifität können daher nicht bestimmt werden. Keine automatische
+Sensitivität und Spezifität können daher nicht bestimmt werden. Die ausschließlich negativen Kandidaten zeigen eine für die Interpretation relevante
+Asymmetrie. Auffällige Werte können reale Produktionsereignisse sein; konkrete
+Ursachen sind aus dieser Reihe nicht nachweisbar. Keine automatische
 Bereinigung und keine kausale Erklärung.</p>
 <p>Lernfragen: Ist die Trennung von saisonalem Niveau und ungewöhnlicher Abweichung
 plausibel? Sind die markierten Wochen fachlich auffällig? Wie könnten andere

@@ -1,7 +1,9 @@
 {
   "source_retrieved": "2026-10-26",
   "ai_assistance": "Codex",
-  "human_review": "AWAITING HUMAN REVIEW",
+  "human_review": "APPROVED \u2013 AWAITING FINAL MERGE AUTHORIZATION",
+  "approval_date": "2026-10-26",
+  "merge_authorized": false,
   "raw_sha256": "6310fd9e1fb081929f29715716dca3c433780a09d69c3a422df253a2d9aca494",
   "stl_config": {
     "period": 52,
@@ -17,8 +19,8 @@
   "sequential_code_cells": 3,
   "embedded_images": 2,
   "files": {
-    "sessions/ch11/production_outliers.ipynb": "d18f3d9801b8b6d749f25e0f59e1b9ea550e83bfa0aa5137851a3260e8cb5a28",
-    "outputs/ch11/exercise_11_4/production_outliers.html": "f394029ef3e95a30a2d9b2825ac224bf81828ee404e9fc728a64743f3302fe90",
+    "sessions/ch11/production_outliers.ipynb": "f7f5265b3eb3d45a2b7d1968bb131d26103f6cb8077caabf79920c5d96f739a9",
+    "outputs/ch11/exercise_11_4/production_outliers.html": "6602077e0b0fe0e167eb073fdf432cb763a04947cf25b10489f4885852f5abcf",
     "outputs/ch11/exercise_11_4/components.csv": "3f4b6a6c7cb46c297cb3fb3b5e13861255919bce4c102771bb6a7974c6725f1b",
     "outputs/ch11/exercise_11_4/outlier_candidates.csv": "fd301bbe4ca073ca5a581d07544eafdf72f1099c5af9b42e7e8221a0fb34f478",
     "outputs/ch11/exercise_11_4/summary.json": "016423eec7f83648cbdb7d1d89a8f01e3e1ed50ee1316a7f330b4ad143cc1b32",

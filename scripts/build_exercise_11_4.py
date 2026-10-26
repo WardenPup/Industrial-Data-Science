@@ -75,7 +75,8 @@ def main():
     files = [source, destination, output / "components.csv", output / "outlier_candidates.csv", output / "summary.json"]
     files += [output / f"{name}.png" for name in FIGURES]
     manifest = {"source_retrieved": "2026-10-26", "ai_assistance": "Codex",
-                "human_review": "AWAITING HUMAN REVIEW", "raw_sha256": SHA256,
+                "human_review": "APPROVED – AWAITING FINAL MERGE AUTHORIZATION",
+                "approval_date": "2026-10-26", "merge_authorized": False, "raw_sha256": SHA256,
                 "stl_config": STL_CONFIG, "fit_config": FIT_CONFIG,
                 "sequential_code_cells": len(code), "embedded_images": len(images),
                 "files": {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest() for p in files}}

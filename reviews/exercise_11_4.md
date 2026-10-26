@@ -1,6 +1,6 @@
 # Exercise 11.4 – Human-AI Review
 
-Status: AWAITING HUMAN REVIEW
+Status: APPROVED – AWAITING FINAL MERGE AUTHORIZATION
 
 ## KI-Beitrag
 Codex hat die offiziellen Anforderungen analysiert, die robuste STL mit residualer
@@ -18,7 +18,8 @@ keine gesicherten Messfehler. Parameter und Grenzen siehe Notebook und Anforderu
 4. Sind die gewählten STL-Annahmen und ihre Grenzen angemessen erklärt?
 
 ## Studentische Rückmeldung
-Noch nicht erhalten. Keine studentische Prüfung oder Freigabe behauptet.
+Fachliche Freigabe vom 26.10.2026 im unveränderten studentischen Review unten.
+Keine finale Merge-Autorisierung erteilt.
 
 ## Technische Prüfung
 Am 26.10.2026 tatsächlich ausgeführt (projektlokales uv, --offline --locked):
@@ -35,6 +36,37 @@ Am 26.10.2026 tatsächlich ausgeführt (projektlokales uv, --offline --locked):
   keine Ausführungsfehler. Keine neue Abhängigkeit.
 Kein Merge und keine Abgabe. GitHub-CI wird nach Push separat geprüft.
 
+
+## KI-gestützte Abschlussprüfung nach studentischem Review – 26.10.2026
+
+40 Tests erfolgreich (2,248 s): `scripts/uv.cmd run --offline --locked python -m unittest discover -s tests -v`.
+Weitere tatsächlich ausgeführte Befehle mit gleichem uv-Präfix:
+- `python scripts/build_exercise_11_4.py`: frischer Kernel, drei sequenzielle Codezellen,
+  zwei eingebettete PNGs, keine Notebookfehler.
+- `python scripts/check_exercise_11_4_html.py`: offline 900/1400 px, beide Bilder geladen,
+  keine Seitenfehler oder horizontalen Überläufe.
+- `python scripts/check_exercise_11_4_review.py`: tatsächliche STL-Argumente kontrolliert,
+  direkte STL-Referenz mit derselben Bibliothek; Schwellenarithmetik separat mit
+  math.fsum und ddof=1 nachgerechnet. Beide CSVs und je 26 Plot-Marker zugeordnet.
+
+Ergebnisse: 1.044 Originalwerte, keine Lücken, exakt unveränderte Eingabe; 26 negative
+und null positive Kandidaten (2,4904214559 %). Residuenmittel −4,540957783,
+Stichprobenstandardabweichung 26,820479374; Grenzen −85,002395904/75,920480338
+Stück/Woche. Maximale additive Rekonstruktionsabweichung 9,9475983006e-14.
+Alle numerischen und methodischen Reviewaussagen bestätigt; keine Diskrepanz.
+Beide Grafiken erneut visuell geprüft, Beschriftungen und Markierungen korrekt.
+Rohdaten und sieben Manifest-Artefakte checksumgeprüft; Prüfdetails zusätzlich in
+human_review_verification.json. Keine Änderung der Berechnung oder STL-Parameter.
+Notebook um die ausdrücklich angefragte Einordnung von Asymmetrie und möglichen
+realen Ereignissen präzisiert, ohne konkrete Ursachen zu behaupten.
+
+Transparente Werkzeugkorrekturen: Ein erster Builder-Aufruf scheiterte nach der
+Statusänderung an einer Windows-Dateikodierung; UTF-8 wiederhergestellt und erneut
+gebaut. Der neue Markercheck griff zunächst auf die Seaborn-Liniencollection zu;
+er wählt jetzt die beschriftete Kandidatencollection. Wiederholte Prüfung erfolgreich.
+Bekannte lokale Jupyter-Warnung: TCP-Kernelkommunikation unverschlüsselt.
+STL- und Schwellenwahl bleiben Annahmen; Kandidaten sind keine bewiesenen Messfehler.
+Die wissenschaftliche Freigabe ist dokumentiert, Merge-Autorisierung bleibt ausstehend.
 
 # Human Review – Exercise 11.4
 
