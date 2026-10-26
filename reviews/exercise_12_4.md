@@ -110,3 +110,154 @@ wird hier nicht behauptet. Neue aktuelle Head-CI wird im PR separat nachgeprüft
 Zusätzliche Human-Reviewfrage: Ist die auf beiden Plattformen qualitativ gleiche
 Rangfolge mit offengelegter CNN-Zahlendifferenz für diesen begrenzten Vergleich
 angemessen eingeordnet? Keine allgemeine oder bitgenaue Reproduktion behauptet.
+
+
+# Human Review – Exercise 12.4
+**Industrial Data Science – Time Series Regression**
+
+**Reviewer:** Studentischer Human Review  
+**Datum:** 26.10.2026  
+**Status:** SCIENTIFICALLY APPROVED – AWAITING TECHNICAL FINAL VERIFICATION  
+**Merge-Autorisierung:** Nicht erteilt
+
+## 1. Gesamtbeurteilung
+
+Die Umsetzung von Exercise 12.4 ist wissenschaftlich nachvollziehbar und erfüllt nach den vorliegenden Unterlagen das Ziel, drei unterschiedliche Verfahren zur Regression multivariater Zeitreihen zu vergleichen.
+
+Die Arbeit behandelt DTW-3-NN, Time Series Forest und ein eindimensionales CNN. Besonders positiv ist, dass die Modelle auf denselben ursprünglichen TRAIN-/TEST-Daten ausgewertet werden und die Ergebnisse sowohl durch Kennzahlen als auch durch grafische Darstellungen verglichen werden.
+
+Die Interpretation bleibt auf den tatsächlich untersuchten Datensatz beschränkt. Ich sehe anhand der vorgelegten Ergebnisse keinen fachlichen Grund für eine grundlegende Überarbeitung.
+
+## 2. Datengrundlage und Vorverarbeitung
+
+Die Daten bestehen aus 95 TRAIN- und 42 TEST-Fällen mit jeweils 24 Kanälen und 144 Zeitpunkten.
+
+Die dokumentierte Standardisierung verwendet ausschließlich die Trainingsdaten zur Bestimmung der Skalierungsparameter. Dieses Vorgehen ist für einen unverfälschten TEST-Vergleich wesentlich und methodisch angemessen.
+
+Auch die Zielwerte werden für das CNN standardisiert. Die Rücktransformation auf die ursprüngliche kWh-Skala ist erforderlich, damit alle drei Verfahren mit denselben physikalischen Einheiten verglichen werden können.
+
+Die grafische Darstellung eines Trainingsfalls zeigt drei der insgesamt 24 Eingangskanäle. Das ist zur Veranschaulichung ausreichend. Sie darf jedoch nicht als vollständige Darstellung aller Eingangsdaten interpretiert werden.
+
+**Beurteilung:** Die Vorverarbeitung ist nachvollziehbar. Die korrekte Implementierung der TRAIN-only-Skalierung und Rücktransformation soll in der abschließenden technischen Prüfung nochmals bestätigt werden.
+
+## 3. Bewertung der Regressionsverfahren
+
+### DTW-3-NN
+
+Das Verfahren verwendet drei Nachbarn und Dynamic Time Warping als Distanzmaß. Die DTW-Fensterbeschränkung von 0,1 ist dokumentiert.
+
+Der Ansatz ist für Zeitreihen verständlich, da er zeitlich verschobene Signalverläufe miteinander vergleichen kann.
+
+Der RMSE von 3,509225 kWh und der MAE von 2,711349 kWh zeigen allerdings, dass einzelne Vorhersagen stärker von den tatsächlichen Werten abweichen.
+
+Die Vorhersagen liegen teilweise relativ dicht beieinander, obwohl die tatsächlichen Zielwerte stärker variieren. Das ist mit der Mittelwertbildung über die Nachbarzielwerte vereinbar. Eine allgemeine Ursache für die Fehler lässt sich daraus nicht eindeutig bestimmen.
+
+### Time Series Forest
+
+Der Forest verwendet 200 Bäume und zufällig ausgewählte Zeitintervalle.
+
+Mit einem RMSE von 2,109183 kWh und einem MAE von 1,685254 kWh erzielt er auf dem untersuchten TEST-Split die kleinsten Fehler beider Kennzahlen.
+
+Auch grafisch liegen viele Vorhersagen vergleichsweise nahe an der Identitätslinie.
+
+Ich halte die Aussage für gerechtfertigt, dass der Forest in diesem konkreten Experiment die beste gemessene Regressionsleistung zeigt.
+
+Eine allgemeine Überlegenheit gegenüber den anderen Verfahren ist damit nicht nachgewiesen.
+
+### CNN
+
+Das CNN wurde mit Seed 42 über 60 Epochen trainiert und besitzt laut Ergebnisdatei 5.553 trainierbare Parameter.
+
+Die Trainingsverlustkurve sinkt von ungefähr 1,003 auf 0,0061. Das zeigt, dass das Modell die Trainingsdaten zunehmend gut approximiert.
+
+Allerdings wird ausschließlich der Trainingsverlust dargestellt. Daraus kann weder eine gute Generalisierungsleistung noch ein nachgewiesenes Overfitting abgeleitet werden.
+
+Der TEST-RMSE beträgt 3,614675 kWh und liegt damit etwas über dem Wert des DTW-3-NN. Gleichzeitig ist der MAE mit 2,608054 kWh geringer.
+
+Diese unterschiedliche Reihenfolge der Kennzahlen ist plausibel: Der RMSE gewichtet größere Fehler stärker, während der MAE die durchschnittliche absolute Abweichung beschreibt.
+
+Die CNN-Vorhersagen enthalten einige deutlichere Fehler, die das schlechtere RMSE-Ergebnis erklären können.
+
+## 4. Numerische Ergebnisprüfung
+
+Die bereitgestellten 42 TEST-Vorhersagen wurden unabhängig anhand der Formeln für RMSE und MAE nachgerechnet.
+
+| Verfahren | RMSE [kWh] | MAE [kWh] |
+|---|---:|---:|
+| DTW-3-NN | 3,509225 | 2,711349 |
+| Time Series Forest | 2,109183 | 1,685254 |
+| CNN | 3,614675 | 2,608054 |
+
+Die errechneten Ergebnisse stimmen mit der gelieferten Metrikdatei überein.
+
+Die mittleren Vorhersageabweichungen (Vorhersage minus Istwert) betragen:
+
+- DTW-3-NN: −0,264841 kWh
+- Time Series Forest: −0,077742 kWh
+- CNN: −0,825579 kWh
+
+Alle drei Verfahren unterschätzen den mittleren Zielwert auf diesem TEST-Split geringfügig beziehungsweise beim CNN deutlicher. Eine systematische Unterschätzung in anderen Datensätzen ist daraus nicht ableitbar.
+
+Der Forest besitzt außerdem die kleinste maximale absolute Einzelabweichung der drei untersuchten Modelle.
+
+## 5. Bewertung der Abbildungen
+
+### Eingangsdaten und Trainingsverlauf
+
+Die erste Abbildung zeigt einen beispielhaften multivariaten Signalverlauf und den Trainingsverlust des CNN.
+
+Die Achsen sind verständlich beschriftet. Die drei dargestellten Eingangskanäle lassen sich gut unterscheiden.
+
+Der Trainingsverlust verläuft insgesamt fallend. Kleinere Schwankungen sind sichtbar und werden nicht durch eine künstlich geglättete Kurve verdeckt.
+
+Die Darstellung ist für eine studentische Ausarbeitung ausreichend.
+
+### Vorhersagen gegen tatsächliche Zielwerte
+
+Die zweite Abbildung stellt die TEST-Vorhersagen aller drei Verfahren gegenüber.
+
+Besonders sinnvoll ist die gemeinsame Achsenskalierung. Dadurch lässt sich die Streuung um die Identitätslinie direkt vergleichen.
+
+Die RMSE-Werte in den Überschriften erleichtern die Interpretation.
+
+Ich würde die Grafik unverändert beibehalten.
+
+## 6. Reproduzierbarkeit und wissenschaftliche Grenzen
+
+Die technische Dokumentation berichtet über 64 bestandene Tests, frische Notebook-Ausführung, reproduzierte Vorhersagen und erfolgreiche CI-Läufe.
+
+Die hochgeladenen Ergebnisdateien sind numerisch konsistent. Die Prüfung der vollständigen Notebook-Implementierung, der ursprünglichen Rohdaten und sämtlicher CI-Protokolle ist jedoch von dieser unabhängigen Ergebnisprüfung zu unterscheiden.
+
+Besonders relevant bleibt die Abweichung zwischen Windows und Linux beim CNN. Die Linux-Ergebnisse von 3,626400 kWh RMSE und 2,613485 kWh MAE liegen geringfügig über den lokalen Windows-Werten.
+
+Diese Abweichung muss nicht zwingend auf einen Implementierungsfehler hinweisen. Sie kann durch unterschiedliche numerische Ausführung entstehen. Eine konkrete Ursache ist damit aber noch nicht nachgewiesen.
+
+Positiv ist, dass die Abweichung nicht verschwiegen wird.
+
+Weitere Einschränkungen sind die geringe Stichprobengröße, die Auswertung mit einem Seed, das Fehlen einer unabhängigen Validierungsstudie und die Diskrepanz zwischen der angegebenen Kataloggröße von 138 Reihen und den tatsächlich verwendeten 137 Fällen.
+
+Eine statistisch abgesicherte Rangfolge der Modelle wird nicht beansprucht.
+
+## 7. Schlussfolgerung
+
+Die Ergebnisse zeigen, dass der Time Series Forest auf dem vorliegenden TEST-Split sowohl den geringsten RMSE als auch den geringsten MAE erreicht.
+
+DTW-3-NN und CNN weisen größere Vorhersagefehler auf. Ihre unterschiedliche Reihenfolge bei RMSE und MAE zeigt, weshalb mehrere Bewertungskennzahlen sinnvoll sind.
+
+Das Experiment verdeutlicht, dass ein komplexeres neuronales Modell bei einer kleinen Trainingsmenge nicht automatisch bessere TEST-Ergebnisse erzielen muss.
+
+Die wissenschaftliche Darstellung ist verständlich, ausreichend kritisch und für eine studentische Übungsaufgabe angemessen.
+
+## 8. Finale wissenschaftliche Entscheidung
+
+**SCIENTIFICALLY APPROVED**
+
+Ich befürworte die wissenschaftliche Freigabe der vorliegenden Exercise 12.4 unter Beibehaltung der dokumentierten Grenzen.
+
+Es sind keine zusätzlichen Experimente allein zur Erhöhung des Umfangs erforderlich.
+
+Die abschließende technische Prüfung soll insbesondere die Datenintegrität, Zielwert-Rücktransformation, Konsistenz der Vorhersagen und die dokumentierten Unterschiede zwischen Windows und Linux bestätigen.
+
+Der Originalreview soll unverändert archiviert werden. Technische Ergänzungen sind separat zu dokumentieren.
+
+**Dieser Human Review erteilt keine Autorisierung zum Merge, zur Änderung früherer Aufgaben oder zur Universitätseinreichung.**
