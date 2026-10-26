@@ -1,3 +1,13 @@
+## 26.10.2026 – 12.4: finaler Prüfzeitpunkt korrigiert
+
+Wissenschaftlich APPROVED, finale Merge-Autorisierung vorhanden; Merge bleibt bis
+zur erfolgreichen korrigierten Head-CI gesperrt. Beide 5db5bd5-CI-Läufe schlugen am
+neu ergänzten globalen Laufzeit-Nachcheck fehl (40415223685/40415228525), nicht an
+vorangehenden numerischen Vergleichen. Prüfannahme auf CNN-Trainingsgrenze präzisiert,
+Zustände nach Predict/externen Kontrollen separat protokolliert. Keine Modell- oder
+Parameteränderung und keine Lockerung numerischer Reproduktionsschwellen. Ursache
+der plattformabhängigen Zahlenabweichung weiter nicht bewiesen. Kein Merge erfolgt.
+
 ## 26.10.2026 – 12.4 finale Merge-Autorisierung erhalten
 
 Student ausdrücklich: „wenn du fertig bist. kannst du es mergen“.

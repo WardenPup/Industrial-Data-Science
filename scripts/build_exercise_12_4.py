@@ -82,7 +82,12 @@ def main():
     with patch.object(study,'fit_scaler',wraps=study.fit_scaler) as scaling:
         fitted=fit_regressors(x_train,y_train)
         assert scaling.call_count==1;np.testing.assert_array_equal(scaling.call_args.args[0],x_train)
+    training_runtime={"num_threads":torch.get_num_threads(),"deterministic_algorithms":torch.are_deterministic_algorithms_enabled(),"initial_seed":torch.initial_seed()}
+    print("Training runtime before prediction:",json.dumps(training_runtime))
+    assert training_runtime=={"num_threads":1,"deterministic_algorithms":True,"initial_seed":42},training_runtime
     repeat,seconds=predict_regressors(fitted,x_test)
+    after_predict_threads=torch.get_num_threads()
+    print("Threads immediately after model predictions:",after_predict_threads)
     for method,column in [("DTW 3-NN","knn_kwh"),("Time Series Forest","forest_kwh"),("CNN","cnn_kwh")]:
         np.testing.assert_allclose(repeat[method],saved[column],atol=1e-10,rtol=1e-10)
     np.testing.assert_allclose(fitted["history"].train_standardized_mse,history.train_standardized_mse,atol=1e-10,rtol=1e-10)
@@ -102,7 +107,9 @@ def main():
     assert len(forest.estimators_)==200 and forest.n_cases_==95
     assert sum(p.numel() for p in fitted["models"]["CNN"].parameters())==5553
     assert all(p.device.type=="cpu" for p in fitted["models"]["CNN"].parameters())
-    assert torch.get_num_threads()==1 and torch.are_deterministic_algorithms_enabled() and torch.initial_seed()==42
+    post_prediction_runtime={"num_threads":torch.get_num_threads(),"deterministic_algorithms":torch.are_deterministic_algorithms_enabled(),"initial_seed":torch.initial_seed()}
+    print("Runtime after independent prediction checks:",json.dumps(post_prediction_runtime))
+    assert post_prediction_runtime["deterministic_algorithms"] and post_prediction_runtime["initial_seed"]==42,post_prediction_runtime
     np.testing.assert_allclose(fitted["target_scaler"],[y_train.mean(),y_train.std()],atol=1e-12)
     assert review_metrics[1]["max_absolute_error"]<min(review_metrics[0]["max_absolute_error"],review_metrics[2]["max_absolute_error"])
     assert metrics.loc["DTW 3-NN","rmse"]<metrics.loc["CNN","rmse"]
@@ -117,6 +124,7 @@ def main():
         "torch":torch.__version__,"device":"cpu","num_threads":torch.get_num_threads(),"interop_threads":torch.get_num_interop_threads(),
         "deterministic_algorithms":torch.are_deterministic_algorithms_enabled(),"initial_seed":torch.initial_seed(),
         "mkldnn_enabled":torch.backends.mkldnn.enabled,"torch_build":torch.__config__.show()},
+        "training_runtime_before_prediction":training_runtime,"threads_immediately_after_model_predictions":after_predict_threads,"runtime_after_prediction_checks":post_prediction_runtime,
         "reproducibility_scope":"Second full fit in the same runtime, atol/rtol 1e-10; no cross-platform numerical identity claimed",
         "historical_linux_cnn":{"rmse":3.626400,"mae":2.613485,"runs":[40412448258,40412456174]},
         "platform_difference_cause_proven":False,"cnn_train_loss_first":float(history.train_standardized_mse.iloc[0]),"cnn_train_loss_last":float(history.train_standardized_mse.iloc[-1])}

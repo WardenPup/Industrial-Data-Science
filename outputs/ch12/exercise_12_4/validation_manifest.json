@@ -16,14 +16,14 @@
   "independent_forest_tree_mean": true,
   "saved_cnn_predictions_checked": true,
   "repeat_fit_seconds": {
-    "DTW 3-NN": 0.031885100004728884,
-    "Time Series Forest": 7.68598490000295,
-    "CNN": 4.8668565999978455
+    "DTW 3-NN": 0.033109299998614006,
+    "Time Series Forest": 7.1965683000016725,
+    "CNN": 4.218452100001741
   },
   "repeat_predict_seconds": {
-    "DTW 3-NN": 1.0065132000017911,
-    "Time Series Forest": 1.2662104000046384,
-    "CNN": 0.007721699992544018
+    "DTW 3-NN": 1.2283536000031745,
+    "Time Series Forest": 1.018681599991396,
+    "CNN": 0.0060024999984307215
   },
   "packages": {
     "aeon": "1.6.0",
@@ -32,13 +32,13 @@
     "torch": "2.9.1+cpu"
   },
   "files": {
-    "sessions/ch12/appliances_regression.ipynb": "884df74a3ad425f74cd0bf5b76120b85a3bd72fa1e440845441c87452e7617b7",
-    "outputs/ch12/exercise_12_4/appliances_regression.html": "590398b39877aac7e1fc8053a099994e24535f00e764bfde80559a82d0a29424",
+    "sessions/ch12/appliances_regression.ipynb": "8aca30bfbb5004fb3e52a3eff4b9e941f0a8935aa8b04de577a019d64e1b0f6f",
+    "outputs/ch12/exercise_12_4/appliances_regression.html": "e280f69ca55cda5ceaf2e7cc48b8e515dc9ec68120f28de951defa6471c17bb1",
     "sessions/ch12/regression.py": "6c20bba796060d9430f48eb25e6b697aad22ecc18cd78e9ad9bd948a9df6f76f",
     "sessions/ch12/appliances_source.json": "385054a054aea60ec59602b6a2895d688475cd777191a0716d0486e5a1c4819e",
-    "outputs/ch12/exercise_12_4/summary.json": "7e0361d1900f9e786ab2e301bc505dd2a5640a1df285cbfb5dbb567aff9b0e72",
+    "outputs/ch12/exercise_12_4/summary.json": "3e2294cab5a5fe40b7245beb052b565a42210b578f2b4ea7eec66a4da1a15ae8",
     "outputs/ch12/exercise_12_4/cnn_weights.npz": "b91ff5c84366c51f5799f704e631a55db8a3d3644d44a2be5831519c904ab83c",
-    "outputs/ch12/exercise_12_4/review_verification.json": "dabec8b515227c71d66910d768355d055e4b63be73fb8c078ab59cfa0f24fc5b",
+    "outputs/ch12/exercise_12_4/review_verification.json": "9a9cd07813014e008e510af965cd3fbf973f3c284b4d5cd68396386cf178ce32",
     "outputs/ch12/exercise_12_4/cnn_training.csv": "3d400d7a12773737b499bc53916f7ea1a42eac4e4e2c3b0f878e909912823e3d",
     "outputs/ch12/exercise_12_4/metrics.csv": "c9742cff0878d9fb30b712e71e06d9d7ff7180aca32e216c2aa08bdf7fcd743c",
     "outputs/ch12/exercise_12_4/predictions.csv": "c40b75c36afe2967624b70c2ab9e06142be08d6e32a57a6517cbadb2967b0412",

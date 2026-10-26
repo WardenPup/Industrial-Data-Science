@@ -354,3 +354,27 @@ Codex dokumentiert diese tatsächlich erhaltene Entscheidung; kein zusätzlicher
 studentischer Test behauptet. Kein Squash/Rebase, keine Universitätseinreichung.
 Der tatsächliche Merge wird erst nach Erfüllung der Bedingungen ausgeführt und
 mit seinem vollständigen SHA im PR und Abschlussbericht dokumentiert.
+
+
+## KI-Fehleranalyse – finaler CI-Gate zunächst fehlgeschlagen
+
+Am Freigabehead 5db5bd5 scheiterten die abschließenden Push-/PR-Läufe
+40415223685/40415228525 im neuen Laufzeitcheck. Push-Protokoll analysiert:
+Assertion über num_threads==1, deterministische Algorithmen und Seed42 nach allen
+unabhängigen Bibliotheksaufrufen schlug fehl. Alle davor ausgeführten numerischen
+Checks waren durchgelaufen. Kein Merge ausgeführt und kein CI-Erfolg behauptet.
+
+Fehler im Prüfzeitpunkt: Die Modellimplementierung setzt die PyTorch-Intra-Op-
+Einstellung beim CNN-Fit, garantiert aber keinen unveränderten globalen Zustand
+nach sämtlichen externen Predict-/Intervallaufrufen. aeons Numba-Threading-Decorator
+setzt und restauriert Threadzustände; damit ist die pauschale Nachbedingung kein
+sauberer Vertrag des CNN-Fits. Der konkrete Linux-Nachzustand wird nun separat
+protokolliert statt als unveränderliche Modellkonfiguration ausgegeben. Die genaue
+Wechselwirkung und die Ursache der bekannten Zahlenabweichung bleiben unbewiesen.
+
+Korrigierte technische Prüfung: unverändert strenger Check direkt nach dem vollen
+CNN-Fit (Intra-Op1, deterministische Algorithmen, Seed42), zusätzliche Protokolle
+unmittelbar nach Predict und nach den unabhängigen Kontrollen. Seed/Determinismus
+auch danach geprüft. Kein Modell-/Parameterwechsel, keine toleranter gemachten
+numerischen Vergleichsschwellen. Windows-Fit und Offline-Prüfung erneut ausgeführt;
+aktuelle korrigierte Head-CI muss vor dem autorisierten Merge erfolgreich sein.
