@@ -1,0 +1,1626 @@
+{
+  "prepared": "2026-10-27",
+  "snapshot": "1d8c583186dfa8a9691204a6902a50f10c086a74",
+  "ai_assistance": "Codex",
+  "uploaded": false,
+  "packages": [
+    {
+      "exercise": "10.1",
+      "title": "Isolierte Umgebung und Herzkurve",
+      "file": "chapter_10/Industrial_Data_Science_Exercise_10_1.zip",
+      "bytes": 125787,
+      "sha256": "72af7ee1d323b1dea7f004c9fce386a24035500669f54d507af07b2113177fe8",
+      "original_archive": {
+        "path": "submission/chapter_10/Industrial_Data_Science_Exercise_10_1.zip",
+        "sha256": "44b69fc222611034ed178a404a405e6132b353673154a91e48181e96d6256cdc",
+        "bytes": 122803
+      },
+      "central_file": "exercise_10_1/sessions/ch10/aufgabe_10_1.md",
+      "html": null,
+      "adjustments": [
+        {
+          "change": "add START_HERE.md and AUTHORSHIP_AND_AI.md; all original member bytes unchanged"
+        }
+      ],
+      "files": {
+        "AUTHORSHIP_AND_AI.md": {
+          "bytes": 879,
+          "sha256": "1a341c25a2ea4e04e7d66358eb83b0d84abc5b6b6d7db10e82aaf65a982ea918"
+        },
+        "START_HERE.md": {
+          "bytes": 2000,
+          "sha256": "3a2798edac94d6a32c9e6970887743ab9e45e3e564b3d3ff99ac8509e25a4da6"
+        },
+        "exercise_10_1/.python-version": {
+          "bytes": 8,
+          "sha256": "845c494b4a7e1a741db19fd42eda239d3ee03b65f08276008943349a3055c9cc"
+        },
+        "exercise_10_1/README_ABGABE.md": {
+          "bytes": 1889,
+          "sha256": "866eb5181907c143af6bc4f44c985035cceb718d7191a0fef6edfb446f37d2b2"
+        },
+        "exercise_10_1/outputs/ch10/aufgabe_10_1_herz.png": {
+          "bytes": 70516,
+          "sha256": "918c7150ddcaff0dabc87919137587388e3a14c8db5efbb302654d4d7ac61494"
+        },
+        "exercise_10_1/pyproject.toml": {
+          "bytes": 527,
+          "sha256": "045231f3617050ed5cb950f79f72a2a18a03073ef8e93172d1fcb0c98cc5ad32"
+        },
+        "exercise_10_1/scripts/uv.cmd": {
+          "bytes": 531,
+          "sha256": "f5e9664060d67fdd493b16d8f3e2d0b4e2ac3f410a4abdafb2fad679c6358188"
+        },
+        "exercise_10_1/sessions/ch10/aufgabe_10_1.md": {
+          "bytes": 4177,
+          "sha256": "4423d326d84100d8ddf74245e3a939afc34caf1730b66fdd628d49348c7ea4a2"
+        },
+        "exercise_10_1/sessions/ch10/aufgabe_10_1.py": {
+          "bytes": 1892,
+          "sha256": "8f96bf63e744eb5b636c188c99243a3c6f18b93e0d3f8a5ed8b4a3cccab139cc"
+        },
+        "exercise_10_1/uv.lock": {
+          "bytes": 163784,
+          "sha256": "763c5bd659cc8ae2be73ca192dc93e8596af70d45b1ef4b4fa8a4bf2abc345b1"
+        },
+        "exercise_10_1/uv.toml": {
+          "bytes": 24,
+          "sha256": "788bb37dfc37f588c605afbb058e51b06fabf82c58f275ce115a7099ae2664a9"
+        }
+      }
+    },
+    {
+      "exercise": "10.2",
+      "title": "Jupyter und AI4I-Grundstatistik",
+      "file": "chapter_10/Industrial_Data_Science_Exercise_10_2.zip",
+      "bytes": 800253,
+      "sha256": "841a8b10e2cf8de9499d6a21f8b677b087b3eb32600c3b7504f8367023e831bc",
+      "original_archive": {
+        "path": "submission/chapter_10/Industrial_Data_Science_Exercise_10_2.zip",
+        "sha256": "61448bedeb510dec21e9e65d7e94989bf9956969e649abb3e3a8a73788da5c98",
+        "bytes": 796625
+      },
+      "central_file": "exercise_10_2/sessions/ch10/ai4i_explore.ipynb",
+      "html": "exercise_10_2/outputs/ch10/exercise_10_2/ai4i_explore.html",
+      "adjustments": [
+        {
+          "change": "add START_HERE.md and AUTHORSHIP_AND_AI.md; all original member bytes unchanged"
+        }
+      ],
+      "files": {
+        "AUTHORSHIP_AND_AI.md": {
+          "bytes": 879,
+          "sha256": "1a341c25a2ea4e04e7d66358eb83b0d84abc5b6b6d7db10e82aaf65a982ea918"
+        },
+        "START_HERE.md": {
+          "bytes": 2008,
+          "sha256": "17ba4afd94b747bf61565961f8028da619fd38225aeeceefc7a5df8758943191"
+        },
+        "exercise_10_2/.python-version": {
+          "bytes": 8,
+          "sha256": "845c494b4a7e1a741db19fd42eda239d3ee03b65f08276008943349a3055c9cc"
+        },
+        "exercise_10_2/README_ABGABE.md": {
+          "bytes": 3076,
+          "sha256": "03bb87aa5683770c247ea368ca3001fe8656607a7599828d052bf58f1196b444"
+        },
+        "exercise_10_2/data/raw/README.md": {
+          "bytes": 1119,
+          "sha256": "a6481a6783571c5a0ad78c6628b38024152df78581bf82a8e355b64c045ead80"
+        },
+        "exercise_10_2/data/raw/ai4i2020.csv": {
+          "bytes": 522048,
+          "sha256": "dc6630cd9b1f0f853922fad78a1b6436570d3f1ec863f1dd5c4340ac56bc8a8e"
+        },
+        "exercise_10_2/outputs/ch10/exercise_10_2/ai4i_explore.html": {
+          "bytes": 453256,
+          "sha256": "db70247c9fd907ad07a7b0a984d1e095eef018bf38aa1dc6e421d8101a3d7623"
+        },
+        "exercise_10_2/outputs/ch10/exercise_10_2/ai4i_explore.pdf": {
+          "bytes": 223463,
+          "sha256": "723b11109ca734e4ac3fb67d9d2bbfb3392acc1d8c03bb9e76df1f7683ee07a2"
+        },
+        "exercise_10_2/outputs/ch10/exercise_10_2/summary_statistics.csv": {
+          "bytes": 371,
+          "sha256": "57ec77e8982f03a2c9524f290d0969d6444d8f37fa4c65f51c69374dde149e07"
+        },
+        "exercise_10_2/outputs/ch10/exercise_10_2/torque_over_udi.png": {
+          "bytes": 105968,
+          "sha256": "6c1df2983a33eb3027c041cf2d6bd13de5e0769f8bf5f89fb9420e0b8a14171d"
+        },
+        "exercise_10_2/pyproject.toml": {
+          "bytes": 527,
+          "sha256": "045231f3617050ed5cb950f79f72a2a18a03073ef8e93172d1fcb0c98cc5ad32"
+        },
+        "exercise_10_2/scripts/build_exercise_10_2.py": {
+          "bytes": 3009,
+          "sha256": "0413fb908f0a9c7e8bbcb728871276b40b8fef84924ae32e7f6e1f116c76dd3c"
+        },
+        "exercise_10_2/scripts/uv.cmd": {
+          "bytes": 531,
+          "sha256": "f5e9664060d67fdd493b16d8f3e2d0b4e2ac3f410a4abdafb2fad679c6358188"
+        },
+        "exercise_10_2/scripts/validate_notebooks.py": {
+          "bytes": 2203,
+          "sha256": "1fe1a7433f60ec57c77fdb3777556ac8df54f73504a3d15fb77f063e53baf3b5"
+        },
+        "exercise_10_2/sessions/__init__.py": {
+          "bytes": 27,
+          "sha256": "76958bcbf6dff8c3929bd3946da3259eabba3314e4409a3c57fd519e0d8a0dc2"
+        },
+        "exercise_10_2/sessions/ch10/__init__.py": {
+          "bytes": 28,
+          "sha256": "ed971cc8e7874462ad7c7bd78432ea0ff2521545a0cdabe87c9303087160805c"
+        },
+        "exercise_10_2/sessions/ch10/ai4i_data.py": {
+          "bytes": 1570,
+          "sha256": "cf26d04ab36b73b6a6459e1d152d468c1c18f00182e7d7d748af416931b7000c"
+        },
+        "exercise_10_2/sessions/ch10/ai4i_explore.ipynb": {
+          "bytes": 164074,
+          "sha256": "44a50d79c71e35c963752d3388cb93215368ae3b7fc5c545df8be031a9bf45fc"
+        },
+        "exercise_10_2/templates/notebook_export.html.j2": {
+          "bytes": 542,
+          "sha256": "b220b3d9fa6b4d90d1abcdca297d21d98e9ade82e615c85ebbdccd3570c42a65"
+        },
+        "exercise_10_2/uv.lock": {
+          "bytes": 163784,
+          "sha256": "763c5bd659cc8ae2be73ca192dc93e8596af70d45b1ef4b4fa8a4bf2abc345b1"
+        },
+        "exercise_10_2/uv.toml": {
+          "bytes": 24,
+          "sha256": "788bb37dfc37f588c605afbb058e51b06fabf82c58f275ce115a7099ae2664a9"
+        }
+      }
+    },
+    {
+      "exercise": "10.3",
+      "title": "Explorative Analyse mit Seaborn",
+      "file": "chapter_10/Industrial_Data_Science_Exercise_10_3.zip",
+      "bytes": 5164040,
+      "sha256": "84381fabc5ef99d5e634487d7753d9e73a8a14e87bb5e9b3222447c4cc28b3a4",
+      "original_archive": {
+        "path": "submission/chapter_10/Industrial_Data_Science_Exercise_10_3.zip",
+        "sha256": "f94af58bb6e3b7a04a65ad470ab6f46d2fef1b88696c14441b0b6bda78872a3d",
+        "bytes": 5159585
+      },
+      "central_file": "exercise_10_3/sessions/ch10/ai4i_seaborn.ipynb",
+      "html": "exercise_10_3/outputs/ch10/exercise_10_3/ai4i_seaborn.html",
+      "adjustments": [
+        {
+          "change": "add START_HERE.md and AUTHORSHIP_AND_AI.md; all original member bytes unchanged"
+        }
+      ],
+      "files": {
+        "AUTHORSHIP_AND_AI.md": {
+          "bytes": 879,
+          "sha256": "1a341c25a2ea4e04e7d66358eb83b0d84abc5b6b6d7db10e82aaf65a982ea918"
+        },
+        "START_HERE.md": {
+          "bytes": 2008,
+          "sha256": "38f602298114aa4017e1a8d65acf00ba606e7931f0f3e72b97be629b15b5e39d"
+        },
+        "exercise_10_3/.python-version": {
+          "bytes": 8,
+          "sha256": "845c494b4a7e1a741db19fd42eda239d3ee03b65f08276008943349a3055c9cc"
+        },
+        "exercise_10_3/README_ABGABE.md": {
+          "bytes": 3026,
+          "sha256": "fdf5416ad4b3abf874a36c0ec9f65642186cc79b0c7ea9751e0591f9d089448f"
+        },
+        "exercise_10_3/data/raw/README.md": {
+          "bytes": 1119,
+          "sha256": "a6481a6783571c5a0ad78c6628b38024152df78581bf82a8e355b64c045ead80"
+        },
+        "exercise_10_3/data/raw/ai4i2020.csv": {
+          "bytes": 522048,
+          "sha256": "dc6630cd9b1f0f853922fad78a1b6436570d3f1ec863f1dd5c4340ac56bc8a8e"
+        },
+        "exercise_10_3/outputs/ch10/exercise_10_3/01_line.png": {
+          "bytes": 106062,
+          "sha256": "c7ad2c226d5f40c225bcc10bac202331fb5499a85eed5098cce8a0c24f694690"
+        },
+        "exercise_10_3/outputs/ch10/exercise_10_3/02_histograms.png": {
+          "bytes": 65867,
+          "sha256": "ee09c49bc731df47d32653f658f0ea6c86e920b057dce4423e99d3fe86f2c039"
+        },
+        "exercise_10_3/outputs/ch10/exercise_10_3/03_boxplots.png": {
+          "bytes": 68863,
+          "sha256": "efdab5cd2d4535ecd1733d320a8e5de85e7cc97c1a13aba6ae65ebb93acca7a1"
+        },
+        "exercise_10_3/outputs/ch10/exercise_10_3/04_violins.png": {
+          "bytes": 118956,
+          "sha256": "c99edef43e57f78bd6ea2bb4c0936836df98a89e74d0f8a028c8b2470a6b6f9a"
+        },
+        "exercise_10_3/outputs/ch10/exercise_10_3/05_scatter.png": {
+          "bytes": 229767,
+          "sha256": "fe736f0404229bf65fd6ad08b55728415cab971e7cd4ae4adb980c74bb292e2f"
+        },
+        "exercise_10_3/outputs/ch10/exercise_10_3/06_pairplot.png": {
+          "bytes": 472027,
+          "sha256": "08390b1bee41fd5ff52506cb3630dfa7d266cafc47eef31d8b0d85f98624e178"
+        },
+        "exercise_10_3/outputs/ch10/exercise_10_3/07_heatmap.png": {
+          "bytes": 58248,
+          "sha256": "91a66765ae79571afc83e947503cf5c8b22fcd1ba3a346a25250c417dcb3f75a"
+        },
+        "exercise_10_3/outputs/ch10/exercise_10_3/08_joint_regression.png": {
+          "bytes": 271754,
+          "sha256": "326e256f63eb6f9519f878b6ff18469c97b26cd17fd893a0d0209e58f7939143"
+        },
+        "exercise_10_3/outputs/ch10/exercise_10_3/09_strip.png": {
+          "bytes": 203084,
+          "sha256": "8d0292558a7ff3195784bd147787b0584e92f00369baff94138bc1830b61bf00"
+        },
+        "exercise_10_3/outputs/ch10/exercise_10_3/10_count.png": {
+          "bytes": 54059,
+          "sha256": "836e3f26553fb0bf4532e46a2c7fa85d2b0d3f4740ccc9fb4bbb47d1842066a7"
+        },
+        "exercise_10_3/outputs/ch10/exercise_10_3/ai4i_seaborn.html": {
+          "bytes": 2553075,
+          "sha256": "6c1f14b3eece5954db06374eb18cae05a64a5c65e6b5fd1b5bd4f27fbf96238d"
+        },
+        "exercise_10_3/outputs/ch10/exercise_10_3/bin_edges.json": {
+          "bytes": 331,
+          "sha256": "5808dee9ffdffa03bfc9f0b79d0729b5336555445699fe8fe3c285f889bf5d37"
+        },
+        "exercise_10_3/outputs/ch10/exercise_10_3/iqr_summary.csv": {
+          "bytes": 341,
+          "sha256": "6459ce304b3740c04bdaeb757b461af491ee2bd2acfafedb54624ec7954d3269"
+        },
+        "exercise_10_3/outputs/ch10/exercise_10_3/pearson.csv": {
+          "bytes": 247,
+          "sha256": "61e3f24416c08d79ca05e9faf9df113dbf627da64e273a9fd2e0e2a7eede29e2"
+        },
+        "exercise_10_3/outputs/ch10/exercise_10_3/plot_manifest.json": {
+          "bytes": 1590,
+          "sha256": "4e28ea2db090ba960f0cdbfa367cdee4da3e6499ebe8a8f083b4474c74ef83a7"
+        },
+        "exercise_10_3/outputs/ch10/exercise_10_3/spearman.csv": {
+          "bytes": 249,
+          "sha256": "f758df42bfd97e74b571995f8a6a9971e0cf64d0cb45c1f5dec3f2f74d4ec05e"
+        },
+        "exercise_10_3/outputs/ch10/exercise_10_3/speed_bin_counts.csv": {
+          "bytes": 45,
+          "sha256": "a3a29c032165c59ec045e691ff08f37738f94a3d473a0bd7cab54e38333e41f7"
+        },
+        "exercise_10_3/outputs/ch10/exercise_10_3/torque_bin_counts.csv": {
+          "bytes": 227,
+          "sha256": "e0c4e55b3bcfb6c5413da50b1e2410030beb26ef9b6ca4dc8edc9b62497a1fb9"
+        },
+        "exercise_10_3/pyproject.toml": {
+          "bytes": 527,
+          "sha256": "045231f3617050ed5cb950f79f72a2a18a03073ef8e93172d1fcb0c98cc5ad32"
+        },
+        "exercise_10_3/scripts/build_exercise_10_3.py": {
+          "bytes": 2901,
+          "sha256": "73e70b7e2aafcfe61c0ac5164a7007c067022417ad81d16b2e0b3a8609d92dc1"
+        },
+        "exercise_10_3/scripts/uv.cmd": {
+          "bytes": 531,
+          "sha256": "f5e9664060d67fdd493b16d8f3e2d0b4e2ac3f410a4abdafb2fad679c6358188"
+        },
+        "exercise_10_3/scripts/validate_notebooks.py": {
+          "bytes": 2203,
+          "sha256": "1fe1a7433f60ec57c77fdb3777556ac8df54f73504a3d15fb77f063e53baf3b5"
+        },
+        "exercise_10_3/sessions/__init__.py": {
+          "bytes": 27,
+          "sha256": "76958bcbf6dff8c3929bd3946da3259eabba3314e4409a3c57fd519e0d8a0dc2"
+        },
+        "exercise_10_3/sessions/ch10/__init__.py": {
+          "bytes": 28,
+          "sha256": "ed971cc8e7874462ad7c7bd78432ea0ff2521545a0cdabe87c9303087160805c"
+        },
+        "exercise_10_3/sessions/ch10/ai4i_data.py": {
+          "bytes": 1570,
+          "sha256": "cf26d04ab36b73b6a6459e1d152d468c1c18f00182e7d7d748af416931b7000c"
+        },
+        "exercise_10_3/sessions/ch10/ai4i_eda.py": {
+          "bytes": 2054,
+          "sha256": "6d3ded139515e06b4f8d5cb4ab6137ddd8dd5d01d9c49727408ec346a99fb88a"
+        },
+        "exercise_10_3/sessions/ch10/ai4i_seaborn.ipynb": {
+          "bytes": 2239761,
+          "sha256": "00d6adf40181ae83e866e235f7938ccf32ef359cd534a0ef4fc4470ef7305733"
+        },
+        "exercise_10_3/templates/notebook_export.html.j2": {
+          "bytes": 542,
+          "sha256": "b220b3d9fa6b4d90d1abcdca297d21d98e9ade82e615c85ebbdccd3570c42a65"
+        },
+        "exercise_10_3/uv.lock": {
+          "bytes": 163784,
+          "sha256": "763c5bd659cc8ae2be73ca192dc93e8596af70d45b1ef4b4fa8a4bf2abc345b1"
+        },
+        "exercise_10_3/uv.toml": {
+          "bytes": 24,
+          "sha256": "788bb37dfc37f588c605afbb058e51b06fabf82c58f275ce115a7099ae2664a9"
+        }
+      }
+    },
+    {
+      "exercise": "10.4",
+      "title": "Wissenschaftlicher Bericht mit Quarto",
+      "file": "chapter_10/Industrial_Data_Science_Exercise_10_4.zip",
+      "bytes": 7627937,
+      "sha256": "da69e333b3a4b0b7a55c70835db6611325714a25ef21fe3df94536186f1d547e",
+      "original_archive": {
+        "path": "submission/chapter_10/Industrial_Data_Science_Exercise_10_4.zip",
+        "sha256": "846f99b1f836f919d82f8bddf29727f22cd33b14c055e40922afaf34ac456a81",
+        "bytes": 7623096
+      },
+      "central_file": "exercise_10_4/reports/exercise_10_4/paper.qmd",
+      "html": "exercise_10_4/outputs/ch10/exercise_10_4/paper.html",
+      "adjustments": [
+        {
+          "change": "add START_HERE.md and AUTHORSHIP_AND_AI.md; all original member bytes unchanged"
+        }
+      ],
+      "files": {
+        "AUTHORSHIP_AND_AI.md": {
+          "bytes": 879,
+          "sha256": "1a341c25a2ea4e04e7d66358eb83b0d84abc5b6b6d7db10e82aaf65a982ea918"
+        },
+        "START_HERE.md": {
+          "bytes": 1990,
+          "sha256": "562687449ae7b29a119d0ed656405f9c3e47c9bab2c926c061a969f40ccd8461"
+        },
+        "exercise_10_4/.python-version": {
+          "bytes": 8,
+          "sha256": "845c494b4a7e1a741db19fd42eda239d3ee03b65f08276008943349a3055c9cc"
+        },
+        "exercise_10_4/README_ABGABE.md": {
+          "bytes": 3376,
+          "sha256": "a6676f83056c89af32a40efdad693154b5be30ab3598ae6b82d79120d73bfc41"
+        },
+        "exercise_10_4/data/raw/README.md": {
+          "bytes": 1119,
+          "sha256": "a6481a6783571c5a0ad78c6628b38024152df78581bf82a8e355b64c045ead80"
+        },
+        "exercise_10_4/data/raw/ai4i2020.csv": {
+          "bytes": 522048,
+          "sha256": "dc6630cd9b1f0f853922fad78a1b6436570d3f1ec863f1dd5c4340ac56bc8a8e"
+        },
+        "exercise_10_4/outputs/ch10/exercise_10_4/notebook_figures/01_line.png": {
+          "bytes": 106062,
+          "sha256": "c7ad2c226d5f40c225bcc10bac202331fb5499a85eed5098cce8a0c24f694690"
+        },
+        "exercise_10_4/outputs/ch10/exercise_10_4/notebook_figures/02_histograms.png": {
+          "bytes": 57200,
+          "sha256": "ea662757d673fa25f6b2c17229f7175de8f5adb81b02a1ab7343ec98cd61588f"
+        },
+        "exercise_10_4/outputs/ch10/exercise_10_4/notebook_figures/03_boxplots.png": {
+          "bytes": 63230,
+          "sha256": "26d5c6983c520a1561168dff446125db63fdd105c500321d9d4d3fa04e6c34fc"
+        },
+        "exercise_10_4/outputs/ch10/exercise_10_4/notebook_figures/04_violins.png": {
+          "bytes": 102301,
+          "sha256": "4f41ed54633ba7a5c257562b2c54400329a42754fa0578b91edcc93a87f2886f"
+        },
+        "exercise_10_4/outputs/ch10/exercise_10_4/notebook_figures/05_scatter.png": {
+          "bytes": 229767,
+          "sha256": "fe736f0404229bf65fd6ad08b55728415cab971e7cd4ae4adb980c74bb292e2f"
+        },
+        "exercise_10_4/outputs/ch10/exercise_10_4/notebook_figures/06_pairplot.png": {
+          "bytes": 469611,
+          "sha256": "b47a8dcd2363085ef95906146740690551556b62ce5b848b23dd4172c4fbd8d0"
+        },
+        "exercise_10_4/outputs/ch10/exercise_10_4/notebook_figures/07_heatmap.png": {
+          "bytes": 58248,
+          "sha256": "91a66765ae79571afc83e947503cf5c8b22fcd1ba3a346a25250c417dcb3f75a"
+        },
+        "exercise_10_4/outputs/ch10/exercise_10_4/notebook_figures/08_joint_regression.png": {
+          "bytes": 272238,
+          "sha256": "b3627b40eb921c21a804060064d527fe43adbd0409c62bf4bef9f82c59e2e1a0"
+        },
+        "exercise_10_4/outputs/ch10/exercise_10_4/notebook_figures/09_strip.png": {
+          "bytes": 155200,
+          "sha256": "c236b2b99fc79d1c8aff220a4bf0afadc9757911240e3c425749b8d984b70b08"
+        },
+        "exercise_10_4/outputs/ch10/exercise_10_4/notebook_figures/10_count.png": {
+          "bytes": 53035,
+          "sha256": "661890f31cc66f0b4a8d9a3a6cb1acd9f6b9e135686a242b11c70d9c8e3300a9"
+        },
+        "exercise_10_4/outputs/ch10/exercise_10_4/notebook_figures/bin_edges.json": {
+          "bytes": 331,
+          "sha256": "5808dee9ffdffa03bfc9f0b79d0729b5336555445699fe8fe3c285f889bf5d37"
+        },
+        "exercise_10_4/outputs/ch10/exercise_10_4/notebook_figures/iqr_summary.csv": {
+          "bytes": 341,
+          "sha256": "6459ce304b3740c04bdaeb757b461af491ee2bd2acfafedb54624ec7954d3269"
+        },
+        "exercise_10_4/outputs/ch10/exercise_10_4/notebook_figures/pearson.csv": {
+          "bytes": 247,
+          "sha256": "61e3f24416c08d79ca05e9faf9df113dbf627da64e273a9fd2e0e2a7eede29e2"
+        },
+        "exercise_10_4/outputs/ch10/exercise_10_4/notebook_figures/spearman.csv": {
+          "bytes": 249,
+          "sha256": "f758df42bfd97e74b571995f8a6a9971e0cf64d0cb45c1f5dec3f2f74d4ec05e"
+        },
+        "exercise_10_4/outputs/ch10/exercise_10_4/notebook_figures/speed_bin_counts.csv": {
+          "bytes": 45,
+          "sha256": "a3a29c032165c59ec045e691ff08f37738f94a3d473a0bd7cab54e38333e41f7"
+        },
+        "exercise_10_4/outputs/ch10/exercise_10_4/notebook_figures/torque_bin_counts.csv": {
+          "bytes": 227,
+          "sha256": "e0c4e55b3bcfb6c5413da50b1e2410030beb26ef9b6ca4dc8edc9b62497a1fb9"
+        },
+        "exercise_10_4/outputs/ch10/exercise_10_4/notebook_presentation.html": {
+          "bytes": 3416182,
+          "sha256": "3376a47bed68b00dadd2e9cdfa418d2c052ecc05e5563c950fd6c19a84842f67"
+        },
+        "exercise_10_4/outputs/ch10/exercise_10_4/notebook_presentation.pdf": {
+          "bytes": 1410466,
+          "sha256": "b4625da20b454678a119fee9512e27de0697cec630ee6b2c3c4e4c78d04642d9"
+        },
+        "exercise_10_4/outputs/ch10/exercise_10_4/paper.html": {
+          "bytes": 1950177,
+          "sha256": "49b3069413e7acfd371d26b0eff204a5eb3a4d967d6430179f055d969d76a131"
+        },
+        "exercise_10_4/outputs/ch10/exercise_10_4/paper.pdf": {
+          "bytes": 189309,
+          "sha256": "80b4cf5c5bfcf7bf01e619c89445e8135d15181575db12fd07217b982ffba7fc"
+        },
+        "exercise_10_4/outputs/ch10/exercise_10_4/tex_packages.tsv": {
+          "bytes": 5118,
+          "sha256": "b0f30f08e4996d10bf973eff39972698700d8cf32daf7ad81ce85bcb5ca2ce7c"
+        },
+        "exercise_10_4/outputs/ch10/exercise_10_4/validation_manifest.json": {
+          "bytes": 1033,
+          "sha256": "39df6224d1230ddf6c217757549487bcf5db6508ee7c2515e10bda83d8c04118"
+        },
+        "exercise_10_4/pyproject.toml": {
+          "bytes": 527,
+          "sha256": "045231f3617050ed5cb950f79f72a2a18a03073ef8e93172d1fcb0c98cc5ad32"
+        },
+        "exercise_10_4/reports/exercise_10_4/_quarto.yml": {
+          "bytes": 638,
+          "sha256": "0a7eb3878daf89b3e28a26565d5b006382de889eb83a2cc52b041fe5ce600cbe"
+        },
+        "exercise_10_4/reports/exercise_10_4/notebook_presentation.ipynb": {
+          "bytes": 2132590,
+          "sha256": "c1ca63f17851f9c95cd4c51c0ca88b9be506c678ad1b77a22e82017dcc20fa70"
+        },
+        "exercise_10_4/reports/exercise_10_4/paper.qmd": {
+          "bytes": 12225,
+          "sha256": "5c2c48d3e7ffbb2ebbf42f78130e3288683cc6b1d790f2349634470c2c19762a"
+        },
+        "exercise_10_4/reports/exercise_10_4/references.bib": {
+          "bytes": 994,
+          "sha256": "6e2b8beec8bcfb2e74c42f62bdcbc17e3ab9e3f2b6252d60e1c9e5875b02237b"
+        },
+        "exercise_10_4/reports/exercise_10_4/styles.css": {
+          "bytes": 238,
+          "sha256": "57b428cadc907468f65a5ceaa933b403a7358c798291436309d1339c009cc880"
+        },
+        "exercise_10_4/scripts/build_exercise_10_4.py": {
+          "bytes": 5767,
+          "sha256": "67f22acd75a322e19b626a36a2db4d3a6de2c275ed2cf6fe2328246cce91bd15"
+        },
+        "exercise_10_4/scripts/uv.cmd": {
+          "bytes": 531,
+          "sha256": "f5e9664060d67fdd493b16d8f3e2d0b4e2ac3f410a4abdafb2fad679c6358188"
+        },
+        "exercise_10_4/sessions/__init__.py": {
+          "bytes": 27,
+          "sha256": "76958bcbf6dff8c3929bd3946da3259eabba3314e4409a3c57fd519e0d8a0dc2"
+        },
+        "exercise_10_4/sessions/ch10/__init__.py": {
+          "bytes": 28,
+          "sha256": "ed971cc8e7874462ad7c7bd78432ea0ff2521545a0cdabe87c9303087160805c"
+        },
+        "exercise_10_4/sessions/ch10/ai4i_data.py": {
+          "bytes": 1570,
+          "sha256": "cf26d04ab36b73b6a6459e1d152d468c1c18f00182e7d7d748af416931b7000c"
+        },
+        "exercise_10_4/sessions/ch10/ai4i_eda.py": {
+          "bytes": 2054,
+          "sha256": "6d3ded139515e06b4f8d5cb4ab6137ddd8dd5d01d9c49727408ec346a99fb88a"
+        },
+        "exercise_10_4/sessions/ch10/report_10_4.py": {
+          "bytes": 2349,
+          "sha256": "2d37b4c31a0c2223b34d04505e931c3faef906963104640f23100400513ee9f9"
+        },
+        "exercise_10_4/uv.lock": {
+          "bytes": 163784,
+          "sha256": "763c5bd659cc8ae2be73ca192dc93e8596af70d45b1ef4b4fa8a4bf2abc345b1"
+        },
+        "exercise_10_4/uv.toml": {
+          "bytes": 24,
+          "sha256": "788bb37dfc37f588c605afbb058e51b06fabf82c58f275ce115a7099ae2664a9"
+        }
+      }
+    },
+    {
+      "exercise": "11.1",
+      "title": "Rollende Glättung mit erhaltener Lückenmaske",
+      "file": "chapter_11/Industrial_Data_Science_Exercise_11_1.zip",
+      "bytes": 769336,
+      "sha256": "4107306c29963cb42957820c8e60b63f2dd1a4e2ad3afbd845be47763406748c",
+      "original_archive": {
+        "path": "submission/chapter_11/Industrial_Data_Science_Exercise_11_1.zip",
+        "sha256": "805f522a32c19c664eb1a8474c1f3db0643fa1781d82b05fbc465c01fe8aa3d6",
+        "bytes": 765567
+      },
+      "central_file": "sessions/ch11/production_smoothing.ipynb",
+      "html": "outputs/ch11/exercise_11_1/production_smoothing.html",
+      "adjustments": [
+        {
+          "change": "add START_HERE.md and AUTHORSHIP_AND_AI.md; all original member bytes unchanged"
+        }
+      ],
+      "files": {
+        ".python-version": {
+          "bytes": 8,
+          "sha256": "845c494b4a7e1a741db19fd42eda239d3ee03b65f08276008943349a3055c9cc"
+        },
+        "AUTHORSHIP_AND_AI.md": {
+          "bytes": 879,
+          "sha256": "1a341c25a2ea4e04e7d66358eb83b0d84abc5b6b6d7db10e82aaf65a982ea918"
+        },
+        "README_SUBMISSION.md": {
+          "bytes": 1372,
+          "sha256": "2f073d6ef597397a368bea5c76ad97ea302b9232cd95febf99152ae1fba9df38"
+        },
+        "START_HERE.md": {
+          "bytes": 1958,
+          "sha256": "b72346a0df1e9bc2f1ddffee494fb345b402836843872fc37af55f1f7efed6c5"
+        },
+        "data/processed/exercise_11_1_smoothed.csv": {
+          "bytes": 69252,
+          "sha256": "6b56874ef3d27621f4e7645e94530566dc022caaa3936eb541e32312299f96b8"
+        },
+        "data/raw/PRODUCTION_SOURCE.md": {
+          "bytes": 1173,
+          "sha256": "d0321dd384f9b29e9ed58c169e60cf4d019b7975b393a6d6776405e48124bbd4"
+        },
+        "data/raw/sss1_production_data.csv": {
+          "bytes": 43081,
+          "sha256": "6310fd9e1fb081929f29715716dca3c433780a09d69c3a422df253a2d9aca494"
+        },
+        "docs/EXERCISE_11_1_REQUIREMENTS.md": {
+          "bytes": 1940,
+          "sha256": "b9401ce40a879842d5fe486d99f7a76bcddfd3b9dde684961b0ed2604d4d5dc9"
+        },
+        "outputs/ch11/exercise_11_1/01_original_and_gaps.png": {
+          "bytes": 113683,
+          "sha256": "dc545c8325727e320d8c56fff0dfd11d77f3a0aef09853c29ec096337db8570a"
+        },
+        "outputs/ch11/exercise_11_1/02_smoothing_comparison.png": {
+          "bytes": 143513,
+          "sha256": "32253ada14562ad35c07b7576b82637cd231467839054d137fc0d57c2368a1d0"
+        },
+        "outputs/ch11/exercise_11_1/human_review_verification.json": {
+          "bytes": 369,
+          "sha256": "dfa9d29ddbd5d57f73db44e185b0f1e93a2a9a5cd93d9cf96d24b36185a83d9b"
+        },
+        "outputs/ch11/exercise_11_1/production_smoothing.html": {
+          "bytes": 528129,
+          "sha256": "1a2456c14bb98941a8abceedb3fa02ddb63fd882ba63ce9c2a466b27ad3ebd61"
+        },
+        "outputs/ch11/exercise_11_1/summary.json": {
+          "bytes": 287,
+          "sha256": "ee44c553d6d42c230fabb0460c1a076cc121870c56c0c0d7aaf19ec8536907f3"
+        },
+        "outputs/ch11/exercise_11_1/validation_manifest.json": {
+          "bytes": 1071,
+          "sha256": "93057aafd4568866c15e8a69e6f583136a686e53102501668187c158e132459a"
+        },
+        "pyproject.toml": {
+          "bytes": 581,
+          "sha256": "204d7016dd11fe1083cbbd93995295ca3fbb1ea9bbe710d427430733a34bfec3"
+        },
+        "reviews/exercise_11_1.md": {
+          "bytes": 14274,
+          "sha256": "0f137f05c97591d2e6dc56d3d86e4ed6251f6b91bf581e599135e9fa619796e5"
+        },
+        "scripts/build_exercise_11_1.py": {
+          "bytes": 3805,
+          "sha256": "7eb2f94bb5f9a263ff0bfbc33a50365ff7130e11f152cb30ca592a4ca7a931fb"
+        },
+        "sessions/ch11/__init__.py": {
+          "bytes": 62,
+          "sha256": "f361f0bc1fc5d7aa29e2e7873ac5cff0fd60ca33eea5686066dd80e4c3502918"
+        },
+        "sessions/ch11/production.py": {
+          "bytes": 1821,
+          "sha256": "ba40442022550b3c689156fbf9f185186970036b71aa1d0065dd8fd73baf4a79"
+        },
+        "sessions/ch11/production_plots.py": {
+          "bytes": 2214,
+          "sha256": "9ec8a0c07bcf14239d50220469dc9fc08c16e4b2441570f64d2efa8417e4d256"
+        },
+        "sessions/ch11/production_smoothing.ipynb": {
+          "bytes": 243272,
+          "sha256": "2461c46036a1d03c5be23dcb0ffb2633f0e015be551e71c5722d13f335ff864a"
+        },
+        "templates/notebook_export.html.j2": {
+          "bytes": 559,
+          "sha256": "64f93826e7d4536b176b393c1fdf741775f9186a072736553796417cc4747a6f"
+        },
+        "uv.lock": {
+          "bytes": 175343,
+          "sha256": "b6e49ed4d5ccc4f4fd9fcef40424d2488fde6c26f982382565ead97c5efde8f1"
+        }
+      }
+    },
+    {
+      "exercise": "11.2",
+      "title": "Vergleich von sechs Imputationsmethoden",
+      "file": "chapter_11/Industrial_Data_Science_Exercise_11_2.zip",
+      "bytes": 2308557,
+      "sha256": "a3d73cf8ddad91749092dbe0051acc9291487a7a773c28ae1a0faaeb42681526",
+      "original_archive": {
+        "path": "submission/chapter_11/Industrial_Data_Science_Exercise_11_2.zip",
+        "sha256": "8117695f9b8019918885600e94873bd1bde49d130e023ca400669c3ab55504a1",
+        "bytes": 2304323
+      },
+      "central_file": "sessions/ch11/production_imputation.ipynb",
+      "html": "outputs/ch11/exercise_11_2/production_imputation.html",
+      "adjustments": [
+        {
+          "change": "add START_HERE.md and AUTHORSHIP_AND_AI.md; all original member bytes unchanged"
+        }
+      ],
+      "files": {
+        ".python-version": {
+          "bytes": 8,
+          "sha256": "845c494b4a7e1a741db19fd42eda239d3ee03b65f08276008943349a3055c9cc"
+        },
+        "AUTHORSHIP_AND_AI.md": {
+          "bytes": 879,
+          "sha256": "1a341c25a2ea4e04e7d66358eb83b0d84abc5b6b6d7db10e82aaf65a982ea918"
+        },
+        "README_SUBMISSION.md": {
+          "bytes": 1372,
+          "sha256": "715b828f686d0a94c9be1f2210e5e16da23d03969bbbf92b09a6ec63c2039997"
+        },
+        "START_HERE.md": {
+          "bytes": 1955,
+          "sha256": "bba378ca57a26ad5f8a76e1527cbc284d79b49bd80f25e03696e9ca201e7e778"
+        },
+        "data/processed/exercise_11_2_imputed.csv": {
+          "bytes": 169873,
+          "sha256": "36db0a30375f4450acb646eb1de16cb1e011845f9460dd5f8dd26656eea05aad"
+        },
+        "data/raw/PRODUCTION_SOURCE.md": {
+          "bytes": 1173,
+          "sha256": "d0321dd384f9b29e9ed58c169e60cf4d019b7975b393a6d6776405e48124bbd4"
+        },
+        "data/raw/sss1_production_data.csv": {
+          "bytes": 43081,
+          "sha256": "6310fd9e1fb081929f29715716dca3c433780a09d69c3a422df253a2d9aca494"
+        },
+        "docs/EXERCISE_11_2_REQUIREMENTS.md": {
+          "bytes": 3534,
+          "sha256": "5bf9d884d437afa32a2ddeb577c45efd914dcf80be93a753415dbdb7343fe09c"
+        },
+        "outputs/ch11/exercise_11_2/bfill.png": {
+          "bytes": 132718,
+          "sha256": "b069f154f80d006fbe1200b870335147b3784b54d592c6b36200beb7201696a4"
+        },
+        "outputs/ch11/exercise_11_2/ffill.png": {
+          "bytes": 130913,
+          "sha256": "8c7db7089be4e042b48328218bfeaba50fac49bdbf0a299333a3b286553cfff3"
+        },
+        "outputs/ch11/exercise_11_2/gaps.csv": {
+          "bytes": 2005,
+          "sha256": "feaa5fe995b19b2f306e57adca67b6d20cd63889c9f7b9de6c3d06b9b3d6de05"
+        },
+        "outputs/ch11/exercise_11_2/human_review_verification.json": {
+          "bytes": 684,
+          "sha256": "f24715dbe0fa6ebc5e36d4aca59410909e6188ec57547ddfab545012e454ff3c"
+        },
+        "outputs/ch11/exercise_11_2/linear.png": {
+          "bytes": 139963,
+          "sha256": "466432a0f256bf3aecf4d715b1f16c40aeb803303e2061c3aa54acd330122e2d"
+        },
+        "outputs/ch11/exercise_11_2/longest_gap_comparison.png": {
+          "bytes": 108275,
+          "sha256": "53787068f906e61fb2b006e607dfddc8d492ebfa6bcacc6736c78079a2f9dd13"
+        },
+        "outputs/ch11/exercise_11_2/method_summary.csv": {
+          "bytes": 427,
+          "sha256": "d8aa2d8812e9d35b3597cb05af8c6dacf5b20ed00ebec42307d7730e87fb25f1"
+        },
+        "outputs/ch11/exercise_11_2/pchip.png": {
+          "bytes": 140612,
+          "sha256": "0f46f72439db0909d7733fcbb2edb1d9dc45968054e7c5b8600841ed9e3db17b"
+        },
+        "outputs/ch11/exercise_11_2/polynomial2.png": {
+          "bytes": 144516,
+          "sha256": "a89bbeed8bc32c857696fae67a00979f0bfd72e6b58e33f888c0e5a554886d8c"
+        },
+        "outputs/ch11/exercise_11_2/polynomial5.png": {
+          "bytes": 147160,
+          "sha256": "3532979f5716d802e560ca6958bdf002fe4a4a2cb33aeb4eb034e5f4c70ec802"
+        },
+        "outputs/ch11/exercise_11_2/production_imputation.html": {
+          "bytes": 1150538,
+          "sha256": "3562603b566edd8e97aa7026b401fe2c5b75b81a2e251847972b6ced47c060ca"
+        },
+        "outputs/ch11/exercise_11_2/summary.json": {
+          "bytes": 590,
+          "sha256": "1fa5fc2f511d67ddb83998d1d0033f11ee76c9f429226bc3dc43880890879ea4"
+        },
+        "outputs/ch11/exercise_11_2/validation_manifest.json": {
+          "bytes": 1957,
+          "sha256": "bb4d3f033d515c0514e086aee2f155655d6eac9cbf3d09bd057ff439728fdb8d"
+        },
+        "pyproject.toml": {
+          "bytes": 581,
+          "sha256": "204d7016dd11fe1083cbbd93995295ca3fbb1ea9bbe710d427430733a34bfec3"
+        },
+        "reviews/exercise_11_2.md": {
+          "bytes": 20078,
+          "sha256": "4377bcae943eae422041d44aebd737e7f6a80c964c5066974ab1105053728b5c"
+        },
+        "scripts/build_exercise_11_2.py": {
+          "bytes": 4762,
+          "sha256": "131e5430148348d392a647d0bda184b207b7995ab6f5bd42586ad2b6ef813815"
+        },
+        "sessions/ch11/__init__.py": {
+          "bytes": 62,
+          "sha256": "f361f0bc1fc5d7aa29e2e7873ac5cff0fd60ca33eea5686066dd80e4c3502918"
+        },
+        "sessions/ch11/imputation.py": {
+          "bytes": 3904,
+          "sha256": "2fb07dc57a692d56d8c165ca34e8c2bbf7cdc1b20e4de19478873b85a3f3c73a"
+        },
+        "sessions/ch11/imputation_plots.py": {
+          "bytes": 2138,
+          "sha256": "a1f1535582e8486d3011af1117675b88af8d60057b0d85e1e0d0c05edbf15c4b"
+        },
+        "sessions/ch11/production.py": {
+          "bytes": 1821,
+          "sha256": "ba40442022550b3c689156fbf9f185186970036b71aa1d0065dd8fd73baf4a79"
+        },
+        "sessions/ch11/production_imputation.ipynb": {
+          "bytes": 856802,
+          "sha256": "b55e637e6a46f6c68b0bcacb1a649b37d92b6191c72b85d7e8cf06497828905f"
+        },
+        "sessions/ch11/production_plots.py": {
+          "bytes": 2214,
+          "sha256": "9ec8a0c07bcf14239d50220469dc9fc08c16e4b2441570f64d2efa8417e4d256"
+        },
+        "templates/notebook_export.html.j2": {
+          "bytes": 559,
+          "sha256": "64f93826e7d4536b176b393c1fdf741775f9186a072736553796417cc4747a6f"
+        },
+        "uv.lock": {
+          "bytes": 175343,
+          "sha256": "b6e49ed4d5ccc4f4fd9fcef40424d2488fde6c26f982382565ead97c5efde8f1"
+        }
+      }
+    },
+    {
+      "exercise": "11.3",
+      "title": "Zweistufige STL-Imputation",
+      "file": "chapter_11/Industrial_Data_Science_Exercise_11_3.zip",
+      "bytes": 1704374,
+      "sha256": "8c4442d0a47efa5db940b6f3134de9fd72e4aa90f6fecd9db56f0058c990913f",
+      "original_archive": {
+        "path": "submission/chapter_11/Industrial_Data_Science_Exercise_11_3.zip",
+        "sha256": "8514455de3ad680be538e25f4885ccb2a099d1ee05d1ce931d7c7cf1afa0cd34",
+        "bytes": 1700222
+      },
+      "central_file": "sessions/ch11/production_stl_imputation.ipynb",
+      "html": "outputs/ch11/exercise_11_3/production_stl_imputation.html",
+      "adjustments": [
+        {
+          "change": "add START_HERE.md and AUTHORSHIP_AND_AI.md; all original member bytes unchanged"
+        }
+      ],
+      "files": {
+        ".python-version": {
+          "bytes": 8,
+          "sha256": "845c494b4a7e1a741db19fd42eda239d3ee03b65f08276008943349a3055c9cc"
+        },
+        "AUTHORSHIP_AND_AI.md": {
+          "bytes": 879,
+          "sha256": "1a341c25a2ea4e04e7d66358eb83b0d84abc5b6b6d7db10e82aaf65a982ea918"
+        },
+        "README_SUBMISSION.md": {
+          "bytes": 1372,
+          "sha256": "b11a688d949ee56048a1da963319d6185b85c6869dac1daa39ea4a6add10e0e6"
+        },
+        "START_HERE.md": {
+          "bytes": 1958,
+          "sha256": "91ac549cf6428db6c8e7f03320dc9afd89e123a607e2dc617b618624a0ae4163"
+        },
+        "data/processed/exercise_11_3_stages.csv": {
+          "bytes": 152906,
+          "sha256": "a3d4ab98f84d4a847392038e412266c6aae5474492b2451a0047eaa1f7e60c9a"
+        },
+        "data/raw/PRODUCTION_SOURCE.md": {
+          "bytes": 1173,
+          "sha256": "d0321dd384f9b29e9ed58c169e60cf4d019b7975b393a6d6776405e48124bbd4"
+        },
+        "data/raw/sss1_production_data.csv": {
+          "bytes": 43081,
+          "sha256": "6310fd9e1fb081929f29715716dca3c433780a09d69c3a422df253a2d9aca494"
+        },
+        "docs/EXERCISE_11_3_REQUIREMENTS.md": {
+          "bytes": 4430,
+          "sha256": "116f71abc5d889585959962d44f66c891f9dc35be90e56375bed07ed02ed1b3e"
+        },
+        "outputs/ch11/exercise_11_3/01_stl_components.png": {
+          "bytes": 246823,
+          "sha256": "7cd9823404b98240976eec700d2579a02da41bf755b0557fcbc7345d3b34138e"
+        },
+        "outputs/ch11/exercise_11_3/02_deseasonalized_gaps.png": {
+          "bytes": 103274,
+          "sha256": "b53f62ebb434dd128c930372078682c7238f62ef1ca19258ad0ca2ea203cc9ad"
+        },
+        "outputs/ch11/exercise_11_3/03_final_imputation.png": {
+          "bytes": 154909,
+          "sha256": "6a08c6f09902f867a9a8564fd5edbc510147492a901f25df9c2ce544f36007b5"
+        },
+        "outputs/ch11/exercise_11_3/04_long_gap_comparison.png": {
+          "bytes": 122066,
+          "sha256": "1f078e3c7e3e7c0b6107552e5145467318e3dc86af12cfb54b1dfd1d0fab07d1"
+        },
+        "outputs/ch11/exercise_11_3/components.csv": {
+          "bytes": 89758,
+          "sha256": "4d6516c68d352b503952025c3ce260b9ad317e4f0534bd1272d8fe5a458fe93c"
+        },
+        "outputs/ch11/exercise_11_3/human_review_verification.json": {
+          "bytes": 615,
+          "sha256": "fb140373288b53068394be0db6ea71d2ecdc5114c91c371cf699f9f4be219d25"
+        },
+        "outputs/ch11/exercise_11_3/production_stl_imputation.html": {
+          "bytes": 871873,
+          "sha256": "3d9be7a7656ff62d3416ab5e9e0f1abefaffc528ec1df2923cf2109b9194dd1a"
+        },
+        "outputs/ch11/exercise_11_3/stage_missing_counts.csv": {
+          "bytes": 151,
+          "sha256": "fa2762c2ad18cc66a243cb51e6197787926e5d74cb396882551be9e1c5451135"
+        },
+        "outputs/ch11/exercise_11_3/summary.json": {
+          "bytes": 865,
+          "sha256": "8c6a76b42bc664104f3cb77cdff06291cd2cce6ea2a22e020f139fe7ca58f9e9"
+        },
+        "outputs/ch11/exercise_11_3/validation_manifest.json": {
+          "bytes": 1904,
+          "sha256": "51a5dd2135b182d097c9b69abe538eeb8c4bea65e6766e80394534208cf34013"
+        },
+        "pyproject.toml": {
+          "bytes": 581,
+          "sha256": "204d7016dd11fe1083cbbd93995295ca3fbb1ea9bbe710d427430733a34bfec3"
+        },
+        "reviews/exercise_11_3.md": {
+          "bytes": 24614,
+          "sha256": "c4f891e8a28642d13f53e0db927c6ae033989636478391903ebcd6c75121a9d7"
+        },
+        "scripts/build_exercise_11_3.py": {
+          "bytes": 5358,
+          "sha256": "01fded8f31cc0af18832dc589616429fe4d992ba5d70f0f68a99e3dd724dca79"
+        },
+        "sessions/ch11/__init__.py": {
+          "bytes": 62,
+          "sha256": "f361f0bc1fc5d7aa29e2e7873ac5cff0fd60ca33eea5686066dd80e4c3502918"
+        },
+        "sessions/ch11/imputation.py": {
+          "bytes": 3904,
+          "sha256": "2fb07dc57a692d56d8c165ca34e8c2bbf7cdc1b20e4de19478873b85a3f3c73a"
+        },
+        "sessions/ch11/production.py": {
+          "bytes": 1821,
+          "sha256": "ba40442022550b3c689156fbf9f185186970036b71aa1d0065dd8fd73baf4a79"
+        },
+        "sessions/ch11/production_plots.py": {
+          "bytes": 2214,
+          "sha256": "9ec8a0c07bcf14239d50220469dc9fc08c16e4b2441570f64d2efa8417e4d256"
+        },
+        "sessions/ch11/production_stl_imputation.ipynb": {
+          "bytes": 586340,
+          "sha256": "56916265e5b9f8700fcec2c4c4c799c9544d7dae2c5db7f082814d9212306b39"
+        },
+        "sessions/ch11/stl_imputation.py": {
+          "bytes": 3337,
+          "sha256": "82fe5521b263b6e0a5be91fb7f92ca64ce68daad3bb2fe8017f765941b96bcb0"
+        },
+        "sessions/ch11/stl_plots.py": {
+          "bytes": 3720,
+          "sha256": "2d7f22c9d09156364d85aeeb227bdcc6dd8cc6118a9236e86981ce87fa4e58fb"
+        },
+        "templates/notebook_export.html.j2": {
+          "bytes": 559,
+          "sha256": "64f93826e7d4536b176b393c1fdf741775f9186a072736553796417cc4747a6f"
+        },
+        "uv.lock": {
+          "bytes": 175343,
+          "sha256": "b6e49ed4d5ccc4f4fd9fcef40424d2488fde6c26f982382565ead97c5efde8f1"
+        }
+      }
+    },
+    {
+      "exercise": "11.4",
+      "title": "STL-basierte Ausreißerkandidaten",
+      "file": "chapter_11/Industrial_Data_Science_Exercise_11_4.zip",
+      "bytes": 715695,
+      "sha256": "6a126ebc424dffe8dd2dd562e08f5da1cb83348b3de9b65c206c2c2cce5c4d6f",
+      "original_archive": {
+        "path": "submission/chapter_11/Industrial_Data_Science_Exercise_11_4.zip",
+        "sha256": "ef6e0ae46b227639d942e8afe6b4541b05d603a0c2f8d884a117748fd457e47b",
+        "bytes": 711783
+      },
+      "central_file": "sessions/ch11/production_outliers.ipynb",
+      "html": "outputs/ch11/exercise_11_4/production_outliers.html",
+      "adjustments": [
+        {
+          "change": "add START_HERE.md and AUTHORSHIP_AND_AI.md; all original member bytes unchanged"
+        }
+      ],
+      "files": {
+        ".python-version": {
+          "bytes": 8,
+          "sha256": "845c494b4a7e1a741db19fd42eda239d3ee03b65f08276008943349a3055c9cc"
+        },
+        "AUTHORSHIP_AND_AI.md": {
+          "bytes": 879,
+          "sha256": "1a341c25a2ea4e04e7d66358eb83b0d84abc5b6b6d7db10e82aaf65a982ea918"
+        },
+        "README_SUBMISSION.md": {
+          "bytes": 1372,
+          "sha256": "dd91c058fdd0fcf36c88c05489474ca900f430926ad63d4790f8205a708509c1"
+        },
+        "START_HERE.md": {
+          "bytes": 1941,
+          "sha256": "85657473e1014731ac03cd5f1dfb9983399ed95bb119e2af9b2c76fb81c2f801"
+        },
+        "data/raw/PRODUCTION_SOURCE.md": {
+          "bytes": 1173,
+          "sha256": "d0321dd384f9b29e9ed58c169e60cf4d019b7975b393a6d6776405e48124bbd4"
+        },
+        "data/raw/sss1_production_data.csv": {
+          "bytes": 43081,
+          "sha256": "6310fd9e1fb081929f29715716dca3c433780a09d69c3a422df253a2d9aca494"
+        },
+        "docs/EXERCISE_11_4_REQUIREMENTS.md": {
+          "bytes": 2524,
+          "sha256": "f98d2fdfc44324cc37d06f2d6d2c3ed6ebc0712af7bc4274d8f14adf3023b77c"
+        },
+        "outputs/ch11/exercise_11_4/01_original_outliers.png": {
+          "bytes": 115618,
+          "sha256": "538dd668a73324d845ec4170bd7e54a6ef9c917050db34a57959dd32b26479b7"
+        },
+        "outputs/ch11/exercise_11_4/02_residual_thresholds.png": {
+          "bytes": 122599,
+          "sha256": "4ef4d03b188437fa32d4682c1cd88b9ed483d46d6ba211756cdeab2fbb47ae2f"
+        },
+        "outputs/ch11/exercise_11_4/components.csv": {
+          "bytes": 96010,
+          "sha256": "3f4b6a6c7cb46c297cb3fb3b5e13861255919bce4c102771bb6a7974c6725f1b"
+        },
+        "outputs/ch11/exercise_11_4/human_review_verification.json": {
+          "bytes": 824,
+          "sha256": "2f0d64556c26737113efa8200aebf489429c429f706a408c36aaef85d87c4a59"
+        },
+        "outputs/ch11/exercise_11_4/outlier_candidates.csv": {
+          "bytes": 2432,
+          "sha256": "fd301bbe4ca073ca5a581d07544eafdf72f1099c5af9b42e7e8221a0fb34f478"
+        },
+        "outputs/ch11/exercise_11_4/production_outliers.html": {
+          "bytes": 485504,
+          "sha256": "6602077e0b0fe0e167eb073fdf432cb763a04947cf25b10489f4885852f5abcf"
+        },
+        "outputs/ch11/exercise_11_4/summary.json": {
+          "bytes": 655,
+          "sha256": "016423eec7f83648cbdb7d1d89a8f01e3e1ed50ee1316a7f330b4ad143cc1b32"
+        },
+        "outputs/ch11/exercise_11_4/validation_manifest.json": {
+          "bytes": 1424,
+          "sha256": "4600a8dab85c9caf893251d2cd603c62e843aac125b39d5ed973a0429e4261a4"
+        },
+        "pyproject.toml": {
+          "bytes": 581,
+          "sha256": "204d7016dd11fe1083cbbd93995295ca3fbb1ea9bbe710d427430733a34bfec3"
+        },
+        "reviews/exercise_11_4.md": {
+          "bytes": 12951,
+          "sha256": "ec54f8143603ea9bfd190d2db72ff62167384b544b14f4b3d5a4b8cd9a057d79"
+        },
+        "scripts/build_exercise_11_4.py": {
+          "bytes": 4327,
+          "sha256": "4b75c9fc78284658b681f06828ee94f317a9f698f0d9dcc315747f0d2d34272a"
+        },
+        "sessions/ch11/__init__.py": {
+          "bytes": 62,
+          "sha256": "f361f0bc1fc5d7aa29e2e7873ac5cff0fd60ca33eea5686066dd80e4c3502918"
+        },
+        "sessions/ch11/imputation.py": {
+          "bytes": 3904,
+          "sha256": "2fb07dc57a692d56d8c165ca34e8c2bbf7cdc1b20e4de19478873b85a3f3c73a"
+        },
+        "sessions/ch11/outliers.py": {
+          "bytes": 1600,
+          "sha256": "ff908ffa177a8e8225a785602aa335a64d9e61a894a6a24ae1a8b5c7f36a2ea6"
+        },
+        "sessions/ch11/production.py": {
+          "bytes": 1821,
+          "sha256": "ba40442022550b3c689156fbf9f185186970036b71aa1d0065dd8fd73baf4a79"
+        },
+        "sessions/ch11/production_outliers.ipynb": {
+          "bytes": 200139,
+          "sha256": "f7f5265b3eb3d45a2b7d1968bb131d26103f6cb8077caabf79920c5d96f739a9"
+        },
+        "sessions/ch11/stl_imputation.py": {
+          "bytes": 3337,
+          "sha256": "82fe5521b263b6e0a5be91fb7f92ca64ce68daad3bb2fe8017f765941b96bcb0"
+        },
+        "templates/notebook_export.html.j2": {
+          "bytes": 559,
+          "sha256": "64f93826e7d4536b176b393c1fdf741775f9186a072736553796417cc4747a6f"
+        },
+        "uv.lock": {
+          "bytes": 175343,
+          "sha256": "b6e49ed4d5ccc4f4fd9fcef40424d2488fde6c26f982382565ead97c5efde8f1"
+        }
+      }
+    },
+    {
+      "exercise": "12.1",
+      "title": "Zeitreihen-Clustering: k-Means und KASBA",
+      "file": "chapter_12/Industrial_Data_Science_Exercise_12_1.zip",
+      "bytes": 1846261,
+      "sha256": "08e84851e56234efae37b71e0b367fc300b5e67d0f7df8c15431571faf7849ac",
+      "original_archive": null,
+      "central_file": "sessions/ch12/gesture_clustering.ipynb",
+      "html": "outputs/ch12/exercise_12_1/gesture_clustering.html",
+      "adjustments": [],
+      "files": {
+        ".python-version": {
+          "bytes": 8,
+          "sha256": "845c494b4a7e1a741db19fd42eda239d3ee03b65f08276008943349a3055c9cc"
+        },
+        "AUTHORSHIP_AND_AI.md": {
+          "bytes": 879,
+          "sha256": "1a341c25a2ea4e04e7d66358eb83b0d84abc5b6b6d7db10e82aaf65a982ea918"
+        },
+        "START_HERE.md": {
+          "bytes": 1989,
+          "sha256": "f76ef538a36c607b8cb14ff264ccbcc1d3039cecd82f3e4b51a9af885066c75d"
+        },
+        "data/raw/GesturePebbleZ1/GesturePebbleZ1_TEST.ts": {
+          "bytes": 214339,
+          "sha256": "6084d75d1e95be92fd7e4d07baa62cf41ae6fe6442d965d98a1c83470f431b6a"
+        },
+        "data/raw/GesturePebbleZ1/GesturePebbleZ1_TRAIN.ts": {
+          "bytes": 186006,
+          "sha256": "e885be50acbd32d666febb838769ec5d95851d6c201f2fb4c64ac8a08ad5f249"
+        },
+        "docs/EXERCISE_12_1_REQUIREMENTS.md": {
+          "bytes": 3816,
+          "sha256": "aeb5f8e028f37375e1f45ab3d5c23f2a1aa84033b1d00fd62ec0f69805a838c3"
+        },
+        "docs/GESTURE_PEBBLE_SOURCE.md": {
+          "bytes": 1203,
+          "sha256": "e403528c3a4776ebb8fbdd18d4695e9f49311013e5618572373938326411c167"
+        },
+        "outputs/ch12/exercise_12_1/01_data_exploration.png": {
+          "bytes": 163092,
+          "sha256": "5947d5f8ae77319438f98b9046b04eedde14640129190476d3f09fa1d644c03f"
+        },
+        "outputs/ch12/exercise_12_1/02_cluster_centers.png": {
+          "bytes": 348111,
+          "sha256": "b7f224534b0ab736b4213e13940899a274e3e91b670613e1fa2cfcec500d5165"
+        },
+        "outputs/ch12/exercise_12_1/03_class_cluster_counts.png": {
+          "bytes": 185139,
+          "sha256": "3f03dc5556fb1abf9af901486369d0c34d4f99a4177ff96f7bb37020a70f523c"
+        },
+        "outputs/ch12/exercise_12_1/04_msm_example.png": {
+          "bytes": 39078,
+          "sha256": "ae1e4a28c8cc6b4714fefb326cb4abab26086b9f94d6b223fd3a28abbbe07735"
+        },
+        "outputs/ch12/exercise_12_1/assignments.csv": {
+          "bytes": 17489,
+          "sha256": "04dba8f85526aabc4bcb103cdc3315d7c353283aea87792aa386b6e0b53eeb04"
+        },
+        "outputs/ch12/exercise_12_1/centers.csv": {
+          "bytes": 63099,
+          "sha256": "70a9e8c4307d1386b44602a037d87554f7c72a6cc7a49f2ba1d60bfa576c64ef"
+        },
+        "outputs/ch12/exercise_12_1/counts_0_TEST.csv": {
+          "bytes": 116,
+          "sha256": "71961bfcf8d88e6e23d1e358e323759cad97a69cc2762dcb1c1e6c262dfe1011"
+        },
+        "outputs/ch12/exercise_12_1/counts_0_TRAIN.csv": {
+          "bytes": 115,
+          "sha256": "a928fcdecbaf113e93dbfba228d1378b965b52c7d5736e32a4ee57ea93b3a526"
+        },
+        "outputs/ch12/exercise_12_1/counts_1_TEST.csv": {
+          "bytes": 115,
+          "sha256": "0df9a63337c9cc3ee020b09ebeec6f10b89bfe53e1f9c144460396ac7c05421d"
+        },
+        "outputs/ch12/exercise_12_1/counts_1_TRAIN.csv": {
+          "bytes": 115,
+          "sha256": "b592ca7981b749708adafbea3b5334ab8e021b57f346469e9da1b06dc3bd3cbb"
+        },
+        "outputs/ch12/exercise_12_1/gesture_clustering.html": {
+          "bytes": 872633,
+          "sha256": "10e72951f050048264f4361a978682412cfab92e82b6f405804bb6515bdace97"
+        },
+        "outputs/ch12/exercise_12_1/human_review_verification.json": {
+          "bytes": 1923,
+          "sha256": "4dfe3346a7c13294bf4d73b6fb2db14481e805a4a8774142712d3a3f5c83dc60"
+        },
+        "outputs/ch12/exercise_12_1/lengths.csv": {
+          "bytes": 4187,
+          "sha256": "13ac17684c25be5e09ebfa29ca7d88288e74fbb2ce5c4cd0436ac0617ac1154b"
+        },
+        "outputs/ch12/exercise_12_1/metrics.csv": {
+          "bytes": 504,
+          "sha256": "b930b436b351799841c690f28ae919eaf254bbd83b372b79333751e1438c0bbc"
+        },
+        "outputs/ch12/exercise_12_1/msm_example.csv": {
+          "bytes": 49,
+          "sha256": "4edd7cbad311fbf68db12c817641a1e9f0662b5ba14415e971488103cc5b3d7d"
+        },
+        "outputs/ch12/exercise_12_1/summary.json": {
+          "bytes": 1524,
+          "sha256": "e9286b1e5714f70698e0c18e51091e3962f06e005978ab0521b66127854a590c"
+        },
+        "outputs/ch12/exercise_12_1/validation_manifest.json": {
+          "bytes": 2633,
+          "sha256": "727b95aaf05563423f8369e3817bbc25745b0f49a12801e8040dce2538db90b3"
+        },
+        "pyproject.toml": {
+          "bytes": 847,
+          "sha256": "20382e0896aed31887adca54baed6b83194b36b4b9af7622f4b4c0f9eb28bed0"
+        },
+        "reviews/exercise_12_1.md": {
+          "bytes": 13937,
+          "sha256": "bd3c35ac78cba317669b3fecefd74263783809ac9f437ae47dccac032ce63680"
+        },
+        "scripts/build_exercise_12_1.py": {
+          "bytes": 4719,
+          "sha256": "0c8942ae0cf82fe0079b92e6643ea67cea5c39aa37038bf993187b890f77e969"
+        },
+        "sessions/__init__.py": {
+          "bytes": 27,
+          "sha256": "76958bcbf6dff8c3929bd3946da3259eabba3314e4409a3c57fd519e0d8a0dc2"
+        },
+        "sessions/ch12/clustering.py": {
+          "bytes": 4386,
+          "sha256": "d837c6807ff191ecae997fd3e5ec0673c15ff2b1e787fcea3e5c8b95466edd38"
+        },
+        "sessions/ch12/gesture_clustering.ipynb": {
+          "bytes": 572580,
+          "sha256": "5569fce5ace3a6fed4f77dd6c8c1e65e38a5d185586b8a17564957462eca916f"
+        },
+        "sessions/ch12/gesture_source.json": {
+          "bytes": 399,
+          "sha256": "63c702dfb519e472371662e402b8ebec7982ff3a680f8e1409e217645f2bef38"
+        },
+        "templates/notebook_export.html.j2": {
+          "bytes": 559,
+          "sha256": "64f93826e7d4536b176b393c1fdf741775f9186a072736553796417cc4747a6f"
+        },
+        "uv.lock": {
+          "bytes": 192160,
+          "sha256": "ec6db5ddc2212485f9c85c1ce1b8d1ec061355edd6d2347efef05b95ebe94150"
+        }
+      }
+    },
+    {
+      "exercise": "12.2",
+      "title": "Gestenklassifikation: DTW-3-NN und CNN",
+      "file": "chapter_12/Industrial_Data_Science_Exercise_12_2.zip",
+      "bytes": 1709485,
+      "sha256": "9c5ca785c672a1c6ddcfec4d88146240bab023aad87a1f60a97f8f15e65668d6",
+      "original_archive": null,
+      "central_file": "sessions/ch12/uwave_classification.ipynb",
+      "html": "outputs/ch12/exercise_12_2/uwave_classification.html",
+      "adjustments": [],
+      "files": {
+        ".python-version": {
+          "bytes": 8,
+          "sha256": "845c494b4a7e1a741db19fd42eda239d3ee03b65f08276008943349a3055c9cc"
+        },
+        "AUTHORSHIP_AND_AI.md": {
+          "bytes": 879,
+          "sha256": "1a341c25a2ea4e04e7d66358eb83b0d84abc5b6b6d7db10e82aaf65a982ea918"
+        },
+        "START_HERE.md": {
+          "bytes": 1995,
+          "sha256": "fba79abc95c67860ceb34e01c9bff5f82e18377805d8eb45ca16be698ea6b4a4"
+        },
+        "data/raw/UWaveGestureLibrary/UWaveGestureLibrary_TEST.ts": {
+          "bytes": 2445046,
+          "sha256": "517dbc817c3f181c64727a84ee8bd0cedd3554346042898b9107010b690c331a"
+        },
+        "data/raw/UWaveGestureLibrary/UWaveGestureLibrary_TRAIN.ts": {
+          "bytes": 918539,
+          "sha256": "cb7cd8cb995775d30dacbfd5c2a9cb3a80dfbd186fd444294bae70c9162dead1"
+        },
+        "docs/EXERCISE_12_2_REQUIREMENTS.md": {
+          "bytes": 5061,
+          "sha256": "82c0d25005286fd5b6578e6449e9a1c114cc508fff6514967e9c90c66f3bb4c4"
+        },
+        "docs/UWAVE_SOURCE.md": {
+          "bytes": 1604,
+          "sha256": "a31f55f708f129e3a9f2bd2d9ebfc7de060a6a279ce64d03e48b29230c9c0b3e"
+        },
+        "outputs/ch12/exercise_12_2/01_input_and_training.png": {
+          "bytes": 129430,
+          "sha256": "c0ad1295328c3249e7e685f7026e50dfa2f7a1ab28282ab013789a069a36cbc2"
+        },
+        "outputs/ch12/exercise_12_2/02_confusion_matrices.png": {
+          "bytes": 147586,
+          "sha256": "01f08d203a3e19ab2b09e22cd83728cefb4c5b379683ab3843fdee3496d49d1e"
+        },
+        "outputs/ch12/exercise_12_2/classification_report.csv": {
+          "bytes": 924,
+          "sha256": "50540e60b539d37b793cf37f4292e6d649ff7d14ed5b7e2c6fdf7920afe898b0"
+        },
+        "outputs/ch12/exercise_12_2/cnn_training.csv": {
+          "bytes": 1477,
+          "sha256": "d458b5e802207b93954442a680774417dbfd2ceffd0e41ce14834858370eeca7"
+        },
+        "outputs/ch12/exercise_12_2/cnn_weights.npz": {
+          "bytes": 19901,
+          "sha256": "6733d916ddf6bf7d70962d24dcb4c6c1bdf084c261008aeb4586ad635ff098b9"
+        },
+        "outputs/ch12/exercise_12_2/confusion_cnn.csv": {
+          "bytes": 211,
+          "sha256": "8109fa0922baba17ff0e326d9adcc530f0cbff04fc0752dc990374e293fc9990"
+        },
+        "outputs/ch12/exercise_12_2/confusion_knn.csv": {
+          "bytes": 211,
+          "sha256": "9c163676eabdac56fc84c5b9efa74f8530dd6471f0ddd927ccdc043622a277aa"
+        },
+        "outputs/ch12/exercise_12_2/human_review_verification.json": {
+          "bytes": 2429,
+          "sha256": "5eedac6e1e04778b60a2d2558d41cb5df8b696da7239a5325474b0cd04661dc1"
+        },
+        "outputs/ch12/exercise_12_2/metrics.csv": {
+          "bytes": 237,
+          "sha256": "6124101ade4ec81ba32bdf78edcb85eb03493a9e4f86714b2a371a4457fcc232"
+        },
+        "outputs/ch12/exercise_12_2/predictions.csv": {
+          "bytes": 5349,
+          "sha256": "cc3b8c9bb99b638252d14e6be6a4c37ff24030ec60dfa08d212031abc1189ee4"
+        },
+        "outputs/ch12/exercise_12_2/summary.json": {
+          "bytes": 1421,
+          "sha256": "a3c8d23e18213184565f040adb9ccc7d6f7a784293d1f38472b428fa5f2a71fa"
+        },
+        "outputs/ch12/exercise_12_2/uwave_classification.html": {
+          "bytes": 499289,
+          "sha256": "d28c60615930d9b2e85e88b75787fc6b50996d0aa1d4d4cc26c2c8c29983e54b"
+        },
+        "outputs/ch12/exercise_12_2/validation_manifest.json": {
+          "bytes": 2241,
+          "sha256": "9a87528e1269b1915adaefe41d8d3a359171073e343cba2b4c420276f6d30e58"
+        },
+        "pyproject.toml": {
+          "bytes": 847,
+          "sha256": "20382e0896aed31887adca54baed6b83194b36b4b9af7622f4b4c0f9eb28bed0"
+        },
+        "reviews/exercise_12_2.md": {
+          "bytes": 13800,
+          "sha256": "be9c7d9977bf46268a701a8d72eab58d5038ca635ce641b8ad8a623d9c34d139"
+        },
+        "scripts/build_exercise_12_2.py": {
+          "bytes": 6407,
+          "sha256": "0dd3b01942a99f407a4ed3cb28b7893acbeb4c652978e0549f7e614b3b6e8325"
+        },
+        "sessions/__init__.py": {
+          "bytes": 27,
+          "sha256": "76958bcbf6dff8c3929bd3946da3259eabba3314e4409a3c57fd519e0d8a0dc2"
+        },
+        "sessions/ch12/classification.py": {
+          "bytes": 6342,
+          "sha256": "162264872924527a5e912005a3a6b28370b742e98962e031e654da45a7f3bced"
+        },
+        "sessions/ch12/uwave_classification.ipynb": {
+          "bytes": 211552,
+          "sha256": "4bd8975197b5c7690d62f0b4fa7832799aeb74ce3dd153d9224f918caa73bbae"
+        },
+        "sessions/ch12/uwave_source.json": {
+          "bytes": 964,
+          "sha256": "bbefe0475794dc46711740d90fad66d964fa3b38a37e7f80af718cd8c36511c6"
+        },
+        "templates/notebook_export.html.j2": {
+          "bytes": 559,
+          "sha256": "64f93826e7d4536b176b393c1fdf741775f9186a072736553796417cc4747a6f"
+        },
+        "uv.lock": {
+          "bytes": 192160,
+          "sha256": "ec6db5ddc2212485f9c85c1ce1b8d1ec061355edd6d2347efef05b95ebe94150"
+        }
+      }
+    },
+    {
+      "exercise": "12.3",
+      "title": "Gestenklassifikation mit Time Series Forest",
+      "file": "chapter_12/Industrial_Data_Science_Exercise_12_3.zip",
+      "bytes": 1476855,
+      "sha256": "323e2ffcc5fcabf414b7c56eed889386e7cf235aaab89888ead8ebace30c20ae",
+      "original_archive": null,
+      "central_file": "sessions/ch12/uwave_forest.ipynb",
+      "html": "outputs/ch12/exercise_12_3/uwave_forest.html",
+      "adjustments": [
+        {
+          "file": "sessions/ch12/forest_reference.json",
+          "change": "restore checksum-pinned line endings only",
+          "before": "fc904d7ab793f591a408259ed2e0b86eb036cfdd59b15f81e51187c9221b6e4e",
+          "after": "86dc1d7846d1428e8f493b892a45cff1fd6afbe0d8e8e9fae3f704853722cfa7"
+        }
+      ],
+      "files": {
+        ".python-version": {
+          "bytes": 8,
+          "sha256": "845c494b4a7e1a741db19fd42eda239d3ee03b65f08276008943349a3055c9cc"
+        },
+        "AUTHORSHIP_AND_AI.md": {
+          "bytes": 879,
+          "sha256": "1a341c25a2ea4e04e7d66358eb83b0d84abc5b6b6d7db10e82aaf65a982ea918"
+        },
+        "START_HERE.md": {
+          "bytes": 1968,
+          "sha256": "4b138ba037e2e6897bd5c91eaeca5fd5d0869b6d41792ad5b208fc8e30de1990"
+        },
+        "data/raw/UWaveGestureLibrary/UWaveGestureLibrary_TEST.ts": {
+          "bytes": 2445046,
+          "sha256": "517dbc817c3f181c64727a84ee8bd0cedd3554346042898b9107010b690c331a"
+        },
+        "data/raw/UWaveGestureLibrary/UWaveGestureLibrary_TRAIN.ts": {
+          "bytes": 918539,
+          "sha256": "cb7cd8cb995775d30dacbfd5c2a9cb3a80dfbd186fd444294bae70c9162dead1"
+        },
+        "docs/EXERCISE_12_3_REQUIREMENTS.md": {
+          "bytes": 4720,
+          "sha256": "5c491c60e1642d539282c6e243e71571ed1bc7a01429c920873717fd82bae91a"
+        },
+        "docs/UWAVE_SOURCE.md": {
+          "bytes": 1604,
+          "sha256": "a31f55f708f129e3a9f2bd2d9ebfc7de060a6a279ce64d03e48b29230c9c0b3e"
+        },
+        "outputs/ch12/exercise_12_2/classification_report.csv": {
+          "bytes": 924,
+          "sha256": "50540e60b539d37b793cf37f4292e6d649ff7d14ed5b7e2c6fdf7920afe898b0"
+        },
+        "outputs/ch12/exercise_12_2/confusion_cnn.csv": {
+          "bytes": 211,
+          "sha256": "8109fa0922baba17ff0e326d9adcc530f0cbff04fc0752dc990374e293fc9990"
+        },
+        "outputs/ch12/exercise_12_2/confusion_knn.csv": {
+          "bytes": 211,
+          "sha256": "9c163676eabdac56fc84c5b9efa74f8530dd6471f0ddd927ccdc043622a277aa"
+        },
+        "outputs/ch12/exercise_12_2/metrics.csv": {
+          "bytes": 237,
+          "sha256": "6124101ade4ec81ba32bdf78edcb85eb03493a9e4f86714b2a371a4457fcc232"
+        },
+        "outputs/ch12/exercise_12_2/predictions.csv": {
+          "bytes": 5349,
+          "sha256": "cc3b8c9bb99b638252d14e6be6a4c37ff24030ec60dfa08d212031abc1189ee4"
+        },
+        "outputs/ch12/exercise_12_3/01_interval.png": {
+          "bytes": 58221,
+          "sha256": "820d45fbf594e3c5167e2f3160e6858831c490c7251d0c1a9d1c7cfb4fec46d7"
+        },
+        "outputs/ch12/exercise_12_3/02_comparison.png": {
+          "bytes": 90495,
+          "sha256": "8e748247a24520247cd003d454422c8493e2f4d594bcd8419000735d887af432"
+        },
+        "outputs/ch12/exercise_12_3/classification_report.csv": {
+          "bytes": 1504,
+          "sha256": "466aae20587e23a2b472b8046bf62137cc232fa2694982e01a7ee90f9eafc391"
+        },
+        "outputs/ch12/exercise_12_3/confusion_forest.csv": {
+          "bytes": 211,
+          "sha256": "b558ab1721f31b14834e0bb6f9751fe19869b120c108e87b5e0158e2bd02df1b"
+        },
+        "outputs/ch12/exercise_12_3/forest_probabilities.csv": {
+          "bytes": 13769,
+          "sha256": "95a87d44afe30fcf75973b9169e1d35df06b5d69536b1a9dc7bb6618e867ed51"
+        },
+        "outputs/ch12/exercise_12_3/metrics.csv": {
+          "bytes": 220,
+          "sha256": "24a9350b8afc5f0ce885ae2c780661f576cc251c688783f6e4affef88e63101c"
+        },
+        "outputs/ch12/exercise_12_3/paired_comparison.csv": {
+          "bytes": 118,
+          "sha256": "8c960820ac305dca826d67324d17eb13f48fd19c6826076143a29c748eaba9bb"
+        },
+        "outputs/ch12/exercise_12_3/predictions.csv": {
+          "bytes": 6636,
+          "sha256": "9917dd1f1fb181ddd1dac74e7951b47c17d21523dd667b6a296f95960f30b24a"
+        },
+        "outputs/ch12/exercise_12_3/summary.json": {
+          "bytes": 3537,
+          "sha256": "0c7ac9ade7bd5d3a19aca9fb93dddbb1ef31ff80ec634761d06b642d70f433f3"
+        },
+        "outputs/ch12/exercise_12_3/uwave_forest.html": {
+          "bytes": 439276,
+          "sha256": "21b3db7cbb2ee16835b7f75a6ff7cc309dd362648121d90e458fcb913f67a6df"
+        },
+        "outputs/ch12/exercise_12_3/validation_manifest.json": {
+          "bytes": 3267,
+          "sha256": "b4646ce927debd49c7961824515b11e2c2c4c7d48a35f30d17ff4b3da9b3dff0"
+        },
+        "pyproject.toml": {
+          "bytes": 847,
+          "sha256": "20382e0896aed31887adca54baed6b83194b36b4b9af7622f4b4c0f9eb28bed0"
+        },
+        "reviews/exercise_12_3.md": {
+          "bytes": 17856,
+          "sha256": "819db5e5175642e25497e151fb3aab5658d06c8b3c20037fc037e113f0d334bf"
+        },
+        "scripts/build_exercise_12_3.py": {
+          "bytes": 8708,
+          "sha256": "6040c8750b7bb4b404f354c1e9d07b23aa00a2faf8be34e9328fbc6d58e7e65b"
+        },
+        "sessions/__init__.py": {
+          "bytes": 27,
+          "sha256": "76958bcbf6dff8c3929bd3946da3259eabba3314e4409a3c57fd519e0d8a0dc2"
+        },
+        "sessions/ch12/classification.py": {
+          "bytes": 6342,
+          "sha256": "162264872924527a5e912005a3a6b28370b742e98962e031e654da45a7f3bced"
+        },
+        "sessions/ch12/forest.py": {
+          "bytes": 4764,
+          "sha256": "8a0c86aa2e0e1f255179d0187f29e7ccb9a8c9a5d853ae766e3dbb4a0c84b2fd"
+        },
+        "sessions/ch12/forest_reference.json": {
+          "bytes": 695,
+          "sha256": "86dc1d7846d1428e8f493b892a45cff1fd6afbe0d8e8e9fae3f704853722cfa7"
+        },
+        "sessions/ch12/uwave_forest.ipynb": {
+          "bytes": 145716,
+          "sha256": "38c308b2eec4c9e543b1dec78b8e007a0d6ae58bce6017aea38009f0164b274d"
+        },
+        "sessions/ch12/uwave_source.json": {
+          "bytes": 964,
+          "sha256": "bbefe0475794dc46711740d90fad66d964fa3b38a37e7f80af718cd8c36511c6"
+        },
+        "templates/notebook_export.html.j2": {
+          "bytes": 559,
+          "sha256": "64f93826e7d4536b176b393c1fdf741775f9186a072736553796417cc4747a6f"
+        },
+        "uv.lock": {
+          "bytes": 192160,
+          "sha256": "ec6db5ddc2212485f9c85c1ce1b8d1ec061355edd6d2347efef05b95ebe94150"
+        }
+      }
+    },
+    {
+      "exercise": "12.4",
+      "title": "Multivariate Energieregression",
+      "file": "chapter_12/Industrial_Data_Science_Exercise_12_4.zip",
+      "bytes": 1426857,
+      "sha256": "1c346c4ddd61228b91f48bebd8106788e53b809c1621f5c356747053f9643dfd",
+      "original_archive": null,
+      "central_file": "sessions/ch12/appliances_regression.ipynb",
+      "html": "outputs/ch12/exercise_12_4/appliances_regression.html",
+      "adjustments": [
+        {
+          "file": "sessions/ch12/appliances_source.json",
+          "change": "restore approved CRLF metadata bytes (technical commit 7eb767f)",
+          "before": "12a13831ef2f8591d756c6c3b743264855eaf91182b9d4c3425c6c45a7d82846",
+          "after": "385054a054aea60ec59602b6a2895d688475cd777191a0716d0486e5a1c4819e"
+        }
+      ],
+      "files": {
+        ".python-version": {
+          "bytes": 8,
+          "sha256": "845c494b4a7e1a741db19fd42eda239d3ee03b65f08276008943349a3055c9cc"
+        },
+        "AUTHORSHIP_AND_AI.md": {
+          "bytes": 879,
+          "sha256": "1a341c25a2ea4e04e7d66358eb83b0d84abc5b6b6d7db10e82aaf65a982ea918"
+        },
+        "START_HERE.md": {
+          "bytes": 1991,
+          "sha256": "e1741581eba4a1024cb20bb1cc40ed7ab2ab8bbde2d68982a3be15c882fc8806"
+        },
+        "data/raw/AppliancesEnergy/AppliancesEnergy_TEST.ts": {
+          "bytes": 1405567,
+          "sha256": "9a53cd61b5f006719186ce6f768caa06cc3deeabc70468fed62c8326e0ece41a"
+        },
+        "data/raw/AppliancesEnergy/AppliancesEnergy_TRAIN.ts": {
+          "bytes": 3120766,
+          "sha256": "7eb6b7f765ee1bc590aecf9499e1581ef22aa492fe1a067efcb2a244c8ddcdcb"
+        },
+        "docs/APPLIANCES_SOURCE.md": {
+          "bytes": 2173,
+          "sha256": "d9b997026d1cc55c577995ad8c4adaec7b99a1b0a2bf037a7d8fdbb5908e9ea0"
+        },
+        "docs/EXERCISE_12_4_REQUIREMENTS.md": {
+          "bytes": 4993,
+          "sha256": "762620006ef05e00ebf943bdf61b81280eb8a43658fe078043071e8347b1fd49"
+        },
+        "outputs/ch12/exercise_12_4/01_input_and_training.png": {
+          "bytes": 105975,
+          "sha256": "153109a589c1e019967632054e13691bd6801b7ee379278dae239bd1a294fe07"
+        },
+        "outputs/ch12/exercise_12_4/02_predictions.png": {
+          "bytes": 86155,
+          "sha256": "a15a6bc5d2ed2412988f77a3a26e616db2c6fb9216df841f34fa3f230186d209"
+        },
+        "outputs/ch12/exercise_12_4/appliances_regression.html": {
+          "bytes": 465613,
+          "sha256": "e280f69ca55cda5ceaf2e7cc48b8e515dc9ec68120f28de951defa6471c17bb1"
+        },
+        "outputs/ch12/exercise_12_4/cnn_training.csv": {
+          "bytes": 1449,
+          "sha256": "3d400d7a12773737b499bc53916f7ea1a42eac4e4e2c3b0f878e909912823e3d"
+        },
+        "outputs/ch12/exercise_12_4/cnn_weights.npz": {
+          "bytes": 21853,
+          "sha256": "b91ff5c84366c51f5799f704e631a55db8a3d3644d44a2be5831519c904ab83c"
+        },
+        "outputs/ch12/exercise_12_4/metrics.csv": {
+          "bytes": 162,
+          "sha256": "c9742cff0878d9fb30b712e71e06d9d7ff7180aca32e216c2aa08bdf7fcd743c"
+        },
+        "outputs/ch12/exercise_12_4/predictions.csv": {
+          "bytes": 2706,
+          "sha256": "c40b75c36afe2967624b70c2ab9e06142be08d6e32a57a6517cbadb2967b0412"
+        },
+        "outputs/ch12/exercise_12_4/review_verification.json": {
+          "bytes": 3162,
+          "sha256": "9a9cd07813014e008e510af965cd3fbf973f3c284b4d5cd68396386cf178ce32"
+        },
+        "outputs/ch12/exercise_12_4/summary.json": {
+          "bytes": 2582,
+          "sha256": "3e2294cab5a5fe40b7245beb052b565a42210b578f2b4ea7eec66a4da1a15ae8"
+        },
+        "outputs/ch12/exercise_12_4/validation_manifest.json": {
+          "bytes": 2576,
+          "sha256": "f0638473a7e078c699344329cd162c4e275f443e79e0fbbe9485ecc88b742b42"
+        },
+        "pyproject.toml": {
+          "bytes": 847,
+          "sha256": "20382e0896aed31887adca54baed6b83194b36b4b9af7622f4b4c0f9eb28bed0"
+        },
+        "reviews/exercise_12_4.md": {
+          "bytes": 24732,
+          "sha256": "312098dc8ae7152db7a314b7e7960adc60e7df481480269fab6e11c605186c16"
+        },
+        "scripts/build_exercise_12_4.py": {
+          "bytes": 11065,
+          "sha256": "da2163b08405c6541f57a7076158265976f30a753755bad1757c07badb5ed4f6"
+        },
+        "sessions/__init__.py": {
+          "bytes": 27,
+          "sha256": "76958bcbf6dff8c3929bd3946da3259eabba3314e4409a3c57fd519e0d8a0dc2"
+        },
+        "sessions/ch12/appliances_regression.ipynb": {
+          "bytes": 171341,
+          "sha256": "8aca30bfbb5004fb3e52a3eff4b9e941f0a8935aa8b04de577a019d64e1b0f6f"
+        },
+        "sessions/ch12/appliances_source.json": {
+          "bytes": 1480,
+          "sha256": "385054a054aea60ec59602b6a2895d688475cd777191a0716d0486e5a1c4819e"
+        },
+        "sessions/ch12/classification.py": {
+          "bytes": 6342,
+          "sha256": "162264872924527a5e912005a3a6b28370b742e98962e031e654da45a7f3bced"
+        },
+        "sessions/ch12/regression.py": {
+          "bytes": 5353,
+          "sha256": "6c20bba796060d9430f48eb25e6b697aad22ecc18cd78e9ad9bd948a9df6f76f"
+        },
+        "sessions/ch12/uwave_source.json": {
+          "bytes": 964,
+          "sha256": "bbefe0475794dc46711740d90fad66d964fa3b38a37e7f80af718cd8c36511c6"
+        },
+        "templates/notebook_export.html.j2": {
+          "bytes": 559,
+          "sha256": "64f93826e7d4536b176b393c1fdf741775f9186a072736553796417cc4747a6f"
+        },
+        "uv.lock": {
+          "bytes": 192160,
+          "sha256": "ec6db5ddc2212485f9c85c1ce1b8d1ec061355edd6d2347efef05b95ebe94150"
+        }
+      }
+    }
+  ]
+}
