@@ -1,6 +1,6 @@
 # Aufgabe 10.4 – Human-AI-Review
 
-Status: **TECHNICALLY_VALIDATED**. Finale Projekt- und Merge-Freigabe: **PENDING**.
+Status: **APPROVED**. Freigabe: 26.10.2026 (Europe/Berlin). Merge ausdrücklich autorisiert, vorbehaltlich aktueller erfolgreicher Prüfungen.
 
 Der folgende Erstentwurfsnachweis ist historisch. Das unveränderte studentische
 Review vom 26.10.2026 und die anschließende KI-Korrektur sind unten dokumentiert.
@@ -897,3 +897,25 @@ aktuellen Checks als bereit für die finale Mergeprüfung markiert. main und
 PR #3 bleiben unverändert, keine Universitätsabgabe und kein Kapitel 11.
 Dieser folgende Dokumentationscommit wird erneut durch Hosted CI geprüft;
 das aktuelle Ergebnis wird im PR und Abschlussbericht separat angegeben.
+
+
+## Ausdrückliche Endfreigabe und Mergeauftrag (26.10.2026)
+
+Der Studierende hat im aktuellen Auftrag ausdrücklich bestätigt:
+
+> I explicitly approve the final scientific content of Exercise 10.4 and authorize merging the validated work for Exercises 10.3 and 10.4 into `main`, subject to the verification steps below.
+
+Status: **APPROVED**. Tatsächliches Freigabedatum: **26.10.2026 (Europe/Berlin)**.
+Die Bestätigung stammt vom Studierenden, die Dokumentation dieses Absatzes von
+Codex. Beide bisherigen studentischen Reviewrunden bleiben wortgetreu erhalten.
+Es wird keine zusätzliche unabhängige Testausführung durch den Studierenden
+behauptet. Die Merge-Erlaubnis gilt vorbehaltlich erfolgreicher aktueller Checks.
+Keine Genehmigung zur Universitätseinreichung und keine Arbeit an Kapitel 11.
+
+PR #3 wurde nach Prüfung seiner dokumentierten Freigabe und beider erfolgreichen
+Checks für c9c58ab regulär als `7bb6055e4d824e42c0f663d37c98d1fba847f057`
+gemergt. Lokales main wurde synchronisiert. PR #4 wird gegen dieses neue main
+nochmals geprüft; die gemeinsame 10.3-Vorgeschichte wird nicht dupliziert.
+Aktive 10.4-Dokumente erhalten ausschließlich wahrheitsgemäße Freigabehinweise;
+wissenschaftliche Aussagen und Berechnungen werden nicht geändert. Diese
+Statusredaktion erhält vor dem Merge eigene Render-, Sicht- und CI-Prüfungen.

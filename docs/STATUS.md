@@ -292,3 +292,14 @@ Prüfung des nachfolgenden Dokumentationscommits zur finalen Mergeprüfung berei
 markiert. **Finale Projekt-/Merge-Autorisierung bleibt PENDING.** Kein Merge,
 keine Universitätseinreichung, keine Arbeit an Kapitel 11. Quarto-/TeX-Prüfung
 lokal, keine neue Quarto-CI behauptet. Frühere Statusabschnitte sind historisch.
+
+
+## Kapitel 10 – endgültige Freigabe und angeordnete Mergereihenfolge (26.10.2026)
+
+Der Studierende erteilt ausdrücklich die finale wissenschaftliche Freigabe für
+10.4 und autorisiert die regulären Merges von #3 und #4 in dieser Reihenfolge,
+vorbehaltlich erfolgreicher Prüfungen. 10.4: APPROVED; Freigabedatum 26.10.2026.
+PR #3 ist nach beiden erfolgreichen Head-Checks als `7bb6055` gemergt; main
+synchronisiert. PR #4 wird nach Freigabedokumentation und Statusaktualisierung
+der Exporte erneut geprüft. Bisherige Reviewtexte und sämtliche Commits bleiben
+erhalten. Keine Universitätseinreichung und keine Arbeit an Kapitel 11.
