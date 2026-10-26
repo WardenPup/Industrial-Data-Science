@@ -177,3 +177,15 @@ Offline HTML rendering and all plot checksums were verified, with visual checks
 of every PNG. The genuine IQR boundary correction is disclosed and regression-tested.
 No PDF is required by 10.3 and none was generated. No approval of 10.3, merge,
 student feedback or 10.4 work is claimed. Hosted CI results belong to draft PR #3.
+
+## Exercise 10.3 student review received (2026-10-26)
+
+The student supplied their own positive evaluation and scientific interpretations
+in `reviews/exercise_10_3.md`, preserved verbatim in commit `6c850a1` with
+Human-Review: Feedback provided and Review-Source: Student-authored review file.
+They explicitly authorized recording approval once final checks pass, without
+authorizing merge. Fresh local tests (18), sequential execution (12 code cells),
+all ten images/HTML, independent Pearson/Spearman/IQR/bin checks and official
+requirement coverage pass. No technical corrections or invented review are needed.
+The previously pending original PR workflow has succeeded. Approval remains
+conditional until current-head hosted CI is verified; no 10.4 work or merge.

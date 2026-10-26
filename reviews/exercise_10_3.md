@@ -1,7 +1,9 @@
 # Exercise 10.3 review
 
-Status: AWAITING HUMAN REVIEW
-Human review: Pending
+Status: TECHNICALLY_VALIDATED
+Human review: Feedback provided
+Final approval: Conditional on successful final CI verification, as explicitly
+confirmed by the student in the current exchange. Merge authorization: Not granted.
 
 ## Requirements and provenance
 
@@ -11,7 +13,9 @@ PR #2 was merged only after explicit student merge authorization and inspection
 of both successful current-head checks. Its commits and student text are preserved.
 
 Codex performs requirements analysis, implementation and technical checks for 10.3.
-No student review, feedback or approval of this exercise has been received.
+At initial implementation no student review had been received. The subsequent
+student-authored review is preserved verbatim below, committed separately as
+`6c850a1`. It is human feedback, not AI-generated interpretation or test evidence.
 
 ## Verification
 
@@ -84,7 +88,62 @@ on the draft PR after push; local results do not imply hosted success.
 
 ## Human review and approval
 
-Pending. Do not merge 10.3, start 10.4 or submit coursework.
+The student's review is academically positive, with no requested corrections.
+The student separately confirmed: record APPROVED once final checks pass.
+That condition is not merge authorization. Final current-head CI is checked
+after this validation commit; until then approval remains conditional.
+Do not merge 10.3, start 10.4 or submit coursework.
+
+## Fresh AI/automated verification after human review (2026-10-26)
+
+Codex compared the full supplied file against the previous Git version and
+preserved the original wording, interpretations and Markdown hard line breaks.
+The generic Git whitespace check flagged those intentional two-space breaks;
+they were preserved, not silently edited. The review commit checks other
+whitespace issues with end-of-line-space checking disabled for that command.
+
+| Actual command | Result |
+|---|---|
+| `scripts/uv.cmd sync --offline --locked` | Exit 0; 107 installed packages checked |
+| `scripts/uv.cmd run --offline --locked python scripts/download_ai4i.py` | Exit 0; original CSV checksum verified |
+| `scripts/uv.cmd run --offline --locked python -m unittest discover -s tests -v` | Exit 0; all 18 tests passed |
+| `scripts/uv.cmd run --offline --locked python scripts/build_exercise_10_3.py` | Exit 0; 12 sequential code cells, 10 actual PNG outputs and 10 embedded HTML figures |
+| `scripts/uv.cmd run --offline --locked python scripts/validate_notebooks.py` | Exit 0; both tracked notebooks executed and validated in fresh kernels |
+| `.venv/Scripts/python.exe .tools/verify_exercise3_final_review.py` | Exit 0; independent statistical/bin checks and student-text preservation |
+| `.venv/Scripts/python.exe .tools/check_exercise3_html.py` | Exit 0; offline browser render, all ten images decoded, tables/page fit viewport |
+
+The task-local helpers are ad-hoc verification, not new repository tests.
+NumPy's correlation matrix matches every saved Pearson coefficient; SciPy's
+rank-correlation matrix matches every saved Spearman coefficient within 1e-12.
+An independent Decimal calculation confirms IQR flags 64/418/0. Exact saved
+bin edges match acquisition-free recalculation; independent searchsorted
+membership agrees for all 10000 rows, with speed counts 8965/975/60 and torque
+counts summing to 10000. All ten plot checksums match the manifest and the
+previously committed figures: no plot changed during this review cycle.
+
+Pearson torque/speed is −0.8750270863; Spearman is −0.9164741739.
+Air-temperature Pearson values are −0.0137778231 and 0.0226704588, matching
+the student's rounded −0.014/0.023. No scientific discrepancy was found.
+The line's absence of an obvious trend is a visual student observation, not
+a new formal trend-test result. Their technical-results section correctly
+attributes execution and CI information to Codex; no independent student
+execution or additional human tests are inferred.
+
+Representative regenerated HTML sections were visually inspected. Official
+Exercise 10.3 was freshly retrieved and the complete acceptance matrix checked:
+all ten figure groups, three-variable panels, observation questions, original
+units, legends and interpretations are covered. HTML is required by the work
+request and verified; the official 10.3 task does not require PDF, so no PDF or
+10.4 work was added. No implementation correction or renewed review is needed.
+
+Remaining limits: synthetic data, UDI without timestamps, purely descriptive
+correlations/regression, KDE/bin/overplotting sensitivity, rounded displayed
+interval labels versus exact saved JSON edges, and the known external local
+TCP kernel warning. None is an unresolved technical defect.
+
+Both original-head CI runs, including previously pending PR run 40246933766,
+were inspected and are successful. New commits must receive their own hosted
+checks; those results and any final approval are recorded subsequently.
 
 
 # Human Review – Aufgabe 10.3
