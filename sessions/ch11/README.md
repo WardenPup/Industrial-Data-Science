@@ -1,6 +1,7 @@
 # Kapitel 11 – Self study, Session 2
 
-Aufgabe 11.1 implementiert; menschliches Review steht aus. 11.2–11.4 nicht begonnen.
+Aufgabe 11.1 fachlich APPROVED nach studentischem Review vom 26.10.2026;
+erneute technische Prüfung bestanden. Merge-Erlaubnis ausstehend. 11.2–11.4 nicht begonnen.
 Quelle: https://noxthot.github.io/ws26_industrial_datascience_manuscript/1_act1/7_self_study_session2.html
 Gelesen am 26.10.2026. Notebook: `production_smoothing.ipynb`.
 

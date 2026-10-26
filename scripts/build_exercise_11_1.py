@@ -66,7 +66,8 @@ def main():
              output / "02_smoothing_comparison.png", output / "summary.json",
              ROOT / "data/processed/exercise_11_1_smoothed.csv"]
     manifest = {"source_retrieved": "2026-10-26", "ai_assistance": "Codex",
-                "human_review": "AWAITING HUMAN REVIEW", "data_sha256": SHA256,
+                "human_review": "APPROVED", "approval_date": "2026-10-26",
+                "merge_authorized": False, "data_sha256": SHA256,
                 "sequential_code_cells": len(code), "embedded_html_images": len(images),
                 "files": {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest()
                           for p in files}}

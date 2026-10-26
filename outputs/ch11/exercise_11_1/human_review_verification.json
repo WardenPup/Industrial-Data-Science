@@ -1,0 +1,17 @@
+{
+  "rows": 1044,
+  "observed": 677,
+  "missing": 367,
+  "missing_percent": 35.15325670498085,
+  "max_absolute_column_difference": 9.729278908784181,
+  "support_counts": {
+    "1": 2,
+    "2": 4,
+    "3": 59,
+    "4": 56,
+    "5": 556
+  },
+  "same_mask_median_and_mean": true,
+  "independent_window_comparison": "PASS",
+  "notebook_and_html": "PASS"
+}

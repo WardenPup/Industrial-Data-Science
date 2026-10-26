@@ -1,8 +1,10 @@
 # Aufgabe 11.1 – Human-AI-Review
 
-Status: **AWAITING HUMAN REVIEW** (26.10.2026).
-Studentisches Feedback: noch nicht eingegangen. Keine fachliche Freigabe,
-keine Merge-Erlaubnis. Die Umsetzung wurde ausdrücklich beauftragt.
+Status: **APPROVED** (fachliche Freigabe: 26.10.2026).
+Studentisches Review unverändert unten dokumentiert; keine methodischen
+Korrekturen angefordert. Anschließende technische Prüfung bestanden.
+**Merge-Erlaubnis ausstehend.** Die folgenden Erstprüfungsabschnitte sind historisch;
+der aktuelle technische Nachweis folgt getrennt nach dem studentischen Originaltext.
 
 ## Umsetzung und KI-Anteil
 
@@ -176,3 +178,68 @@ Bei der Durchsicht der bereitgestellten Ergebnisse wurden keine wesentlichen Feh
 **Human Review: APPROVED**
 
 Keine fachlichen Korrekturen erforderlich. Die abschließende technische Validierung und die Prüfung des Pull Requests bleiben Bestandteil des GitHub-Workflows.
+
+---
+
+## KI-Nachprüfung nach studentischem Review – 26.10.2026
+
+Der studentische Originalblock oben ist wortgetreu erhalten. Git-Diff gegen
+88688f6: ausschließlich 112 angehängte Zeilen; separat als b44bcd8 committed.
+Keine Autor-/Committerüberschreibung vorgenommen. Codex hat das Committen
+ausgeführt; der Reviewtext stammt nach ausdrücklicher Bestätigung vom Studierenden.
+Die fachliche Freigabe APPROVED ist dokumentiert, eine Merge-Erlaubnis fehlt.
+
+### Zahlenabgleich gegen Daten, frische Notebookausgabe und Exporte
+
+| Aussage im Review | Tatsächlicher Nachweis |
+|---|---|
+| 1.044 Wochen, 02.01.2005–29.12.2024 | 1.044 geordnete Sonntage, beide Endpunkte bestätigt |
+| pieces vollständig | 0 NaNs |
+| pieces_gaps 367 fehlend, 35,15 % | 367 / 1.044 = 35,15325670498085 % |
+| 677 beobachtete Wochen | 1.044 − 367 = 677 |
+| maximale absolute Abweichung 9,729 Stück | 9,729278908784181, gerundet 9,729 |
+| 367 Lücken nach Glättung, identische Positionen | exakte Maskengleichheit bei Median und Mittelwert |
+| zentrierte fünf Kalenderwochen | unabhängige Schleife über t−2 bis t+2 an allen 1.044 Positionen |
+| Stützzahlen 1/2/3/4/5 | Häufigkeiten 2/4/59/56/556; Summe 677 |
+| sechs dünn besetzte Fenster | 2 + 4 = 6 beobachtete Wochen mit maximal zwei Werten |
+| vier Codezellen, 27 Tests | frischer Notebooklauf 1–4; erneut 27 Tests erfolgreich |
+| Detailausschnitt 2018–2019 | beide Jahre im zweiten Teilbild bestätigt |
+
+`scripts/check_exercise_11_1_review.py` berechnet Median über die sortierten
+vorhandenen Werte und Mittelwert über Summe/Anzahl unabhängig von pandas rolling.
+Beide Reihen stimmen an sämtlichen Positionen innerhalb numerischer
+Rundungstoleranz überein; NaN-Masken werden exakt verglichen. Geprüft sind auch
+die abgeleitete CSV, gespeicherte Notebooktabellen/-ausgaben, summary.json,
+sämtliche sechs Manifesthashes und die tatsächlichen Linienpfade aller Teilachsen.
+Die Aussage über unveränderte Daten bezieht sich auf die Rohdaten: keine zusätzliche
+Imputation/Normalisierung, die Glättung steht ausschließlich in abgeleiteten Spalten.
+
+### Tatsächlich ausgeführte Befehle und Ergebnisse
+
+- `scripts/uv.cmd sync --offline --locked`: 111 aufgelöst, 107 installierte geprüft.
+- `scripts/uv.cmd run --offline --locked python -m unittest discover -s tests -v`:
+  27 Tests, 2,191 s, OK.
+- `scripts/uv.cmd run --offline --locked python scripts/build_exercise_11_1.py`:
+  vier frische sequenzielle Codezellen; zwei echte PNG-Outputs, offlinefähiges HTML,
+  Rohdaten-SHA256 und ursprüngliche 367-NaN-Maske erfolgreich geprüft.
+- `scripts/uv.cmd run --offline --locked python scripts/check_exercise_11_1_review.py`:
+  sämtliche oben genannten Zahlen, Fenster, Masken, gespeicherten Outputs und
+  Dateihashes erfolgreich geprüft; Ergebnis in human_review_verification.json.
+- Offline-Chromium bei 900/1400 px: zwei Bilder geladen, keine Seitenfehler,
+  kein horizontaler Überlauf. Beide erneut erzeugten PNGs visuell kontrolliert;
+  sie sind bytegleich mit der bereits studentisch geprüften Fassung.
+  HTML unveränderte wissenschaftliche Inhalte; nur echte Freigabehinweise angepasst.
+
+Der erste Lauf des neuen Nachprüfers scheiterte beim HTML-Tabellenlesen an der
+nicht installierten optionalen lxml-Abhängigkeit. Er wurde auf das vorhandene
+BeautifulSoup umgestellt; keine neue Abhängigkeit installiert. Ein vorheriger
+Matplotlib-Cache-Schreibhinweis wurde durch projektlokales MPLCONFIGDIR behoben.
+Der vollständige korrigierte Nachprüfer und die Browserprüfung bestanden danach.
+Der bekannte lokale Jupyter-TCP-Hinweis trat auf; kein Notebookfehler.
+
+Kein methodischer Korrekturbedarf, keine zusätzlichen studentischen Tests behauptet.
+Fensterwahl nicht optimiert; reale Kurzereignisse können gedämpft und längere
+Störungen erhalten bleiben; bei dünnen Fenstern geringe Robustheit. Zentrierung
+gilt für historische Berichte. Diese bekannten Grenzen bleiben transparent.
+Die nachgelagerten GitHub-Checks werden am neuen Head geprüft und im PR mit ihren
+tatsächlichen Ergebnissen verlinkt. Kein Merge, keine 11.2 und kein Upload.

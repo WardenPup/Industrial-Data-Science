@@ -189,7 +189,9 @@ an die Universität übermittelt.
 Kapitel 10 bleibt unverändert freigegeben. Der ausdrücklich autorisierte
 Kapitel-11-Start umfasst nur 11.1: [Notebook](sessions/ch11/production_smoothing.ipynb),
 [Anforderungen](docs/EXERCISE_11_1_REQUIREMENTS.md),
-[Review](reviews/exercise_11_1.md). Status: **AWAITING HUMAN REVIEW**.
+[Review](reviews/exercise_11_1.md). Status: **APPROVED** nach positivem
+studentischem Review vom 26.10.2026 und erneuter technischer Prüfung.
+Die ausdrückliche Merge-Autorisierung steht weiterhin aus.
 
 ```powershell
 scripts/uv.cmd run --locked python scripts/download_production.py
@@ -199,4 +201,4 @@ scripts/uv.cmd run --offline --locked python scripts/build_exercise_11_1.py
 HTML und zwei Grafiken liegen unter `outputs/ch11/exercise_11_1/`, die abgeleitete
 CSV unter `data/processed/`. Median und Mittelwert werden mit fünf zentrierten
 Wochen verglichen; alle 367 ursprünglichen Lücken bleiben erhalten.
-Keine Imputation, keine Arbeit an 11.2 und kein Merge vor studentischem Review.
+Keine Imputation, keine Arbeit an 11.2 und kein Merge ohne ausdrückliche Erlaubnis.
