@@ -58,3 +58,110 @@ Warnungen: lokale unverschlüsselte Jupyter-TCP-Kommunikation; erster Numba-JIT-
 meldete uint64→int64-Castwarnung bei der euklidischen Distanz. Keine fehlgeschlagenen
 numerischen Tests. uv meldete einmal einen temporären Cache-Rename-Retry, danach
 Installation erfolgreich. Keine zusätzlichen studentischen Tests behauptet.
+
+
+# Human Review – Exercise 12.1
+
+**Datum:** 26.10.2026  
+**Aufgabe:** GesturePebbleZ1 – Time Series Clustering  
+**Status:** Fachlich positiv beurteilt, technische Abschlussprüfung ausstehend  
+**KI-Unterstützung:** Codex (Implementierung und automatisierte Tests), ChatGPT (Unterstützung bei der Ergebnisinterpretation)
+
+## 1. Daten und Vorverarbeitung
+
+Die Datenexploration zeigt, dass die Gesten unterschiedlich lange Zeitreihen besitzen. Im Trainingsdatensatz reichen die Längen von 115 bis 455 Messwerten, im Testdatensatz von 100 bis 375.
+
+Die Anpassung auf 128 Werte ist für den Methodenvergleich nachvollziehbar, da die Verfahren damit dieselbe Eingabedimension verwenden können.
+
+Die z-Normalisierung halte ich ebenfalls für sinnvoll. Dadurch wird verhindert, dass unterschiedliche absolute Sensorwerte den Distanzvergleich dominieren.
+
+Allerdings gehen bei der Längenanpassung Informationen über die ursprüngliche Dauer und möglicherweise kurze Bewegungsdetails verloren. Durch die Normalisierung werden außerdem absolute Amplitudenunterschiede entfernt. Beide Schritte können die Clusterbildung beeinflussen.
+
+## 2. Wahl der Clusteranzahl
+
+Die Wahl von k = 6 ist nachvollziehbar, da der Datensatz sechs bekannte Gestenklassen enthält.
+
+Die Clusterbildung selbst erfolgt ohne Verwendung dieser Klassenlabels. Die Labels dienen anschließend zur externen Bewertung.
+
+Damit untersuchen wir, wie gut die gefundenen Gruppen mit den bekannten Klassen übereinstimmen. Die Ergebnisse beweisen allerdings nicht, dass sechs Cluster auch unabhängig von den Labels die optimale Wahl darstellen.
+
+## 3. Euklidisches k-Means
+
+Die dargestellten Clusterzentren sind nachvollziehbar. Einige typische Signalformen werden erkannt, andere Klassen verteilen sich jedoch auf mehrere Cluster.
+
+Besonders die Klassen 1, 4 und 5 werden teilweise vermischt. Das ist auch in den Heatmaps erkennbar.
+
+Eine mögliche Erklärung ist, dass die euklidische Distanz die einzelnen Abtastpositionen direkt vergleicht und gegenüber zeitlich verschobenen Signalmerkmalen empfindlich ist.
+
+Auf dem Testdatensatz erreicht das Verfahren:
+
+- ARI = 0,489671
+- NMI = 0,592963
+
+Das Ergebnis zeigt eine erkennbare, aber keine eindeutige Übereinstimmung zwischen Clustern und Gestenklassen.
+
+## 4. KASBA mit MSM
+
+Bei KASBA fällt die deutlich klarere Trennung der Signalformen auf.
+
+In den Clusterzentren sind mehrere charakteristische Gestenverläufe gut erkennbar. Auch die Heatmaps zeigen, dass die meisten Beobachtungen einer Klasse jeweils demselben Cluster zugeordnet werden.
+
+Auf dem Testdatensatz erreicht KASBA:
+
+- ARI = 0,948216
+- NMI = 0,954753
+
+Damit liefert KASBA in diesem Versuch eine wesentlich bessere Übereinstimmung mit den bekannten Klassen als das euklidische k-Means.
+
+MSM berücksichtigt beim Distanzvergleich Änderungen der zeitlichen Zuordnung durch Move-, Split- und Merge-Operationen. Das ist bei unterschiedlich ausgeführten Gesten plausibel vorteilhaft.
+
+Die höhere Clusterqualität gilt für diese konkrete Auswertung. Daraus lässt sich keine allgemeine Überlegenheit von KASBA für beliebige Zeitreihendaten ableiten.
+
+## 5. MSM-Beispiel
+
+Die kleine Kostenmatrix verdeutlicht den Grundgedanken der Move-Split-Merge-Distanz.
+
+Das Zusammenführen zweier aufeinanderfolgender Einsen wird im Beispiel mit Kosten 1 dargestellt. Die kumulierten Kosten veranschaulichen, wie aus lokalen Operationen eine Gesamtdistanz entsteht.
+
+Das Beispiel ist als didaktische Erklärung hilfreich. Für die technische Abschlussprüfung sollte noch bestätigt werden, dass die gesamte Matrix genau der verwendeten MSM-Rekurrenz und Kostenfunktion entspricht.
+
+## 6. Vergleich und Aussagegrenzen
+
+Die verwendeten ARI- und NMI-Werte eignen sich zur Bewertung der Clusterzuordnungen, weil die willkürliche Nummerierung der Cluster keinen Einfluss auf diese Kennzahlen hat.
+
+Trotzdem bestehen Einschränkungen:
+
+- Die Untersuchung verwendet nur einen dokumentierten Zufallsseed.
+- Die Ergebnisse hängen von der gewählten Normalisierung, Resampling-Länge und Clusteranzahl ab.
+- Die Untersuchung einer weiteren Initialisierung oder eines alternativen Seeds wäre für eine Robustheitsbewertung sinnvoll.
+- Da beide Sessions dieselben Personen betreffen, ist der Testsplit nicht automatisch ein unabhängiger Nachweis der Übertragbarkeit auf neue Personen.
+
+Außerdem fällt auf, dass KASBA im Testsplit bessere Werte als im Trainingssplit erreicht. Das ist nicht zwingend ein Fehler, sollte aber nicht als allgemeiner Vorteil auf ungesehenen Daten interpretiert werden.
+
+## 7. Grafische Darstellung und Nachvollziehbarkeit
+
+Alle vier Abbildungen sind lesbar und die Achsen weitgehend verständlich beschriftet.
+
+Die ursprünglichen Signallängen, Clusterzentren und Klassen-Cluster-Häufigkeiten werden sinnvoll gegenübergestellt.
+
+Die getrennte Darstellung von TRAIN und TEST unterstützt die Interpretation.
+
+Die relativen Zeitachsen und die dimensionslosen normalisierten Sensorwerte sind nachvollziehbar.
+
+Die Rohdaten und exportierten Kennzahlen sind für eine spätere Überprüfung dokumentiert.
+
+## 8. Gesamturteil
+
+Die Aufgabe ist fachlich nachvollziehbar umgesetzt. Die Ergebnisse zeigen anschaulich den Unterschied zwischen punktweisem euklidischem Distanzvergleich und dem elastischeren MSM-Ansatz.
+
+Die deutlich höheren ARI- und NMI-Werte von KASBA stimmen mit der erkennbar klareren Clustertrennung in den Heatmaps überein.
+
+Die wesentlichen wissenschaftlichen Grenzen sind bekannt und sollten in der endgültigen Dokumentation erhalten bleiben.
+
+**Fachliches Urteil: Positiv.**
+
+Ich sehe auf Grundlage der vorliegenden Ergebnisse keinen grundlegenden fachlichen Fehler. Vor der abschließenden Freigabe sollen die MSM-Rekurrenz, die Trennung von Training und Test sowie die dokumentierte technische Validierung noch einmal geprüft werden.
+
+**Finale Merge-Freigabe: PENDING.**
+
+Dieser Review dokumentiert die fachliche Beurteilung der vorliegenden Ergebnisse. Er ersetzt keine unabhängige Neuausführung des Codes.
