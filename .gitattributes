@@ -23,3 +23,8 @@ sessions/ch12/uwave_forest.ipynb -text
 outputs/ch12/exercise_12_3/* -text
 sessions/ch12/forest.py -text
 sessions/ch12/forest_reference.json -text
+
+sessions/ch12/appliances_regression.ipynb -text
+sessions/ch12/appliances_source.json -text
+sessions/ch12/regression.py -text
+outputs/ch12/exercise_12_4/* -text

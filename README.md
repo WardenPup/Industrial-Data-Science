@@ -277,3 +277,11 @@ Reproduktion: `scripts/uv.cmd run --offline --locked python scripts/build_exerci
 Forest 277/320 korrekt, Accuracy 0,865625, Macro-F1 0,863884: über CNN, unter DTW-3-NN
 auf diesem Split. Keine allgemeine Überlegenheit. KI-Unterstützung: Codex.
 Status: **SCIENTIFICALLY APPROVED – TECHNICALLY VALIDATED – AWAITING FINAL MERGE AUTHORIZATION**. Review: `reviews/exercise_12_3.md`.
+
+### Aufgabe 12.4
+
+Notebook: `sessions/ch12/appliances_regression.ipynb`; HTML: `outputs/ch12/exercise_12_4/appliances_regression.html`.
+Originaldaten: `scripts/download_appliances.py`; Reproduktion: `scripts/build_exercise_12_4.py`.
+Drei feste Verfahren (DTW-3-NN, Time Series Forest, CNN), identische 95/42 Originalsplits,
+TRAIN-only-Skalierung, RMSE/MAE in kWh. KI-Unterstützung: Codex.
+Status: **AWAITING HUMAN REVIEW**. Reviewbericht: `reviews/exercise_12_4.md`.

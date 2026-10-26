@@ -1,0 +1,47 @@
+{
+  "validated_date": "2026-10-26",
+  "ai_assistance": "Codex",
+  "human_review": "AWAITING HUMAN REVIEW",
+  "merge_authorized": false,
+  "raw_sha256": {
+    "AppliancesEnergy_TEST.ts": "9a53cd61b5f006719186ce6f768caa06cc3deeabc70468fed62c8326e0ece41a",
+    "AppliancesEnergy_TRAIN.ts": "7eb6b7f765ee1bc590aecf9499e1581ef22aa492fe1a067efcb2a244c8ddcdcb"
+  },
+  "seed": 42,
+  "epochs": 60,
+  "sequential_code_cells": 3,
+  "embedded_images": 2,
+  "all_126_predictions_reproduced": true,
+  "independent_knn_target_mean": true,
+  "independent_forest_tree_mean": true,
+  "saved_cnn_predictions_checked": true,
+  "repeat_fit_seconds": {
+    "DTW 3-NN": 0.027392399992095307,
+    "Time Series Forest": 9.770668899989687,
+    "CNN": 4.320078700009617
+  },
+  "repeat_predict_seconds": {
+    "DTW 3-NN": 0.9938288999983342,
+    "Time Series Forest": 0.7240472999983467,
+    "CNN": 0.005634800007101148
+  },
+  "packages": {
+    "aeon": "1.6.0",
+    "numpy": "2.3.5",
+    "scikit-learn": "1.9.1",
+    "torch": "2.9.1+cpu"
+  },
+  "files": {
+    "sessions/ch12/appliances_regression.ipynb": "067ab4466abe7abad01fc8b7163178a2241159cfa0c4cc4d4bc50b59392777e3",
+    "outputs/ch12/exercise_12_4/appliances_regression.html": "9336a9b051b16806cadc65ea59895ceba77b93bddf46e1ca096d639f9aec0f48",
+    "sessions/ch12/regression.py": "6c20bba796060d9430f48eb25e6b697aad22ecc18cd78e9ad9bd948a9df6f76f",
+    "sessions/ch12/appliances_source.json": "385054a054aea60ec59602b6a2895d688475cd777191a0716d0486e5a1c4819e",
+    "outputs/ch12/exercise_12_4/summary.json": "511d4e3172ef1d387dab8b038d55cd764a15c0690725b5607c7084e1b9684207",
+    "outputs/ch12/exercise_12_4/cnn_weights.npz": "b91ff5c84366c51f5799f704e631a55db8a3d3644d44a2be5831519c904ab83c",
+    "outputs/ch12/exercise_12_4/cnn_training.csv": "3d400d7a12773737b499bc53916f7ea1a42eac4e4e2c3b0f878e909912823e3d",
+    "outputs/ch12/exercise_12_4/metrics.csv": "c9742cff0878d9fb30b712e71e06d9d7ff7180aca32e216c2aa08bdf7fcd743c",
+    "outputs/ch12/exercise_12_4/predictions.csv": "c40b75c36afe2967624b70c2ab9e06142be08d6e32a57a6517cbadb2967b0412",
+    "outputs/ch12/exercise_12_4/01_input_and_training.png": "153109a589c1e019967632054e13691bd6801b7ee379278dae239bd1a294fe07",
+    "outputs/ch12/exercise_12_4/02_predictions.png": "a15a6bc5d2ed2412988f77a3a26e616db2c6fb9216df841f34fa3f230186d209"
+  }
+}
