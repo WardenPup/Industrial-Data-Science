@@ -1,7 +1,7 @@
 # Industrial Data Science – Self-Study Kapitel 10–12
 
 Lokales Lernprojekt. Aufgaben 10.1 und 10.2 sind freigegeben und gemergt;
-10.3 wartet nach technischer Prüfung auf Human Review.
+10.3 ist nach studentischer Prüfung und erfolgreicher CI freigegeben; Merge-Erlaubnis steht aus.
 Die offizielle Aufgabenstellung hat Vorrang vor eigenen Zusammenfassungen.
 
 ## Start in PowerShell
@@ -95,7 +95,8 @@ Der ursprüngliche Infrastrukturtest ist weiterhin synthetisch und getrennt von 
 Korrelations-/IQR-Tabellen, Bin-Häufigkeiten, Grenzen und ein Bildmanifest.
 Die drei Histogramme, Boxplots und Violinplots sind jeweils als drei Teilachsen
 zusammengefasst. Die offizielle 10.3-Aufgabe verlangt keinen PDF-Export.
-[Review 10.3](reviews/exercise_10_3.md): AWAITING HUMAN REVIEW. Keine 10.4-Arbeit.
+[Review 10.3](reviews/exercise_10_3.md): APPROVED nach bestätigter CI-Bedingung.
+Kein Merge ohne ausdrückliche Erlaubnis. Keine 10.4-Arbeit.
 
 ## VS Code
 

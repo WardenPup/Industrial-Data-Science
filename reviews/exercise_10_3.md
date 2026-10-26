@@ -1,9 +1,9 @@
 # Exercise 10.3 review
 
-Status: TECHNICALLY_VALIDATED
+Status: APPROVED
 Human review: Feedback provided
-Final approval: Conditional on successful final CI verification, as explicitly
-confirmed by the student in the current exchange. Merge authorization: Not granted.
+Final approval: Recorded on 2026-10-26 after the student's explicitly
+authorized CI condition was satisfied. Merge authorization: Not granted.
 
 ## Requirements and provenance
 
@@ -144,6 +144,34 @@ TCP kernel warning. None is an unresolved technical defect.
 Both original-head CI runs, including previously pending PR run 40246933766,
 were inspected and are successful. New commits must receive their own hosted
 checks; those results and any final approval are recorded subsequently.
+
+
+## Final approval after successful CI (2026-10-26)
+
+The student explicitly clarified: "Record APPROVED once final checks pass."
+Both checks for validated commit `be8c81e0626d21efddaaaa0e19673393dba15232`
+completed successfully and were inspected before this approval was recorded:
+
+- Branch run 40250697129: success.
+- PR run 40250701155: success.
+
+The previously pending original PR run 40246933766 also completed successfully.
+All four existing runs were checked; no failed or unfinished run was presented
+as a pass. Local validation, source/figure consistency and the student's findings
+remain accurate. No unresolved technical defect or implementation correction
+was found. The earlier conditional statements above describe the stage at the
+validation commit; this section records its subsequent successful resolution.
+
+The resulting approval is the student's conditional authorization now fulfilled,
+not an AI-created human review. The original student-authored section below
+remains verbatim. Only AI status documentation and corresponding HTML metadata
+are reconciled after the gate; no scientific calculation or interpretation is
+changed. The final documentation commit receives its own CI before PR readiness.
+An ad-hoc code-source comparison first used the Windows default text encoding
+and falsely reported a difference in non-ASCII labels. Repeating it with explicit
+UTF-8 confirms every scientific code cell is unchanged; no implementation defect
+or code correction was involved.
+No merge is authorized or performed; Exercise 10.4 remains unstarted.
 
 
 # Human Review – Aufgabe 10.3
