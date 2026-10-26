@@ -1,0 +1,114 @@
+{
+  "ai_assistance": "Codex",
+  "student_independent_execution_claimed": false,
+  "train_shape": [
+    120,
+    3,
+    315
+  ],
+  "test_shape": [
+    320,
+    3,
+    315
+  ],
+  "actual_calls": [
+    {
+      "method": "DTW 3-NN",
+      "operation": "fit",
+      "shape": [
+        120,
+        3,
+        315
+      ],
+      "labels": "TRAIN only"
+    },
+    {
+      "method": "CNN",
+      "operation": "fit",
+      "shape": [
+        120,
+        3,
+        315
+      ],
+      "labels": "TRAIN only"
+    },
+    {
+      "method": "DTW 3-NN",
+      "operation": "predict",
+      "shape": [
+        320,
+        3,
+        315
+      ],
+      "labels_supplied": false
+    },
+    {
+      "method": "CNN",
+      "operation": "forward in predict_classifiers",
+      "shape": [
+        320,
+        3,
+        315
+      ],
+      "labels_supplied": false
+    }
+  ],
+  "actual_cnn_config": {
+    "epochs": 60,
+    "seed": 42,
+    "n_classes": 8
+  },
+  "cnn_parameters": 5000,
+  "all_640_predictions_reproduced": true,
+  "all_reports_and_confusion_matrices_match": true,
+  "metrics": [
+    {
+      "method": "DTW 3-NN",
+      "accuracy": 0.909375,
+      "balanced_accuracy": 0.909375,
+      "macro_f1": 0.9085926338042423
+    },
+    {
+      "method": "CNN",
+      "accuracy": 0.846875,
+      "balanced_accuracy": 0.846875,
+      "macro_f1": 0.8465046609503573
+    }
+  ],
+  "training_curve": {
+    "epochs": 60,
+    "first": 2.031084990501404,
+    "last": 0.0031050994681815,
+    "positive_increments": 0,
+    "overfitting_proven": false
+  },
+  "runtime_comparison": {
+    "previous": [
+      {
+        "method": "DTW 3-NN",
+        "accuracy": 0.909375,
+        "balanced_accuracy": 0.909375,
+        "macro_f1": 0.9085926338042424,
+        "fit_seconds": 0.0305575000093085,
+        "predict_seconds": 8.784080299999914
+      },
+      {
+        "method": "CNN",
+        "accuracy": 0.846875,
+        "balanced_accuracy": 0.846875,
+        "macro_f1": 0.8465046609503573,
+        "fit_seconds": 6.284844999987399,
+        "predict_seconds": 0.0548879999987548
+      }
+    ],
+    "repeat_fit_seconds": {
+      "DTW 3-NN": 0.03296940001018811,
+      "CNN": 5.912797600001795
+    },
+    "repeat_predict_seconds": {
+      "DTW 3-NN": 8.42752380001184,
+      "CNN": 0.048443200008478016
+    }
+  },
+  "artifact_hashes_checked": 12
+}

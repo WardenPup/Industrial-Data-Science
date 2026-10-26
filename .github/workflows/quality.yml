@@ -88,3 +88,4 @@ jobs:
         run: |
           uv run --locked python scripts/build_exercise_12_2.py
           uv run --locked python scripts/check_exercise_12_2_html.py
+          uv run --locked python scripts/check_exercise_12_2_review.py

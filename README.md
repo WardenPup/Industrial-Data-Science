@@ -265,6 +265,6 @@ früherer Umgebung unter `submission/chapter_11/`; keine Einreichung erfolgt.
 Multivariate UWave-Gestenklassifikation: `sessions/ch12/uwave_classification.ipynb`;
 HTML: `outputs/ch12/exercise_12_2/uwave_classification.html`.
 Daten: `scripts/download_uwave.py`; frische Ausführung: `scripts/build_exercise_12_2.py`.
-KI-Unterstützung: Codex; AWAITING HUMAN REVIEW. PyTorch 2.9.1 nur CPU, expliziter
+KI-Unterstützung: Codex; APPROVED – AWAITING FINAL MERGE AUTHORIZATION. PyTorch 2.9.1 nur CPU, expliziter
 Paketindex in pyproject.toml. uv-Cache-Konfiguration aus uv.toml ebenfalls dorthin
 übernommen, um sich überlagernde Indexkonfigurationen zu vermeiden.

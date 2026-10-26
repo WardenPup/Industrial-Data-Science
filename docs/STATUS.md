@@ -1,3 +1,15 @@
+## 26.10.2026 – Aufgabe 12.2: wissenschaftlich freigegeben, technisch nachgeprüft
+
+Status: APPROVED – AWAITING FINAL MERGE AUTHORIZATION.
+Originalreview separat in a958b4b erhalten; keine zusätzlichen Human-Tests behauptet.
+52 Tests erneut bestanden (6,813 s), Notebook frisch/sequenziell, beide Abbildungen
+visuell und HTML offline geprüft. TRAIN-only-Fits instrumentiert, alle 640 Vorhersagen,
+Metriken, Klassenberichte, Gewichte und zwölf Artefakthashes bestätigt. 291/271 korrekt;
+Accuracy 0,909375/0,846875. Wissenschaftliche Grenzen und separater KI-Hinweis zur
+ursprünglichen festen Länge dokumentiert. Ein Windows-Dateizugriffsfehler beim erneuten
+Export wurde offengelegt; vollständige Wiederholung erfolgreich und protokolliert.
+PR #10 erst nach erfolgreicher Head-CI bereit; kein Merge, keine 12.3 oder Einreichung.
+
 ## 26.10.2026 – Aufgabe 12.2 technisch validiert
 
 Status: AWAITING HUMAN REVIEW. Originales multivariates UWave-Archiv vollständig:

@@ -98,7 +98,7 @@ def main():
     files = [source, destination] + sorted(output.glob("*.csv")) + [output / "summary.json", output / "cnn_weights.npz"]
     files += [output / f"{name}.png" for name in FIGURES]
     from importlib.metadata import version
-    manifest={"retrieved_date":"2026-10-26","ai_assistance":"Codex","human_review":"AWAITING HUMAN REVIEW","merge_authorized":False,
+    manifest={"retrieved_date":"2026-10-26","ai_assistance":"Codex","human_review":"APPROVED – AWAITING FINAL MERGE AUTHORIZATION","scientific_review":"SCIENTIFICALLY APPROVED","review_received":"2026-10-26","merge_authorized":False,
               "raw_sha256":SOURCE["files"],"seed":SEED,"fixed_epochs":EPOCHS,
               "packages":{name:version(name) for name in ["aeon","numpy","scipy","scikit-learn","numba","torch"]},
               "sequential_code_cells":len(code),"embedded_images":len(images),

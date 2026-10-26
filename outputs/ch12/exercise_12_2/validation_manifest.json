@@ -1,7 +1,9 @@
 {
   "retrieved_date": "2026-10-26",
   "ai_assistance": "Codex",
-  "human_review": "AWAITING HUMAN REVIEW",
+  "human_review": "APPROVED \u2013 AWAITING FINAL MERGE AUTHORIZATION",
+  "scientific_review": "SCIENTIFICALLY APPROVED",
+  "review_received": "2026-10-26",
   "merge_authorized": false,
   "raw_sha256": {
     "UWaveGestureLibrary_TRAIN.ts": "cb7cd8cb995775d30dacbfd5c2a9cb3a80dfbd186fd444294bae70c9162dead1",
@@ -20,15 +22,15 @@
   "sequential_code_cells": 3,
   "embedded_images": 2,
   "files": {
-    "sessions/ch12/uwave_classification.ipynb": "dea4941c8b46aeda81f94aefedbe6dad36cd6d704f366b889c93247c15114be6",
-    "outputs/ch12/exercise_12_2/uwave_classification.html": "0b64e152f51b59403facdb413c5d1a17c29c1cf2c8704fe83ddc2c2eb98eb93f",
+    "sessions/ch12/uwave_classification.ipynb": "4bd8975197b5c7690d62f0b4fa7832799aeb74ce3dd153d9224f918caa73bbae",
+    "outputs/ch12/exercise_12_2/uwave_classification.html": "d28c60615930d9b2e85e88b75787fc6b50996d0aa1d4d4cc26c2c8c29983e54b",
     "outputs/ch12/exercise_12_2/classification_report.csv": "50540e60b539d37b793cf37f4292e6d649ff7d14ed5b7e2c6fdf7920afe898b0",
     "outputs/ch12/exercise_12_2/cnn_training.csv": "d458b5e802207b93954442a680774417dbfd2ceffd0e41ce14834858370eeca7",
     "outputs/ch12/exercise_12_2/confusion_cnn.csv": "8109fa0922baba17ff0e326d9adcc530f0cbff04fc0752dc990374e293fc9990",
     "outputs/ch12/exercise_12_2/confusion_knn.csv": "9c163676eabdac56fc84c5b9efa74f8530dd6471f0ddd927ccdc043622a277aa",
-    "outputs/ch12/exercise_12_2/metrics.csv": "2fa8c3ead9875ae50226629d7c3819cec8f37d53f016f6628eeaf3f2ed9e7707",
+    "outputs/ch12/exercise_12_2/metrics.csv": "6124101ade4ec81ba32bdf78edcb85eb03493a9e4f86714b2a371a4457fcc232",
     "outputs/ch12/exercise_12_2/predictions.csv": "cc3b8c9bb99b638252d14e6be6a4c37ff24030ec60dfa08d212031abc1189ee4",
-    "outputs/ch12/exercise_12_2/summary.json": "54064d0e4c0bf3847d4d176e3fb12eb6257de840a2acea13fbc56b30a91877c4",
+    "outputs/ch12/exercise_12_2/summary.json": "a3c8d23e18213184565f040adb9ccc7d6f7a784293d1f38472b428fa5f2a71fa",
     "outputs/ch12/exercise_12_2/cnn_weights.npz": "6733d916ddf6bf7d70962d24dcb4c6c1bdf084c261008aeb4586ad635ff098b9",
     "outputs/ch12/exercise_12_2/01_input_and_training.png": "c0ad1295328c3249e7e685f7026e50dfa2f7a1ab28282ab013789a069a36cbc2",
     "outputs/ch12/exercise_12_2/02_confusion_matrices.png": "01f08d203a3e19ab2b09e22cd83728cefb4c5b379683ab3843fdee3496d49d1e"

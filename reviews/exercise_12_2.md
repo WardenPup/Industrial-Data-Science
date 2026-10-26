@@ -1,11 +1,11 @@
 # Aufgabe 12.2 – Human-AI Review
 
-Status: AWAITING HUMAN REVIEW
+Status: APPROVED – AWAITING FINAL MERGE AUTHORIZATION
 
 ## KI-Beitrag
 Codex analysierte die offiziellen Anforderungen, prüfte das multivariate Originalarchiv,
 implementierte gemeinsame TRAIN-Skalierung, DTW-3-NN und das 1D-CNN samt Notebook,
-Export und technischer Prüfung. Keine studentische Rückmeldung oder Freigabe vorliegend.
+Export und technischer Prüfung. Der nachfolgende Originalreview wurde separat in a958b4b gesichert.
 
 ## Konkrete Entscheidungen
 120 TRAIN-/320 TEST-Gesten, drei Kanäle und 315 Werte, acht Klassen. Kein Resampling.
@@ -67,9 +67,53 @@ erfolgreich. uv meldete temporäre Cache-Rename-Retries, Installation erfolgreic
 Tatsächliche Warnungen: Numba uint64→int64 bei DTW und lokale unverschlüsselte
 Jupyter-TCP-Kommunikation; keine fehlgeschlagenen numerischen Tests.
 
-Keine studentische Prüfung oder Freigabe behauptet. Wissenschaftlicher Review ausstehend.
+Der vorstehende Erstbericht dokumentiert den damaligen Stand vor dem studentischen Review.
 
 
+
+## Technische Nachprüfung nach studentischer Freigabe – Codex, 26.10.2026
+
+Studentische Entscheidung: SCIENTIFICALLY APPROVED. Der vollständige Originaltext
+unten bleibt wortgetreu erhalten; keine zusätzlichen studentischen Tests behauptet.
+Abschlussstatus: APPROVED – AWAITING FINAL MERGE AUTHORIZATION. Kein Merge autorisiert.
+
+Tatsächlich erneut ausgeführt mit `scripts/uv.cmd run --offline --locked`:
+- `python -m unittest discover -s tests -q`: 52 Tests bestanden, 6,813 s.
+- `python scripts/build_exercise_12_2.py`: frischer Kernel, drei Codezellen sequenziell.
+- `python scripts/check_exercise_12_2_html.py`: HTML offline bei 900/1400 px,
+  beide eingebetteten Bilder geladen, keine Seitenfehler oder horizontaler Überlauf.
+- `python scripts/check_exercise_12_2_review.py`: beide Modelle erneut trainiert;
+  tatsächliche Aufrufe mit TRAIN-only-Skalierung/TRAIN-Labels und TEST-only-Prediction
+  instrumentiert. Alle 640 Einzelvorhersagen, Confusion-Matrizen und Klassenberichte
+  stimmen überein. Gespeicherte Gewichte, 60 Verlustwerte und zwölf Artefakthashes geprüft.
+
+120 TRAIN-/320 TEST-Fälle, drei Kanäle mit je 315 Werten bestätigt.
+DTW-3-NN: 291 korrekt, Accuracy 0,909375, Macro-F1 0,9085926338042423.
+CNN: 271 korrekt, Accuracy 0,846875, Macro-F1 0,8465046609503573.
+Beide elf Verwechslungen 4→5; CNN 60 Epochen, Seed 42, 5.000 Parameter.
+Beide Abbildungen visuell geprüft: Achsen, Beschriftungen, Legenden und gemeinsame
+Confusion-Farbskala korrekt; physikalische Einheiten sind nicht dokumentiert.
+Verlust 2,0310849905→0,0031050995, keine positiven Schritte. Ohne Validierungsdaten
+ist damit kein Overfitting nachgewiesen. Keine numerische Abweichung vom Human Review.
+
+KI-Präzisierung, getrennt vom Originalreview: Das Originalarchiv enthält bereits
+315 Werte je Kanal. Die Lösung führt kein Resampling durch. Physikalische Dauer und
+zeitliche Auflösung sind hier nicht belegt; ein konkreter Informationsverlust durch
+eine in dieser Lösung vorgenommene Längenanpassung wird nicht behauptet.
+
+Ein erneuter Exportversuch brach mit Windows OSError 22 beim Schreiben von
+confusion_knn.csv ab. Ursache nicht nachgewiesen; vollständiger Wiederholungslauf
+anschließend geprüft. Jupyter warnte vor unverschlüsseltem lokalem TCP-Transport.
+Keine neue Numba-Warnung in dieser Nachprüfung beobachtet. Fit-/Predict-Zeiten
+schwanken zwischen Läufen; tatsächliche Werte stehen in human_review_verification.json,
+keine universelle Laufzeitüberlegenheit daraus abgeleitet.
+Letzter Notebook-Lauf: kNN Fit 0.0306 s / Predict 8.7841 s;
+CNN Fit 6.2848 s / Predict 0.0549 s. Separater Audit: kNN Fit 0.0330 s / Predict 8.4275 s;
+CNN Fit 5.9128 s / Predict 0.0484 s.
+
+Grenzen bleiben: ein Seed, nur 120 Trainingsfälle, keine Hyperparameter-/Validierungs-
+studie, keine belegte Personenunabhängigkeit und abweichende Katalogfallzahlen.
+Frühere Lösungen, Reviews und acht Abgabe-ZIPs bleiben unverändert.
 
 # Human Review – Exercise 12.2
 

@@ -6,7 +6,8 @@ Quelle: https://noxthot.github.io/ws26_industrial_datascience_manuscript/1_act1/
 Datenabruf scripts/download_gestures.py, Export scripts/build_exercise_12_1.py.
 Originaler Human Review bleibt unverändert erhalten.
 
-12.2: KI-gestützte Implementierung durch Codex, technisch validiert; AWAITING HUMAN REVIEW.
+12.2: KI-gestützte Implementierung durch Codex, studentisch wissenschaftlich freigegeben;
+APPROVED – AWAITING FINAL MERGE AUTHORIZATION.
 Notebook uwave_classification.ipynb; Datenabruf scripts/download_uwave.py;
 Export scripts/build_exercise_12_2.py. Alle Skripte vom Projektstamm mit uv ausführen.
 Anforderungen: docs/EXERCISE_12_2_REQUIREMENTS.md; Review: reviews/exercise_12_2.md.
