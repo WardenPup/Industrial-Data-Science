@@ -148,8 +148,9 @@ Eine separate Präsentationskopie erhält die vollständige EDA aus 10.3.
 [Anforderungen](docs/EXERCISE_10_4_REQUIREMENTS.md) und
 [offene Reviewfragen](reviews/exercise_10_4.md) dokumentieren die Trennung von
 KI-Erstentwurf, tatsächlichen technischen Prüfungen und studentischer Redaktion.
-Status: **AWAITING FINAL HUMAN APPROVAL** nach studentischem PDF-Review und
-KI-gestützter Korrektur. Die Exporte liegen unter
+Status: **TECHNICALLY_VALIDATED** nach zwei studentischen PDF-Reviews,
+KI-gestützten Korrekturen und erfolgreichen lokalen/GitHub-Prüfungen.
+Finale Projekt- und Merge-Freigabe bleibt ausstehend. Die Exporte liegen unter
 `outputs/ch10/exercise_10_4/`; PDF wird über Quarto und LuaLaTeX erzeugt.
 Die bestehenden Actions prüfen Python und Notebooks. Die zusätzliche Quarto-/TeX-
 Exportprüfung erfolgt lokal und ist nicht Bestandteil der bisherigen CI.

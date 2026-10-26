@@ -273,3 +273,22 @@ Merge-Freigabe ausstehend. Der neue Auftrag bestätigt ausdrücklich den Push zu
 bestehenden Remote und einen Draft-PR gegen main. PR #3 bleibt offen; kein Merge,
 keine Arbeit an Kapitel 11 und keine Universitätseinreichung. Aktuelle Nachweise
 und Grenzen stehen im Reviewprotokoll; ältere Statusabschnitte sind historisch.
+
+
+## Aufgabe 10.4 – technisch validiert, Merge-Freigabe ausstehend (26.10.2026)
+
+**TECHNICALLY_VALIDATED.** Beide studentischen Reviewrunden bleiben wortgetreu
+getrennt erhalten; wissenschaftliche Beurteilung positiv. Die finalen kleinen
+Tabellenumbrüche sind lokal vollständig geprüft, Berechnungen unverändert.
+GitHub PR #4: https://github.com/WardenPup/Industrial-Data-Science/pull/4 .
+Der Head `a48975287429cae4405e8bdb8e55cbe9a60b7511` hat beide Hosted-Läufe tatsächlich bestanden:
+- pull_request: 40314359996 – SUCCESS – https://github.com/WardenPup/Industrial-Data-Science/actions/runs/40314359996
+- push: 40314355102 – SUCCESS – https://github.com/WardenPup/Industrial-Data-Science/actions/runs/40314355102
+
+GitHub meldet keine Mergekonflikte. Alle sechs manifestierten Quellen/Exporte
+auf dem Remote stimmen bytegenau mit der geprüften lokalen Fassung überein.
+Die Git-Zeilenendenkorrektur ist im Review offen dokumentiert. Der PR wird nach
+Prüfung des nachfolgenden Dokumentationscommits zur finalen Mergeprüfung bereit
+markiert. **Finale Projekt-/Merge-Autorisierung bleibt PENDING.** Kein Merge,
+keine Universitätseinreichung, keine Arbeit an Kapitel 11. Quarto-/TeX-Prüfung
+lokal, keine neue Quarto-CI behauptet. Frühere Statusabschnitte sind historisch.

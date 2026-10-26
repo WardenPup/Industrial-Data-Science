@@ -1,7 +1,9 @@
 # Überarbeitete wissenschaftliche Reviewfassung – Aufgabe 10.4
 
-Status: **AWAITING FINAL HUMAN APPROVAL**. Studentisches PDF-Review vom
-26.10.2026 erhalten; Korrekturen durch Codex. Finale Freigabe ausstehend.
+Status: **TECHNICALLY_VALIDATED** nach zwei studentischen PDF-Reviews vom
+26.10.2026, Codex-Korrekturen und lokalen/GitHub-Prüfungen. Finale Projekt- und
+Merge-Freigabe ausstehend; die Exporte behalten den Hinweis auf ausstehende
+endgültige studentische Freigabe.
 
 `paper.qmd` ist der kurze, direkt editierbare Bericht. Die ergänzende
 `notebook_presentation.ipynb` ist eine eigenständige Präsentationskopie der
