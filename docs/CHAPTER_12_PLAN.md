@@ -1,3 +1,10 @@
+## Fortschreibung 26.10.2026
+
+12.1 ist nach ausdrücklicher Abschlussfreigabe regulär über PR #9 integriert.
+12.2 ist jetzt zur Implementierung und technischen Verifikation bis zum Human Review
+beauftragt. 12.3–12.4 bleiben unbegonnen; die unten stehende ursprüngliche
+Prioritätsanalyse und damalige Autorisierung bleiben als Historie erhalten.
+
 # Kapitel 12 – Prioritätsplan
 
 KI-gestützte Analyse am 26.10.2026. Exakte offizielle Quelle:

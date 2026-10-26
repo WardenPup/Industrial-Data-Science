@@ -1,3 +1,13 @@
+## 26.10.2026 – Aufgabe 12.1 abgeschlossen; 12.2 begonnen
+
+12.1: STUDENT APPROVED, finale fachliche/technische Freigabe ausdrücklich erteilt.
+Freigabevermerk 96d58be nach 5e96c4c/06765d8; neue Head-CI 40394307160 und
+40394315059 erfolgreich, keine Reviewkommentare/offenen Threads, konfliktfrei.
+PR #9 auf Ready gesetzt und regulär gemergt: 7be3f3a15d9f110b6c1dcf58bac2c2e5b1180633.
+Lokales main synchronisiert. Originalreview und alle Entwicklungscommits erhalten.
+12.2 auf exercise/12.2 ausdrücklich zur Umsetzung bis zum Review autorisiert;
+Anforderungen gelesen, keine Freigabe für 12.2 und kein Beginn von 12.3.
+
 ## 26.10.2026 – Aufgabe 12.1: positives Feedback, Abschlussprüfung erfolgreich
 
 Status: TECHNICALLY_VALIDATED – AWAITING FINAL HUMAN APPROVAL.
