@@ -1,6 +1,6 @@
 # Arbeitsstand – 26.10.2026
 
-## Neuester Stand: 11.1 integriert; 11.2 in Bearbeitung
+## Neuester Stand: 11.1 integriert; 11.2 zur fachlichen Prüfung
 
 Der Studierende hat den Merge von PR #5 ausdrücklich genehmigt. Codex bestätigte
 die dokumentierte fachliche Freigabe, Konfliktfreiheit und beide erfolgreichen
@@ -11,8 +11,13 @@ und freigegebene Resultate bleiben bestehen. **Aufgabe 11.1 vollständig abgesch
 
 Danach `exercise/11.2` von diesem main angelegt. Offizielle 11.2-Aufgabe und
 Kapitel-5-Methoden am 26.10.2026 gelesen; Anforderungen separat dokumentiert.
-Status 11.2 zunächst DRAFT, Umsetzung/technische Prüfung folgen. Keine Freigabe,
-kein Merge von 11.2, keine 11.3 und keine Universitätseinreichung.
+11.2 ist technisch geprüft: sechs Imputationsvarianten, 33 Tests bestanden,
+zehn Codezellen frisch sequenziell, sieben Grafiken und eigenständiges HTML.
+Alle 367 Lücken ergänzt, 677 bekannte Werte erhalten; Rohdaten und freigegebene
+11.1-Lösung unverändert. HTML offline bei 900/1400 px geprüft. Details:
+[Review 11.2](../reviews/exercise_11_2.md).
+Status: **AWAITING HUMAN REVIEW**. Keine Freigabe, kein Merge von 11.2,
+keine 11.3 und keine Universitätseinreichung. Draft-PR mit aktuellen CI-Prüfungen folgt.
 
 Die folgenden Abschnitte beschreiben frühere Arbeitsstände.
 
