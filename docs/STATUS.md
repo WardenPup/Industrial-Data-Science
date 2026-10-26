@@ -1,3 +1,14 @@
+## 26.10.2026 – Aufgabe 12.2 regulär gemergt; 12.3 beauftragt
+
+Explizite finale studentische Merge-Autorisierung erhalten. Unveränderter Head
+50d3a01, beide CI-Läufe 40401653232/40401662685 erfolgreich, Ready/conflict-free,
+keine Reviewkommentare oder offenen Threads. PR #10 regulär mit Merge-Commit
+ a216fdcecbcea9760b3a2fceb6ae672c0b98ed36 integriert; main identisch mit origin/main,
+Arbeitsbaum sauber. Review a958b4b und Verifikation 50d3a01 vollständig erhalten.
+Originalreviews bleiben unverändert. Finale Autorisierung ist hier und im Merge-
+Commit dokumentiert. 12.3 auf exercise/12.3 bis zum Human Review autorisiert;
+Anforderungen separat festgelegt, 12.4 unbegonnen, keine Einreichung.
+
 ## 26.10.2026 – Aufgabe 12.2: wissenschaftlich freigegeben, technisch nachgeprüft
 
 Status: APPROVED – AWAITING FINAL MERGE AUTHORIZATION.

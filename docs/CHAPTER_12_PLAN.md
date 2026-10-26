@@ -1,3 +1,10 @@
+## Fortschreibung – nach PR #10
+
+12.2 am 26.10.2026 ausdrücklich final autorisiert und regulär als a216fdc gemergt.
+12.3 jetzt bis zum wissenschaftlichen Human Review beauftragt; Anforderungen siehe
+EXERCISE_12_3_REQUIREMENTS.md. 12.4 bleibt unbegonnen. Ältere Autorisierungsstände
+unten sind historische Planung, keine Einschränkung des aktuellen Auftrags.
+
 ## Fortschreibung 26.10.2026
 
 12.1 ist nach ausdrücklicher Abschlussfreigabe regulär über PR #9 integriert.
