@@ -64,3 +64,115 @@ Bitte Fensterwahl, Methodenerklärung, sichtbare Lücken und Interpretation prü
 Lernfragen stehen im Notebook. Keine studentische Prüfung oder Zustimmung erfunden.
 GitHub-CI wird nach Veröffentlichung am tatsächlichen PR-Head geprüft; lokale
 Prüfungen sind keine Behauptung eines erfolgreichen Actions-Laufs.
+
+
+# Human Review – Aufgabe 11.1
+
+**Datum:** 26.10.2026  
+**Aufgabe:** Glättung einer Produktionszeitreihe mit gleitendem Median  
+**KI-Unterstützung:** Codex  
+**Status:** APPROVED – Fachliche Prüfung abgeschlossen
+
+## 1. Prüfung der Daten
+
+Der Datensatz enthält 1.044 wöchentliche Beobachtungen vom 02.01.2005 bis zum 29.12.2024.
+
+Die vollständige Produktionsreihe `pieces` enthält keine fehlenden Werte. In `pieces_gaps` fehlen dagegen 367 Beobachtungen, entsprechend 35,15 % der Wochen.
+
+Die beiden Reihen sind außerhalb der Lücken nicht exakt identisch. Die maximale absolute Abweichung beträgt 9,729 Stück. Deshalb können ihre Unterschiede nicht ausschließlich als fehlende Werte interpretiert werden.
+
+Die Daten wurden nicht durch zusätzliche Imputation, Normalisierung oder Filterung verändert.
+
+## 2. Prüfung der Glättungsmethode
+
+Die Implementierung verwendet einen zentrierten gleitenden Median mit einem Fenster von fünf Kalenderwochen.
+
+Für eine Woche werden grundsätzlich zwei vorhergehende Wochen, die aktuelle Woche und zwei nachfolgende Wochen berücksichtigt.
+
+Fehlende Beobachtungen werden bei der Medianberechnung übersprungen. Das verwendete `min_periods=1` erlaubt Berechnungen auch bei unvollständigen Fenstern.
+
+Nach der Berechnung werden ursprünglich fehlende Positionen wieder explizit auf `NaN` gesetzt.
+
+Diese Vorgehensweise ist sinnvoll, da die ursprüngliche Lückenstruktur erhalten bleibt und keine künstlichen Messwerte an unbeobachteten Wochen dargestellt werden.
+
+Der zusätzliche gleitende Mittelwert verwendet dieselbe Fensterdefinition und Lückenbehandlung und ermöglicht einen nachvollziehbaren Methodenvergleich.
+
+## 3. Konkrete Validierungsergebnisse
+
+Die bereitgestellte Validierungsübersicht bestätigt:
+
+- 1.044 Beobachtungen insgesamt.
+- 367 fehlende Werte vor der Glättung.
+- 367 fehlende Werte nach der Glättung.
+- Identische Positionen aller fehlenden Werte.
+- Fensterbreite von fünf Wochen.
+- Zentrierte Berechnung.
+- Sechs beobachtete Wochen mit nur einem oder zwei verfügbaren Werten im jeweiligen Fenster.
+
+Von den 677 ursprünglich beobachteten Wochen besitzen 556 ein vollständiges 5-Werte-Fenster, 56 ein Fenster mit vier Werten, 59 eines mit drei Werten, vier eines mit zwei Werten und zwei nur einen verfügbaren Wert.
+
+Damit sind die Grenzen der Glättung an lückenhaften Stellen konkret nachvollziehbar.
+
+## 4. Visuelle Prüfung
+
+### Originalreihe und Lücken
+
+Die erste Grafik zeigt die vollständige Reihe und die ursprüngliche Reihe mit fehlenden Beobachtungen.
+
+Ein langfristiger Produktionsanstieg ist deutlich erkennbar. Daneben treten regelmäßige Schwankungen und einzelne starke Einbrüche auf.
+
+Die Lücken erscheinen als echte Unterbrechungen und werden nicht durch interpolierte Verbindungslinien geschlossen.
+
+### Vergleich von Median und Mittelwert
+
+Die zweite Grafik zeigt die geglätteten Reihen zusammen mit den beobachteten Produktionswerten.
+
+Die orange Mittelwertlinie und die blaue Medianlinie verlaufen größtenteils ähnlich. Bei einzelnen auffälligen Beobachtungen zeigen sich Unterschiede.
+
+Besonders im Detailausschnitt 2018–2019 wird sichtbar, dass die Glättung kurzfristige Schwankungen reduziert, ohne die grundsätzliche Entwicklung vollständig zu verändern.
+
+Die Kurven bleiben an den ursprünglichen Lücken unterbrochen.
+
+Achsenbeschriftungen, Einheiten und Legenden sind verständlich und vollständig.
+
+## 5. Fachliche Interpretation
+
+Der Median ist bei isolierten extremen Zählfehlern robuster als der arithmetische Mittelwert, weil die Höhe eines einzelnen Extremwerts den Median häufig nicht verändert.
+
+Der Mittelwert wird dagegen direkt von allen Einzelwerten beeinflusst.
+
+Durch die Glättung werden kurzfristige Schwankungen reduziert. Dabei können allerdings auch tatsächliche Produktionsereignisse, etwa kurzfristige Stillstände oder Störungen, abgeschwächt werden.
+
+Bei Fenstern mit nur einem oder zwei vorhandenen Werten ist die statistische Aussagekraft eingeschränkt. Insbesondere ist der Median bei zwei Werten gleich ihrem arithmetischen Mittelwert.
+
+Das zentrierte Fenster verwendet auch Beobachtungen aus späteren Wochen. Für eine historische Analyse ist dies geeignet, für eine Echtzeitprognose ohne Anpassung jedoch nicht.
+
+## 6. Grenzen
+
+Die gewählte Fensterbreite von fünf Wochen ist ein nachvollziehbarer Kompromiss, aber nicht statistisch optimiert.
+
+Die Glättung garantiert keine vollständige Entfernung fehlerhafter Beobachtungen.
+
+Längere Störungen können teilweise erhalten bleiben, während kurze reale Ereignisse abgeschwächt werden können.
+
+Die Methode liefert geglättete Schätzwerte und ersetzt keine tatsächlichen Messungen.
+
+## 7. Technische Prüfungen
+
+Laut Codex wurden 27 automatisierte Tests erfolgreich ausgeführt. Vier Notebook-Codezellen wurden sequenziell ausgeführt und der HTML-Export geprüft.
+
+Die hochgeladenen Diagramme, die HTML-Ausgabe und die JSON-Ergebnisdateien sind inhaltlich konsistent.
+
+Eine zusätzliche unabhängige lokale Testausführung durch den Studierenden wird nicht behauptet.
+
+## 8. Gesamtbewertung
+
+Die Glättungsmethode wurde nachvollziehbar umgesetzt. Die ursprünglichen fehlenden Werte bleiben vollständig erhalten, der Methodenvergleich ist sinnvoll und die Visualisierungen unterstützen die fachliche Interpretation.
+
+Die Einschränkungen bei unvollständig besetzten Fenstern und bei der Glättung realer Produktionsereignisse sind ausreichend dokumentiert.
+
+Bei der Durchsicht der bereitgestellten Ergebnisse wurden keine wesentlichen Fehler festgestellt.
+
+**Human Review: APPROVED**
+
+Keine fachlichen Korrekturen erforderlich. Die abschließende technische Validierung und die Prüfung des Pull Requests bleiben Bestandteil des GitHub-Workflows.
