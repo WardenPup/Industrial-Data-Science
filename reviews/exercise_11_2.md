@@ -1,8 +1,10 @@
 # Aufgabe 11.2 – Human-AI-Review
 
-Status: **AWAITING HUMAN REVIEW** (26.10.2026).
-Kein studentisches Feedback, keine wissenschaftliche Freigabe und keine
-Merge-Erlaubnis für 11.2. Keine Universitätseinreichung.
+Status: **APPROVED** (fachliche Freigabe vom 26.10.2026).
+Studentischer Originalreview unverändert unten dokumentiert; keine methodischen
+Korrekturen angefordert. Erneute technische Prüfung bestanden. Merge-Erlaubnis
+weiterhin ausstehend. Keine Universitätseinreichung. Die Erstprüfungsabschnitte
+sind historisch; aktueller KI-Nachweis getrennt nach dem studentischen Text.
 
 ## Anforderungen und Umsetzung
 
@@ -280,3 +282,79 @@ Bei der Durchsicht der bereitgestellten Ergebnisse wurden keine wesentlichen fac
 **Human Review: APPROVED**
 
 Keine inhaltlichen Korrekturen erforderlich. Der Pull Request bleibt bis zur ausdrücklichen Merge-Freigabe ungemergt.
+
+
+---
+
+## KI-Nachprüfung nach studentischem Review – 26.10.2026
+
+Originalwortlaut des studentischen Reviews vollständig und unverändert erhalten.
+Git-Diff gegen e06d2f2: 190 angehängte Zeilen, separat als 452843a committed.
+Vorherige Inhalte blieben im Reviewcommit unverändert; keine Überschreibung
+von Autor-/Committermetadaten. Codex führte den Commit aus, der Text stammt
+nach ausdrücklicher Bestätigung vom Studierenden. Fachliche Freigabe APPROVED,
+keine methodische Korrekturanforderung; Merge-Erlaubnis weiterhin ausstehend.
+
+### Aussagenabgleich und präzisierter Langlückenbefund
+
+| Reviewaussage | Tatsächliche Nachprüfung |
+|---|---|
+| Sechs Methoden auf 11.1-Eingabe | Hash des freigegebenen Medians bestätigt; ffill/bfill/linear/Polynom 2/5/PCHIP |
+| 1.044 Wochen, 367 fehlend, 677 beobachtet | alle Zahlen bestätigt; Zeitachse in CSV und allen Ergebnisreihen identisch |
+| Alle Fehlwochen ergänzt | pro Verfahren 367 neue endliche Werte, 0 NaNs verbleibend |
+| Vorhandene Werte unverändert | alle 677 Werte in jedem berechneten Ergebnis exakt gleich, zusätzlich CSV-Rundungsprüfung |
+| Langlücke 23 Wochen | erste längste Lücke 11.12.2011–13.05.2012, 32 Lücken insgesamt |
+| Stufen bei Forward/Backward Fill | jeweils konstanter linker/rechter Randwert innerhalb der Lücke |
+| Linear/PCHIP zurückhaltend | lineare Referenz bestätigt; PCHIP in dieser Lücke monoton, ohne Überschreiten der Randwerte |
+| Ausgeprägter Grad-5-Rückgang | Minimum 357,9956960057037 bei Randwerten 473,54887536096425 / 606,8249557703607 |
+| Polynomüberschwinger dokumentiert | 78 / 189 Werte außerhalb der bekannten Lückenrandwerte bei Grad 2 / 5, sonst null |
+| 33 Tests / 10 Zellen / 7 Grafiken | erneut ausgeführt bzw. geprüft; tatsächliche Ergebnisse unten |
+
+Technische Präzisierung durch Codex, keine zusätzliche studentische Beobachtung:
+Der im Review genannte Anstieg von Grad 2 beschreibt die Gesamtentwicklung über
+23 Wochen. Die Kurve ist nicht streng monoton: am Anfang ein kleiner Rückgang,
+kleinster Wochenschritt einschließlich Randpunkten -1,407807929401372 Stück.
+Das Originalreview bleibt unverändert; kein methodischer Korrekturbedarf entsteht.
+Subjektive Plausibilitätsbewertungen im menschlichen Review bleiben als solche
+stehen und werden nicht als rechnerisch bewiesene Genauigkeit ausgegeben.
+
+`scripts/check_exercise_11_2_review.py` nutzt separate Referenzberechnungen:
+Indexsuche für Forward/Backward Fill, NumPy interp für linear, direkte SciPy-
+Spline-/PCHIP-Aufrufe auf relativen Wochenpositionen für die weiteren Verfahren.
+Übereinstimmung ist innerhalb dokumentierter numerischer Toleranz geprüft;
+diese API-Gegenprüfung ist kein unabhängiger Nachweis unbekannter wahrer Werte.
+Ein separater Positionsscan prüft alle Lücken. Gespeicherte Notebooktabellen,
+Ausgabeströme, Lücken-/Methoden-CSV, summary.json und alle 13 Manifesthashes stimmen.
+Die tatsächlichen Linienpfade sämtlicher 18 Kurs-Teilbilder und der sechs
+Vergleichslinien wurden gegen beobachtete/ergänzte Werte und NaN-Masken geprüft.
+
+### Tatsächlich ausgeführte technische Prüfungen
+
+- `scripts/uv.cmd sync --offline --locked`: 111 aufgelöst, 107 installierte geprüft.
+- `scripts/uv.cmd run --offline --locked python -m unittest discover -s tests -v`:
+  33 Tests, 0,581 s, OK.
+- `scripts/uv.cmd run --offline --locked python scripts/build_exercise_11_2.py`:
+  zehn Codezellen in neuem Kernel sequenziell 1–10; sieben eingebettete echte PNGs,
+  Rohdaten-/Eingabehash, CSV-Invarianten und lineare NumPy-Referenz erfolgreich.
+- `scripts/uv.cmd run --offline --locked python scripts/check_exercise_11_2_review.py`:
+  alle obigen Aussagen, Ergebnisse, Linienpfade und Hashes erfolgreich geprüft;
+  human_review_verification.json enthält die tatsächlich berechneten Zahlen.
+- `scripts/uv.cmd run --offline --locked python scripts/check_exercise_11_2_html.py`:
+  offline bei 900/1400 px, sieben Bilder geladen, keine Seitenfehler/Überläufe.
+- Alle sieben erneut erzeugten PNGs visuell geprüft und bytegleich mit e06d2f2;
+  Achsen, Einheiten, Legenden und Lückentrennung unverändert. HTML-Freigabehinweise
+  anhand der Browserbilder geprüft, wissenschaftliche Aussagen unverändert.
+
+Der erste Lauf des neuen Nachprüfers scheiterte wegen eines Spaltenzugriffs
+`results.ffill`, der die DataFrame-Methode statt der Spalte adressierte.
+Auf expliziten Spaltenzugriff korrigiert; keine Änderung am wissenschaftlichen
+Imputationscode. Ein Hinweis zu pandas/NumPy-Zeiteinheiten im Nachprüfer wurde
+mit positionsbasierter Auswahl des identischen Wochenfensters behoben. Der
+vollständige abschließende Nachprüfer bestand ohne diese Fehler/Hinweise.
+Bekannter lokaler Jupyter-TCP-Hinweis beim Kernelstart; keine Notebookfehler.
+
+Keine zusätzlichen studentischen Tests oder Beobachtungen behauptet. Die
+bekannten Grenzen bleiben: unbekannter Verlauf langer Lücken, mögliche Polynom-
+überschwinger, keine fehlerfreie Ground Truth und keine Echtzeitprognose.
+GitHub-CI wird am neuen Head geprüft und mit tatsächlichen Ergebnissen im PR
+verlinkt. Keine Arbeit an 11.3, kein Merge und keine Universitätseinreichung.

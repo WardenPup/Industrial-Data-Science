@@ -1,0 +1,24 @@
+{
+  "rows": 1044,
+  "filled_per_method": 367,
+  "observed_unchanged_per_method": 677,
+  "independent_method_references": "PASS",
+  "outside_gap_anchors": {
+    "ffill": 0,
+    "bfill": 0,
+    "linear": 0,
+    "polynomial2": 78,
+    "polynomial5": 189,
+    "pchip": 0
+  },
+  "gap_blocks": 32,
+  "longest_gap_weeks": 23,
+  "longest_gap_start": "2011-12-11",
+  "longest_gap_end": "2012-05-13",
+  "long_gap_left_anchor": 473.54887536096425,
+  "long_gap_right_anchor": 606.8249557703607,
+  "long_gap_polynomial5_min": 357.9956960057037,
+  "long_gap_polynomial2_smallest_step": -1.407807929401372,
+  "plot_paths_and_saved_outputs": "PASS",
+  "manifest_hashes": 13
+}

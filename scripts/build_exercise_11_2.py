@@ -80,7 +80,8 @@ def main():
              output / "gaps.csv", output / "summary.json"]
     files += [output / f"{name}.png" for name in [*METHODS, "longest_gap_comparison"]]
     manifest = {"retrieved_date": "2026-10-26", "ai_assistance": "Codex",
-                "human_review": "AWAITING HUMAN REVIEW", "raw_sha256": SHA256,
+                "human_review": "APPROVED", "approval_date": "2026-10-26",
+                "merge_authorized": False, "raw_sha256": SHA256,
                 "approved_input_sha256": INPUT_SHA256,
                 "sequential_code_cells": len(code), "embedded_images": len(images),
                 "files": {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest()

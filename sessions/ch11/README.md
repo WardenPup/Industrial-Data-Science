@@ -2,7 +2,8 @@
 
 Aufgabe 11.1 fachlich APPROVED nach studentischem Review vom 26.10.2026;
 nach erfolgreicher CI und ausdrücklicher Erlaubnis als PR #5 regulär gemergt (b7543e0).
-11.2 technisch geprüft, AWAITING HUMAN REVIEW; 11.3–11.4 nicht begonnen.
+11.2 fachlich APPROVED (Review 26.10.2026), erneut technisch geprüft;
+Merge-Erlaubnis ausstehend. 11.3–11.4 nicht begonnen.
 Quelle: https://noxthot.github.io/ws26_industrial_datascience_manuscript/1_act1/7_self_study_session2.html
 Gelesen am 26.10.2026. Notebook: `production_smoothing.ipynb`.
 

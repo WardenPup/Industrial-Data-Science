@@ -207,7 +207,9 @@ Aufgabe 11.1 selbst enthält keine Imputation; diese folgt separat in 11.2.
 
 Auf ausdrücklichen Folgeauftrag implementiert: [Notebook](sessions/ch11/production_imputation.ipynb),
 [Anforderungen](docs/EXERCISE_11_2_REQUIREMENTS.md), [Review](reviews/exercise_11_2.md).
-Status: **AWAITING HUMAN REVIEW**. Die vorausgehende 11.1-Lösung bleibt unverändert.
+Status: **APPROVED**, studentisches Review vom 26.10.2026 und anschließende
+technische Prüfung dokumentiert. Die Merge-Erlaubnis steht aus.
+Die vorausgehende 11.1-Lösung bleibt unverändert.
 
 ```powershell
 scripts/uv.cmd run --locked python scripts/download_production.py
