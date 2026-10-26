@@ -15,6 +15,7 @@ __pycache__/
 reports/exercise_10_4/*_files/
 reports/exercise_10_4/*.tex
 reports/exercise_10_4/*.pdf
+outputs/ch10/exercise_10_4/*_files/
 .tmp/
 tmp/
 temp/

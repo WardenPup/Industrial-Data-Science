@@ -8,6 +8,8 @@ import shutil
 import subprocess
 import sys
 
+import nbformat
+
 ROOT = Path(__file__).resolve().parents[1]
 PROJECT = ROOT / 'reports/exercise_10_4'
 OUTPUT = ROOT / 'outputs/ch10/exercise_10_4'
@@ -32,12 +34,24 @@ def main():
     if version != '1.10.19':
         raise RuntimeError(f'Expected Quarto 1.10.19; found {version}')
     sources = [PROJECT / 'paper.qmd', PROJECT / 'notebook_presentation.ipynb']
-    before = {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in sources}
+    paper_hash = hashlib.sha256(sources[0].read_bytes()).hexdigest()
+    notebook_cells = [(c.cell_type, c.source) for c in nbformat.read(sources[1], as_version=4).cells]
     for source in sources:
         for fmt in ['html', 'pdf']:
             subprocess.run([quarto, 'render', str(source), '--to', fmt, '--execute'],
                            cwd=ROOT, env=env, check=True)
-    assert before == {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in sources}
+            OUTPUT.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(PROJECT / '_rendered' / f'{source.stem}.{fmt}',
+                         OUTPUT / f'{source.stem}.{fmt}')
+    assert paper_hash == hashlib.sha256(sources[0].read_bytes()).hexdigest()
+    # Quarto --execute intentionally persists real outputs in this presentation
+    # copy. Its source cells, and the original 10.3 notebook, must stay intact.
+    notebook = nbformat.read(sources[1], as_version=4)
+    assert notebook_cells == [(c.cell_type, c.source) for c in notebook.cells]
+    code = [c for c in notebook.cells if c.cell_type == 'code']
+    assert [c.execution_count for c in code] == list(range(1, len(code) + 1))
+    assert not any(o.output_type == 'error' for c in code for o in c.outputs)
+    before = {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in sources}
     from bs4 import BeautifulSoup
     from pypdf import PdfReader
     manifest = {'quarto': version, 'python': sys.version.split()[0],
@@ -53,18 +67,30 @@ def main():
             assert len(page.select('math')) >= 2
             assert len(page.select('#refs .csl-entry')) == 4
         reader = PdfReader(pdf_path)
-        text = '\n'.join(p.extract_text() for p in reader.pages)
-        assert 'AWAITING HUMAN REVIEW' in text
+        producer = str(reader.metadata.producer)
+        assert 'LuaTeX' in producer, producer
+        text = ' '.join(' '.join(p.extract_text() for p in reader.pages).split())
+        # PDF extraction may insert spaces between strongly kerned capital letters.
+        assert 'AWAITINGHUMANREVIEW' in ''.join(text.split())
         assert 'Drehmoment' in text and len(text) > 3000
-        # Actual PDF figure XObjects (not only references to image filenames).
+        # QMD plots can be vector PDF graphics, so raster XObjects alone do not
+        # count figures. Check generated LaTeX inclusions and captions as well.
         image_total = sum(len(list(p.images)) for p in reader.pages)
-        assert image_total >= image_count, (stem, image_total)
+        tex = (PROJECT / f'{stem}.tex').read_text(encoding='utf-8')
+        assert tex.count('\\includegraphics') == image_count
+        if stem == 'paper':
+            assert all(f'Abbildung {i}' in text for i in range(1, 4))
+        else:
+            assert image_total >= image_count, (stem, image_total)
         for path in [html_path, pdf_path]:
-            manifest['exports'].append({'file': path.name, 'bytes': path.stat().st_size,
-                                       'sha256': hashlib.sha256(path.read_bytes()).hexdigest()})
-        print(f'PASS {stem}: {image_count} embedded HTML figures; {len(reader.pages)} PDF pages; {image_total} PDF images')
+            entry = {'file': path.name, 'bytes': path.stat().st_size,
+                     'sha256': hashlib.sha256(path.read_bytes()).hexdigest()}
+            if path.suffix == '.pdf':
+                entry.update({'pages': len(reader.pages), 'producer': producer})
+            manifest['exports'].append(entry)
+        print(f'PASS {stem}: {image_count} embedded HTML figures; {len(reader.pages)} PDF pages; {image_count} LaTeX figure inclusions ({image_total} raster XObjects)')
     (OUTPUT / 'validation_manifest.json').write_text(json.dumps(manifest, indent=2) + '\n', encoding='utf-8')
-    print('PASS: four Quarto exports; source files unchanged; visual inspection still required')
+    print(f'PASS: four Quarto exports; {len(code)} sequential notebook cells; source text unchanged; visual inspection still required')
 
 
 if __name__ == '__main__':

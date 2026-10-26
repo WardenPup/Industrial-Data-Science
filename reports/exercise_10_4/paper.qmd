@@ -54,9 +54,19 @@ Trendaussagen.
 Histogramme mit jeweils 30 gleich breiten Klassen zeigen die Verteilungsform.
 Die Klassenbildung ist eine Darstellungsentscheidung und kein statistischer
 Nachweis einer bestimmten Verteilungsfamilie. Boxplots ergänzen Median, Quartile
-und Randwerte. Der Interquartilsabstand ist
+und Randwerte.
+
+```{=latex}
+\begin{samepage}
+```
+
+Der Interquartilsabstand ist
 
 $$IQR = Q_{0{,}75}-Q_{0{,}25}.$$
+
+```{=latex}
+\end{samepage}
+```
 
 Dabei bezeichnet $Q_p$ das empirische Quantil zum Anteil $p$, hier mit linearer
 Interpolation berechnet. Werte unter $Q_{0{,}25}-1{,}5\,IQR$ oder über

@@ -1,6 +1,6 @@
 project:
   type: default
-  output-dir: ../../outputs/ch10/exercise_10_4
+  output-dir: _rendered
   execute-dir: project
   render:
     - paper.qmd

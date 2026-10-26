@@ -52,7 +52,7 @@ def relationship(data):
 
 
 def correlation_table(pearson, spearman):
-    rows = ['| Größenpaar | Pearson r | Spearman ρ |', '|:--|--:|--:|']
+    rows = [r'| Größenpaar | Pearson $r$ | Spearman $\rho_s$ |', '|:--|--:|--:|']
     for a, b, label in [(TORQUE, SPEED, 'Drehmoment / Drehzahl'),
                         (TORQUE, AIR, 'Drehmoment / Lufttemperatur'),
                         (SPEED, AIR, 'Drehzahl / Lufttemperatur')]:
