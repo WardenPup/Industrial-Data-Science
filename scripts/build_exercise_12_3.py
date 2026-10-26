@@ -94,12 +94,34 @@ def main():
     for method,column in [("DTW 3-NN","knn"),("CNN","cnn")]:
         old=predictions[column].to_numpy()==y_test;new=repeat==y_test
         assert paired.loc[method].tolist()==[int((old&new).sum()),int((~old&new).sum()),int((old&~new).sum()),int((~old&~new).sum())]
+    # Explicit reconciliation of statements in the real student review.
+    assert x_train.shape==(120,3,315) and x_test.shape==(320,3,315)
+    np.testing.assert_array_equal(np.unique(y_test,return_counts=True)[1],np.full(8,40))
+    assert metrics.correct.tolist()==[291,271,277]
+    np.testing.assert_allclose(metrics.loc["Time Series Forest","accuracy"],.865625,atol=1e-12)
+    np.testing.assert_allclose(metrics.loc["Time Series Forest","macro_f1"],.8638843023800332,atol=1e-12)
+    np.testing.assert_array_equal(paired.loc["DTW 3-NN"],[270,7,21,22])
+    np.testing.assert_array_equal(paired.loc["CNN"],[261,16,10,33])
+    forest_matrix=manual_matrices["Time Series Forest"]
+    np.testing.assert_array_equal(np.diag(forest_matrix),[35,39,35,25,37,31,36,39])
+    assert forest_matrix[3,4]==11
+    np.testing.assert_array_equal(forest_matrix[5],[4,0,4,1,0,31,0,0])
+    assert probs.shape==(320,8) and np.isfinite(probs).all() and (probs>=0).all()
+    np.testing.assert_allclose(probs.sum(axis=1),1,atol=1e-12)
+    np.testing.assert_array_equal(model.classes_[probs.argmax(axis=1)],predictions.forest)
+    assert model.n_cases_==120 and model.n_channels_==3 and model.n_timepoints_==315
+    assert summary["example"]["channel"]==2 and summary["example"]["start"]==85 and summary["example"]["end_exclusive"]==146
+    interval_cell=next(c for c in code if "channel=example" in c.source)
+    assert "Kanal {channel+1}" in interval_cell.source
+    assert "Kanal 3 entspricht dem Python-Index 2" in str(page)
+    assert 146-85==61
+    print("PASS reviewed counts, eight balanced classes, all paired/class-error counts, 320 probability rows and channel-index clarification")
     print(metrics.to_string())
     nbformat.write(notebook,source)
     destination=output/"uwave_forest.html";destination.write_text(str(page),encoding="utf-8")
     from importlib.metadata import version
     files=[source,destination,ROOT/"sessions/ch12/forest.py",ROOT/"sessions/ch12/forest_reference.json",output/"summary.json"]+sorted(output.glob("*.csv"))+[output/(name+".png") for name in FIGURES]
-    manifest={"validated_date":"2026-10-26","ai_assistance":"Codex","human_review":"AWAITING HUMAN REVIEW – NOT MERGED","merge_authorized":False,"raw_sha256":SOURCE["files"],"reference":reference,"config":CONFIG,"sequential_code_cells":len(code),"embedded_images":len(images),"all_320_forest_predictions_reproduced":True,"independent_tree_probability_aggregation":True,"repeat_fit_seconds":fit_seconds,"repeat_predict_seconds":predict_seconds,"packages":{name:version(name) for name in ["aeon","numpy","scikit-learn"]},"files":{p.relative_to(ROOT).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in files}}
+    manifest={"validated_date":"2026-10-26","ai_assistance":"Codex","human_review":"SCIENTIFICALLY APPROVED – TECHNICALLY VALIDATED – AWAITING FINAL MERGE AUTHORIZATION","merge_authorized":False,"raw_sha256":SOURCE["files"],"reference":reference,"config":CONFIG,"sequential_code_cells":len(code),"embedded_images":len(images),"all_320_forest_predictions_reproduced":True,"independent_tree_probability_aggregation":True,"repeat_fit_seconds":fit_seconds,"repeat_predict_seconds":predict_seconds,"packages":{name:version(name) for name in ["aeon","numpy","scikit-learn"]},"files":{p.relative_to(ROOT).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in files}}
     (output/"validation_manifest.json").write_text(json.dumps(manifest,indent=2)+"\n",encoding="utf-8")
     print("PASS: 3 fresh sequential cells, 2 decoded images; reference hashes, all metrics/reports/paired counts, TRAIN scaler, 320 repeated predictions and 200-tree probability aggregation")
 

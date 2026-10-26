@@ -276,4 +276,4 @@ Reproduktion: `scripts/uv.cmd run --offline --locked python scripts/build_exerci
 200 aeon-Intervallbäume, Seed 42, gleiche Originalsplits und TRAIN-only-Skalierung wie 12.2.
 Forest 277/320 korrekt, Accuracy 0,865625, Macro-F1 0,863884: über CNN, unter DTW-3-NN
 auf diesem Split. Keine allgemeine Überlegenheit. KI-Unterstützung: Codex.
-Status: **AWAITING HUMAN REVIEW – NOT MERGED**. Review: `reviews/exercise_12_3.md`.
+Status: **SCIENTIFICALLY APPROVED – TECHNICALLY VALIDATED – AWAITING FINAL MERGE AUTHORIZATION**. Review: `reviews/exercise_12_3.md`.

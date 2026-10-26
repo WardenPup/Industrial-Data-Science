@@ -1,7 +1,7 @@
 {
   "validated_date": "2026-10-26",
   "ai_assistance": "Codex",
-  "human_review": "AWAITING HUMAN REVIEW \u2013 NOT MERGED",
+  "human_review": "SCIENTIFICALLY APPROVED \u2013 TECHNICALLY VALIDATED \u2013 AWAITING FINAL MERGE AUTHORIZATION",
   "merge_authorized": false,
   "raw_sha256": {
     "UWaveGestureLibrary_TRAIN.ts": "cb7cd8cb995775d30dacbfd5c2a9cb3a80dfbd186fd444294bae70c9162dead1",
@@ -29,19 +29,19 @@
   "embedded_images": 2,
   "all_320_forest_predictions_reproduced": true,
   "independent_tree_probability_aggregation": true,
-  "repeat_fit_seconds": 5.8589176999958,
-  "repeat_predict_seconds": 1.1295575000112876,
+  "repeat_fit_seconds": 5.57745120000618,
+  "repeat_predict_seconds": 0.9086714000004577,
   "packages": {
     "aeon": "1.6.0",
     "numpy": "2.3.5",
     "scikit-learn": "1.9.1"
   },
   "files": {
-    "sessions/ch12/uwave_forest.ipynb": "0abdf1f86548a23364f8e66372375a399316812a385ebf32eb5e86142dede9dd",
-    "outputs/ch12/exercise_12_3/uwave_forest.html": "b998d2f6d943bb87c4ec70322ed4462fc0e119ce4facc1917127ec3d50e091f7",
+    "sessions/ch12/uwave_forest.ipynb": "38c308b2eec4c9e543b1dec78b8e007a0d6ae58bce6017aea38009f0164b274d",
+    "outputs/ch12/exercise_12_3/uwave_forest.html": "21b3db7cbb2ee16835b7f75a6ff7cc309dd362648121d90e458fcb913f67a6df",
     "sessions/ch12/forest.py": "8a0c86aa2e0e1f255179d0187f29e7ccb9a8c9a5d853ae766e3dbb4a0c84b2fd",
     "sessions/ch12/forest_reference.json": "86dc1d7846d1428e8f493b892a45cff1fd6afbe0d8e8e9fae3f704853722cfa7",
-    "outputs/ch12/exercise_12_3/summary.json": "8d244ac8b844678ef73e069a46319cdf75e80168a862356f00788a6b247bf2cf",
+    "outputs/ch12/exercise_12_3/summary.json": "0c7ac9ade7bd5d3a19aca9fb93dddbb1ef31ff80ec634761d06b642d70f433f3",
     "outputs/ch12/exercise_12_3/classification_report.csv": "466aae20587e23a2b472b8046bf62137cc232fa2694982e01a7ee90f9eafc391",
     "outputs/ch12/exercise_12_3/confusion_forest.csv": "b558ab1721f31b14834e0bb6f9751fe19869b120c108e87b5e0158e2bd02df1b",
     "outputs/ch12/exercise_12_3/forest_probabilities.csv": "95a87d44afe30fcf75973b9169e1d35df06b5d69536b1a9dc7bb6618e867ed51",

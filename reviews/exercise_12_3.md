@@ -137,3 +137,72 @@ Wissenschaftlicher Human Review: APPROVED WITH MINOR DOCUMENTATION CLARIFICATION
 Technische Abschlussprüfung und CI sollen den aktuellsten Stand noch einmal kontrollieren.
 Dies ist KEINE Merge-Autorisierung. PR #11 darf nicht gemergt werden.
 Exercise 12.4 darf noch nicht begonnen werden. Keine Universitätseinreichung.
+
+
+---
+
+## KI-/technische Abschlussanmerkung – Codex, 26.10.2026
+
+Aktueller Status: SCIENTIFICALLY APPROVED – TECHNICALLY VALIDATED – AWAITING FINAL MERGE AUTHORIZATION.
+Die studentische Freigabe mit kleiner Dokumentationspräzisierung stammt aus dem
+Originalreview oben, separat unverändert in fb85fa2 gesichert. Auch der frühere
+technische Bericht bleibt als Historie unverändert. Keine zusätzlichen studentischen
+Tests, Code-Audits oder CI-Prüfungen behauptet. Keine Merge-Autorisierung erteilt.
+
+### Tatsächliche Korrektur und Codeprüfung
+Ein knapper Satz erklärt nun im Notebook/HTML: Kanal 3 entspricht Python-Index 2.
+Die Grafik verwendet nachweislich `Kanal {channel+1}`, die Datenadressierung
+`[0,channel]`. summary.json enthält channel=2, Intervall [85,146), also 61 Werte.
+Kein Modell-, Daten- oder Grafikwechsel. Das Intervall bleibt ausdrücklich ein
+Merkmalsbeispiel, keine globale Feature-Importance. Gleicher TEST-Split, feste
+Konfigurationen, keine allgemeine/signifikante Überlegenheit und keine kausale
+Deutung von 4→5 werden im Notebook ausdrücklich erklärt.
+
+`fit_forest` erhält ausschließlich x_train/y_train; der Skalierer berechnet
+Mittelwert/Standardabweichung nur daraus, anschließend fit auf diesen transformierten
+120 Fällen. TEST wird mit festem TRAIN-Skalierer transformiert; Labels werden erst
+in Auswertung/Referenz-Zuordnungsprüfung benutzt. Keine TEST-basierte Suche oder
+Auswahl im geprüften Notebook/Kerncode. Konfiguration bereits vor Training in
+78610e0 festgelegt. Bestehender instrumentierter TRAIN-Fit-Test erneut bestanden.
+Der TEST-Benchmark war durch 12.2 bereits bekannt; kein neuer unabhängiger Testdatensatz.
+
+### Tatsächlich erneut ausgeführte Befehle und Resultate
+Mit `scripts/uv.cmd run --offline --locked` vom Projektstamm:
+- `python -m unittest discover -s tests -q`: alle 57 Tests bestanden, 6,710 s.
+- `python scripts/build_exercise_12_3.py`: frischer Kernel, drei Codezellen sequenziell,
+  beide PNGs dekodiert. Zweiter vollständiger Forest-Fit bestätigt alle 320 Labels
+  und Probability-Vektoren; Mittelung aller 200 Baumwahrscheinlichkeiten geprüft.
+  Metriken/24 Klassenberichtzeilen separat aus allen 960 Modellvorhersagen gerechnet.
+  Zusätzliche explizite Assertions sichern die konkreten Reviewzahlen und Kanalzuordnung.
+- `python scripts/check_exercise_12_3_html.py`: offline 900/1400 px, beide Bilder
+  geladen, keine Seitenfehler oder horizontaler Überlauf. Beide PNGs visuell geprüft.
+- 120 TRAIN/320 TEST, 3 × 315, 200 Bäume, acht TEST-Klassen zu je 40 Fällen bestätigt.
+  Forest 277 korrekt/43 falsch, Accuracy 0,865625, Macro-F1 0,8638843023800332;
+  Referenzen DTW 291 und CNN 271 korrekt. Beide Paarvergleiche bestätigt:
+  DTW 270/7/21/22, CNN 261/16/10/33 (beide/nur Forest/nur Referenz richtig/beide falsch).
+  Alle 320 × 8 Wahrscheinlichkeiten endlich, nicht negativ, Zeilensumme 1 innerhalb
+  Gleitkommatoleranz, argmax in jedem Fall gleich exportiertem Forest-Label.
+- Forest-Diagonale [35,39,35,25,37,31,36,39]; Fehler je Klasse
+  [5,1,5,15,3,9,4,1]. Klasse 4→5 elfmal. Klasse 6: 31 richtig, Fehler nach
+  1/3/4: 4/4/1. Alle Matrixzellen stimmen mit Einzelvorhersagen und Bericht überein.
+- Beide unveränderten Original-.ts-Dateien gegen Quellen-SHA256 geprüft, fünf
+  Referenzhashes gegen freigegebenen Git-Stand 50d3a01 und 13 aktuelle Artefakthashes
+  geprüft. Originalquelle/Archivherkunft dokumentiert in docs/UWAVE_SOURCE.md.
+  Kein erneuter Netzwerkdownload oder erneute Archivprüfung behauptet.
+- Acht wissenschaftliche 12.3-Artefakte (zwei PNGs, Metriken, Vorhersagen, Bericht,
+  Matrix, Wahrscheinlichkeiten, Paare) bytegleich mit 4b4f197. Frühere Lösungen,
+  Reviews, Umgebung und alle acht Abgabe-ZIPs (SHA256/CRC) unverändert.
+
+Notebook-Fit/Predict: 6.2079/0.9835 s;
+separater Audit: 5.5775/0.9087 s.
+Abweichungen zu historischen Laufzeiten ändern keine wissenschaftlichen Ergebnisse;
+Hardware/Cache/JIT können Zeiten beeinflussen. Jupyter warnte tatsächlich über
+unverschlüsselten lokalen TCP-Transport. Keine fehlgeschlagenen numerischen,
+Notebook- oder Offline-HTML-Prüfungen. Ein Konsolen-Leseversuch scheiterte an cp1252
+bei griechischen Zeichen; erneutes Lesen mit UTF-8 erfolgreich, Artefakte unbeschädigt.
+
+Grenzen unverändert: ein fester bekannter Split, ein Seed, 120 Trainingsfälle,
+keine zusätzliche Seed-/externe Validierungsstudie, keine Konfidenzintervalle,
+Signifikanz oder Kalibrierung belegt; physikalische Auflösung/Personensplit unbekannt.
+Aktuelle Head-CI und PR-Reviewpunkte werden nach Push separat im PR dokumentiert;
+Ready for review nur bei beiden erfolgreichen Läufen. Kein Merge, keine 12.4/Einreichung.
