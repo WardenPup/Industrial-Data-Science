@@ -1,3 +1,15 @@
+## 26.10.2026 – Aufgabe 12.4 technisch validiert
+
+Status: AWAITING HUMAN REVIEW. Ausschließlich die drei offiziellen Regressoren:
+DTW-3-NN, Time Series Forest und CNN, gegebene 95/42-Splits, 24 × 144 Eingaben,
+TRAIN-only-Skalierung, keine TEST-Optimierung. RMSE 3,509225/2,109183/3,614675 kWh,
+MAE 2,711349/1,685254/2,608054 kWh. 64 Tests bestanden (6,921 s), drei frische
+Codezellen, zweiter vollständiger Fit/126 Vorhersagen und unabhängige Metrik-/Modell-
+Rechnungen bestätigt. Zwei Grafiken visuell, HTML offline 900/1400 px, elf Hashes
+und acht bisherige ZIPs geprüft. Quellenabweichung 137 statt beschriebenen 138
+transparent, bestehende Reviews/Ergebnisse/Umgebung unverändert. KI-Beiträge und
+konkrete Human-Reviewfragen dokumentiert. Draft PR/Head-CI folgen. Kein Merge/Upload.
+
 ## 26.10.2026 – Aufgabe 12.3 final integriert; 12.4 begonnen
 
 Finale studentische Merge-Autorisierung für PR #11 ausdrücklich erhalten.
