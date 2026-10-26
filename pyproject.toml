@@ -17,6 +17,7 @@ dependencies = [
     "seaborn>=0.13.2,<0.14",
     "scipy>=1.14,<2",
     "statsmodels>=0.15,<0.16",
+    "aeon==1.6.0",
 ]
 
 [tool.uv]

@@ -251,3 +251,11 @@ Drei-Sigma-Regel. Notebook: `sessions/ch11/production_outliers.ipynb`;
 HTML: `outputs/ch11/exercise_11_4/production_outliers.html`.
 Ausführen: `scripts/uv.cmd run --offline --locked python scripts/build_exercise_11_4.py`.
 KI-Unterstützung: Codex; Status APPROVED – AWAITING FINAL MERGE AUTHORIZATION.
+
+### Aufgabe 12.1
+
+Gestenclustering: `sessions/ch12/gesture_clustering.ipynb`, Export unter
+`outputs/ch12/exercise_12_1/gesture_clustering.html`. Daten explizit mit
+`scripts/download_gestures.py` laden, dann `scripts/build_exercise_12_1.py`.
+KI-Unterstützung: Codex; AWAITING HUMAN REVIEW. Kapitel-11-ZIPs samt geprüfter
+früherer Umgebung unter `submission/chapter_11/`; keine Einreichung erfolgt.

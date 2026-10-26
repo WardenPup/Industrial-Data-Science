@@ -1,0 +1,8 @@
+{
+  "url": "https://www.timeseriesclassification.com/aeon-toolkit/GesturePebbleZ1.zip",
+  "archive_sha256": "9c8dcd73f418453aa0c1f72f6f848b95e296c7546a7e0f9ee42197c09b6c25d3",
+  "files": {
+    "GesturePebbleZ1_TRAIN.ts": "e885be50acbd32d666febb838769ec5d95851d6c201f2fb4c64ac8a08ad5f249",
+    "GesturePebbleZ1_TEST.ts": "6084d75d1e95be92fd7e4d07baa62cf41ae6fe6442d965d98a1c83470f431b6a"
+  }
+}
