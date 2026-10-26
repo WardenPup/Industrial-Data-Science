@@ -1,0 +1,33 @@
+project:
+  type: default
+  output-dir: ../../outputs/ch10/exercise_10_4
+  execute-dir: ../../
+  render:
+    - paper.qmd
+    - notebook_presentation.ipynb
+lang: de
+jupyter: python3
+execute:
+  cache: false
+  freeze: false
+  echo: false
+  warning: false
+format:
+  html:
+    embed-resources: true
+    code-fold: true
+    code-summary: Python-Code anzeigen
+    toc: true
+    html-math-method: mathml
+  pdf:
+    pdf-engine: lualatex
+    keep-tex: true
+    documentclass: scrartcl
+    papersize: a4
+    fontsize: 11pt
+    geometry: margin=24mm
+    colorlinks: true
+    fig-pos: H
+    toc: false
+bibliography: references.bib
+number-sections: false
