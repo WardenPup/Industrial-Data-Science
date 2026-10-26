@@ -44,6 +44,7 @@ jobs:
         # The notebook itself executes offline after this explicit acquisition step.
         run: |
           uv run --locked python scripts/download_ai4i.py
+          uv run --locked python scripts/download_production.py
           uv run --locked python -m unittest discover -s tests -v
       - name: Execute Exercise 10.1
         run: uv run --locked python sessions/ch10/aufgabe_10_1.py --output outputs/tooling-smoke/heart.png
@@ -57,3 +58,5 @@ jobs:
         run: uv run --locked python scripts/build_exercise_10_2.py
       - name: Execute Exercise 10.3 and verify all required plots and HTML
         run: uv run --locked python scripts/build_exercise_10_3.py
+      - name: Execute Exercise 11.1 and verify gap preservation and HTML
+        run: uv run --locked python scripts/build_exercise_11_1.py

@@ -182,4 +182,21 @@ Projektumgebung aus. Poppler und das vorhandene Playwright-Chromium werden für
 PDF-/Offline-HTML-QA benötigt. ZIPs enthalten direkt relevante Quellen, Exporte,
 Reproduktionsdateien und UCI-Daten mit Lizenz; keine installierten Werkzeuge.
 Die vorbereiteten ZIPs sind lokal Git-ignoriert und werden nicht automatisch
-an die Universität übermittelt. Kapitel 11 wurde nicht begonnen.
+an die Universität übermittelt.
+
+## Aufgabe 11.1 – rollende Glättung
+
+Kapitel 10 bleibt unverändert freigegeben. Der ausdrücklich autorisierte
+Kapitel-11-Start umfasst nur 11.1: [Notebook](sessions/ch11/production_smoothing.ipynb),
+[Anforderungen](docs/EXERCISE_11_1_REQUIREMENTS.md),
+[Review](reviews/exercise_11_1.md). Status: **AWAITING HUMAN REVIEW**.
+
+```powershell
+scripts/uv.cmd run --locked python scripts/download_production.py
+scripts/uv.cmd run --offline --locked python scripts/build_exercise_11_1.py
+```
+
+HTML und zwei Grafiken liegen unter `outputs/ch11/exercise_11_1/`, die abgeleitete
+CSV unter `data/processed/`. Median und Mittelwert werden mit fünf zentrierten
+Wochen verglichen; alle 367 ursprünglichen Lücken bleiben erhalten.
+Keine Imputation, keine Arbeit an 11.2 und kein Merge vor studentischem Review.
