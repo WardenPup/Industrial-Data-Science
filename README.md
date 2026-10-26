@@ -257,5 +257,14 @@ KI-Unterstützung: Codex; Status APPROVED – AWAITING FINAL MERGE AUTHORIZATION
 Gestenclustering: `sessions/ch12/gesture_clustering.ipynb`, Export unter
 `outputs/ch12/exercise_12_1/gesture_clustering.html`. Daten explizit mit
 `scripts/download_gestures.py` laden, dann `scripts/build_exercise_12_1.py`.
-KI-Unterstützung: Codex; TECHNICALLY_VALIDATED – AWAITING FINAL HUMAN APPROVAL. Kapitel-11-ZIPs samt geprüfter
+KI-Unterstützung: Codex; STUDENT APPROVED und über PR #9 integriert. Kapitel-11-ZIPs samt geprüfter
 früherer Umgebung unter `submission/chapter_11/`; keine Einreichung erfolgt.
+
+### Aufgabe 12.2
+
+Multivariate UWave-Gestenklassifikation: `sessions/ch12/uwave_classification.ipynb`;
+HTML: `outputs/ch12/exercise_12_2/uwave_classification.html`.
+Daten: `scripts/download_uwave.py`; frische Ausführung: `scripts/build_exercise_12_2.py`.
+KI-Unterstützung: Codex; AWAITING HUMAN REVIEW. PyTorch 2.9.1 nur CPU, expliziter
+Paketindex in pyproject.toml. uv-Cache-Konfiguration aus uv.toml ebenfalls dorthin
+übernommen, um sich überlagernde Indexkonfigurationen zu vermeiden.

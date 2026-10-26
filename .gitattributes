@@ -15,3 +15,6 @@ outputs/ch11/exercise_11_4/* -text
 
 sessions/ch12/gesture_clustering.ipynb -text
 outputs/ch12/exercise_12_1/* -text
+
+sessions/ch12/uwave_classification.ipynb -text
+outputs/ch12/exercise_12_2/* -text
