@@ -85,3 +85,73 @@ on the draft PR after push; local results do not imply hosted success.
 ## Human review and approval
 
 Pending. Do not merge 10.3, start 10.4 or submit coursework.
+
+
+# Human Review – Aufgabe 10.3
+
+**Datum:** 26.10.2026  
+**Aufgabe:** Explorative Datenanalyse des AI4I-Datensatzes mit Seaborn  
+**KI-Unterstützung:** Codex  
+**Review-Status:** Fachlich geprüft, Freigabe nach abschließender CI-Kontrolle
+
+## 1. Prüfung der Visualisierungen
+
+Die zehn bereitgestellten Diagrammgruppen wurden auf Verständlichkeit, Achsenbeschriftungen, Einheiten und Plausibilität geprüft.
+
+- **Liniendiagramm:** Das Drehmoment schwankt über die UDI-Reihenfolge, ohne einen eindeutigen Trend. UDI wird korrekt als Zeilenkennung und nicht als Zeit interpretiert.
+- **Histogramme:** Das Drehmoment ist annähernd symmetrisch um 40 Nm verteilt. Die Drehzahl zeigt eine rechtsschiefe Verteilung mit einzelnen hohen Werten. Die Lufttemperatur weist mehrere Häufigkeitsbereiche auf.
+- **Boxplots:** Median, Quartile und Ausreißer sind erkennbar. Besonders bei der Drehzahl treten zahlreiche Werte außerhalb der 1,5-IQR-Grenzen auf.
+- **Violinplots:** Die geglätteten Verteilungen stimmen qualitativ mit den Histogrammen überein. Im Gegensatz zu Boxplots machen sie die Verteilungsdichte sichtbar.
+- **Scatterplot und Pairplot:** Zwischen Drehzahl und Drehmoment besteht ein deutlich negativer, nichtlinearer Zusammenhang. Für die Lufttemperatur ist kein vergleichbar ausgeprägter Zusammenhang erkennbar.
+- **Korrelationsmatrix:** Die Pearson-Korrelation zwischen Drehmoment und Drehzahl beträgt -0,875. Die Korrelationen mit der Lufttemperatur liegen nahe null (-0,014 bzw. 0,023).
+- **Regressionsdarstellung:** Die nahezu horizontale Regressionslinie zwischen Lufttemperatur und Drehmoment entspricht der sehr schwachen linearen Korrelation.
+- **Stripplot:** Die Einteilung in drei Drehzahlbereiche zeigt abnehmende Drehmomentwerte bei steigender Drehzahl.
+- **Countplot:** Die meisten Drehmomentwerte liegen in den mittleren Intervallen. Sehr kleine und sehr große Werte kommen deutlich seltener vor.
+
+Die Abbildungen sind insgesamt gut lesbar und sinnvoll beschriftet.
+
+## 2. Fachliches Verständnis
+
+**Boxplot und Violinplot:**  
+Ein Boxplot zeigt Median, Quartile, Streuung und mögliche Ausreißer nach der 1,5-IQR-Regel. Ein Violinplot ergänzt Informationen über die geschätzte Verteilungsdichte. Seine Form hängt von der verwendeten Glättung ab.
+
+**Korrelation und Nichtlinearität:**  
+Die starke negative Pearson-Korrelation zwischen Drehmoment und Drehzahl zeigt einen deutlichen statistischen Zusammenhang. Der Scatterplot verdeutlicht zusätzlich dessen nichtlineare Form. Eine Pearson-Korrelation beschreibt nur die lineare Komponente eines Zusammenhangs.
+
+**Ausreißer:**  
+Werte außerhalb der 1,5-IQR-Grenzen sind statistisch auffällig, aber nicht automatisch Messfehler. Sie sollten ohne weitere Begründung nicht entfernt werden.
+
+**Binning:**  
+Die Einteilung in Intervalle erleichtert Vergleiche und Häufigkeitsdarstellungen. Allerdings gehen dabei Detailinformationen verloren. Die Ergebnisse hängen von den gewählten Intervallgrenzen ab.
+
+## 3. Grenzen der Analyse
+
+Der AI4I-Datensatz enthält synthetische Daten. Die beobachteten Zusammenhänge lassen sich deshalb nicht ohne Weiteres auf reale Maschinen übertragen.
+
+Die Diagramme und Korrelationskoeffizienten beschreiben statistische Muster, beweisen aber keine kausalen Wirkungen. UDI ist keine Zeitvariable.
+
+Auch die Wahl der Histogrammintervalle, Drehzahlklassen und KDE-Glättung beeinflusst die Darstellung.
+
+## 4. Technische Validierung
+
+Laut Codex wurden folgende Prüfungen durchgeführt:
+
+- 18 automatisierte Tests erfolgreich.
+- 12 Code-Zellen nacheinander ausgeführt.
+- Zehn Diagrammgruppen erzeugt und visuell geprüft.
+- HTML-Export mit eingebetteten Abbildungen erstellt.
+- GitHub Actions für den Branch erfolgreich.
+
+Die separat gestartete Pull-Request-CI war zum Zeitpunkt des Codex-Berichts noch nicht abgeschlossen.
+
+Diese technischen Ergebnisse werden als KI-gestützte beziehungsweise automatisierte Prüfungen dokumentiert, nicht als eigenständig lokal ausgeführte studentische Tests.
+
+## 5. Gesamtbewertung
+
+Die bereitgestellten Visualisierungen sind nachvollziehbar und fachlich plausibel. Die statistischen Ergebnisse passen zu den dargestellten Verteilungen und Zusammenhängen.
+
+Die Grenzen der Aussagekraft wurden berücksichtigt. Bei der fachlichen Prüfung der bereitgestellten Ergebnisse wurden keine wesentlichen Fehler festgestellt.
+
+**Human Review: Fachlich positiv.**
+
+Die endgültige Freigabe erfolgt nach erfolgreicher Kontrolle aller GitHub-Actions-Prüfungen. Bis dahin bleibt Pull Request #3 ungemergt.
