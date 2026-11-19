@@ -50,3 +50,114 @@ eine getrennte Validierung. Keine Kausalitätsbehauptung oder weitere Modellstud
 4. Sind TRAIN/TEST-Trennung, seltene Fehler und die getrennten Ziel-spezifischen Splits ausreichend erklärt?
 
 Kein Merge, kein Beginn von 14.4, keine Universitätseinreichung.
+
+
+---
+
+## Studentischer Human Review – Originalwortlaut
+
+# HUMAN REVIEW – EXERCISE 14.3
+
+**Entscheidung: SCIENTIFICALLY APPROVED**
+
+## 1. Aufgabenverständnis
+
+Die Aufgabe wurde fachlich nachvollziehbar umgesetzt.
+
+Der Vergleich von Entscheidungsbäumen mit unterschiedlichen Baumtiefen zeigt, welchen Einfluss zusätzlich berechnete Merkmale auf die Erkennung von Heat Dissipation Failure (HDF) und Power Failure (PWF) haben.
+
+Die Betrachtung der Baumtiefen 1 bis 8 ist angemessen. Die Verwendung identischer TRAIN-/TEST-Aufteilungen ermöglicht einen direkten Vergleich der jeweiligen Modellvarianten.
+
+## 2. Feature Engineering
+
+Die Ergänzung von `temp_diff` für HDF und `power` für PWF ist fachlich sinnvoll.
+
+Beide Merkmale verknüpfen vorhandene Messgrößen und können dadurch Zusammenhänge sichtbar machen, die ein flacher Entscheidungsbaum mit den ursprünglichen Einzelmerkmalen nicht ebenso einfach darstellen kann.
+
+Die Ergebnisse zeigen deutlich, dass zusätzliche fachlich begründete Merkmale bereits bei vergleichsweise geringer Baumtiefe einen erheblichen Nutzen haben können.
+
+Diese Verbesserung ist nicht automatisch auf andere Datensätze übertragbar. Insbesondere bei synthetischen Daten können solche Merkmale die zugrunde liegenden Regeln besonders gut abbilden.
+
+## 3. Überprüfung der Ergebnisse
+
+Die bereitgestellten Einzelvorhersagen und Ergebnistabellen wurden rechnerisch kontrolliert.
+
+**HDF bei Baumtiefe 3:**
+
+- Basismodell: F1 = 0,611111
+- Mit `temp_diff`: F1 = 0,930233
+- Basismodell: 2 False Positives und 12 False Negatives
+- Mit Zusatzmerkmal: 0 False Positives und 3 False Negatives
+
+**PWF bei Baumtiefe 3:**
+
+- Basismodell: F1 = 0,789474
+- Mit `power`: F1 = 1,000000
+- Basismodell: 4 False Positives und 4 False Negatives
+- Mit Zusatzmerkmal: keine Fehlklassifikationen
+
+Die aus den 4.000 bereitgestellten Vorhersagezeilen erneut berechneten Werte stimmen mit den Ergebnistabellen überein.
+
+Der Nutzen der Zusatzmerkmale ist damit für den untersuchten TEST-Split eindeutig nachgewiesen.
+
+## 4. Bewertung der Grafik
+
+Die Darstellung ist verständlich und ausreichend beschriftet.
+
+Besonders positiv:
+
+- TRAIN und TEST sind durch unterschiedliche Linienstile unterscheidbar.
+- Basis- und erweiterte Modelle sind farblich getrennt.
+- HDF und PWF werden separat dargestellt.
+- Die Unterschiede zwischen den Baumtiefen sind gut erkennbar.
+
+Die Grafik zeigt außerdem, dass eine größere Baumtiefe nicht zwangsläufig zu einem besseren TEST-F1 führt.
+
+Es besteht kein zwingender Bedarf für weitere Abbildungen.
+
+## 5. Accuracy und F1
+
+Die Verwendung des F1-Scores ist angemessen, da positive Fehlerfälle in diesem Datensatz selten sind.
+
+Von 10.000 Datenpunkten sind lediglich 115 HDF-positiv und 95 PWF-positiv.
+
+Ein Modell könnte daher sehr viele Fälle korrekt als fehlerfrei klassifizieren und trotzdem einen großen Teil der tatsächlichen Fehler übersehen.
+
+Der F1-Score berücksichtigt sowohl übersehene Fehler als auch falsche Fehlermeldungen und ist deshalb für diesen Vergleich aussagekräftiger als Accuracy allein.
+
+## 6. Wissenschaftliche Einschränkungen
+
+Folgende Grenzen müssen in der Ausarbeitung erkennbar bleiben:
+
+1. Es wurde nur eine feste TRAIN-/TEST-Aufteilung untersucht.
+2. Die positiven TEST-Fälle sind mit 23 HDF- und 19 PWF-Fällen sehr selten.
+3. Ein F1-Wert von 1,0 bedeutet lediglich, dass auf diesem TEST-Split alle Fälle korrekt klassifiziert wurden.
+4. Die Ergebnisse belegen keine allgemeine Überlegenheit der erweiterten Modelle bei anderen Daten.
+5. Die Untersuchung der Baumtiefen auf TEST darf nicht als unabhängige Hyperparameteroptimierung interpretiert werden.
+6. Die Zusatzmerkmale können bei synthetischen Daten besonders stark mit den Regeln zur Labelerzeugung zusammenhängen.
+
+Eine zusätzliche Kreuzvalidierung oder umfangreiche Parameterstudie ist für diese Übung nicht zwingend erforderlich.
+
+## 7. Technische Nachvollziehbarkeit
+
+Die bereitgestellten CSV-Dateien sind untereinander konsistent.
+
+Die berechneten F1-Werte, Fehlerzahlen und Klassenzählungen stimmen überein. Die SHA256-Prüfsummen der sechs bereitgestellten Ergebnisartefakte entsprechen dem Validierungsmanifest.
+
+Die gemeldeten drei erfolgreichen Tests, die frische Notebook-Ausführung und die GitHub-CI-Ergebnisse werden als technische Validierungsnachweise anerkannt. Sie wurden im Rahmen dieses Human Reviews nicht eigenständig erneut ausgeführt.
+
+## 8. Abschließende Bewertung
+
+Die Aufgabe erfüllt ihren wesentlichen wissenschaftlichen Zweck.
+
+Es wird nachvollziehbar demonstriert, dass fachlich begründetes Feature Engineering die Fehlererkennung eines Entscheidungsbaums erheblich verbessern kann, ohne dass dafür zwingend eine große Baumtiefe benötigt wird.
+
+Die erzielten Ergebnisse sind plausibel, rechnerisch konsistent und verständlich dargestellt.
+
+**Human-Review-Ergebnis: APPROVED**
+
+Keine verpflichtenden wissenschaftlichen Änderungen.
+
+Die bereits dokumentierten Einschränkungen sollen erhalten bleiben.
+
+Die Freigabe gilt für die fachliche Ausarbeitung. Der technische Abschluss und der Merge sind weiterhin separat zu prüfen und freizugeben.
