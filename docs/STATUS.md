@@ -1,3 +1,19 @@
+## 19.11.2026 – GitHub bereinigt, offene Abgabevorbereitung erhalten
+
+Zwölf vollständig nach main integrierte Remote-Branches exercise/10.1–12.4
+nach erneuter PR-/Abstammungsprüfung atomar entfernt. main bleibt 1d8c583,
+submission/final-preparation bleibt wegen Draft-PR #13 erhalten. Lokale Branches,
+Commits, Originalreviews und 21 ZIP-/RAR-Archive unverändert erhalten.
+
+PR #13: offen/Draft, konfliktfrei, keine Reviewkommentare/-entscheidungen;
+bisheriger Head 1dc0e99 mit tatsächlich erfolgreicher PR-CI 40422141330.
+Paketfreigabe und Merge-Autorisierung bleiben ausstehend. Statusdokumentation
+im selben Branch aktualisiert; neue Head-CI separat prüfen. Kein Merge/Upload.
+Nächster offizieller Self-Study-Abschnitt laut aktuellem Kursindex: Kapitel 14,
+Session 1 (Act 2), noch nicht begonnen.
+Details: [Bereinigungsnachweis](GITHUB_CLEANUP_2026_11_19.md).
+Die folgenden Datumsabschnitte bleiben historische Arbeitsstände.
+
 ## 27.10.2026 – Kapitel 12 integriert; finale Abgabe vorbereitet
 
 PR #12 nach ausdrücklicher Freigabe regulär gemergt: 1d8c583186dfa8a9691204a6902a50f10c086a74.
