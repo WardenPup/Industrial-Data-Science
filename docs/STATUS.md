@@ -1,3 +1,40 @@
+## 19.11.2026 – GitHub bereinigt, offene Abgabevorbereitung erhalten
+
+Zwölf vollständig nach main integrierte Remote-Branches exercise/10.1–12.4
+nach erneuter PR-/Abstammungsprüfung atomar entfernt. main bleibt 1d8c583,
+submission/final-preparation bleibt wegen Draft-PR #13 erhalten. Lokale Branches,
+Commits, Originalreviews und 21 ZIP-/RAR-Archive unverändert erhalten.
+
+PR #13: offen/Draft, konfliktfrei, keine Reviewkommentare/-entscheidungen;
+bisheriger Head 1dc0e99 mit tatsächlich erfolgreicher PR-CI 40422141330.
+Paketfreigabe und Merge-Autorisierung bleiben ausstehend. Statusdokumentation
+im selben Branch aktualisiert; neue Head-CI separat prüfen. Kein Merge/Upload.
+Nächster offizieller Self-Study-Abschnitt laut aktuellem Kursindex: Kapitel 14,
+Session 1 (Act 2), noch nicht begonnen.
+Details: [Bereinigungsnachweis](GITHUB_CLEANUP_2026_11_19.md).
+Die folgenden Datumsabschnitte bleiben historische Arbeitsstände.
+
+## 27.10.2026 – Kapitel 12 integriert; finale Abgabe vorbereitet
+
+PR #12 nach ausdrücklicher Freigabe regulär gemergt: 1d8c583186dfa8a9691204a6902a50f10c086a74.
+Push/PR-CI am Head 98641c9 erfolgreich (40416791685/40416798514), anschließend
+64 Tests auf synchronisiertem main bestanden. Alle zwölf PRs und erfolgreichen
+letzten Head-Läufe erneut über GitHub bestätigt. Originalreviews/Historie erhalten.
+
+Finale Aufbereitung auf submission/final-preparation: zwölf lokale ZIPs, alle
+entpackt/CRC/SHA geprüft, 11 Notebooks mit 70 Codezellen frisch und Herzskript ausgeführt;
+49 CSV-Vergleiche, HTML offline 900/1400 px, 47 PNGs/21 PDF-Seiten gesichtet.
+Acht Original-ZIPs und alle alten Mitglieder unverändert; Einstiegshilfen ergänzt.
+Zwei reine Quellen-Metadaten-Zeilenendenkorrekturen (7eb767f/763cd15), keine
+Änderung wissenschaftlicher Ergebnisse. Alle 53 Kapitel-12-Git-Artefakthashes stimmen.
+Keine unabhängige Neuinstallation; alte Lockfiles erhalten, aktuelle Umgebung genutzt.
+
+submission/final/README.md und SUBMISSION_CHECKLIST.md enthalten exakte Dateien
+und Grenzen. Wissenschaftlich 12/12 APPROVED/in main; organisatorische Freigabe
+der ergänzten Paketfassungen und konkrete Kurs-/KI-/Datenbedingungen noch PENDING.
+Status SUBMISSION PREPARATION INCOMPLETE bis zur studentischen Abschlussentscheidung.
+Vorbereitungs-PR bleibt Draft/ungemergt. Keine Hochschuleinreichung durchgeführt.
+
 ## 26.10.2026 – 12.4: finaler Prüfzeitpunkt korrigiert
 
 Wissenschaftlich APPROVED, finale Merge-Autorisierung vorhanden; Merge bleibt bis

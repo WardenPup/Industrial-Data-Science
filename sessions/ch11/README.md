@@ -5,7 +5,8 @@ nach erfolgreicher CI und ausdrücklicher Erlaubnis als PR #5 regulär gemergt (
 11.2 fachlich APPROVED (Review 26.10.2026), erneut technisch geprüft;
 PR #6 nach ausdrücklicher Erlaubnis regulär gemergt (84085f5).
 11.3 fachlich positiv geprüft und technisch erneut validiert:
-APPROVED – AWAITING FINAL MERGE AUTHORIZATION. 11.4 nicht begonnen.
+APPROVED, nach ausdrücklicher Freigabe über PR #7 regulär integriert (a294bc5).
+11.4 ebenfalls APPROVED und über PR #8 integriert (d117c40).
 Quelle: https://noxthot.github.io/ws26_industrial_datascience_manuscript/1_act1/7_self_study_session2.html
 Gelesen am 26.10.2026. Notebook: `production_smoothing.ipynb`.
 

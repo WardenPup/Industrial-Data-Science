@@ -1,0 +1,306 @@
+{
+  "checked": "2026-10-27",
+  "local_main": "1d8c583186dfa8a9691204a6902a50f10c086a74",
+  "pull_requests": [
+    {
+      "pr": 1,
+      "exercise": "10.1",
+      "url": "https://github.com/WardenPup/Industrial-Data-Science/pull/1",
+      "merged": true,
+      "merge_sha": "5c2ac0d1d53253430f4cf5ae579c4c11d50ba54e",
+      "head": "88d623e016e127cad5e14a9853cf0bb72469b1de",
+      "base": "main",
+      "head_runs": [
+        {
+          "id": 40243437373,
+          "event": "pull_request",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/WardenPup/Industrial-Data-Science/actions/runs/40243437373"
+        },
+        {
+          "id": 40243434377,
+          "event": "push",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/WardenPup/Industrial-Data-Science/actions/runs/40243434377"
+        }
+      ]
+    },
+    {
+      "pr": 2,
+      "exercise": "10.2",
+      "url": "https://github.com/WardenPup/Industrial-Data-Science/pull/2",
+      "merged": true,
+      "merge_sha": "40b31c64b88d9441be3ac9eb71433bdb49b7e4f9",
+      "head": "793f961ec6fd6399bd6bd77dcf3d9e6951609e34",
+      "base": "main",
+      "head_runs": [
+        {
+          "id": 40245925850,
+          "event": "pull_request",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/WardenPup/Industrial-Data-Science/actions/runs/40245925850"
+        },
+        {
+          "id": 40245922949,
+          "event": "push",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/WardenPup/Industrial-Data-Science/actions/runs/40245922949"
+        }
+      ]
+    },
+    {
+      "pr": 3,
+      "exercise": "10.3",
+      "url": "https://github.com/WardenPup/Industrial-Data-Science/pull/3",
+      "merged": true,
+      "merge_sha": "7bb6055e4d824e42c0f663d37c98d1fba847f057",
+      "head": "c9c58ab85821e3f8cd24a3490d8c7c7d1bf4796b",
+      "base": "main",
+      "head_runs": [
+        {
+          "id": 40251073444,
+          "event": "pull_request",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/WardenPup/Industrial-Data-Science/actions/runs/40251073444"
+        },
+        {
+          "id": 40251069844,
+          "event": "push",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/WardenPup/Industrial-Data-Science/actions/runs/40251069844"
+        }
+      ]
+    },
+    {
+      "pr": 4,
+      "exercise": "10.4",
+      "url": "https://github.com/WardenPup/Industrial-Data-Science/pull/4",
+      "merged": true,
+      "merge_sha": "740ed55675d7b12830941700d860d3f5bd17a405",
+      "head": "608c0fa67088e5000967188e9abb9785204b70c3",
+      "base": "main",
+      "head_runs": [
+        {
+          "id": 40325534101,
+          "event": "pull_request",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/WardenPup/Industrial-Data-Science/actions/runs/40325534101"
+        },
+        {
+          "id": 40325527337,
+          "event": "push",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/WardenPup/Industrial-Data-Science/actions/runs/40325527337"
+        }
+      ]
+    },
+    {
+      "pr": 5,
+      "exercise": "11.1",
+      "url": "https://github.com/WardenPup/Industrial-Data-Science/pull/5",
+      "merged": true,
+      "merge_sha": "b7543e048a4aafac7fa2ad5ba4d18c46e72d2f68",
+      "head": "ef7451f5eaafa605e693fdcd43dc50af75df9ae0",
+      "base": "main",
+      "head_runs": [
+        {
+          "id": 40346921112,
+          "event": "pull_request",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/WardenPup/Industrial-Data-Science/actions/runs/40346921112"
+        },
+        {
+          "id": 40346910024,
+          "event": "push",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/WardenPup/Industrial-Data-Science/actions/runs/40346910024"
+        }
+      ]
+    },
+    {
+      "pr": 6,
+      "exercise": "11.2",
+      "url": "https://github.com/WardenPup/Industrial-Data-Science/pull/6",
+      "merged": true,
+      "merge_sha": "84085f5fa4387a833aa13ba20ce29d0930ff4359",
+      "head": "00842a15c3542ca750203edaa7c861608aa830fe",
+      "base": "main",
+      "head_runs": [
+        {
+          "id": 40354542238,
+          "event": "pull_request",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/WardenPup/Industrial-Data-Science/actions/runs/40354542238"
+        },
+        {
+          "id": 40354532276,
+          "event": "push",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/WardenPup/Industrial-Data-Science/actions/runs/40354532276"
+        }
+      ]
+    },
+    {
+      "pr": 7,
+      "exercise": "11.3",
+      "url": "https://github.com/WardenPup/Industrial-Data-Science/pull/7",
+      "merged": true,
+      "merge_sha": "a294bc572415c585d9dc699cb17eb4de994a8111",
+      "head": "d20340062d4a65ac2b20478e7e10ecf60a41cb21",
+      "base": "main",
+      "head_runs": [
+        {
+          "id": 40361135563,
+          "event": "pull_request",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/WardenPup/Industrial-Data-Science/actions/runs/40361135563"
+        },
+        {
+          "id": 40361125270,
+          "event": "push",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/WardenPup/Industrial-Data-Science/actions/runs/40361125270"
+        }
+      ]
+    },
+    {
+      "pr": 8,
+      "exercise": "11.4",
+      "url": "https://github.com/WardenPup/Industrial-Data-Science/pull/8",
+      "merged": true,
+      "merge_sha": "d117c40d303a2b2d9c47c8bd2a15ff1d8a3d1f3c",
+      "head": "f1f6f5d5628e0cf4d2b75ecca806e49e15d458a3",
+      "base": "main",
+      "head_runs": [
+        {
+          "id": 40367138930,
+          "event": "pull_request",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/WardenPup/Industrial-Data-Science/actions/runs/40367138930"
+        },
+        {
+          "id": 40367130594,
+          "event": "push",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/WardenPup/Industrial-Data-Science/actions/runs/40367130594"
+        }
+      ]
+    },
+    {
+      "pr": 9,
+      "exercise": "12.1",
+      "url": "https://github.com/WardenPup/Industrial-Data-Science/pull/9",
+      "merged": true,
+      "merge_sha": "7be3f3a15d9f110b6c1dcf58bac2c2e5b1180633",
+      "head": "96d58bef27b21836e110912f6b0449b3e6482b38",
+      "base": "main",
+      "head_runs": [
+        {
+          "id": 40394315059,
+          "event": "pull_request",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/WardenPup/Industrial-Data-Science/actions/runs/40394315059"
+        },
+        {
+          "id": 40394307160,
+          "event": "push",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/WardenPup/Industrial-Data-Science/actions/runs/40394307160"
+        }
+      ]
+    },
+    {
+      "pr": 10,
+      "exercise": "12.2",
+      "url": "https://github.com/WardenPup/Industrial-Data-Science/pull/10",
+      "merged": true,
+      "merge_sha": "a216fdcecbcea9760b3a2fceb6ae672c0b98ed36",
+      "head": "50d3a014fb42b055b12e60188df2df82ea5918f5",
+      "base": "main",
+      "head_runs": [
+        {
+          "id": 40401662685,
+          "event": "pull_request",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/WardenPup/Industrial-Data-Science/actions/runs/40401662685"
+        },
+        {
+          "id": 40401653232,
+          "event": "push",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/WardenPup/Industrial-Data-Science/actions/runs/40401653232"
+        }
+      ]
+    },
+    {
+      "pr": 11,
+      "exercise": "12.3",
+      "url": "https://github.com/WardenPup/Industrial-Data-Science/pull/11",
+      "merged": true,
+      "merge_sha": "2e330476318d5b4cb6673e859bea23707ed151fc",
+      "head": "efc7d46bf1ce65c58baf52c024433d00889ff6e4",
+      "base": "main",
+      "head_runs": [
+        {
+          "id": 40407978296,
+          "event": "pull_request",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/WardenPup/Industrial-Data-Science/actions/runs/40407978296"
+        },
+        {
+          "id": 40407972537,
+          "event": "push",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/WardenPup/Industrial-Data-Science/actions/runs/40407972537"
+        }
+      ]
+    },
+    {
+      "pr": 12,
+      "exercise": "12.4",
+      "url": "https://github.com/WardenPup/Industrial-Data-Science/pull/12",
+      "merged": true,
+      "merge_sha": "1d8c583186dfa8a9691204a6902a50f10c086a74",
+      "head": "98641c9555d6589590d144c3918ad873c4411796",
+      "base": "main",
+      "head_runs": [
+        {
+          "id": 40416798514,
+          "event": "pull_request",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/WardenPup/Industrial-Data-Science/actions/runs/40416798514"
+        },
+        {
+          "id": 40416791685,
+          "event": "push",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/WardenPup/Industrial-Data-Science/actions/runs/40416791685"
+        }
+      ]
+    }
+  ]
+}

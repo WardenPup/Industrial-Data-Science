@@ -1,6 +1,6 @@
 # Industrial Data Science – Self-Study Kapitel 10–12
 
-Lokales Lernprojekt. Aufgaben 10.1–10.4 sind nach studentischen Reviews,
+Lokales Lernprojekt. Aufgaben 10.1–12.4 sind nach studentischen Reviews,
 ausdrücklichen Freigaben und technischen Prüfungen vollständig in main integriert.
 Die offizielle Aufgabenstellung hat Vorrang vor eigenen Zusammenfassungen.
 
@@ -112,7 +112,7 @@ Für die IDE-Erweiterung ist eine eigene Anmeldung in VS Code erforderlich.
 
 - `AGENTS.md`: dauerhafte Arbeitsregeln für KI-Unterstützung.
 - `sessions/ch10/`: freigegebene 10.1-Lösung und 10.2-Notebook mit Datenprüfung.
-- `sessions/ch11/`, `sessions/ch12/`: vorbereitete Kapitel mit Quellenlinks.
+- `sessions/ch11/`, `sessions/ch12/`: freigegebene, in main integrierte Lösungen mit Quellenlinks.
 - `tests/`: mathematische Prüfungen und echter PNG-Export.
 - `outputs/ch10/`: erzeugte Herzkurve sowie 10.2-HTML/PDF, Grafik und Statistik.
 - `data/raw/`, `data/processed/`: spätere Originaldaten und Ableitungen.
@@ -146,7 +146,7 @@ Der editierbare deutsche Erstentwurf liegt unter
 Eine separate Präsentationskopie erhält die vollständige EDA aus 10.3.
 [Render-Anleitung](reports/exercise_10_4/README.md),
 [Anforderungen](docs/EXERCISE_10_4_REQUIREMENTS.md) und
-[offene Reviewfragen](reviews/exercise_10_4.md) dokumentieren die Trennung von
+[Reviewhistorie](reviews/exercise_10_4.md) dokumentieren die Trennung von
 KI-Erstentwurf, tatsächlichen technischen Prüfungen und studentischer Redaktion.
 Status: **APPROVED** nach zwei studentischen PDF-Reviews,
 KI-gestützten Korrekturen und erfolgreicher technischer Prüfung.
@@ -187,7 +187,7 @@ an die Universität übermittelt.
 ## Aufgabe 11.1 – rollende Glättung
 
 Kapitel 10 bleibt unverändert freigegeben. Der ausdrücklich autorisierte
-Kapitel-11-Start umfasst nur 11.1: [Notebook](sessions/ch11/production_smoothing.ipynb),
+Kapitel-11-Start begann mit 11.1: [Notebook](sessions/ch11/production_smoothing.ipynb),
 [Anforderungen](docs/EXERCISE_11_1_REQUIREMENTS.md),
 [Review](reviews/exercise_11_1.md). Status: **APPROVED** nach positivem
 studentischem Review vom 26.10.2026 und erneuter technischer Prüfung.
@@ -227,7 +227,7 @@ und PCHIP. Sieben Grafiken, HTML, Lückentabelle und Methodendiagnostik liegen u
 
 Auf ausdrücklichen Folgeauftrag: [Notebook](sessions/ch11/production_stl_imputation.ipynb),
 [Anforderungen](docs/EXERCISE_11_3_REQUIREMENTS.md), [Review](reviews/exercise_11_3.md).
-Status: **APPROVED – AWAITING FINAL MERGE AUTHORIZATION** nach positivem
+Status: **APPROVED, über PR #7 regulär integriert** nach positivem
 studentischem Review vom 26.10.2026 und erneuter technischer Prüfung.
 Freigegebene 11.1-/11.2-Dateien bleiben erhalten; kein Merge ohne ausdrückliche Erlaubnis.
 
@@ -242,7 +242,7 @@ Vorläufig linear ergänzen, mit STL zerlegen, die ursprüngliche lückenhafte
 Medianreihe saisonbereinigt linear imputieren und Saison zurückaddieren.
 Vier Grafiken, HTML und Ergebnistabellen: `outputs/ch11/exercise_11_3/`.
 statsmodels ist im bestehenden uv-Lockfile ergänzt; keine globalen Python-Pakete.
-Keine Genauigkeitsbehauptung, keine 11.4 und kein Merge vor studentischem Review.
+Keine Genauigkeitsbehauptung; 11.4 ist separat freigegeben und über PR #8 integriert.
 
 ### Aufgabe 11.4
 
@@ -250,7 +250,7 @@ Originalproduktion: residualbasierte Ausreißerkandidaten mit robuster STL und
 Drei-Sigma-Regel. Notebook: `sessions/ch11/production_outliers.ipynb`;
 HTML: `outputs/ch11/exercise_11_4/production_outliers.html`.
 Ausführen: `scripts/uv.cmd run --offline --locked python scripts/build_exercise_11_4.py`.
-KI-Unterstützung: Codex; Status APPROVED – AWAITING FINAL MERGE AUTHORIZATION.
+KI-Unterstützung: Codex; Status APPROVED, über PR #8 regulär integriert.
 
 ### Aufgabe 12.1
 
@@ -265,7 +265,7 @@ früherer Umgebung unter `submission/chapter_11/`; keine Einreichung erfolgt.
 Multivariate UWave-Gestenklassifikation: `sessions/ch12/uwave_classification.ipynb`;
 HTML: `outputs/ch12/exercise_12_2/uwave_classification.html`.
 Daten: `scripts/download_uwave.py`; frische Ausführung: `scripts/build_exercise_12_2.py`.
-KI-Unterstützung: Codex; APPROVED – AWAITING FINAL MERGE AUTHORIZATION. PyTorch 2.9.1 nur CPU, expliziter
+KI-Unterstützung: Codex; APPROVED, über PR #10 regulär integriert. PyTorch 2.9.1 nur CPU, expliziter
 Paketindex in pyproject.toml. uv-Cache-Konfiguration aus uv.toml ebenfalls dorthin
 übernommen, um sich überlagernde Indexkonfigurationen zu vermeiden.
 
@@ -276,7 +276,7 @@ Reproduktion: `scripts/uv.cmd run --offline --locked python scripts/build_exerci
 200 aeon-Intervallbäume, Seed 42, gleiche Originalsplits und TRAIN-only-Skalierung wie 12.2.
 Forest 277/320 korrekt, Accuracy 0,865625, Macro-F1 0,863884: über CNN, unter DTW-3-NN
 auf diesem Split. Keine allgemeine Überlegenheit. KI-Unterstützung: Codex.
-Status: **SCIENTIFICALLY APPROVED – TECHNICALLY VALIDATED – AWAITING FINAL MERGE AUTHORIZATION**. Review: `reviews/exercise_12_3.md`.
+Status: **APPROVED, technisch validiert und über PR #11 regulär integriert**. Review: `reviews/exercise_12_3.md`.
 
 ### Aufgabe 12.4
 
@@ -284,4 +284,13 @@ Notebook: `sessions/ch12/appliances_regression.ipynb`; HTML: `outputs/ch12/exerc
 Originaldaten: `scripts/download_appliances.py`; Reproduktion: `scripts/build_exercise_12_4.py`.
 Drei feste Verfahren (DTW-3-NN, Time Series Forest, CNN), identische 95/42 Originalsplits,
 TRAIN-only-Skalierung, RMSE/MAE in kWh. KI-Unterstützung: Codex.
-Status: **SCIENTIFICALLY APPROVED – TECHNICALLY VALIDATED – AWAITING FINAL MERGE AUTHORIZATION**. Reviewbericht: `reviews/exercise_12_4.md`.
+Status: **APPROVED, technisch validiert und über PR #12 regulär integriert**. Reviewbericht: `reviews/exercise_12_4.md`.
+
+## Repository-Stand – 19.11.2026
+
+Die zwölf erledigten Remote-Branches exercise/10.1 bis exercise/12.4 wurden nach
+Merge-/Abstammungsprüfung entfernt; Historie und lokale Branches bleiben erhalten.
+main und submission/final-preparation bleiben bestehen. [PR #13](https://github.com/WardenPup/Industrial-Data-Science/pull/13)
+bleibt Draft: Paketfreigabe und Merge-Autorisierung ausstehend.
+[Finaler Abgabeordner](submission/final/README.md), [Bereinigungsnachweis](docs/GITHUB_CLEANUP_2026_11_19.md).
+Kein Upload und noch kein Beginn eines neuen Kapitels.
