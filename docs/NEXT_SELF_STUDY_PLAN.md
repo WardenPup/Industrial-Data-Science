@@ -1,6 +1,6 @@
 # Nächste Self-Study-Aufgaben
 
-Stand/Abruf: **19.11.2026**. Status: **14.1 APPROVED und integriert; 14.2 technisch validiert – AWAITING HUMAN REVIEW; übrige Übungen nur geplant**.
+Stand/Abruf: **19.11.2026**. Status: **14.1 APPROVED und integriert; 14.2 APPROVED und integriert; 14.3 wissenschaftlich freigegeben, Merge-Autorisierung ausstehend; übrige Übungen nur geplant**.
 Codex: Quellenprüfung, Anforderungsübersicht und Workflowvorschlag. Keine neuen
 studentischen Prüfungen oder Freigaben behauptet; bisherige Lösungen bleiben erhalten.
 
@@ -37,12 +37,12 @@ der Kursseiten. Pflichtartefakte wie Screenshots und Skripte sind separat genann
 **14.1 — Tool wear failure — APPROVED, PR #14 integriert — low**
 - [x] Die TWF-Beschreibung in 13.1.7 mit den Befunden aus 13.1.6.1/13.1.6.2 vergleichen und den konkreten Widerspruch belegen. Ergebnis: kurze begründete Gegenüberstellung; keine neue Modellstudie verlangt. Voraussetzung: diese Kursbefunde lesen, keine vorangehende neue Übung nötig.
 
-**14.2 — Overstrain failure — AWAITING HUMAN REVIEW — medium**
+**14.2 — Overstrain failure — APPROVED, PR #15 integriert — medium**
 - [x] OSF-Zusammenhang Torque × Tool wear und Type-abhängige Grenzen 11.000/12.000/13.000 min·Nm visualisieren.
 - [x] Bäume der Tiefen 1/2/4/8 ausschließlich auf Torque und Tool wear fitten; Grenzen mit `DecisionBoundaryDisplay` und der 11.000-Hyperbel vergleichen. Anschließend Kursbaum um `wearadjTorque` und Type ergänzen; Struktur, kleinste nahezu trennende Tiefe und gelernte Grenze berichten. Voraussetzung: Kursbaum 13.1.6.2, nicht das Ergebnis von 14.1.
 
-**14.3 — Engineered features and model performance — medium**
-- [ ] Tiefenvergleich für HDF/PWF mit und ohne `temp_diff` beziehungsweise `power`; F1 statt Accuracy auswerten und Klassenungleichgewicht erklären. Ergebnis: kompakter Leistungsvergleich; Vorgehen aus 14.2 wiederverwenden, Featuredefinitionen aus Kapitel 13 prüfen.
+**14.3 — Engineered features and model performance — SCIENTIFICALLY APPROVED, Merge ausstehend — medium**
+- [x] Tiefenvergleich für HDF/PWF mit und ohne `temp_diff` beziehungsweise `power`; F1 statt Accuracy auswerten und Klassenungleichgewicht erklären. Ergebnis: kompakter Leistungsvergleich; Vorgehen aus 14.2 wiederverwenden, Featuredefinitionen aus Kapitel 13 prüfen.
 
 **14.4 — Parallel coordinates plots — medium**
 - [ ] Plotly-Parallelkoordinaten: alle verfügbaren kontinuierlichen Variablen, gewählter Fehlertyp und Type; Fehlertyp kategorial, Linienfarbe nach Type. Jupyter-Dropdown zur Fehlertypwahl; Achsen umordnen und Brushing tatsächlich nutzen, erkannte Muster dokumentieren. Voraussetzung: AI4I/Kapitel-13-Muster; 14.1–14.3 liefern Vergleich, sind keine neue Datenquelle.

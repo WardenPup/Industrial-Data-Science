@@ -1,3 +1,30 @@
+## 19.11.2026 – 14.3: studentischer Review technisch nachgeprüft
+
+**SCIENTIFICALLY APPROVED – TECHNICALLY VALIDATED – AWAITING FINAL MERGE AUTHORIZATION**.
+Originalreview unverändert separat ff87709. Drei Tests erneut bestanden (3,674 s),
+drei frische Codezellen, Grafik und HTML offline 900/1400 px geprüft. Separate
+Nachrechnung bestätigt alle 64 Ergebniszeilen und 4.000 exportierten Zeilen mit
+beiden Modellvorhersagen. Sieben Manifesthashes und 21 Archive bestätigt. Keine
+fachlichen Korrekturen; nur Status/Prüfdokumentation und frischer Export. Aktuelle
+Head-CI und Ready-Status werden im PR #16 nach tatsächlichem Abschluss belegt.
+Finale Merge-Autorisierung ausstehend; kein Beginn 14.4, keine Einreichung.
+
+## 19.11.2026 – Exercise 14.2 integriert; 14.3 technisch geprüft
+
+PR #15 nach ausdrücklicher Nutzerautorisierung regulär gemergt:
+`9ac1cbf059a2503c1bd09e0c45e9413b1ccc29bd`. Unmittelbar vorher Head c5fd968,
+beide erfolgreichen aktuellen CI-Läufe, Konfliktfreiheit, fehlende Kommentare und
+Reviewthreads sowie unveränderter Originalreview bestätigt. PR auf Ready gesetzt;
+Review d2525b8 und CI-Korrektur c5fd968 erhalten. main = origin/main am Merge-SHA.
+
+14.3: **AWAITING HUMAN REVIEW**. HDF/PWF-Tiefen 1–8 mit/ohne temp_diff/power;
+F1 statt Accuracy, gleiche feste TRAIN/TEST-Splits je Ziel, keine TEST-Modellwahl.
+Drei Tests bestanden (3,329 s), drei frische sequenzielle Codezellen, eine Grafik
+visuell geprüft; HTML offline 900/1400 px bestanden. HDF TEST-F1 bei Tiefe 3:
+0,611111 → 0,930233; PWF: 0,789474 → 1. Rohdaten unverändert. Keine neue
+studentische Freigabe; Head-CI wird nach Push im Draft-PR tatsächlich dokumentiert.
+Frühere Lösungen/Originalreviews und Abgabepakete unverändert. Kein Beginn 14.4.
+
 ## 19.11.2026 – 14.2 wissenschaftlicher Review übernommen; CI nachprüfen
 
 SCIENTIFICALLY APPROVED. Originalreview unverändert in d2525b8. Sichere CI-Versorgung
