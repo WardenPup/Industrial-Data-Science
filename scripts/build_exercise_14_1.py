@@ -68,7 +68,7 @@ def main():
         np.testing.assert_array_equal(table["Datensätze"], table["TWF=1"] + table["TWF=0"])
     assert pd.read_csv(output / "twf_outside_interval.csv").UDI.tolist() == [1997, 2865, 5402]
     files = [source, destination] + sorted(output.glob("*.csv")) + [output / "summary.json", output / "01_twf_wear.png"]
-    manifest = {"validated_date": "2026-11-19", "status": "AWAITING HUMAN REVIEW", "ai_assistance": "Codex",
+    manifest = {"validated_date": "2026-11-19", "status": "SCIENTIFICALLY APPROVED – TECHNICALLY VALIDATED – AWAITING FINAL MERGE AUTHORIZATION", "ai_assistance": "Codex",
                 "raw_sha256": verify_file(), "sequential_code_cells": len(counts), "embedded_images": 1,
                 "files": {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest() for p in files}}
     (output / "validation_manifest.json").write_text(json.dumps(manifest, indent=2)+"\n", encoding="utf-8")

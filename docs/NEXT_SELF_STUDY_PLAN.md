@@ -1,6 +1,6 @@
 # Nächste Self-Study-Aufgaben
 
-Stand/Abruf: **19.11.2026**. Status: **14.1 technisch umgesetzt – AWAITING HUMAN REVIEW; übrige Übungen nur geplant**.
+Stand/Abruf: **19.11.2026**. Status: **14.1 wissenschaftlich freigegeben; finale technische Nachprüfung / Merge-Freigabe separat; übrige Übungen nur geplant**.
 Codex: Quellenprüfung, Anforderungsübersicht und Workflowvorschlag. Keine neuen
 studentischen Prüfungen oder Freigaben behauptet; bisherige Lösungen bleiben erhalten.
 
@@ -34,7 +34,7 @@ der Kursseiten. Pflichtartefakte wie Screenshots und Skripte sind separat genann
 
 ### Kapitel 14 – S14, Daten: AI4I 2020
 
-**14.1 — Tool wear failure — AWAITING HUMAN REVIEW — low**
+**14.1 — Tool wear failure — SCIENTIFICALLY APPROVED, Merge ausstehend — low**
 - [x] Die TWF-Beschreibung in 13.1.7 mit den Befunden aus 13.1.6.1/13.1.6.2 vergleichen und den konkreten Widerspruch belegen. Ergebnis: kurze begründete Gegenüberstellung; keine neue Modellstudie verlangt. Voraussetzung: diese Kursbefunde lesen, keine vorangehende neue Übung nötig.
 
 **14.2 — Overstrain failure — medium**

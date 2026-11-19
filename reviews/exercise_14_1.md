@@ -1,3 +1,7 @@
+> Aktueller Stand 19.11.2026: **SCIENTIFICALLY APPROVED – TECHNICALLY VALIDATED – AWAITING FINAL MERGE AUTHORIZATION**.
+> Der folgende Erstbericht bleibt als historische Dokumentation erhalten.
+> Studentischer Originalreview und nachfolgende Codex-Verifikation sind getrennt.
+
 # Exercise 14.1 – Technischer Bericht für den Human Review
 
 **Status: AWAITING HUMAN REVIEW.** 19.11.2026. Studentische Bewertung/Freigabe
@@ -138,3 +142,29 @@ Ich sehe keinen fachlichen Korrekturbedarf.
 **Finale wissenschaftliche Bewertung: APPROVED.**
 
 Die technische Abschlussprüfung und die finale Merge-Freigabe bleiben separate Schritte.
+
+
+---
+
+## Codex-Verifikation nach studentischem Review – 19.11.2026
+
+Der oben vollständig übernommene studentische Wortlaut wurde gegen den Nutzerauftrag
+verglichen; der frühere Bericht ist erhalten. Keine zusätzliche studentische Prüfung
+oder Merge-Autorisierung wird daraus abgeleitet. Originalreview separat: `086ba13`.
+
+Erneut tatsächlich ausgeführt im bestehenden uv-Environment:
+- `scripts/uv.cmd run --offline --locked python -m unittest discover -s tests -p test_tool_wear.py -v`: **3/3 bestanden**, 0,063 s (vorher 0,149 s; keine Zeitgarantie).
+- `scripts/uv.cmd run --offline --locked python scripts/build_exercise_14_1.py --check-html`: **3 frische sequenzielle Codezellen**, keine Ausführungsfehler; HTML offline bei **900/1400 px** ohne Seitenfehler, fehlgeschlagene Anfragen oder Seitenüberlauf.
+- PNG und beide vollständigen Browseransichten visuell geprüft: Titel, Minutenachse, Häufigkeitsachse, Bereich 200–240 min und Ausreißer lesbar. Histogramm zählt TWF-Markierungen, keine Ausfallwahrscheinlichkeiten.
+- Unabhängige CSV-Selektoren bestätigen 10.000 Zeilen, 46 statt beschriebener 51 TWF, 43 innerhalb 200–240 min, genau drei außerhalb bei 198/246/253 min; bei ≤202,5 min 2/9.328, darüber 44/672. Alle 46 TWF sind allgemeine Fehler; weitere 293 allgemeine Fehler haben TWF=0.
+- Rohdaten-SHA256 und alle **acht** Manifesthashes stimmen. Wissenschaftliche CSV/JSON/PNG sind bytegleich mit `2a20221`; wissenschaftliche Zellquellen unverändert. **21 Abgabearchive** stimmen mit dem bestehenden SHA256-Snapshot überein. Frühere Aufgaben/Originalreviews unverändert.
+
+Keine fachlichen Korrekturen erforderlich. Nur Statusangaben und Prüfdokumentation
+aktualisiert, Notebook/HTML frisch erzeugt. Die 69 Austausche bleiben ausdrücklich
+als nicht unabhängig prüfbare Beschreibungsangabe gekennzeichnet. Ursache der
+Diskrepanz unbekannt; synthetische Daten, keine Kausalitätsbehauptung.
+
+Warnung erneut: lokaler Jupyter-TCP-Transport ohne Verschlüsselung; Ausführung
+erfolgreich. Keine zusätzlichen Analysen, Modelle oder Tests eingeführt. Aktuelle
+GitHub-Checks und Review-/Konfliktprüfung werden nach Push am tatsächlichen Head
+im bestehenden PR #14 dokumentiert. **Kein Merge autorisiert oder durchgeführt.**
