@@ -1,3 +1,6 @@
+> Aktueller Stand 19.11.2026: **SCIENTIFICALLY APPROVED – TECHNICALLY VALIDATED – AWAITING FINAL MERGE AUTHORIZATION**.
+> Erstbericht, studentischer Originalreview und Codex-Nachprüfung sind getrennt dokumentiert.
+
 # Exercise 14.3 – Technischer Prüfbericht
 
 **AWAITING HUMAN REVIEW**, 19.11.2026. Studentische Bewertung/Freigabe ausstehend.
@@ -161,3 +164,28 @@ Keine verpflichtenden wissenschaftlichen Änderungen.
 Die bereits dokumentierten Einschränkungen sollen erhalten bleiben.
 
 Die Freigabe gilt für die fachliche Ausarbeitung. Der technische Abschluss und der Merge sind weiterhin separat zu prüfen und freizugeben.
+
+---
+
+## Codex-Abschlussverifikation – 19.11.2026
+
+Originalreview wortgetreu separat in ff87709 gesichert; vollständiger Textvergleich
+mit dem Nutzeranhang bestanden. Frühere studentische Texte unverändert.
+
+Erneut tatsächlich ausgeführt:
+- `scripts/uv.cmd run --offline --locked python -m unittest discover -s tests -p test_engineered_features.py -v`: **3/3 bestanden**, 3,674 s (zuvor 3,329 s). Formeln/Nichtmutation, Klassenzählungen, alle 32 TRAIN-only-Fits mit gleichen Splits/Parametern pro Ziel, Metriken/Vorhersagen geprüft.
+- `scripts/uv.cmd run --offline --locked python scripts/build_exercise_14_3.py --check-html`: **3 Codezellen im frischen Kernel sequenziell**, keine Fehler; Offline-HTML **900/1400 px** bestanden, eingebettetes Bild geladen, keine Seitenfehler/fehlgeschlagenen Anfragen/Seitenüberläufe. Grafik und beide vollständigen Browseransichten visuell geprüft.
+- Separate Nachrechnung aus Originaldaten mit direkt erzeugten sklearn-Bäumen, festem Split und separat berechneten TP/FP/FN/F1: **alle 64 Ergebniszeilen** und **alle 4.000 exportierten Zeilen mit beiden Modellvorhersagen** stimmen überein. Keine neue Modellstudie oder Erweiterung der Testsuite.
+- HDF TRAIN/TEST positiv 92/23, PWF 76/19 bei jeweils 8.000/2.000 Zeilen; temp_diff in K und power in W einschließlich rpm-Umrechnung korrekt. TEST bei Tiefe 3: HDF Basis TP/FP/FN 11/2/12, F1 0,611111; Zusatz 20/0/3, 0,930233. PWF Basis 15/4/4, 0,789474; Zusatz 19/0/0, 1,000000.
+- Originaldaten-SHA256 und **7 Manifesthashes** geprüft: sechs Ergebnisartefakte plus Notebook. CSV-Dateien und PNG bytegleich mit e46fb1a; JSON nur im Status geändert. **21 Abgabearchive** unverändert.
+
+Keine wissenschaftlichen Abweichungen oder Korrekturen erforderlich. Nur Status-/
+Prüfdokumentation, frische Notebook-Ausführung und Export aktualisiert. Die Splits
+sind je Ziel fest; HDF und PWF haben getrennte Ziel-spezifische Aufteilungen. F1=1
+bleibt ausdrücklich auf den untersuchten PWF-TEST-Split begrenzt. Wenige positive
+Fälle, synthetische Daten, keine unabhängige TEST-Optimierung oder allgemeine
+Überlegenheit behauptet. Bekannte lokale Jupyter-TCP-Warnung ohne Ausführungsfehler.
+
+Aktuelle CI-Ergebnisse werden nach Push am tatsächlichen Head im PR #16 belegt;
+Ready erst nach beiden erfolgreichen Läufen und Prüfung offener Reviewpunkte.
+**Kein Merge autorisiert oder durchgeführt; keine Arbeit an 14.4.**
