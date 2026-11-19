@@ -1,3 +1,25 @@
+## 19.11.2026 – 14.2 wissenschaftlicher Review übernommen; CI nachprüfen
+
+SCIENTIFICALLY APPROVED. Originalreview unverändert in d2525b8. Sichere CI-Versorgung
+aus dem bereits vorhandenen, unveränderten checksumgeprüften UCI-Originalbestand
+(CC BY 4.0); keine TLS-Ausnahme. Drei Tests erneut bestanden (1,765 s), drei frische
+Codezellen und HTML offline 900/1400 px bestanden. Wissenschaftliche Ergebnisse
+unverändert. Neue Head-CI im bestehenden Draft-PR #15 nach Push tatsächlich prüfen;
+keine technische GitHub-Freigabe vor Erfolg, kein Merge autorisiert.
+
+## 19.11.2026 – 14.1 integriert; 14.2 in Bearbeitung
+
+PR #14 nach ausdrücklicher Nutzerfreigabe regulär gemergt: `4e01a254e29b69765901004c8d12302bf2cbd8e5`.
+Unmittelbar zuvor Head 67e3f71, beide erfolgreichen CI-Läufe, Konfliktfreiheit und
+fehlende Kommentare/Reviewthreads erneut bestätigt. Originalreview 086ba13 und
+technische Nachprüfung 67e3f71 vollständig erhalten. Lokales main = origin/main.
+14.1 APPROVED und integriert. 14.2: AWAITING HUMAN REVIEW. Drei fokussierte Tests
+bestanden (1,171 s), drei frische Codezellen; drei Grafiken und HTML offline 900/1400 px
+geprüft. 98 OSF entsprechen exakt der Type-Regel; Produkt+Type bei Tiefe 3 mit zwei
+Anpassungsfehlern und einem Fehler im festen TEST-Split. Neun Manifesthashes/21 Archive
+bestätigt. Draft-PR und aktuelle Head-CI werden nach Push dokumentiert.
+Keine früheren Lösungen/Reviews/Abgabepakete geändert; keine Einreichung.
+
 ## 19.11.2026 – Exercise 14.1: positiver Human Review nachgeprüft
 
 **SCIENTIFICALLY APPROVED – TECHNICALLY VALIDATED – AWAITING FINAL MERGE AUTHORIZATION**.

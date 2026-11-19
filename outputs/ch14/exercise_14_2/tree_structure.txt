@@ -1,0 +1,50 @@
+Kursbasis
+|--- Torque [Nm] <= 56.05
+|   |--- Tool wear [min] <= 211.50
+|   |   |--- Tool wear [min] <= 206.50
+|   |   |   |--- class: 0
+|   |   |--- Tool wear [min] >  206.50
+|   |   |   |--- class: 0
+|   |--- Tool wear [min] >  211.50
+|   |   |--- Torque [Nm] <= 52.05
+|   |   |   |--- class: 0
+|   |   |--- Torque [Nm] >  52.05
+|   |   |   |--- class: 1
+|--- Torque [Nm] >  56.05
+|   |--- Tool wear [min] <= 188.50
+|   |   |--- Tool wear [min] <= 171.50
+|   |   |   |--- class: 0
+|   |   |--- Tool wear [min] >  171.50
+|   |   |   |--- class: 0
+|   |--- Tool wear [min] >  188.50
+|   |   |--- Torque [Nm] <= 59.50
+|   |   |   |--- class: 1
+|   |   |--- Torque [Nm] >  59.50
+|   |   |   |--- class: 1
+
++ Produkt
+|--- wearadjTorque <= 10998.50
+|   |--- class: 0
+|--- wearadjTorque >  10998.50
+|   |--- wearadjTorque <= 11936.90
+|   |   |--- wearadjTorque <= 11695.40
+|   |   |   |--- class: 1
+|   |   |--- wearadjTorque >  11695.40
+|   |   |   |--- class: 0
+|   |--- wearadjTorque >  11936.90
+|   |   |--- class: 1
+
++ Produkt + Type
+|--- wearadjTorque <= 10998.50
+|   |--- class: 0
+|--- wearadjTorque >  10998.50
+|   |--- Type_M <= 0.50
+|   |   |--- Type_H <= 0.50
+|   |   |   |--- class: 1
+|   |   |--- Type_H >  0.50
+|   |   |   |--- class: 0
+|   |--- Type_M >  0.50
+|   |   |--- wearadjTorque <= 12128.50
+|   |   |   |--- class: 0
+|   |   |--- wearadjTorque >  12128.50
+|   |   |   |--- class: 1

@@ -1,6 +1,6 @@
 # Nächste Self-Study-Aufgaben
 
-Stand/Abruf: **19.11.2026**. Status: **14.1 wissenschaftlich freigegeben; finale technische Nachprüfung / Merge-Freigabe separat; übrige Übungen nur geplant**.
+Stand/Abruf: **19.11.2026**. Status: **14.1 APPROVED und integriert; 14.2 technisch validiert – AWAITING HUMAN REVIEW; übrige Übungen nur geplant**.
 Codex: Quellenprüfung, Anforderungsübersicht und Workflowvorschlag. Keine neuen
 studentischen Prüfungen oder Freigaben behauptet; bisherige Lösungen bleiben erhalten.
 
@@ -34,12 +34,12 @@ der Kursseiten. Pflichtartefakte wie Screenshots und Skripte sind separat genann
 
 ### Kapitel 14 – S14, Daten: AI4I 2020
 
-**14.1 — Tool wear failure — SCIENTIFICALLY APPROVED, Merge ausstehend — low**
+**14.1 — Tool wear failure — APPROVED, PR #14 integriert — low**
 - [x] Die TWF-Beschreibung in 13.1.7 mit den Befunden aus 13.1.6.1/13.1.6.2 vergleichen und den konkreten Widerspruch belegen. Ergebnis: kurze begründete Gegenüberstellung; keine neue Modellstudie verlangt. Voraussetzung: diese Kursbefunde lesen, keine vorangehende neue Übung nötig.
 
-**14.2 — Overstrain failure — medium**
-- [ ] OSF-Zusammenhang Torque × Tool wear und Type-abhängige Grenzen 11.000/12.000/13.000 min·Nm visualisieren.
-- [ ] Bäume der Tiefen 1/2/4/8 ausschließlich auf Torque und Tool wear fitten; Grenzen mit `DecisionBoundaryDisplay` und der 11.000-Hyperbel vergleichen. Anschließend Kursbaum um `wearadjTorque` und Type ergänzen; Struktur, kleinste nahezu trennende Tiefe und gelernte Grenze berichten. Voraussetzung: Kursbaum 13.1.6.2, nicht das Ergebnis von 14.1.
+**14.2 — Overstrain failure — AWAITING HUMAN REVIEW — medium**
+- [x] OSF-Zusammenhang Torque × Tool wear und Type-abhängige Grenzen 11.000/12.000/13.000 min·Nm visualisieren.
+- [x] Bäume der Tiefen 1/2/4/8 ausschließlich auf Torque und Tool wear fitten; Grenzen mit `DecisionBoundaryDisplay` und der 11.000-Hyperbel vergleichen. Anschließend Kursbaum um `wearadjTorque` und Type ergänzen; Struktur, kleinste nahezu trennende Tiefe und gelernte Grenze berichten. Voraussetzung: Kursbaum 13.1.6.2, nicht das Ergebnis von 14.1.
 
 **14.3 — Engineered features and model performance — medium**
 - [ ] Tiefenvergleich für HDF/PWF mit und ohne `temp_diff` beziehungsweise `power`; F1 statt Accuracy auswerten und Klassenungleichgewicht erklären. Ergebnis: kompakter Leistungsvergleich; Vorgehen aus 14.2 wiederverwenden, Featuredefinitionen aus Kapitel 13 prüfen.
