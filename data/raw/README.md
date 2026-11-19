@@ -16,3 +16,14 @@ aus dem offiziellen UCI-Archiv. Die CSV bleibt Git-ignoriert.
 Das Skript prüft diese feste Prüfsumme vor dem Speichern bzw. Wiederverwenden.
 Abweichungen erfordern Untersuchung; bestehende Dateien werden nicht überschrieben.
 Die vier ausgewählten Spalten behalten ihre originalen Einheiten im Namen.
+
+## CI-Bestand seit 19.11.2026
+
+Die Aussage „Git-ignoriert“ oben beschreibt den bisherigen Stand. Für den nach
+studentischem Review geforderten sicheren CI-Betrieb wird genau diese bereits am
+26.10.2026 bezogene Original-CSV nun unverändert versioniert (CC BY 4.0, Quelle und
+SHA256 wie oben). Keine neue Datenquelle und keine Änderungen der Originalbytes.
+Grund: abgelaufenes HTTPS-Zertifikat beim offiziellen UCI-Download in beiden
+14.2-CI-Läufen. Der bestehende Downloader prüft bei vorhandenem Bestand dessen
+festen SHA256 und beendet sich ohne Netzabruf. TLS-Prüfung bleibt unverändert aktiv;
+keine Zertifikatsausnahme, keine Rücksetzung der Zeit und kein anderer Datensatz.

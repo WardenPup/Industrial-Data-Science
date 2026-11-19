@@ -46,3 +46,6 @@ data/processed/*
 /submission/chapter_10/*.zip
 
 /submission/chapter_11/*.zip
+
+# Checksum-pinned CC BY 4.0 source snapshot for reproducible offline CI.
+!data/raw/ai4i2020.csv

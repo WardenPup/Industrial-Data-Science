@@ -173,3 +173,33 @@ Die vorhandenen wissenschaftlichen Ergebnisse und Grafiken müssen nicht grundle
 Mein Originalreview ist unverändert zu erhalten. Technische Präzisierungen sind separat zu dokumentieren.
 
 Ich erteile mit diesem Review keine Merge-Autorisierung.
+
+---
+
+## Codex-Verifikation nach Human Review – 19.11.2026
+
+Aktueller Stand: SCIENTIFICALLY APPROVED; technische GitHub-Freigabe bis zum
+erfolgreichen Abschluss der neuen Head-CI ausstehend. Kein Merge autorisiert.
+Originalreview unverändert separat in d2525b8 gesichert; vorheriger Bericht erhalten.
+
+Sichere CI-Korrektur: vorhandene Original-CSV (522.048 Bytes, unveränderter SHA256
+dc6630cd9b1f0f853922fad78a1b6436570d3f1ec863f1dd5c4340ac56bc8a8e)
+unter data/raw versioniert; Herkunft/CC BY 4.0 und Grund im dortigen README ergänzt.
+Der bestehende Downloader bestätigt den Bestand ohne Netzabruf. Keine TLS-Ausnahme,
+keine geänderte Quelle, keine geänderten Daten oder Modellparameter. Die früheren
+CI-Fehlläufe 44607242799/44607347699 bleiben sichtbar.
+
+Tatsächlich erneut bestanden:
+- `scripts/uv.cmd run --offline --locked python scripts/download_ai4i.py`: lokaler Originalbestand SHA256-bestätigt, kein Download.
+- `scripts/uv.cmd run --offline --locked python -m unittest discover -s tests -p test_overstrain.py -v`: 3/3 bestanden, 1,765 s.
+- `scripts/uv.cmd run --offline --locked python scripts/build_exercise_14_2.py --check-html`: 3 frische sequenzielle Zellen; 3 eingebettete Bilder; Offline-HTML 900/1400 px ohne Seitenfehler, fehlgeschlagene Anfragen oder Überlauf.
+- Zusätzlicher Artefaktabgleich: 98 OSF = 87/9/2 nach L/M/H, 21 Anpassungsfehler des Zwei-Merkmal-Baums bei Tiefe 8; beide Fehler des Produkt+Type-Kursbaums bei Tiefe 3 sind positive H-Fälle. Alle CSV/JSON/PNG/Text-Ergebnisse bytegleich mit 4de7a9d; 21 Archive unverändert.
+
+Technische Präzisierungen zum unveränderten studentischen Text: Type bezeichnet die
+**Produktvariante**. Die Grafik der Entscheidungsgrenzen nutzt nur Verschleiß und
+Drehmoment; der separat verglichene Kursbasisbaum nutzt die sieben im Notebook
+genannten Eingaben. Die Zahlen 43/22/2 beziehen sich auf diesen Kursbasisvergleich.
+Keine Änderung des studentischen Wortlauts oder seiner wissenschaftlichen Bewertung.
+Bekannte lokale Jupyter-TCP-Warnung erneut ohne Ausführungsfehler. Keine zusätzliche
+Modellstudie oder neue Testsuite; aktuelle CI-Nachweise werden im bestehenden PR #15
+am tatsächlichen Head dokumentiert. Finale Merge-Autorisierung bleibt ausstehend.

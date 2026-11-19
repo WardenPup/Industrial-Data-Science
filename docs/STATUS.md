@@ -1,3 +1,12 @@
+## 19.11.2026 – 14.2 wissenschaftlicher Review übernommen; CI nachprüfen
+
+SCIENTIFICALLY APPROVED. Originalreview unverändert in d2525b8. Sichere CI-Versorgung
+aus dem bereits vorhandenen, unveränderten checksumgeprüften UCI-Originalbestand
+(CC BY 4.0); keine TLS-Ausnahme. Drei Tests erneut bestanden (1,765 s), drei frische
+Codezellen und HTML offline 900/1400 px bestanden. Wissenschaftliche Ergebnisse
+unverändert. Neue Head-CI im bestehenden Draft-PR #15 nach Push tatsächlich prüfen;
+keine technische GitHub-Freigabe vor Erfolg, kein Merge autorisiert.
+
 ## 19.11.2026 – 14.1 integriert; 14.2 in Bearbeitung
 
 PR #14 nach ausdrücklicher Nutzerfreigabe regulär gemergt: `4e01a254e29b69765901004c8d12302bf2cbd8e5`.

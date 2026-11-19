@@ -34,3 +34,5 @@ outputs/ch14/exercise_14_1/* -text
 
 sessions/ch14/overstrain_failure.ipynb -text
 outputs/ch14/exercise_14_2/* -text
+
+data/raw/ai4i2020.csv -text

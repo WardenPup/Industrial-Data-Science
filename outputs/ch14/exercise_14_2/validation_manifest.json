@@ -6,7 +6,7 @@
   "sequential_code_cells": 3,
   "embedded_images": 3,
   "files": {
-    "sessions/ch14/overstrain_failure.ipynb": "fc95af6d4dd8e0d977ea26698ef355356d00e72ffdacc6e750a185c8aeadba07",
+    "sessions/ch14/overstrain_failure.ipynb": "6b910260c1516d8be585610f78add8a81f930dba3617101aa7d84876de218aef",
     "outputs/ch14/exercise_14_2/overstrain_failure.html": "a50c65bb4970e6f373c4c5ef8a72096835551c07fa8def32428d01e2016574b2",
     "outputs/ch14/exercise_14_2/fitting_comparison.csv": "5f0795fbff9db03cc361d9cf0ed55121504707117ab0d661f7ecfa88793bed7c",
     "outputs/ch14/exercise_14_2/heldout_comparison.csv": "c93fe609654f3a2721656f9be0b85ea167b4c4400588839b9856733f87fde708",
