@@ -45,3 +45,131 @@ oder allgemeine Überlegenheit behauptet. Type-L-Hyperbel gilt nicht für alle V
 4. Sind Abbildungen, Tabellen und Einschränkungen für dich mündlich erklärbar und fachlich vollständig?
 
 Kein positiver Human Review vorweggenommen; kein Merge, kein Beginn von 14.3 und keine Einreichung.
+
+
+---
+
+## Studentischer Human Review – Originalwortlaut
+
+# HUMAN REVIEW – Exercise 14.2: Overstrain Failure
+
+**Status: SCIENTIFICALLY APPROVED – CI RESOLUTION REQUIRED**
+
+Ich habe die bereitgestellten Grafiken, Ergebnistabellen und die wissenschaftliche Interpretation von Exercise 14.2 geprüft.
+
+## 1. Wissenschaftliche Umsetzung
+
+Die Aufgabenstellung wurde aus meiner Sicht verständlich und fachlich sinnvoll umgesetzt.
+
+Die Untersuchung zeigt, wie Entscheidungsbäume eine bekannte Fehlerregel aus den AI4I-Daten nachbilden und welchen Einfluss die verwendeten Eingangsmerkmale darauf haben.
+
+Besonders sinnvoll finde ich den schrittweisen Vergleich:
+
+- Werkzeugverschleiß und Drehmoment als Ausgangsbasis.
+- Zusätzlich das Produktmerkmal `wearadjTorque`.
+- Zusätzlich die Maschinenvariante `Type`.
+
+Damit wird anschaulich gezeigt, warum Feature Engineering bei Entscheidungsbäumen hilfreich sein kann.
+
+## 2. Prüfung der Grafiken
+
+**Grafik 1 – OSF-Regel nach Type**
+
+Die Trennung nach L, M und H ist verständlich. Die eingezeichneten Hyperbeln machen sichtbar, dass für die drei Varianten unterschiedliche Grenzwerte gelten.
+
+Die 98 OSF-Markierungen verteilen sich auf 87 L-, 9 M- und 2 H-Fälle.
+
+Die Grafik unterstützt die Aussage, dass die dokumentierte Produktregel mit den Markierungen übereinstimmt.
+
+**Grafik 2 – Entscheidungsgrenzen**
+
+Die zunehmende Baumtiefe wird verständlich dargestellt.
+
+Bei geringer Tiefe können die achsenparallelen Entscheidungsgrenzen die gekrümmte Produktregel nur grob annähern.
+
+Mit zunehmender Tiefe entstehen feinere rechteckige Entscheidungsbereiche und die Anpassungsfehler sinken von 98 bei Tiefe 1 auf 21 bei Tiefe 8.
+
+Die schwarze Hyperbel ist korrekt als Referenz für Type L beschriftet. Sie darf nicht als allgemeine Grenze für alle drei Varianten verstanden werden.
+
+**Grafik 3 – Baumstrukturen**
+
+Der Vergleich der drei Bäume ist besonders aussagekräftig.
+
+Der Ausgangsbaum benötigt mehrere aufeinanderfolgende Entscheidungen über Verschleiß und Drehmoment.
+
+Mit dem Produktmerkmal kann der Baum bereits früh eine passende Trennung vornehmen. Die zusätzliche Berücksichtigung von Type ermöglicht eine weitere Annäherung an die ursprüngliche Regel.
+
+Die Baumstrukturen sind ausführlich, aber für diese Aufgabe fachlich sinnvoll.
+
+## 3. Ergebnisse
+
+Die bereitgestellten CSV-Dateien bestätigen für Tiefe 3 folgende Anpassungsfehler:
+
+- Kursbasis: 43 Fehler.
+- Mit Produktmerkmal: 22 Fehler.
+- Mit Produktmerkmal und Type: 2 Fehler.
+
+Für den getrennten TEST-Split ergeben sich:
+
+- Kursbasis: 14 Fehler, F1 = 0,6111.
+- Mit Produktmerkmal: 8 Fehler, F1 = 0,8000.
+- Mit Produktmerkmal und Type: 1 Fehler, F1 = 0,9744.
+
+Die Unterscheidung zwischen Anpassung auf allen Daten und dem getrennten TEST-Ergebnis ist wichtig und im Bericht nachvollziehbar dargestellt.
+
+Der Testvergleich unterstützt die Aussage, dass die erweiterten Merkmale bei dieser konkreten Datenteilung bessere Klassifikationsergebnisse liefern.
+
+Eine allgemeine Überlegenheit ist damit nicht bewiesen.
+
+## 4. Verbleibende Fehler
+
+Die zwei verbleibenden Anpassungsfehler sind nachvollziehbar eingeordnet.
+
+Es handelt sich um die beiden positiven H-Fälle, die der verwendete Baum aufgrund seiner Struktur und der Mindestblattgröße nicht separat erkennt.
+
+Dass zusätzliche Baumtiefe allein keine vollständig fehlerfreie Trennung garantiert, ist eine wichtige und korrekt dargestellte Einschränkung.
+
+Die geringe Anzahl positiver Fälle sollte bei der Interpretation berücksichtigt werden.
+
+## 5. Wissenschaftliche Grenzen
+
+Die wesentlichen Einschränkungen wurden angemessen dokumentiert:
+
+- Seltene OSF-Fälle und starke Klassenungleichheit.
+- Nur eine feste TRAIN-/TEST-Aufteilung.
+- Keine unabhängige Untersuchung weiterer Maschinen.
+- Kein kausaler Nachweis eines realen Ausfallmechanismus.
+- Synthetische und durch eine bekannte Regel definierte Zielvariable.
+- Modellparameter beeinflussen die erlernten Entscheidungsgrenzen.
+
+Ich halte keine zusätzliche Modellstudie für notwendig, sofern sie nicht ausdrücklich verlangt wird.
+
+## 6. Technische Einschränkung
+
+Die lokale Validierung wurde laut Prüfbericht erfolgreich durchgeführt.
+
+Die GitHub-Actions-Läufe sind allerdings wegen eines HTTPS-Zertifikatsproblems beim UCI-Download fehlgeschlagen.
+
+Daher kann ich noch keine vollständige technische Abschlussfreigabe erteilen.
+
+Die SSL-Zertifikatsprüfung darf nicht deaktiviert oder umgangen werden.
+
+Ich empfehle, den bestehenden geprüften Originaldatensatz über eine sichere, reproduzierbare Datenquelle beziehungsweise einen bereits vorhandenen checksumgeprüften Projektbestand für CI bereitzustellen.
+
+Nach der Korrektur müssen die tatsächlichen CI-Prüfungen erneut erfolgreich durchlaufen.
+
+## 7. Abschließende Bewertung
+
+Die wissenschaftliche Umsetzung von Exercise 14.2 ist aus meiner Sicht gelungen.
+
+Die Methode ist verständlich erklärt, die Grafiken zeigen den Nutzen des Feature Engineerings und die Ergebnisse werden ausreichend kritisch interpretiert.
+
+Die vorhandenen wissenschaftlichen Ergebnisse und Grafiken müssen nicht grundlegend verändert werden.
+
+**SCIENTIFICALLY APPROVED.**
+
+**TECHNICAL APPROVAL PENDING SUCCESSFUL CI.**
+
+Mein Originalreview ist unverändert zu erhalten. Technische Präzisierungen sind separat zu dokumentieren.
+
+Ich erteile mit diesem Review keine Merge-Autorisierung.
