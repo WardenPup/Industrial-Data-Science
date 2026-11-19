@@ -28,3 +28,6 @@ sessions/ch12/appliances_regression.ipynb -text
 sessions/ch12/appliances_source.json -text
 sessions/ch12/regression.py -text
 outputs/ch12/exercise_12_4/* -text
+
+sessions/ch14/tool_wear_failure.ipynb -text
+outputs/ch14/exercise_14_1/* -text
