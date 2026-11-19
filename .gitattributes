@@ -31,3 +31,6 @@ outputs/ch12/exercise_12_4/* -text
 
 sessions/ch14/tool_wear_failure.ipynb -text
 outputs/ch14/exercise_14_1/* -text
+
+sessions/ch14/overstrain_failure.ipynb -text
+outputs/ch14/exercise_14_2/* -text

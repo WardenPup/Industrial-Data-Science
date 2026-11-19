@@ -1,0 +1,19 @@
+{
+  "validated_date": "2026-11-19",
+  "status": "AWAITING HUMAN REVIEW",
+  "ai_assistance": "Codex",
+  "raw_sha256": "dc6630cd9b1f0f853922fad78a1b6436570d3f1ec863f1dd5c4340ac56bc8a8e",
+  "sequential_code_cells": 3,
+  "embedded_images": 3,
+  "files": {
+    "sessions/ch14/overstrain_failure.ipynb": "fc95af6d4dd8e0d977ea26698ef355356d00e72ffdacc6e750a185c8aeadba07",
+    "outputs/ch14/exercise_14_2/overstrain_failure.html": "a50c65bb4970e6f373c4c5ef8a72096835551c07fa8def32428d01e2016574b2",
+    "outputs/ch14/exercise_14_2/fitting_comparison.csv": "5f0795fbff9db03cc361d9cf0ed55121504707117ab0d661f7ecfa88793bed7c",
+    "outputs/ch14/exercise_14_2/heldout_comparison.csv": "c93fe609654f3a2721656f9be0b85ea167b4c4400588839b9856733f87fde708",
+    "outputs/ch14/exercise_14_2/01_osf_rule.png": "3e4659618d1a2312d43f056ee8161c6611dc6a5dfa57287dfcafc082668d06b7",
+    "outputs/ch14/exercise_14_2/02_decision_boundaries.png": "f2b4d72eb1a7ea4348f06702244d34043e1cc70a93324624e8651444f26b796b",
+    "outputs/ch14/exercise_14_2/03_tree_structure.png": "add3ffbdcfaed0511febbbc0946f5415b40d70f5cb8333f814bbf99d26b0c3ff",
+    "outputs/ch14/exercise_14_2/summary.json": "c31d2bd37cb8a035734f3a081caa3538488fcc6fde99518fde0d732b57313a72",
+    "outputs/ch14/exercise_14_2/tree_structure.txt": "2c989f655a638bbf415bdd0a57f73987e1d0133a46ced54ab4f770deb203156a"
+  }
+}

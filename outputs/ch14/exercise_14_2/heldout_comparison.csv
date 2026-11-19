@@ -1,0 +1,4 @@
+Merkmale,Tiefe,Fehler,FP,FN,TP,F1
+Kursbasis,3,14,5,9,11,0.6111111111111112
++ Produkt,3,8,4,4,16,0.8
++ Produkt + Type,3,1,0,1,19,0.9743589743589743

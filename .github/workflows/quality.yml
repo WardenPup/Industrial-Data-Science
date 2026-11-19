@@ -16,7 +16,7 @@ concurrency:
 jobs:
   python-and-notebooks:
     # Exercise 14.1 uses the focused job below; legacy exercise checks stay intact.
-    if: github.head_ref != 'exercise/14.1' && github.ref != 'refs/heads/exercise/14.1'
+    if: github.head_ref != 'exercise/14.1' && github.ref != 'refs/heads/exercise/14.1' && github.head_ref != 'exercise/14.2' && github.ref != 'refs/heads/exercise/14.2'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     env:
@@ -129,3 +129,32 @@ jobs:
         run: uv run --locked playwright install --with-deps chromium
       - name: Execute and verify only Exercise 14.1
         run: uv run --locked python scripts/build_exercise_14_1.py --check-html
+
+  overstrain-review:
+    if: github.head_ref == 'exercise/14.2' || github.ref == 'refs/heads/exercise/14.2'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      PLAYWRIGHT_BROWSERS_PATH: ${{ github.workspace }}/.tools/playwright
+      QA_HEAD: ${{ github.event.pull_request.head.sha || github.sha }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version-file: .python-version
+      - name: Install the existing locked environment
+        run: |
+          python -m pip install uv==0.13.5
+          uv sync --locked
+      - name: Check disclosure and focused OSF tests
+        run: |
+          uv run --locked python scripts/check_commit_messages.py --base origin/main --head "$QA_HEAD"
+          uv run --locked python scripts/download_ai4i.py
+          uv run --locked python -m unittest discover -s tests -p test_overstrain.py -v
+      - name: Install offline HTML browser
+        run: uv run --locked playwright install --with-deps chromium
+      - name: Execute and verify only Exercise 14.2
+        run: uv run --locked python scripts/build_exercise_14_2.py --check-html
