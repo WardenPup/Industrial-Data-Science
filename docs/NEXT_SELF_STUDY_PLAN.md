@@ -1,6 +1,6 @@
 # Nächste Self-Study-Aufgaben
 
-Stand/Abruf: **19.11.2026**. Status: **nur analysiert, nichts implementiert**.
+Stand/Abruf: **19.11.2026**. Status: **14.1 technisch umgesetzt – AWAITING HUMAN REVIEW; übrige Übungen nur geplant**.
 Codex: Quellenprüfung, Anforderungsübersicht und Workflowvorschlag. Keine neuen
 studentischen Prüfungen oder Freigaben behauptet; bisherige Lösungen bleiben erhalten.
 
@@ -34,8 +34,8 @@ der Kursseiten. Pflichtartefakte wie Screenshots und Skripte sind separat genann
 
 ### Kapitel 14 – S14, Daten: AI4I 2020
 
-**14.1 — Tool wear failure — NEXT — low**
-- [ ] Die TWF-Beschreibung in 13.1.7 mit den Befunden aus 13.1.6.1/13.1.6.2 vergleichen und den konkreten Widerspruch belegen. Ergebnis: kurze begründete Gegenüberstellung; keine neue Modellstudie verlangt. Voraussetzung: diese Kursbefunde lesen, keine vorangehende neue Übung nötig.
+**14.1 — Tool wear failure — AWAITING HUMAN REVIEW — low**
+- [x] Die TWF-Beschreibung in 13.1.7 mit den Befunden aus 13.1.6.1/13.1.6.2 vergleichen und den konkreten Widerspruch belegen. Ergebnis: kurze begründete Gegenüberstellung; keine neue Modellstudie verlangt. Voraussetzung: diese Kursbefunde lesen, keine vorangehende neue Übung nötig.
 
 **14.2 — Overstrain failure — medium**
 - [ ] OSF-Zusammenhang Torque × Tool wear und Type-abhängige Grenzen 11.000/12.000/13.000 min·Nm visualisieren.
@@ -177,11 +177,13 @@ Keine zusätzlichen Pakete, Accounts oder Simulatorprozesse wurden jetzt angeleg
 6. **Freigabegate:** `AWAITING HUMAN REVIEW` bis zur studentischen Entscheidung;
    technische Erfolge ersetzen sie nicht. Merge erst nach ausdrücklicher Autorisierung.
 
-Dies ist ein **Vorschlag** für kommende Übungen, keine rückwirkende Änderung der
-Historie und noch keine Änderung von AGENTS.md oder CI. Vor seiner Anwendung die
-strengeren bisherigen Prozessdetails in AGENTS.md ausdrücklich damit abstimmen;
-wissenschaftliche Integrität, Originalreviews und das Mergegate bleiben bestehen.
-Heute wurde nur dieser Plan erstellt; kein neuer Exercise-Branch, kein Training,
-kein Simulatorstart, kein Universitätseinreichen und keine Übungsfreigabe.
+Der Nutzer hat den **vereinfachten Ablauf für 14.1 ausdrücklich beauftragt**,
+einschließlich gemeinsamer Anforderungen/Implementierung und separater Validierung.
+Diese aktuellen Vorgaben gelten für 14.1; AGENTS.md und die frühere Historie bleiben
+erhalten. Die CI wurde für 14.1 gezielt begrenzt; Integrität, Originalreviews und
+das ausdrückliche Mergegate bleiben bestehen.
+Ursprüngliche Planung ohne Implementierung; seit dem ausdrücklichen Folgeauftrag
+ist 14.1 technisch bearbeitet. Kein Modelltraining, Simulatorstart, Universitätseinreichen
+oder studentische Übungsfreigabe erfolgt.
 
-**Exakter erster Schritt nach Beauftragung: Exercise 14.1 – Tool wear failure.**
+**Aktuelles Gate: Human Review für Exercise 14.1 – Tool wear failure. 14.2 bleibt unbegonnen.**

@@ -1,0 +1,14 @@
+{
+  "rows": 10000,
+  "columns": 14,
+  "missing_values": 0,
+  "duplicate_rows": 0,
+  "twf_count": 46,
+  "description_claim": 51,
+  "minimum_twf_wear": 198,
+  "maximum_twf_wear": 253,
+  "outside_interval": 3,
+  "at_or_below_200": 2,
+  "twf_with_general_failure": 46,
+  "other_general_failures": 293
+}

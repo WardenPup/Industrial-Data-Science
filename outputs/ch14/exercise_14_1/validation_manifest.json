@@ -1,0 +1,18 @@
+{
+  "validated_date": "2026-11-19",
+  "status": "AWAITING HUMAN REVIEW",
+  "ai_assistance": "Codex",
+  "raw_sha256": "dc6630cd9b1f0f853922fad78a1b6436570d3f1ec863f1dd5c4340ac56bc8a8e",
+  "sequential_code_cells": 3,
+  "embedded_images": 1,
+  "files": {
+    "sessions/ch14/tool_wear_failure.ipynb": "f9b63ce6be22063adeed8b98261883c46b2e5b65481aab22e3d1d767db59e7db",
+    "outputs/ch14/exercise_14_1/tool_wear_failure.html": "9505256eaca2120f9361b015d5096641ffc247c0d07505635eeedb7bfae541a2",
+    "outputs/ch14/exercise_14_1/data_quality.csv": "7732b76b499a1894ea0e3e3483921cec1e4c45153482136522176be71a1c5bfa",
+    "outputs/ch14/exercise_14_1/threshold_comparison.csv": "de0fdd71f527a73b87a83caff1b2ca96b0514e7c9c6d544349926d03c997c637",
+    "outputs/ch14/exercise_14_1/twf_outside_interval.csv": "98e1bb0415055413b865d5e0dd16d77799b2f4e07316b9d16bf29499d032c436",
+    "outputs/ch14/exercise_14_1/wear_bands.csv": "a5476c851f6dd98b6d241ad60ec5580756579b968e9ab73c3dc5896cc6d52d05",
+    "outputs/ch14/exercise_14_1/summary.json": "738374a4e5bd8a136a39ab780d9979a2efe1e448142e66f3451d141bc26ec11f",
+    "outputs/ch14/exercise_14_1/01_twf_wear.png": "bafc3d38d6857f71317d3e14ba776fa0fc421919b2298d3cb541f2b47595b42f"
+  }
+}
