@@ -1,0 +1,14 @@
+<!doctype html><html lang="de"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>14.4 – Parallelkoordinaten</title>
+<style>body{font:15px Arial;margin:16px;color:#202020}select,button{font:inherit;padding:5px}#scroll{overflow-x:auto;max-width:100%}#chart{width:1400px;height:610px}#status{min-height:2.5em}p{line-height:1.4}</style>
+<h2>AI4I: Merkmale und Fehlermarkierungen</h2>
+<label>Fehlerflag: <select id="target">__OPTIONS__</select></label> <button id="reset">Auswahl zurücksetzen</button>
+<p>Achsentitel ziehen zum Umordnen. Auf einer Achse einen Bereich ziehen zum Filtern; mehrere Achsen kombinieren. Type bestimmt die Linienfarbe. Flag 0 bedeutet nur „dieser Fehler nicht markiert“. Machine failure ist der allgemeine Fehler.</p>
+<div id="scroll"><div id="chart"></div></div><p id="status" role="status"></p>
+<script>__PLOTLY_JS__</script><script>
+const spec=__FIGURE__, flags=__FLAGS__, chart=document.getElementById('chart'), choice=document.getElementById('target');
+function selectedRows(){let dims=chart.data[0].dimensions;return Array.from({length:10000},(_,i)=>i).filter(i=>dims.every(d=>{if(!d.constraintrange||!d.constraintrange.length)return true;let rs=Array.isArray(d.constraintrange[0])?d.constraintrange:[d.constraintrange];return rs.some(r=>d.values[i]>=Math.min(...r)&&d.values[i]<=Math.max(...r));}));}
+function report(){let ids=selectedRows(),types={L:0,M:0,H:0},d=chart.data[0].dimensions.find(d=>d.name==='Type');ids.forEach(i=>types[['L','M','H'][d.values[i]]]++);let pos=ids.filter(i=>flags[choice.value][i]===1).length;document.getElementById('status').textContent=`Ausgewählt: ${ids.length} / 10000; ${choice.value}=1: ${pos}; Type L/M/H: ${types.L}/${types.M}/${types.H}. Keine Ausfallwahrscheinlichkeit.`;window.selectionReport={rows:ids.length,positive:pos,types};}
+Plotly.newPlot(chart,spec.data,spec.layout,{displayModeBar:false,responsive:false}).then(()=>{chart.on('plotly_restyle',report);report();window.chartReady=true;});
+choice.addEventListener('change',()=>{let dims=chart.data[0].dimensions.map(d=>{let result={...d};delete result.constraintrange;if(d.name==='failure'){result.values=flags[choice.value];result.label=choice.value;}return result;});Plotly.restyle(chart,{dimensions:[dims]}).then(report);});
+document.getElementById('reset').addEventListener('click',()=>{let dims=chart.data[0].dimensions.map(d=>{let r={...d};delete r.constraintrange;return r;});Plotly.restyle(chart,{dimensions:[dims]}).then(report);});
+</script></html>
