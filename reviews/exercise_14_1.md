@@ -65,3 +65,76 @@ aus dem Kurs und wird hier nicht gelernt. Keine unabhängige studentische Ausfü
    diesen Daten nicht belegen lassen?
 
 Kein Merge, keine wissenschaftliche Freigabe, kein Beginn von 14.2, keine Einreichung.
+
+
+---
+
+## Studentischer Human Review – Originalwortlaut aus dem Nutzerauftrag
+
+# Human Review – Exercise 14.1: Tool Wear Failure
+
+**Bewertung: SCIENTIFICALLY APPROVED**
+
+Ich habe die Ergebnisse, die Darstellung und die Interpretation von Exercise 14.1 fachlich geprüft.
+
+## 1. Aufgabenverständnis und Vorgehensweise
+
+Die Aufgabe wurde nachvollziehbar umgesetzt. Ziel war es, die Beschreibung des Werkzeugverschleißfehlers (TWF) mit den tatsächlich vorhandenen Daten zu vergleichen.
+
+Die Entscheidung für eine deskriptive Analyse ohne zusätzliches Machine-Learning-Modell halte ich für richtig. Für diese Fragestellung reichen die Auswertung der vorhandenen Fehlermarkierungen, einfache Häufigkeitsvergleiche und eine passende Grafik aus.
+
+## 2. Ergebnisse
+
+Die wichtigsten Ergebnisse sind nachvollziehbar:
+
+- Der Datensatz enthält 10.000 Beobachtungen mit insgesamt 46 TWF-Markierungen. Das weicht von den 51 Fällen in der Beschreibung ab.
+- Von den 46 markierten Fällen liegen 43 im beschriebenen Bereich zwischen 200 und 240 Minuten.
+- Drei Fälle liegen außerhalb dieses Bereichs, und zwar bei 198, 246 und 253 Minuten.
+- Bei einem Werkzeugverschleiß bis einschließlich 202,5 Minuten sind 2 von 9.328 Fällen als TWF markiert. Oberhalb dieser Grenze sind es 44 von 672.
+
+Damit wird deutlich, dass TWF-Markierungen vor allem bei höheren Verschleißwerten auftreten. Gleichzeitig zeigen die Ergebnisse, dass der beschriebene Bereich keine ausnahmslos gültige Grenze darstellt.
+
+Wichtig finde ich außerdem die Unterscheidung zwischen TWF und dem allgemeinen Maschinenfehler. Ein fehlendes TWF-Flag bedeutet nicht automatisch, dass die Maschine fehlerfrei war.
+
+## 3. Bewertung der Grafik
+
+Das Histogramm ist übersichtlich und für die Aufgabe passend.
+
+Die grüne Markierung macht den beschriebenen Bereich von 200 bis 240 Minuten direkt erkennbar. Gleichzeitig fallen die drei außerhalb liegenden TWF-Werte auf.
+
+Die Darstellung unterstützt damit die zentrale Aussage der Untersuchung.
+
+Wichtig ist nur, dass die Balkenhöhen die Anzahl der TWF-Markierungen darstellen und keine Ausfallwahrscheinlichkeit. Diese Unterscheidung wurde in der Ausarbeitung berücksichtigt.
+
+## 4. Wissenschaftliche Interpretation
+
+Die Interpretation halte ich für angemessen und ausreichend vorsichtig.
+
+Besonders wichtig ist, dass die Abweichung zwischen 46 und 51 Fällen nicht einfach als Datenfehler bezeichnet wird. Die tatsächliche Ursache lässt sich mit den vorhandenen Informationen nicht feststellen.
+
+Auch die beschriebenen 69 Werkzeugwechsel können ohne eine entsprechende Markierung im Datensatz nicht unabhängig überprüft werden.
+
+Der Zusammenhang zwischen höherem Verschleiß und häufiger auftretenden TWF-Markierungen wird nachvollziehbar beschrieben, ohne daraus einen sicheren oder kausalen Ausfallmechanismus abzuleiten.
+
+## 5. Grenzen
+
+Die wissenschaftlichen Grenzen sind ausreichend dokumentiert:
+
+- Es handelt sich um einen synthetischen Datensatz.
+- Die dokumentierte Fehlerbeschreibung stimmt nicht vollständig mit den vorhandenen Markierungen überein.
+- Die tatsächlichen Werkzeugwechsel sind nicht separat beobachtbar.
+- Aus dem Verschleißwert allein lässt sich kein sicherer Werkzeugausfall bestimmen.
+
+Weitere Modelle oder statistische Untersuchungen halte ich für Exercise 14.1 nicht für notwendig.
+
+## 6. Abschließende Bewertung
+
+Die Aufgabenstellung wurde aus meiner Sicht vollständig und verständlich bearbeitet.
+
+Die Auswertung ist kompakt, die Grafik sinnvoll und die Interpretation nachvollziehbar. Besonders positiv finde ich, dass Widersprüche zur Beschreibung offengelegt und nicht durch unbegründete Annahmen aufgelöst werden.
+
+Ich sehe keinen fachlichen Korrekturbedarf.
+
+**Finale wissenschaftliche Bewertung: APPROVED.**
+
+Die technische Abschlussprüfung und die finale Merge-Freigabe bleiben separate Schritte.
