@@ -77,6 +77,8 @@ def check():
             page.mouse.move(rect["x"]+5,rect["y"]+12);page.mouse.down();page.mouse.move(rect["x"]+5,rect["y"]+65,steps=3);page.mouse.up()
             page.wait_for_function("window.selectionReport.rows==="+str(expected[target]))
             results.append({"width":1500,"action":"standalone brush with reordered axes","target":target,"order":page.evaluate("chart.data[0].dimensions.map(d=>d.name)"),**page.evaluate("window.selectionReport")})
+            # WebGL lines render progressively; let the completed filter settle before the review image.
+            page.wait_for_timeout(2000)
             page.screenshot(path=str(OUTPUT/filename),full_page=True)
         page.close();browser.close()
     (OUTPUT/"interaction_checks.json").write_text(json.dumps(results,indent=2)+"\n",encoding="utf-8")

@@ -1,0 +1,240 @@
+[
+  {
+    "width": 900,
+    "action": "dropdown and pointer brush",
+    "target": "Machine failure",
+    "rows": 339,
+    "positive": 339,
+    "types": {
+      "L": 235,
+      "M": 83,
+      "H": 21
+    }
+  },
+  {
+    "width": 900,
+    "action": "dropdown and pointer brush",
+    "target": "TWF",
+    "rows": 46,
+    "positive": 46,
+    "types": {
+      "L": 25,
+      "M": 14,
+      "H": 7
+    }
+  },
+  {
+    "width": 900,
+    "action": "dropdown and pointer brush",
+    "target": "HDF",
+    "rows": 115,
+    "positive": 115,
+    "types": {
+      "L": 76,
+      "M": 31,
+      "H": 8
+    }
+  },
+  {
+    "width": 900,
+    "action": "dropdown and pointer brush",
+    "target": "PWF",
+    "rows": 95,
+    "positive": 95,
+    "types": {
+      "L": 59,
+      "M": 31,
+      "H": 5
+    }
+  },
+  {
+    "width": 900,
+    "action": "dropdown and pointer brush",
+    "target": "OSF",
+    "rows": 98,
+    "positive": 98,
+    "types": {
+      "L": 87,
+      "M": 9,
+      "H": 2
+    }
+  },
+  {
+    "width": 900,
+    "action": "dropdown and pointer brush",
+    "target": "RNF",
+    "rows": 19,
+    "positive": 19,
+    "types": {
+      "L": 13,
+      "M": 2,
+      "H": 4
+    }
+  },
+  {
+    "width": 900,
+    "action": "pointer reorder HDF after temp_diff and brush",
+    "order": [
+      "Air temperature [K]",
+      "Process temperature [K]",
+      "Rotational speed [rpm]",
+      "Torque [Nm]",
+      "Tool wear [min]",
+      "temp_diff",
+      "failure",
+      "power",
+      "wearadjTorque",
+      "Type"
+    ],
+    "rows": 115,
+    "positive": 115,
+    "types": {
+      "L": 76,
+      "M": 31,
+      "H": 8
+    }
+  },
+  {
+    "width": 1400,
+    "action": "dropdown and pointer brush",
+    "target": "Machine failure",
+    "rows": 339,
+    "positive": 339,
+    "types": {
+      "L": 235,
+      "M": 83,
+      "H": 21
+    }
+  },
+  {
+    "width": 1400,
+    "action": "dropdown and pointer brush",
+    "target": "TWF",
+    "rows": 46,
+    "positive": 46,
+    "types": {
+      "L": 25,
+      "M": 14,
+      "H": 7
+    }
+  },
+  {
+    "width": 1400,
+    "action": "dropdown and pointer brush",
+    "target": "HDF",
+    "rows": 115,
+    "positive": 115,
+    "types": {
+      "L": 76,
+      "M": 31,
+      "H": 8
+    }
+  },
+  {
+    "width": 1400,
+    "action": "dropdown and pointer brush",
+    "target": "PWF",
+    "rows": 95,
+    "positive": 95,
+    "types": {
+      "L": 59,
+      "M": 31,
+      "H": 5
+    }
+  },
+  {
+    "width": 1400,
+    "action": "dropdown and pointer brush",
+    "target": "OSF",
+    "rows": 98,
+    "positive": 98,
+    "types": {
+      "L": 87,
+      "M": 9,
+      "H": 2
+    }
+  },
+  {
+    "width": 1400,
+    "action": "dropdown and pointer brush",
+    "target": "RNF",
+    "rows": 19,
+    "positive": 19,
+    "types": {
+      "L": 13,
+      "M": 2,
+      "H": 4
+    }
+  },
+  {
+    "width": 1400,
+    "action": "pointer reorder HDF after temp_diff and brush",
+    "order": [
+      "Air temperature [K]",
+      "Process temperature [K]",
+      "Rotational speed [rpm]",
+      "Torque [Nm]",
+      "Tool wear [min]",
+      "temp_diff",
+      "failure",
+      "power",
+      "wearadjTorque",
+      "Type"
+    ],
+    "rows": 115,
+    "positive": 115,
+    "types": {
+      "L": 76,
+      "M": 31,
+      "H": 8
+    }
+  },
+  {
+    "width": 1500,
+    "action": "standalone brush with reordered axes",
+    "target": "HDF",
+    "order": [
+      "Air temperature [K]",
+      "Process temperature [K]",
+      "Torque [Nm]",
+      "Tool wear [min]",
+      "Rotational speed [rpm]",
+      "temp_diff",
+      "power",
+      "wearadjTorque",
+      "Type",
+      "failure"
+    ],
+    "rows": 115,
+    "positive": 115,
+    "types": {
+      "L": 76,
+      "M": 31,
+      "H": 8
+    }
+  },
+  {
+    "width": 1500,
+    "action": "standalone brush with reordered axes",
+    "target": "PWF",
+    "order": [
+      "Air temperature [K]",
+      "Process temperature [K]",
+      "Torque [Nm]",
+      "Tool wear [min]",
+      "Rotational speed [rpm]",
+      "temp_diff",
+      "power",
+      "wearadjTorque",
+      "Type",
+      "failure"
+    ],
+    "rows": 95,
+    "positive": 95,
+    "types": {
+      "L": 59,
+      "M": 31,
+      "H": 5
+    }
+  }
+]

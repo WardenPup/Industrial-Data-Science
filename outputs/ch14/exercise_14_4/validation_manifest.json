@@ -1,0 +1,17 @@
+{
+  "validated_date": "2026-11-19",
+  "status": "AWAITING HUMAN REVIEW",
+  "ai_assistance": "Codex",
+  "raw_sha256": "dc6630cd9b1f0f853922fad78a1b6436570d3f1ec863f1dd5c4340ac56bc8a8e",
+  "sequential_code_cells": 3,
+  "files": {
+    "sessions/ch14/parallel_coordinates.ipynb": "751282e87a8fcd9a9154bc741110c80571ccbf2798bc1f13bf246ec7f2d7f9da",
+    "outputs/ch14/exercise_14_4/parallel_coordinates_notebook.html": "ab03c39622d63d2e7c21bb8f51de2fa8fc8a79277daabaea46748477bb243768",
+    "outputs/ch14/exercise_14_4/parallel_coordinates.html": "4a39c50f513460c8a926d979d53a5be43655880024fa49bb27045da539e64ddf",
+    "outputs/ch14/exercise_14_4/failure_counts.csv": "e2e38f34f70e58932f19b29051de9598a3a5ae0a1f0d27d19ca36d00559460aa",
+    "outputs/ch14/exercise_14_4/summary.json": "dd8321ecfaa5bf1a857a6e25557aa18311b1a380ce3d0d55654edf768b295730",
+    "outputs/ch14/exercise_14_4/interaction_checks.json": "1d8b608163ef542b829dc82bb9018d17f38cbc96c064d5c583dc40a352c4e6af",
+    "outputs/ch14/exercise_14_4/01_hdf_brushed.png": "7a4ea6fe6db17664b12bfbe2f2e39fb81aa09f96c276dc80cc55ade547091745",
+    "outputs/ch14/exercise_14_4/02_pwf_brushed.png": "ce3f2174a309565cc0628dde61b604e2a2c317652274376db7b7842e962acbcb"
+  }
+}

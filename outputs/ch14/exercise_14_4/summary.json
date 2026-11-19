@@ -1,0 +1,28 @@
+{
+  "rows": 10000,
+  "continuous": [
+    "Air temperature [K]",
+    "Process temperature [K]",
+    "Rotational speed [rpm]",
+    "Torque [Nm]",
+    "Tool wear [min]",
+    "temp_diff",
+    "power",
+    "wearadjTorque"
+  ],
+  "failure_counts": {
+    "Machine failure": 339,
+    "TWF": 46,
+    "HDF": 115,
+    "PWF": 95,
+    "OSF": 98,
+    "RNF": 19
+  },
+  "twf_wear_range": [
+    198,
+    253
+  ],
+  "hdf_max_temp_diff": 8.599999999999966,
+  "hdf_max_speed": 1379,
+  "pwf_inside_3500_9000": 0
+}
