@@ -1,3 +1,29 @@
+## 19.11.2026 – Exercise 14.1: positiver Human Review nachgeprüft
+
+**SCIENTIFICALLY APPROVED – TECHNICALLY VALIDATED – AWAITING FINAL MERGE AUTHORIZATION**.
+Originaler studentischer Review unverändert separat in `086ba13` gesichert.
+Drei gezielte Tests erneut bestanden (0,063 s), drei frische sequenzielle Codezellen,
+Histogramm und HTML offline bei 900/1400 px geprüft. Alle Reviewzahlen bestätigt:
+46 TWF, 43 innerhalb 200–240 min, drei außerhalb (198/246/253), 2/9328 und 44/672
+bei 202,5 min. Acht Manifesthashes und 21 Archive stimmen; wissenschaftliche
+Ergebnisdateien unverändert. Keine Korrekturen außer Status-/Prüfdokumentation.
+Bekannte lokale Jupyter-TCP-Warnung ohne Ausführungsfehler. Aktuelle Head-CI und
+Ready-Status werden im PR #14 nach erfolgreichem Abschluss belegt. Kein Merge,
+kein Beginn von 14.2, keine Einreichung; frühere Einträge sind historische Stände.
+
+## 19.11.2026 – Exercise 14.1 technisch geprüft
+
+Status: AWAITING HUMAN REVIEW. Kompakter TWF-Beschreibungsabgleich, keine Modelle
+oder Folgeaufgaben. 46 statt beschriebener 51 TWF-Markierungen, drei außerhalb
+200–240 min (198/246/253); Kurszählung 2/9328 und 44/672 bei 202,5 min bestätigt.
+Drei fokussierte Tests bestanden (0,149 s), drei frische sequenzielle Codezellen,
+eine Grafik visuell und HTML offline 900/1400 px geprüft. Rohdaten und acht
+Manifesthashes bestätigt; frühere Lösungen/Reviews und 21 Archive unverändert.
+Nutzerauftrag autorisiert den schlanken Ablauf mit zwei echten Entwicklungscommits;
+keine Änderung der bisherigen Reviewhistorie. Neue fokussierte CI nur für exercise/14.1,
+Legacy-CI anderer Branches unverändert. Draft-PR/Head-CI werden nach Push geprüft.
+Human Review/Freigabe ausstehend; kein Merge, kein Beginn von 14.2 oder Upload.
+
 ## 26.10.2026 – 12.4: finaler Prüfzeitpunkt korrigiert
 
 Wissenschaftlich APPROVED, finale Merge-Autorisierung vorhanden; Merge bleibt bis
