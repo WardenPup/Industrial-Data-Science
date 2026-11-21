@@ -1,0 +1,5 @@
+ID,Cutting speed vc [m/min],Spindle speed n [1/min],Feed f [mm/rev],Feed rate vf [mm/min],Power Pc [kW],Cooling [%],Material,Drill Bit Type,Process Time [sec],Main Failure,BEF,CCF,FWF,WDF
+3152,22.62,600,0.186,111,95.0,50,P,N,35.68,0,0,0,0,0
+6070,17.14,455,0.247,112,72.59,50,K,H,32.62,0,0,0,0,0
+7196,22.62,600,0.186,111,95.0,50,P,N,35.68,0,0,0,0,0
+18565,17.14,455,0.247,112,72.59,50,K,H,32.62,0,0,0,0,0

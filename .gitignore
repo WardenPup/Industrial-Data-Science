@@ -49,3 +49,6 @@ data/processed/*
 
 # Checksum-pinned CC BY 4.0 source snapshot for reproducible offline CI.
 !data/raw/ai4i2020.csv
+
+!data/raw/XAI_Drilling_Dataset.csv
+!data/raw/XAI_DRILLING_SOURCE.md
