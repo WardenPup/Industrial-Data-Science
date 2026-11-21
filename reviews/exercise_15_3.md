@@ -80,8 +80,14 @@ Bewertung: BESTANDEN.
 
 Bewertung: BESTANDEN.
 
-GESAMTENTSCHEIDUNG:SCIENTIFICALLY APPROVED.
+GESAMTENTSCHEIDUNG:\
+SCIENTIFICALLY APPROVED.
 
 Keine zusätzlichen wissenschaftlichen Analysen erforderlich.
 
 Die technische Prüfung erfolgte anhand der bereitgestellten Interaktionsprotokolle und Grafiken. Es wurde keine unabhängige vollständige Browserprüfung im Rahmen des Human Reviews durchgeführt.
+
+
+## Codex-Abschlussabgleich – 21.11.2026
+
+Originalreview getrennt erhalten; beim Übertragen entstandenen Zeilenumbruch bei der Gesamtentscheidung originalgetreu wiederhergestellt. Neun Artefakthashes und 21 Abgabearchive erneut abgeglichen, unverändert. Bisherige frische Ausführung und Interaktionsprotokolle erhalten; keine zusätzlichen wissenschaftlichen Analysen. Aktuelle Head-CI wird vor dem Merge abgewartet. Kaggle-Registrierung bleibt offen. Student hat regulären Merge nach erfolgreicher Prüfung ausdrücklich autorisiert.
