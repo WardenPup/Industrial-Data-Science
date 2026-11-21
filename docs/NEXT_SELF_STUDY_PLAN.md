@@ -1,6 +1,6 @@
 # Nächste Self-Study-Aufgaben
 
-Stand/Abruf: **19.11.2026**. Status: **14.1 APPROVED und integriert; 14.2 APPROVED und integriert; 14.3 APPROVED und integriert; 14.4 APPROVED und integriert; 15.1 AWAITING HUMAN REVIEW, Registrierung offen; übrige Übungen nur geplant**.
+Stand/Abruf: **19.11.2026**. Status: **14.1 APPROVED und integriert; 14.2 APPROVED und integriert; 14.3 APPROVED und integriert; 14.4 APPROVED und integriert; 15.1 wissenschaftlich freigegeben und integriert, Registrierung offen; 15.2 AWAITING HUMAN REVIEW; übrige Übungen nur geplant**.
 Codex: Quellenprüfung, Anforderungsübersicht und Workflowvorschlag. Keine neuen
 studentischen Prüfungen oder Freigaben behauptet; bisherige Lösungen bleiben erhalten.
 
@@ -49,11 +49,11 @@ der Kursseiten. Pflichtartefakte wie Screenshots und Skripte sind separat genann
 
 ### Kapitel 15 – S15, Daten: XAI Drilling
 
-**15.1 — Register and download the dataset — AWAITING HUMAN REVIEW; Registrierung offen — low**
+**15.1 — Register and download the dataset — SCIENTIFICALLY APPROVED, integriert; Registrierung offen — low**
 - [ ] Kaggle registrieren/Zugang klären, Beschreibung lesen, Daten laden; Form, Typen, Probleme, Ziele und Klassenhäufigkeiten prüfen. Hauptflag gegen Vereinigung der Untergruppen sowie Mehrfachfehler prüfen und Umgang erläutern. Ergebnis: Daten-/Labelprüfung technisch durchgeführt (20.000 × 15, 0 Labelwidersprüche, 114 Mehrfachfehler). **Registrierung bleibt offen: Student hat noch kein Konto.** Öffentlicher Download möglich; keine Zugangsdaten im Repository.
 
-**15.2 — Explore the dataset — medium**
-- [ ] Nach 15.1 Merkmale je Fehlertyp statistisch und mit mindestens zwei geeigneten Grafiken untersuchen; Befunde/Schwellen notieren und mit „Subgroup failures“ vergleichen. Bereits gelesene Beschreibung nicht als ungelesen ausgeben; explorative Betrachtung und anschließenden Vergleich transparent trennen.
+**15.2 — Explore the dataset — AWAITING HUMAN REVIEW — medium**
+- [x] Nach 15.1 Merkmale je Fehlertyp statistisch und mit mindestens zwei geeigneten Grafiken untersuchen; Befunde/Schwellen notieren und mit „Subgroup failures“ vergleichen. Bereits gelesene Beschreibung nicht als ungelesen ausgeben; explorative Betrachtung und anschließenden Vergleich transparent trennen.
 
 **15.3 — Visualize failure patterns with plotly — medium**
 - [ ] Auf Daten aus 15.1 aufbauen: Parallelkoordinaten, Dropdown nach Fehlertyp, Brushing je Fehlertyp; ungefähre Schwellen und neue Muster/Anomalien festhalten. Ergebnis: interaktive Darstellung mit kurzen Befunden, Schwellen für 15.4; 15.2 als Vergleich.
