@@ -1,13 +1,13 @@
 {
   "validated_date": "2026-11-21",
-  "status": "AWAITING HUMAN REVIEW",
+  "status": "SCIENTIFICALLY APPROVED \u2013 TECHNICALLY VALIDATED \u2013 FORMAL REGISTRATION PENDING",
   "ai_assistance": "Codex",
   "raw_sha256": "e1dcc45f8821f7b96d923a253374150d5013cead40bc08b4bef33033aef0ab83",
   "sequential_code_cells": 3,
   "embedded_images": 2,
   "files": {
-    "sessions/ch15/exploration.ipynb": "ba651004c528df24584206a8743f2f858d12c87f1d2fe86ac8f006ef93ab0792",
-    "outputs/ch15/exercise_15_2/exploration.html": "be0ecd830e3078a349aafdabe8aa8c2f7fcfbe0ffc9e5f7e1a1fedf8459a89bb",
+    "sessions/ch15/exploration.ipynb": "8cb287a151bd3ae9c5812f7fb03df59adce445a358ce33004950b2e7ef175326",
+    "outputs/ch15/exercise_15_2/exploration.html": "0b9f364cb7f596a73447f2a05cf42183b5e6803df22bf703fae3b19024cf269c",
     "outputs/ch15/exercise_15_2/categorical_summary.csv": "3c929e2b27d8e75a13550e7783bbd6436b55c6a5cffa868a9b60a3cacdc46b01",
     "outputs/ch15/exercise_15_2/fwf_material_summary.csv": "219a2a7fb7d4eb9b66f96277d3bd41fab1bc100a1cd6b96cb733d5158a742bba",
     "outputs/ch15/exercise_15_2/identifier_check.csv": "84ac37c307d81f952594121fefe42d2dd05b34e07268701289878b44060c7d49",

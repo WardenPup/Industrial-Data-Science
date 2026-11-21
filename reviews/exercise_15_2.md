@@ -111,3 +111,23 @@ Keine zusätzlichen wissenschaftlichen Analysen erforderlich.
 Die aus Exercise 15.1 weiterhin offene Kaggle-Registrierung bleibt dokumentiert.
 
 Keine Universitätseinreichung.
+
+
+---
+
+## Codex-Abschlussprüfung / autorisierter Merge – 21.11.2026
+
+Originalreview vollständig und wortgetreu in 32f2342 gesichert. Wissenschaftlich
+SCIENTIFICALLY APPROVED; keine zusätzlichen studentischen Tests erfunden.
+Drei bestehende Tests erneut bestanden (0,522 s), drei frische sequenzielle Codezellen,
+HTML offline 900/1400 px und beide eingebetteten PNGs geprüft. Alle 56 numerischen
+und 48 kategorialen Ergebniszeilen erneut aus Originaldaten abgeglichen. Elf
+Manifesthashes bestätigt; wissenschaftliche CSV/JSON und beide PNGs bytegleich
+mit 3334424. 21 Abgabearchive unverändert. Keine neuen Analysen oder wissenschaftlichen
+Änderungen; nur Status und Prüfdokumentation. Bekannte lokale Jupyter-TCP-Warnung
+ohne Zellfehler. Registrierung aus 15.1 bleibt ausdrücklich formal offen.
+
+Der aktuelle Nutzerauftrag autorisiert den regulären Merge von PR #19 nach beiden
+erfolgreichen aktuellen Head-CI-Läufen, Konflikt-/Kommentarprüfung und Erhalt aller
+Reviews. Kein Merge in diesem Eintrag vorweggenommen; tatsächlicher SHA folgt im
+Projektstatus. Keine Einreichung; 15.3 erst nach erfolgreichem Merge implementieren.
