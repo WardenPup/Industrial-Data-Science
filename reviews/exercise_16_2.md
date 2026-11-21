@@ -117,3 +117,65 @@ nur Markdown neu exportiert, danach Offline-HTML 900/1400 px erneut geprüft.
 Keine neue Trainingsexekution für die reine Textergänzung behauptet.
 Zusätzliche Reviewfrage innerhalb Frage 4: Ist die Unterscheidung zwischen lokaler
 Wiederholbarkeit und beobachteter Plattformstreuung ausreichend deutlich?
+
+
+## Studentischer Originalreview – 21.11.2026
+
+HUMAN REVIEW – EXERCISE 16.2
+
+Status: SCIENTIFICALLY APPROVED
+
+1. CNN-Architektur und Methode
+
+Das 2D-CNN entspricht der offiziellen Vorgabe. Zwei Faltungs-/Pooling-Blöcke verarbeiten die Wärmebilder und erzeugen anschließend 64 Merkmale für die Klassifikation.
+
+Dropout, Trainingsmodus und Auswertungsmodus sind korrekt berücksichtigt.
+
+Bewertung: BESTANDEN.
+
+2. Modellergebnisse
+
+Die lokale TEST-Accuracy beträgt 0,72 (72 von 100 korrekt).
+
+Das Thermal-CNN erkennt zehn der 15 Critical-Fälle. Fünf Critical-Fälle werden als Warning klassifiziert.
+
+Vier tatsächliche Warning-Fälle werden fälschlich als Critical eingestuft.
+
+Die Confusion-Matrix ist korrekt und verständlich interpretiert.
+
+Bewertung: BESTANDEN.
+
+3. Thermal-Level-Analyse
+
+Alle zehn Fälle mit Thermal-Level 2 werden korrekt als Critical erkannt.
+
+Thermal-Level 0 und 1 erlauben keine vollständige Bestimmung des Gesundheitszustands, weil zusätzlich das Vibrationslevel relevant ist.
+
+Die Grenzen einer einzelnen Sensormodalität werden nachvollziehbar erklärt.
+
+Bewertung: BESTANDEN.
+
+4. Vorverarbeitung, Vergleich und wissenschaftliche Grenzen
+
+Der ursprüngliche TRAIN-/TEST-Split und die TRAIN-only-Standardisierung wurden beibehalten.
+
+Das Thermal-CNN verbessert die lokale Accuracy gegenüber dem Vibrationsmodell von 0,58 auf 0,72, also um 14 Prozentpunkte.
+
+Diese Differenz ist ein Ergebnis des vorliegenden Splits und kein statistischer Nachweis allgemeiner Überlegenheit.
+
+Die Abweichungen zwischen CI-Runnern (Thermal-Accuracy 0,70 beziehungsweise 0,73) sind transparent dokumentiert.
+
+Die identische Wiederholbarkeit innerhalb derselben Umgebung wurde bestätigt; plattformübergreifende Bitgleichheit wird nicht behauptet.
+
+Bewertung: BESTANDEN.
+
+GESAMTENTSCHEIDUNG:\
+SCIENTIFICALLY APPROVED.
+
+Zusätzlicher Human Review:\
+Die acht hochgeladenen Ergebnisartefakte wurden erfolgreich anhand der Manifestprüfsummen kontrolliert. Die 100 Einzelvorhersagen, Argmax-Werte, TEST-Indizes und Confusion-Matrix wurden unabhängig rechnerisch abgeglichen.
+
+Die vollständige Notebook- und Browserausführung wurde im Human Review nicht unabhängig wiederholt.
+
+Keine weitere Modelloptimierung erforderlich.\
+Keine Universitätseinreichung.
