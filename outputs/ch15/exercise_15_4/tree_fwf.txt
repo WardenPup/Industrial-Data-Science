@@ -1,0 +1,16 @@
+|--- numeric__Feed rate vf [mm/min] <= 215.500
+|   |--- numeric__Feed rate vf [mm/min] <= 207.500
+|   |   |--- numeric__Feed rate vf [mm/min] <= 205.500
+|   |   |   |--- class: 0
+|   |   |--- numeric__Feed rate vf [mm/min] >  205.500
+|   |   |   |--- class: 0
+|   |--- numeric__Feed rate vf [mm/min] >  207.500
+|   |   |--- numeric__Cutting speed vc [m/min] <= 29.730
+|   |   |   |--- class: 1
+|   |   |--- numeric__Cutting speed vc [m/min] >  29.730
+|   |   |   |--- class: 0
+|--- numeric__Feed rate vf [mm/min] >  215.500
+|   |--- numeric__Spindle speed n [1/min] <= 790.500
+|   |   |--- class: 1
+|   |--- numeric__Spindle speed n [1/min] >  790.500
+|   |   |--- class: 0

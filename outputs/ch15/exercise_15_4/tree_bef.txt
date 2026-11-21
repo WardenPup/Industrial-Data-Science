@@ -1,0 +1,13 @@
+|--- numeric__Cutting speed vc [m/min] <= 16.695
+|   |--- class: 1
+|--- numeric__Cutting speed vc [m/min] >  16.695
+|   |--- numeric__Feed f [mm/rev] <= 0.138
+|   |   |--- numeric__Cutting speed vc [m/min] <= 22.000
+|   |   |   |--- class: 1
+|   |   |--- numeric__Cutting speed vc [m/min] >  22.000
+|   |   |   |--- class: 0
+|   |--- numeric__Feed f [mm/rev] >  0.138
+|   |   |--- numeric__Feed f [mm/rev] <= 0.148
+|   |   |   |--- class: 0
+|   |   |--- numeric__Feed f [mm/rev] >  0.148
+|   |   |   |--- class: 0

@@ -1,0 +1,22 @@
+|--- numeric__Cooling [%] <= 37.500
+|   |--- numeric__Feed rate vf [mm/min] <= 124.500
+|   |   |--- category__Drill Bit Type_W <= 0.500
+|   |   |   |--- class: 0
+|   |   |--- category__Drill Bit Type_W >  0.500
+|   |   |   |--- class: 1
+|   |--- numeric__Feed rate vf [mm/min] >  124.500
+|   |   |--- numeric__Power Pc [kW] <= 63.905
+|   |   |   |--- class: 0
+|   |   |--- numeric__Power Pc [kW] >  63.905
+|   |   |   |--- class: 1
+|--- numeric__Cooling [%] >  37.500
+|   |--- numeric__Feed rate vf [mm/min] <= 205.500
+|   |   |--- numeric__Feed f [mm/rev] <= 0.278
+|   |   |   |--- class: 0
+|   |   |--- numeric__Feed f [mm/rev] >  0.278
+|   |   |   |--- class: 0
+|   |--- numeric__Feed rate vf [mm/min] >  205.500
+|   |   |--- category__Drill Bit Type_W <= 0.500
+|   |   |   |--- class: 1
+|   |   |--- category__Drill Bit Type_W >  0.500
+|   |   |   |--- class: 0
