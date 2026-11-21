@@ -42,3 +42,7 @@ outputs/ch14/exercise_14_3/* -text
 
 sessions/ch14/parallel_coordinates.ipynb -text
 outputs/ch14/exercise_14_4/* -text
+
+data/raw/XAI_Drilling_Dataset.csv -text
+sessions/ch15/dataset_understanding.ipynb -text
+outputs/ch15/exercise_15_1/* -text

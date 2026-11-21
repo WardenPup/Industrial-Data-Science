@@ -1,0 +1,18 @@
+{
+  "rows": 20000,
+  "columns": 15,
+  "missing_values": 0,
+  "duplicate_full_rows": 0,
+  "duplicate_rows_without_id": 2,
+  "ids_in_duplicate_groups": [
+    3152,
+    6070,
+    7196,
+    18565
+  ],
+  "main_failures": 1001,
+  "subgroup_union": 1001,
+  "label_conflicts": 0,
+  "multiple_subgroups": 114,
+  "kaggle_registration": "Student confirmed no account; registration pending"
+}

@@ -1,3 +1,20 @@
+## 21.11.2026 – 14.4 integriert; 15.1 zur fachlichen Prüfung vorbereitet
+
+PR #17 nach ausdrücklicher Autorisierung regulär gemergt:
+`bede970d32ae9ba595dfcbc4bbc93797605af6f7`. Unmittelbar zuvor unveränderter Head
+4acdcf7, beide erfolgreichen CI-Läufe, Ready/Konfliktfreiheit/keine offenen Kommentare
+und vollständiger Originalreview bestätigt. 72eac4f und 4acdcf7 erhalten;
+main = origin/main am Merge-SHA. Frühere Lösungen/Reviews/Abgaben unverändert.
+
+15.1: **AWAITING HUMAN REVIEW – KAGGLE-REGISTRIERUNG OFFEN**. Student bestätigte
+noch kein Konto; kein Konto angelegt. Öffentlicher offizieller Version-1-Download
+erfolgreich, Beschreibung vollständig gelesen. Daten-/Labelprüfung technisch bestanden:
+20.000 × 15; 1.001 Hauptfehler, ODER-Konsistenz in allen Zeilen, 114 Mehrfachfehler,
+keine Widersprüche. Zwei zusätzliche identische Zeilen ohne ID erhalten. Drei Tests
+bestanden (0,331 s), drei frische Codezellen; eine Grafik/HTML offline 900/1400 px und
+11 Manifesthashes geprüft. Keine Modelle, keine 15.2-Analyse. Aktuelle Head-CI wird
+im Draft-PR nach tatsächlichem Abschluss dokumentiert; keine wissenschaftliche Freigabe.
+
 ## 21.11.2026 – Exercise 14.4 wissenschaftlicher Review nachgeprüft
 
 **SCIENTIFICALLY APPROVED – TECHNICALLY VALIDATED – AWAITING FINAL MERGE AUTHORIZATION**.

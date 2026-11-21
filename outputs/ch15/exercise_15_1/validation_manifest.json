@@ -1,0 +1,21 @@
+{
+  "validated_date": "2026-11-21",
+  "status": "SCIENTIFICALLY APPROVED \u2013 TECHNICALLY VALIDATED \u2013 FORMAL REQUIREMENT PENDING",
+  "ai_assistance": "Codex",
+  "raw_sha256": "e1dcc45f8821f7b96d923a253374150d5013cead40bc08b4bef33033aef0ab83",
+  "sequential_code_cells": 3,
+  "embedded_images": 1,
+  "files": {
+    "sessions/ch15/dataset_understanding.ipynb": "78d6a899094aa4fe75e67e9082b56c12d4a21ecc95762c7cf4b15b1bb33603b1",
+    "outputs/ch15/exercise_15_1/dataset_understanding.html": "6a2daaf6071e7c2f7f7a09c307a7c6a48c10b7c0d9c5e1aa4f1a20ce95956e4a",
+    "outputs/ch15/exercise_15_1/class_counts.csv": "6ed31e4a57adacc2c951da1ad6fb8e30eb43dedb5ef4d06d8858ebff7ea63e39",
+    "outputs/ch15/exercise_15_1/data_quality.csv": "15594bfd70358e4d71d2a021629509bed5e8e05a0ae51ed710886798ddb01d07",
+    "outputs/ch15/exercise_15_1/duplicate_rows_without_id.csv": "cc10611330fe083481f5ca945e918c56202ecc80abfe956f67078f89c15cc106",
+    "outputs/ch15/exercise_15_1/label_conflicts.csv": "c64bbd8c857e78def953405f86c99b93f6c7a0788b4511793777b4767e8be3ef",
+    "outputs/ch15/exercise_15_1/label_consistency.csv": "096fee3dc7b2066d683e4b59c86c92a8fd4823a920145663beedeb61c92f5334",
+    "outputs/ch15/exercise_15_1/multiple_failures.csv": "6c96c4940c4feeb2529261f65d5f3ac70d9d7eebeffe804ac14df175f37a3e44",
+    "outputs/ch15/exercise_15_1/multiplicity.csv": "2707162ab965c3ab4a3c7fa67325418c6adf98ca6b6ba92fddef5a32b2e4797c",
+    "outputs/ch15/exercise_15_1/01_class_counts.png": "6cb594aafc73b676ebe6483b9a5a64edc15cbddb60a4fc3947467010ad1df74d",
+    "outputs/ch15/exercise_15_1/summary.json": "fab4e329bc285da6c2f32ce0051df8ea729f96ab24f2acff9d83d2f8547a97ca"
+  }
+}

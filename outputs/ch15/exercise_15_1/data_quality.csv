@@ -1,0 +1,16 @@
+Spalte,Datentyp,Fehlend,Verschiedene Werte
+ID,int64,0,20000
+Cutting speed vc [m/min],float64,0,573
+Spindle speed n [1/min],int64,0,173
+Feed f [mm/rev],float64,0,204
+Feed rate vf [mm/min],int64,0,190
+Power Pc [kW],float64,0,9458
+Cooling [%],int64,0,5
+Material,object,0,3
+Drill Bit Type,object,0,3
+Process Time [sec],float64,0,1286
+Main Failure,int64,0,2
+BEF,int64,0,2
+CCF,int64,0,2
+FWF,int64,0,2
+WDF,int64,0,2
