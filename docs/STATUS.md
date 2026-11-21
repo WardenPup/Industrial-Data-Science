@@ -1,3 +1,13 @@
+## 21.11.2026 – 16.2: erfolgreiche CI und Plattformbefund
+
+Head 2c8be3a: Push 44909914982 und PR 44909918774 erfolgreich, je zwei vollständige
+frische Notebook-Läufe mit exakt gleichen Vorhersagen/Wahrscheinlichkeiten innerhalb
+des Runners. Thermal lokal 0,72; beobachtete CI-Werte 0,70/0,73. Vibration lokal
+0,58, CI 0,58/0,59. Keine plattformübergreifende Ergebnisgleichheit behauptet;
+Nebenbefund als Grenze in Notebook/HTML/Review ergänzt, keine Optimierung oder
+Änderung der lokalen Matrizen. HTML nach reiner Textergänzung offline erneut geprüft.
+16.2 bleibt AWAITING HUMAN REVIEW; neun neue Hashes sowie alte Artefakte erhalten.
+
 ## 21.11.2026 – Finale Reproduzierbarkeitsprüfung 16.2
 
 Weitere CI-Runner zeigten auch abweichende neu berechnete 16.1-Klassen gegenüber

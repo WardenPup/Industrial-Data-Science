@@ -98,3 +98,22 @@ CI-Neuberechnungen können abweichen. Die früheren Einträge beschreiben jeweil
 damaligen Prüfstand. Beide aktuellen CI-Läufe nach dieser Änderung erneut abwarten.
 
 Finaler lokaler Prüfer: zwei unabhängige frische Acht-Zellen-Ausführungen mit exakt identischen Vorhersage-CSV-Dateien für beide Modelle bestanden. Lokal erneut Vibration 0,58 / Thermal 0,72, null abweichende 16.1-Klassen und maximale Wahrscheinlichkeitsabweichung 0. HTML offline 900/1400 px bestanden; sechs numerische 16.2-Exporte unverändert. Die aktuellen CI-Ergebnisse folgen im Draft-PR.
+
+
+## Erfolgreiche CI und beobachtete Plattformstreuung (Head 2c8be3a)
+
+Beide vollständigen Läufe erfolgreich: Push 44909914982 und PR 44909918774.
+Jeweils zwei frische vollständige Acht-Zellen-Läufe mit exakt identischen
+Vorhersagen/Wahrscheinlichkeiten innerhalb des Runners und Offline-HTML bestanden.
+PR-Runner: Vibration 0,58 / Thermal 0,70, null abweichende 16.1-Klassen, maximale
+16.1-Wahrscheinlichkeitsabweichung 0,0000164 gegenüber gespeichertem Windows-Stand.
+Push-Runner: Vibration 0,59 / Thermal 0,73, eine abweichende 16.1-Klasse, maximale
+Wahrscheinlichkeitsabweichung 0,0065171. Lokal weiterhin 0,58 / 0,72.
+
+Diese tatsächlichen Nebenbefunde sind keine geplante Mehrfachlauf-/Seedstudie oder
+Unsicherheitsschätzung. Keine bestmögliche Kennzahl ausgewählt, keine Optimierung
+oder Änderung gespeicherter Matrizen. Abschnitt 16.2 und HTML um diese Grenze ergänzt;
+nur Markdown neu exportiert, danach Offline-HTML 900/1400 px erneut geprüft.
+Keine neue Trainingsexekution für die reine Textergänzung behauptet.
+Zusätzliche Reviewfrage innerhalb Frage 4: Ist die Unterscheidung zwischen lokaler
+Wiederholbarkeit und beobachteter Plattformstreuung ausreichend deutlich?

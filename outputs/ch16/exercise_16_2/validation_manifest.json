@@ -11,8 +11,8 @@
   "prior_probability_max_abs_difference": 0.0,
   "embedded_images": 3,
   "files": {
-    "sessions/ch16/multimodal_health_monitoring.ipynb": "7c52a769780cd1fc71326fa73a9b677d11d7dc8ff0ffbc15d0dc6f38c80004bb",
-    "outputs/ch16/exercise_16_2/multimodal_health_monitoring.html": "34b6926e953d437d87b6bf10b4608636e7962c0d0f52d6d9dbe1f24715755611",
+    "sessions/ch16/multimodal_health_monitoring.ipynb": "703991bf31fa8399689d0cd59345b1ce0d84a3f019fa06fd96da974326416797",
+    "outputs/ch16/exercise_16_2/multimodal_health_monitoring.html": "c21d83c37cb4f312be4038effc97c33cdf4be013406d9dd221697cc0a27edb8b",
     "outputs/ch16/exercise_16_2/confusion_matrix.csv": "bd504223a0b1e385fa597850ad069ffdfb4ce5b7bf489d25c0c69294f47e5c9d",
     "outputs/ch16/exercise_16_2/predictions.csv": "ae302ddf7f738131a9eedd595de2ec2fb706cd913363589b787d4ec17d7d0f09",
     "outputs/ch16/exercise_16_2/split.csv": "08b4146bb757ddc23733e50dd735f88fa86d2b74ef4957f13bb62f0fb606e3f0",
@@ -20,5 +20,6 @@
     "outputs/ch16/exercise_16_2/01_confusion_matrix.png": "558face377665b8c262d86f90af4d6e7e3054ba614b59d064b600814e82351a9",
     "outputs/ch16/exercise_16_2/summary.json": "dbdfcabf186b628ffa372c3cdb3b64f1679fe76272d7dedf93af9d52c44d3686",
     "outputs/ch16/exercise_16_2/scaling.json": "c4b42d6f12571e25ab29b82fc14e664e98130490d80905cf5d1929d099cba73b"
-  }
+  },
+  "post_execution_documentation": "Observed CI platform variability added to markdown only; HTML re-exported and offline checked without additional training."
 }
