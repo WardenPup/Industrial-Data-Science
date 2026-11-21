@@ -1,6 +1,6 @@
 # Nächste Self-Study-Aufgaben
 
-Stand/Abruf: **19.11.2026**. Status: **14.1 APPROVED und integriert; 14.2 APPROVED und integriert; 14.3 APPROVED und integriert; 14.4 wissenschaftlich freigegeben, Merge-Autorisierung ausstehend; übrige Übungen nur geplant**.
+Stand/Abruf: **19.11.2026**. Status: **14.1 APPROVED und integriert; 14.2 APPROVED und integriert; 14.3 APPROVED und integriert; 14.4 APPROVED und integriert; 15.1 AWAITING HUMAN REVIEW, Registrierung offen; übrige Übungen nur geplant**.
 Codex: Quellenprüfung, Anforderungsübersicht und Workflowvorschlag. Keine neuen
 studentischen Prüfungen oder Freigaben behauptet; bisherige Lösungen bleiben erhalten.
 
@@ -44,13 +44,13 @@ der Kursseiten. Pflichtartefakte wie Screenshots und Skripte sind separat genann
 **14.3 — Engineered features and model performance — APPROVED, PR #16 integriert — medium**
 - [x] Tiefenvergleich für HDF/PWF mit und ohne `temp_diff` beziehungsweise `power`; F1 statt Accuracy auswerten und Klassenungleichgewicht erklären. Ergebnis: kompakter Leistungsvergleich; Vorgehen aus 14.2 wiederverwenden, Featuredefinitionen aus Kapitel 13 prüfen.
 
-**14.4 — Parallel coordinates plots — SCIENTIFICALLY APPROVED, Merge ausstehend — medium**
+**14.4 — Parallel coordinates plots — APPROVED, PR #17 integriert — medium**
 - [x] Plotly-Parallelkoordinaten: alle verfügbaren kontinuierlichen Variablen, gewählter Fehlertyp und Type; Fehlertyp kategorial, Linienfarbe nach Type. Jupyter-Dropdown zur Fehlertypwahl; Achsen umordnen und Brushing tatsächlich nutzen, erkannte Muster dokumentieren. Voraussetzung: AI4I/Kapitel-13-Muster; 14.1–14.3 liefern Vergleich, sind keine neue Datenquelle.
 
 ### Kapitel 15 – S15, Daten: XAI Drilling
 
-**15.1 — Register and download the dataset — low**
-- [ ] Kaggle registrieren/Zugang klären, Beschreibung lesen, Daten laden; Form, Typen, Probleme, Ziele und Klassenhäufigkeiten prüfen. Hauptflag gegen Vereinigung der Untergruppen sowie Mehrfachfehler prüfen und Umgang erläutern. Ergebnis: Daten-/Labelprüfung; Zugang ist mögliche externe Voraussetzung, keine Zugangsdaten im Repository.
+**15.1 — Register and download the dataset — AWAITING HUMAN REVIEW; Registrierung offen — low**
+- [ ] Kaggle registrieren/Zugang klären, Beschreibung lesen, Daten laden; Form, Typen, Probleme, Ziele und Klassenhäufigkeiten prüfen. Hauptflag gegen Vereinigung der Untergruppen sowie Mehrfachfehler prüfen und Umgang erläutern. Ergebnis: Daten-/Labelprüfung technisch durchgeführt (20.000 × 15, 0 Labelwidersprüche, 114 Mehrfachfehler). **Registrierung bleibt offen: Student hat noch kein Konto.** Öffentlicher Download möglich; keine Zugangsdaten im Repository.
 
 **15.2 — Explore the dataset — medium**
 - [ ] Nach 15.1 Merkmale je Fehlertyp statistisch und mit mindestens zwei geeigneten Grafiken untersuchen; Befunde/Schwellen notieren und mit „Subgroup failures“ vergleichen. Bereits gelesene Beschreibung nicht als ungelesen ausgeben; explorative Betrachtung und anschließenden Vergleich transparent trennen.
