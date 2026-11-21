@@ -138,3 +138,16 @@ Die technische Validierung wurde vom ausführenden System berichtet; sie ist nic
 Die Kaggle-Registrierung bleibt als formaler offener Punkt dokumentiert.
 
 Keine Freigabe für eine Universitätseinreichung.
+
+
+---
+
+## Codex-Abschlussprüfung und bedingte Merge-Autorisierung – 21.11.2026
+
+Wissenschaftlich **SCIENTIFICALLY APPROVED**, technisch validiert; **FORMAL REQUIREMENT PENDING**. Originalreview unverändert separat in 6fb3e7d gesichert. Der Student autorisierte im aktuellen Auftrag einen regulären Merge nach erfolgreicher technischer Prüfung, sofern kein ausdrücklich vorgeschriebenes formales Merge-Hindernis besteht.
+
+AGENTS.md, Masterplan und vollständige offizielle Aufgabe geprüft: Registrierung ist eine offene Aufgabenanforderung; keine dieser Quellen schreibt sie ausdrücklich als Git-Merge-Voraussetzung vor. Der aktuelle Nutzerauftrag autorisiert Integration bei sichtbarer Einschränkung. Deshalb darf die geprüfte Ausarbeitung integriert werden, **ohne die Registrierung oder die gesamte Aufgabe als vollständig erledigt auszugeben**. Kein Konto angelegt, keine Registrierung behauptet und keine Einreichungsfreigabe abgeleitet.
+
+Tatsächlich erneut geprüft: drei vorhandene Tests bestanden (0,273 s); drei Codezellen frisch sequenziell, HTML offline 900/1400 px bestanden, keine Ausführungsfehler. 20.000 × 15, keine Fehlwerte, 1.001 Hauptfehler, 0 Labelkonflikte, 114 Mehrfachfehler, zwei zusätzliche Duplikate ohne ID in genau zwei Zweiergruppen bestätigt. Elf Manifesthashes und 21 unveränderte Archive geprüft. Wissenschaftliche Ergebniswerte/Originaldaten nicht geändert. Bekannte lokale Jupyter-TCP-Warnung ohne Zellfehler.
+
+Wissenschaftliche Freigabe und technische Nachprüfung getrennt von der formalen Restanforderung dokumentiert. Beide aktuellen Head-CI-Läufe, Kommentare und Konfliktfreiheit werden unmittelbar vor dem autorisierten Merge erneut geprüft. Noch kein Merge in diesem Eintrag behauptet; tatsächlicher SHA folgt im Projektstatus.

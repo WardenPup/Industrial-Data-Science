@@ -76,7 +76,7 @@ def main():
     assert summary["duplicate_rows_without_id"] == int(data.drop(columns="ID").duplicated().sum()) == 2
     assert pd.read_csv(output/"duplicate_rows_without_id.csv").ID.tolist() == [3152,6070,7196,18565]
     files = [source, destination] + sorted(output.glob("*.csv")) + sorted(output.glob("*.png")) + [output / "summary.json"]
-    manifest = {"validated_date": "2026-11-21", "status": "AWAITING HUMAN REVIEW – KAGGLE REGISTRATION PENDING", "ai_assistance": "Codex",
+    manifest = {"validated_date": "2026-11-21", "status": "SCIENTIFICALLY APPROVED – TECHNICALLY VALIDATED – FORMAL REQUIREMENT PENDING", "ai_assistance": "Codex",
                 "raw_sha256": verify_file(), "sequential_code_cells": len(counts), "embedded_images": 1,
                 "files": {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest() for p in files}}
     (output / "validation_manifest.json").write_text(json.dumps(manifest, indent=2)+"\n", encoding="utf-8")
