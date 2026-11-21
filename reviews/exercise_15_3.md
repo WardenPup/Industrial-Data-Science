@@ -58,3 +58,30 @@ behauptet; echter Callback und tatsächliche Plotly-Browserbedienung geprüft.
 
 Kaggle-Registrierung bleibt formal offen. Kein Merge von 15.3, kein Beginn 15.4,
 keine Universitätseinreichung. Auf tatsächlichen studentischen Review warten.
+
+
+## Studentischer Originalreview – 21.11.2026
+
+Status: SCIENTIFICALLY APPROVED
+
+1. Alle vier Fehlertypen können nachvollziehbar ausgewählt und isoliert werden. Die dokumentierten Fallzahlen sind konsistent.
+
+Bewertung: BESTANDEN.
+
+2. Beobachtete Merkmalsbereiche sind klar von validierten Fehlerregeln getrennt. Es werden keine Ausfallwahrscheinlichkeiten oder kausalen Zusammenhänge behauptet.
+
+Bewertung: BESTANDEN.
+
+3. Die kombinierte Auswahl von Fehlerflag, Material und Bohrertyp ist verständlich. Die überlappenden Fehlerkennzeichnungen werden korrekt berücksichtigt.
+
+Bewertung: BESTANDEN.
+
+4. Die Visualisierung ist ausreichend beschriftet und die Bedienung dokumentiert. Linienüberlagerungen und die etwas gewöhnungsbedürftige Kategorienfilterung sind bekannte Einschränkungen, aber keine wissenschaftlichen Mängel.
+
+Bewertung: BESTANDEN.
+
+GESAMTENTSCHEIDUNG:SCIENTIFICALLY APPROVED.
+
+Keine zusätzlichen wissenschaftlichen Analysen erforderlich.
+
+Die technische Prüfung erfolgte anhand der bereitgestellten Interaktionsprotokolle und Grafiken. Es wurde keine unabhängige vollständige Browserprüfung im Rahmen des Human Reviews durchgeführt.
