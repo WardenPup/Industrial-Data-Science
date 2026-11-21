@@ -6,9 +6,10 @@
   "sequential_code_cells": 8,
   "approved_16_1_cells_sha256": "5e99f97ee231f26b461d6394b0ff1f05d4b08ac79fcd35b41dc95efc151227a9",
   "prior_exports_unchanged": true,
+  "prior_probability_max_abs_difference": 0.0,
   "embedded_images": 3,
   "files": {
-    "sessions/ch16/multimodal_health_monitoring.ipynb": "c8e50ef50994548098c566ec3f0e171caa00d6bf5797b76189256d79e9e31ede",
+    "sessions/ch16/multimodal_health_monitoring.ipynb": "ccecac822191f0924cfe7ec579bf4b9ef735e5647ece50f3fe0e9bc984997655",
     "outputs/ch16/exercise_16_2/multimodal_health_monitoring.html": "34b6926e953d437d87b6bf10b4608636e7962c0d0f52d6d9dbe1f24715755611",
     "outputs/ch16/exercise_16_2/confusion_matrix.csv": "bd504223a0b1e385fa597850ad069ffdfb4ce5b7bf489d25c0c69294f47e5c9d",
     "outputs/ch16/exercise_16_2/predictions.csv": "ae302ddf7f738131a9eedd595de2ec2fb706cd913363589b787d4ec17d7d0f09",

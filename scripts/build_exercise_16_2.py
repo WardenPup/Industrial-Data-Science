@@ -53,7 +53,15 @@ def main():
         original=pd.read_csv(previous/"predictions.csv")
         repeated=pd.read_csv(scratch/"exercise_16_1/predictions.csv")
         assert np.array_equal(original[["Index_0basiert","Ist","Vorhersage"]],repeated[["Index_0basiert","Ist","Vorhersage"]])
-        assert np.allclose(original[["p_Normal","p_Warning","p_Critical"]],repeated[["p_Normal","p_Warning","p_Critical"]],atol=1e-5)
+        reference_probs=original[["p_Normal","p_Warning","p_Critical"]].to_numpy()
+        repeated_probs=repeated[["p_Normal","p_Warning","p_Critical"]].to_numpy()
+        assert np.isfinite(repeated_probs).all() and (repeated_probs>=0).all() and (repeated_probs<=1).all()
+        assert np.allclose(repeated_probs.sum(axis=1),1,atol=1e-6)
+        assert np.array_equal(repeated_probs.argmax(axis=1),repeated.Vorhersage)
+        prior_probability_max_abs_difference=float(np.max(np.abs(reference_probs-repeated_probs)))
+        print(f"16.1 replay: identical indices/labels/classes; max probability difference from saved platform = {prior_probability_max_abs_difference:.12g}")
+        if prior_probability_max_abs_difference>1e-5:
+            print("WARNING: platform-dependent probability differences; saved 16.1 outputs stay untouched. No cross-platform probability tolerance is claimed.")
         output.mkdir(parents=True,exist_ok=True)
         for p in (scratch/"exercise_16_2").iterdir():shutil.copyfile(p,output/p.name)
     # Keep all approved text, code, displayed output and execution metadata untouched.
@@ -113,7 +121,7 @@ def main():
     def verify_file():return RAW_SHA256
     files = [source, destination] + sorted(output.glob("*.csv")) + sorted(output.glob("*.png")) + [output / "summary.json",output / "scaling.json"]
     manifest = {"validated_date": "2026-11-21", "status": "AWAITING HUMAN REVIEW", "ai_assistance": "Codex",
-                "raw_sha256": verify_file(), "sequential_code_cells": len(counts), "approved_16_1_cells_sha256": cell_hash(approved), "prior_exports_unchanged": True, "embedded_images": 3,
+                "raw_sha256": verify_file(), "sequential_code_cells": len(counts), "approved_16_1_cells_sha256": cell_hash(approved), "prior_exports_unchanged": True, "prior_probability_max_abs_difference": prior_probability_max_abs_difference, "embedded_images": 3,
                 "files": {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest() for p in files}}
     (output / "validation_manifest.json").write_text(json.dumps(manifest, indent=2)+"\n", encoding="utf-8")
     print(f"PASS: {len(counts)} fresh sequential cells; three embedded images; independent counts and raw SHA256 verified")

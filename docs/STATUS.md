@@ -1,3 +1,13 @@
+## 21.11.2026 – Technischer CI-Nachtrag 16.2
+
+Erste Push-CI bestanden, erste PR-CI wegen zu strenger plattformübergreifender
+16.1-Wahrscheinlichkeitstoleranz von 1e-5 fehlgeschlagen; Klassen/Indizes/Labels
+waren identisch. Prüfer dokumentiert jetzt maximale Abweichung/Warnung, wahrt
+identische Klassen und gültige Wahrscheinlichkeiten. Kein Modell/Ergebnis geändert.
+Lokal erneut acht frische Zellen und Offline-HTML bestanden, Abweichung 0; sechs
+numerische Exporte unverändert. Neue aktuelle Head-CI im Draft-PR abwarten.
+Status bleibt AWAITING HUMAN REVIEW, kein Merge.
+
 ## 21.11.2026 – 16.1 integriert; 16.2 technisch geprüft
 
 PR #22 nach ausdrücklicher Freigabe regulär gemergt:

@@ -59,3 +59,24 @@ klar als ursprünglicher Entwicklungsstand eingeordnet.
 4. Ist der Vergleich mit 16.1 ausreichend auf diesen Split begrenzt und die unveränderte Vorverarbeitung transparent?
 
 Kein Merge von 16.2, keine Fusion/16.3/16.4 und keine Universitätseinreichung.
+
+
+## Tatsächlicher CI-Befund und minimale Prüferkorrektur
+
+Erster Head 8685f6d: Push-CI erfolgreich, PR-CI 44909083863 fehlgeschlagen.
+Ursache laut Traceback: ergänzende plattformübergreifende Wahrscheinlichkeitstoleranz
+von 1e-5 für die neu ausgeführte 16.1-Vorstufe überschritten. Indizes, Labels und
+sämtliche Klassen waren bereits identisch; keine Änderung der wissenschaftlichen
+Modelle oder gespeicherten Ergebnisse. Die ohnehin ausgeschlossene Zusicherung
+plattformübergreifender Wahrscheinlichkeitsgleichheit war im Prüfer zu streng umgesetzt.
+
+Prüfer erfasst nun die maximale Abweichung ausdrücklich in Log/Manifest, warnt bei
+Überschreitung und prüft weiter identische Klassen/Indizes/Labels, gültige normalisierte
+Wahrscheinlichkeiten und unveränderte Originalartefakte. Lokale Wiederholbarkeit
+bleibt separat anhand zweier vollständiger Läufe geprüft. Keine beliebig aufgeweitete
+Toleranz oder nachträgliche Modelloptimierung. Aktuelle CI nach Korrektur abwarten.
+Weitere CI-Warnungen: IPython verwendet bei nicht vorhandenem beschreibbarem Elternordner
+einen temporären Ordner; setup-python@v5 meldet veraltete Node-20-Zielversion bei
+Ausführung auf Node 24. Kein wissenschaftlicher Einfluss daraus abgeleitet.
+
+Nach der Prüferkorrektur lokal erneut acht Zellen frisch und HTML offline 900/1400 px bestanden. 16.1-Wahrscheinlichkeitsabweichung lokal 0, sämtliche Klassen identisch; sechs numerische 16.2-Exporte weiterhin bytegleich zum ersten Lauf. Neun neue Artefakthashes und 21 unveränderte Archive erneut bestätigt. Keine wissenschaftlichen Änderungen.
