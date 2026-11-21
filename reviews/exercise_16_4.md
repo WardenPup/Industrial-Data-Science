@@ -79,3 +79,80 @@ Keine geplante Mehrfachlauf-/Seedstudie oder Unsicherheitsschätzung behauptet.
 Nur Markdown/HTML ergänzt und offline erneut geprüft, kein weiteres lokales Training.
 Die dokumentierten lokalen Matrizen und frühere freigegebene Abschnitte bleiben
 unverändert. Aktuelle CI nach diesem reinen Dokumentationscommit erneut prüfen.
+
+
+## Studentischer Originalreview – 21.11.2026
+
+HUMAN REVIEW – EXERCISE 16.4
+
+Status: SCIENTIFICALLY APPROVED
+
+1. Intermediate Fusion
+
+Die beiden Feature Extractors für Vibrationssignale und Wärmebilder werden frisch initialisiert. Sie erzeugen 32 beziehungsweise 64 Merkmale.
+
+Die 96 Merkmale werden korrekt zusammengeführt und durch einen gemeinsamen Klassifikationskopf verarbeitet.
+
+Das gesamte Modell wird gemeinsam über 60 Epochen trainiert. Es werden keine bereits trainierten Einzelmodellgewichte übernommen.
+
+Bewertung: BESTANDEN.
+
+2. Vergleichbarkeit
+
+Die fünf Modelle werden anhand derselben 100 TEST-Beobachtungen aus einem gemeinsamen aktuellen Lauf verglichen.
+
+Die historischen Ausgaben vorheriger Exercises werden nicht als unabhängige Vergleichsläufe vermischt.
+
+Die Confusion-Matrizen und Kennzahlen sind konsistent.
+
+Bewertung: BESTANDEN.
+
+3. Modellergebnisse und Critical-Erkennung
+
+Lokale TEST-Ergebnisse:
+
+- Vibration: 58 % Accuracy, Critical 0/15
+- Thermal: 72 % Accuracy, Critical 10/15
+- Early Fusion: 91 % Accuracy, Critical 13/15
+- Late Fusion: 79 % Accuracy, Critical 9/15
+- Intermediate Fusion: 93 % Accuracy, Critical 13/15
+
+Intermediate Fusion erreicht lokal die höchste Accuracy.
+
+Von 15 Critical-Fällen werden 13 richtig erkannt. Zwei werden als Warning klassifiziert.
+
+Gegenüber Early Fusion erkennt Intermediate keine zusätzlichen Critical-Fälle, reduziert aber die falschen Critical-Alarme von vier auf zwei.
+
+Die Unterscheidung zwischen Gesamtaccuracy und Critical-Erkennung ist wissenschaftlich korrekt.
+
+Bewertung: BESTANDEN.
+
+4. Wissenschaftliche Grenzen
+
+Der synthetische Datensatz, der einzelne TRAIN-/TEST-Split und die kleine Zahl kritischer Testfälle begrenzen die Aussagekraft.
+
+Intermediate Fusion unterscheidet sich von den anderen Modellen in Architektur, Parameterzahl und Trainingsdauer. Die höhere lokale Accuracy darf deshalb nicht ausschließlich dem Fusionsverfahren zugeschrieben werden.
+
+Die bekannten Plattformabweichungen werden transparent behandelt. Auf mindestens einem CI-Runner besteht Gleichstand zwischen Early und Intermediate Fusion.
+
+Eine allgemeine Überlegenheit oder Sicherheitseignung für reale industrielle Anlagen wird nicht behauptet.
+
+Bewertung: BESTANDEN.
+
+GESAMTENTSCHEIDUNG:
+SCIENTIFICALLY APPROVED.
+
+Zusätzliche Human-Review-Prüfung:
+
+- Alle fünf Confusion-Matrizen unabhängig aus 100 Einzelvorhersagen rekonstruiert.
+- 500 Klassenvorhersagen und 1.500 exportierte Wahrscheinlichkeiten auf Konsistenz geprüft.
+- Accuracy, Critical-Treffer und übersehene Critical-Fälle nachgerechnet.
+- Late-Fusion-Wahrscheinlichkeitsmittelung bestätigt.
+- Fünf hochgeladene Ergebnisdateien stimmen bytegenau mit den Manifestprüfsummen überein.
+- Die hochgeladene PNG hat einen abweichenden Datei-Hash; die Originaldatei ist technisch erneut abzugleichen.
+- GitHub-PR und erfolgreiche PR-CI geprüft.
+
+Die vollständige Notebook- und Browserausführung wurde im Human Review nicht unabhängig wiederholt.
+
+Keine zusätzlichen Modelloptimierungen erforderlich.
+Keine Universitätseinreichung.
