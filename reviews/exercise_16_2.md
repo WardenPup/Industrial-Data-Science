@@ -1,0 +1,61 @@
+# Exercise 16.2 – Technischer Bericht und Human Review
+
+**AWAITING HUMAN REVIEW – 21.11.2026.** Kein studentischer Review/Freigabe erfunden.
+Codex: genaue offizielle Vorlage gelesen, Architektur ergänzt, gemeinsame Ausführung,
+Tests, Export und tatsächliche numerische/visuelle Prüfung. Keine neuen Abhängigkeiten.
+
+## Anforderungen und Methode
+„Build and train the image network“: ThermalCNN gemäß Tabelle 16.3, Shapes prüfen,
+30 Epochen, TEST-Confusion-Matrix, Thermal-Level gegen wahren/vorhergesagten Status;
+Grenzen einer einzigen Modalität erklären. Quelle/Kriterien im gemeinsamen Notebook.
+Nur 16.2 angehängt, keine Fusion und keine Umsetzung von 16.3/16.4.
+
+Conv2d(1,16,3,same)+ReLU+MaxPool2d(2), Conv2d(16,32,3,same)+ReLU+MaxPool2d(2),
+Flatten, Linear(2048,64)+ReLU+Dropout(0,3), Linear(64,3); **136.131 Parameter**.
+`in_channels=1` wie vorgegeben; Features (4,64), Logits (4,3). Unveränderte 400/100-
+Zuordnung und TRAIN-Modalskalare aus 16.1. Nur standardisierte Bilder als Inputs,
+Labels als Trainingsziel; keine Diagnoselevels. Unveränderte train_model/predict_proba:
+Adam lr=0,001, CrossEntropyLoss, 30 Epochen, Batch 16, Seed 42, ein CPU-Thread.
+Keine Optimierung oder Modellwahl anhand TEST.
+
+## Tatsächliche Ergebnisse
+**72/100 korrekt, Accuracy 0,72**; 16.1 bleibt bei 58/100. Nur derselbe feste Split,
+keine statistische Signifikanz oder allgemeine Überlegenheit behauptet.
+Zeilen wahr, Spalten vorhergesagt:
+
+| | Normal | Warning | Critical |
+|---|---:|---:|---:|
+| Normal | 42 | 6 | 0 |
+| Warning | 13 | 20 | 4 |
+| Critical | 0 | 5 | 10 |
+
+Thermal-Level 0: wahr 48/13/0, vorhergesagt 54/7/0; Level 1: wahr 0/24/5,
+vorhergesagt 1/24/4; Level 2: wahr 0/0/10, vorhergesagt 0/0/10.
+Fünf Critical-Fälle übersehen; die zehn Thermal-Level-2-Fälle hier korrekt.
+Thermal-Level 0 und 1 bestimmen den Gesundheitsstatus laut Definition nicht allein,
+weil zusätzlich das Vibrationslevel zählt. Last/Lage erschweren reine Bildinterpretation.
+Keine perfekte Rekonstruktion verborgener Levels behauptet.
+
+## Tatsächlich ausgeführte Prüfungen
+- `scripts/uv.cmd run --offline --locked python -m unittest discover -s tests -p test_thermal_cnn.py -v`: **2/2 bestanden, 3,685 s**. Exakte Schichtkonfiguration/Shapes; ein Trainingsdurchlauf mit Gewichtsänderung, eval-/Dropout-Modus, stabile und normalisierte Wahrscheinlichkeiten, Wiederholung desselben Seeds mit identischem Ergebnis. Dieser fokussierte Test nutzt eine Epoche auf 16 TRAIN-Bildern, kein zusätzliches Modell-/Optimierungsexperiment.
+- Bestehende 16.1-Tests einschließlich Split- und TRAIN-only-Perturbationsprüfung unmittelbar vor dessen autorisiertem Merge erneut bestanden: 3/3, 2,600 s; unveränderte Datenaufbereitung für 16.2 wiederverwendet.
+- `scripts/uv.cmd run --offline --locked python scripts/build_exercise_16_2.py --check-html`: **acht Codezellen frisch sequenziell**, einschließlich beider vollständigen 30-Epochen-Trainings; nach Ergänzung tatsächlicher Interpretation erneut ausgeführt. Alle sechs numerischen CSV/JSON-Exporte von 16.2 zwischen beiden lokalen Läufen bytegleich.
+- Alle Originalzellen unverändert in temporärem Arbeitsordner ausgeführt, damit relative Schreibpfade keine alten Ergebnisse überschreiben. Erneute 16.1-Vorhersagen/Labels/Indizes abgeglichen (Wahrscheinlichkeiten mit numerischer Toleranz). Freigegebene Zellen einschließlich Text, Code, Outputs und Metadaten im gespeicherten Notebook exakt erhalten; alle zwölf bisherigen Ergebnisartefakte bytegleich. Das erweiterte Notebook erhält erwartungsgemäß einen neuen Gesamthash; der alte Notebookhash im 16.1-Manifest bezieht sich weiterhin auf dessen damaligen Stand. Neuer Manifesthash und zusätzlicher Hash des freigegebenen Zellblocks dokumentieren die Erweiterung.
+- Builder: 100 TEST-Indizes/Labels, 300 Wahrscheinlichkeiten/Argmax, Confusion-Matrix/Accuracy, beide Thermal-Level-Kreuztabellen, identische Split-CSV und TRAIN-Skalare unabhängig nachgerechnet/abgeglichen.
+- Neue Confusion-Matrix und HTML bei **900/1400 px visuell geprüft**; drei eingebettete Grafiken geladen, offline keine Seitenfehler/fehlgeschlagenen Abrufe/Seitenüberläufe. 16.2-Abschnitt lesbar; PNGs in Originalauflösung öffnbar.
+- Rohdaten-SHA256 und **neun Manifesthashes**, geschützte 16.1-Zellen/Ergebnisartefakte sowie **21 unveränderte Archive** bestätigt. Vorhandenes PyTorch 2.9.1+cpu und uv benutzt. Lokale Jupyter-TCP-Warnung ohne Ausführungsfehler. Aktuelle Push-/PR-CI nach Push tatsächlich abwarten und im Draft-PR verlinken.
+
+## Grenzen und vier Fragen für den Human Review
+Kleine synthetische Stichprobe, nur ein Split und Seed, keine externe Validierung.
+Kein Overfitting-Nachweis ohne Validierungsdaten, keine plattformübergreifende
+Bitgleichheit versprochen. Die Modalitäten enthalten jeweils nur einen Teil der
+Zustandsinformation; 72 % sind keine Eignungsbestätigung für Sicherheitsüberwachung.
+Historische Statusangaben im unveränderten 16.1-Abschnitt sind im neuen Abschnitt
+klar als ursprünglicher Entwicklungsstand eingeordnet.
+
+1. Sind 2D-Faltung, Pooling und die 64-Feature-Architektur verständlich erklärt?
+2. Sind die verbleibenden Verwechslungen und fünf übersehenen Critical-Fälle klar dargestellt?
+3. Erklärt die Thermal-Level-Tabelle nachvollziehbar, weshalb das Bild allein nicht immer ausreicht?
+4. Ist der Vergleich mit 16.1 ausreichend auf diesen Split begrenzt und die unveränderte Vorverarbeitung transparent?
+
+Kein Merge von 16.2, keine Fusion/16.3/16.4 und keine Universitätseinreichung.

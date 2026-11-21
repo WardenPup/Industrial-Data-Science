@@ -1,3 +1,19 @@
+## 21.11.2026 – 16.1 integriert; 16.2 technisch geprüft
+
+PR #22 nach ausdrücklicher Freigabe regulär gemergt:
+`70958d71c16c2f7dda900c0635900b7fb7f9b77e`. Originalreview c118c06 und
+Abschluss c77f402 erhalten; beide aktuellen CI-Läufe erfolgreich, keine Kommentare,
+Reviewthreads oder Konflikte. main = origin/main am Merge-SHA synchronisiert.
+
+16.2: **AWAITING HUMAN REVIEW**. Gemeinsames Notebook nur um ThermalCNN ergänzt,
+freigegebene 16.1-Zellen einschließlich Outputs/Metadaten exakt erhalten, alte
+Ergebnisdateien unverändert. Offizielle Architektur (136.131 Parameter), unveränderte
+TRAIN-Vorverarbeitung und 400/100-Split; 30 Epochen. TEST 72/100, fünf Critical-Fälle
+übersehen. Zwei Tests bestanden (3,685 s); acht frische sequenzielle Zellen zweimal,
+sechs numerische Exporte identisch. HTML offline 900/1400 px und Grafik visuell
+geprüft, neun Hashes und 21 Archive bestätigt. Aktuelle CI/Draft-PR nach Push prüfen.
+Keine Freigabe oder Merge von 16.2, keine Fusion/16.3/16.4 oder Einreichung.
+
 ## 21.11.2026 – Exercise 16.1 wissenschaftlich freigegeben
 
 **APPROVED**, Originalreview c118c06 erhalten. Drei Tests erneut bestanden
