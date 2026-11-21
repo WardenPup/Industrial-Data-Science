@@ -49,3 +49,6 @@ outputs/ch15/exercise_15_1/* -text
 
 sessions/ch15/exploration.ipynb -text
 outputs/ch15/exercise_15_2/* -text
+
+sessions/ch15/interactive_patterns.ipynb -text
+outputs/ch15/exercise_15_3/* -text
