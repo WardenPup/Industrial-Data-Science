@@ -123,3 +123,8 @@ Die vollständige Notebook- und Browserausführung wurde im Human Review nicht u
 Die schlechte Critical-Erkennung bleibt als relevantes Ergebnis dokumentiert. Keine nachträgliche Modelloptimierung erforderlich.
 
 Keine Universitätseinreichung.
+
+
+## Codex-Abschlussabgleich – 21.11.2026
+
+**APPROVED (wissenschaftlich)**; regulärer Merge nach erfolgreicher Abschlussprüfung ausdrücklich studentisch autorisiert. Originalreview c118c06 unverändert gesichert. Drei vorhandene Tests erneut bestanden (2,600 s), 13 Manifesthashes (zwölf Ergebnisartefakte plus Notebook) und 21 Abgabearchive unverändert. Keine wissenschaftlichen Änderungen. Bestehende lokale reproduzierbare Ausführung erhalten; aktuelle Head-CI führt Notebook/Offline-HTML frisch aus und wird vor dem Merge vollständig abgewartet. Kommentare/Threads/Konflikte unmittelbar vor Merge prüfen. Tatsächliche Merge-SHA und CI-Links im PR-Abschluss und Abschlussbericht. Keine weitere studentische Prüfung erfunden.

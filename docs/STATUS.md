@@ -1,3 +1,12 @@
+## 21.11.2026 – Exercise 16.1 wissenschaftlich freigegeben
+
+**APPROVED**, Originalreview c118c06 erhalten. Drei Tests erneut bestanden
+(2,600 s), 13 Artefakthashes und 21 Abgabearchive unverändert. Regulärer Merge von
+PR #22 ausdrücklich autorisiert, vorbehaltlich erfolgreicher aktueller Head-CI,
+Konfliktfreiheit und keinen offenen Reviewpunkten. Keine wissenschaftliche Änderung;
+58/100 und 15 übersehene Critical-Fälle bleiben dokumentiert. Tatsächlicher Merge-SHA
+im PR-Abschluss/Abschlussbericht. Ältere Statusabschnitte sind historisch.
+
 ## 21.11.2026 – Exercise 16.1 technisch geprüft
 
 **AWAITING HUMAN REVIEW** auf exercise/16.1, aus synchronisiertem main
