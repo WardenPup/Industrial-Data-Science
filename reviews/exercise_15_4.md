@@ -35,3 +35,36 @@ Die Schwellen wurden bereits anhand aller Daten in 15.2/15.3 betrachtet; damit i
 4. Sind die Grenzen durch vorherige Gesamtdatenexploration, seltene Fehler und den festen Split ausreichend deutlich?
 
 Kein Merge von 15.4, keine weitere Aufgabe und keine Universitätseinreichung.
+
+
+## Studentischer Originalreview – 21.11.2026
+
+Status: SCIENTIFICALLY APPROVED.
+
+1. Die vier Regeln und ihre Herkunft aus Exercise 15.2/15.3 sind nachvollziehbar dokumentiert.
+
+Bewertung: BESTANDEN.
+
+2. Die Confusion-Matrizen und F1-Werte sind korrekt. Die zahlreichen Fehlalarme der CCF-Regel sowie die vollständig übersehenen WDF-Fehler des Entscheidungsbaums sind verständlich erklärt.
+
+Bewertung: BESTANDEN.
+
+3. Für Prozessingenieure sind einfache Regeln zunächst besonders verständlich. Entscheidungsbäume ermöglichen ergänzende Vergleiche, müssen aber anhand der tatsächlichen Fehlklassifikationen beurteilt werden.
+
+Bewertung: BESTANDEN.
+
+4. Die wissenschaftlichen Grenzen sind ausreichend dokumentiert. Besonders wichtig ist, dass die Regeln aus der vorherigen Gesamtdatenexploration stammen und der retrospektive Test keine unabhängige Validierung der Regeln darstellt.
+
+Bewertung: BESTANDEN.
+
+GESAMTENTSCHEIDUNG:\
+SCIENTIFICALLY APPROVED.
+
+Zusätzliche Prüfung im Human Review:
+
+- Alle acht Confusion-Matrizen unabhängig aus den exportierten Vorhersagen nachgerechnet: korrekt.
+- 4.002 eindeutige Test-IDs mit jeweils vier Fehlerauswertungen bestätigt.
+- Elf hochgeladene Ergebnisartefakte stimmen mit den dokumentierten SHA-256-Prüfsummen überein.
+- GitHub-PR und erfolgreiche CI geprüft.
+
+Keine zusätzlichen Modelle oder Optimierungen erforderlich.
