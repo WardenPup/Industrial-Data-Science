@@ -1,3 +1,17 @@
+## 21.11.2026 – 16.4 wissenschaftlich freigegeben; Merge ausstehend
+
+**SCIENTIFICALLY APPROVED**, Originalreview 22c1945 wortgetreu erhalten.
+Abschlussabgleich bestanden: sieben Originalhashes, fünf Matrizen/Tabelle,
+100 TEST-Indizes/500 Vorhersagen/1.500 Wahrscheinlichkeiten, Late-Mittelung und
+TRAIN-Skalare/Split. Original-PNG lokal/Git/GitHub byteidentisch zum Manifest;
+Ursache abweichender Uploadkopie mangels vorliegender Kopie nicht festgestellt,
+keine Umwandlung behauptet. Zwei bestehende Tests bestanden (13,931 s), nur
+funktionaler Ein-Batch-Trainingscheck; keine zusätzlichen vollständigen Trainingsläufe.
+Genehmigte 16.1–16.3-Zellen, 26 frühere Ergebnisartefakte und 21 Archive unverändert.
+Plattformvariation bleibt dokumentiert. Aktuelle Head-CI und Thread-/Konfliktaudit
+vor Ready for Review vollständig abwarten. Finale Merge-Autorisierung fehlt;
+kein Merge von PR #25, keine weitere Aufgabe oder Universitätseinreichung.
+
 ## 21.11.2026 – 16.4: erfolgreiche CI mit beobachtetem Gleichstand
 
 Head ced5d88: Push 44916904691 und PR 44916981444 erfolgreich; je zwei frische

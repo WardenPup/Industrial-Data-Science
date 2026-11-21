@@ -156,3 +156,51 @@ Die vollständige Notebook- und Browserausführung wurde im Human Review nicht u
 
 Keine zusätzlichen Modelloptimierungen erforderlich.
 Keine Universitätseinreichung.
+
+
+## Codex-Abschlussverifikation nach Human Review – 21.11.2026
+
+**SCIENTIFICALLY APPROVED.** Originalreview wortgetreu separat in 22c1945 erhalten;
+gesamter bisheriger technischer Bericht und frühere Reviews unverändert. Finale
+Merge-Autorisierung fehlt.
+
+### Original-PNG und berichtete Uploadabweichung
+`outputs/ch16/exercise_16_4/01_five_confusion_matrices.png`: 139.153 Bytes,
+3759 × 797 Pixel, PNG-Struktur erfolgreich geprüft. Lokale Originaldatei,
+Git-Datei aus geprüftem Head 612e71e und tatsächlich über GitHub-Contents-API geladene
+Datei sind **bytegenau identisch**. Alle drei stimmen mit dem Manifest überein:
+`065f9a0f4a94d97d181d425f02e343b3f2ac6688a01fa2889369ce23d5a10dde`.
+
+Der aktuelle Anhang enthält ausschließlich den Reviewtext, keine abweichende
+Uploadkopie oder deren Hash. Daher ist die Ursache des berichteten anderen Upload-
+Hashes **nicht festgestellt**; insbesondere keine Upload-Umwandlung ohne Beleg
+behauptet. Der studentische Befund bleibt unverändert oben dokumentiert. An der
+maßgeblichen Originaldatei wurde keine Hashabweichung gefunden; nichts ersetzt
+oder neu gerendert.
+
+### Tatsächliche technische Nachprüfung
+Zwei vorhandene Tests erneut bestanden (13,931 s): frische Referenzinitialisierungen,
+getrennte Parameter, exakte Architektur/Shapes/142.883 Parameter, gemeinsamer
+Gradientenfluss und Gewichtsänderung in beiden Zweigen/Kopf, eval-Modus und stabile
+Wahrscheinlichkeiten. Der vorhandene Funktionstest nutzt einen Batch mit 16 TRAIN-
+Paaren/einer Epoche; keine zusätzlichen vollständigen 60-Epochen-Läufe durchgeführt.
+
+Sieben Original-Manifesthashes (sechs Ergebnisartefakte plus Notebook), Rohdaten,
+100 eindeutige TEST-Indizes/Labels, 500 Klassenvorhersagen und 1.500 Wahrscheinlichkeiten/
+Argmax erneut abgeglichen. Fünf Matrizen mit 45 Zählwerten, Accuracy und Critical-
+Treffer/-Fehler unabhängig nachgerechnet: korrekt 58/72/91/79/93, Critical 0/10/13/9/13;
+Intermediate zwei übersehen und zwei falsche Critical-Alarme. Late-Mittelung,
+TRAIN-only-Skalare und unveränderter Split bestätigt. Freigegebener 16.1–16.3-
+Zellblock einschließlich Outputs/Metadaten exakt gegen Merge 3a6cc20, 26 frühere
+Ergebnisartefakte und 21 Abgabearchive unverändert. Keine Änderungen an Modellen,
+Notebook, HTML, Original-PNG oder numerischen Ergebnissen durch den Nachtrag.
+
+Vorhandene Belege für zwei unabhängige frische Vierzehn-Zellen-Läufe und die visuelle/
+Offline-HTML-Prüfung 900/1400 px erhalten; aktuelle konfigurierte Head-CI nach Push
+vollständig abwarten. Plattformvariation/Gleichstand mit Early bleibt unverändert
+sichtbar, keine plattformübergreifende Gleichheit behauptet. Keine zusätzliche
+studentische Notebook-/Browserausführung erfunden.
+
+Nach erfolgreicher aktueller Push-/PR-CI Konflikte und Kommentare/Reviewthreads prüfen;
+erst danach Ready for Review, tatsächliche Links und Abschlussstatus im PR-Bericht.
+PR #25 nicht mergen. Keine weitere Exercise und keine Universitätseinreichung.
