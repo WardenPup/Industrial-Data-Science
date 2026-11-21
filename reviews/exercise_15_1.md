@@ -61,3 +61,80 @@ gelesen; spätere Exploration ist nicht blind gegenüber den Subgroup-failures-A
 
 Offener studentischer Schritt: Kaggle registrieren und bestätigen. Kein Human Review
 oder Merge vorweggenommen. Keine Arbeit an 15.2, keine Universitätseinreichung.
+
+
+---
+
+## Studentischer Human Review – Originalwortlaut, übergeben am 21.11.2026
+
+HUMAN REVIEW – EXERCISE 15.1
+Industrial Data Science – XAI Drilling
+
+Status: SCIENTIFICALLY APPROVED – FORMAL REQUIREMENT PENDING
+
+Die Ergebnisse der Aufgabe 15.1 wurden anhand der bereitgestellten Auswertungen und Visualisierung wissenschaftlich geprüft.
+
+1. Datenverständnis und Datenqualität
+
+Der Datensatz umfasst 20.000 Beobachtungen mit 15 Spalten. Es wurden keine fehlenden Werte festgestellt.
+
+Die Untersuchung der Duplikate ist nachvollziehbar. Unter Berücksichtigung der ID gibt es keine vollständig identischen Zeilen. Ohne ID existieren zwei zusätzliche Duplikate, die jeweils zu einer Gruppe aus zwei identischen Beobachtungen gehören.
+
+Die Entscheidung, diese Zeilen zunächst unverändert zu erhalten, ist angemessen.
+
+2. Fehlerklassen und Klassenungleichgewicht
+
+Die Verteilung der Fehlerlabels ist korrekt dargestellt:
+
+- Main Failure: 1.001 Fälle (5,005 %)
+- BEF: 215 Fälle (1,075 %)
+- CCF: 344 Fälle (1,720 %)
+- FWF: 278 Fälle (1,390 %)
+- WDF: 300 Fälle (1,500 %)
+
+Die Grafik verdeutlicht, dass Fehlerfälle gegenüber fehlerfreien Beobachtungen selten sind.
+
+Für spätere Klassifikationsaufgaben ist deshalb eine Bewertung über geeignete Kennzahlen wie Precision, Recall und F1 sinnvoll. Accuracy allein könnte irreführend sein.
+
+3. Labelkonsistenz und Mehrfachfehler
+
+Die Hauptfehlermarkierung stimmt in allen 20.000 Zeilen mit der logischen ODER-Verknüpfung der vier Fehleruntergruppen überein.
+
+Es wurden keine widersprüchlichen Labels gefunden.
+
+Die 114 Mehrfachfehler sind keine Labelkonflikte:
+
+- 92 Beobachtungen tragen zwei Fehlerlabels.
+- 22 Beobachtungen tragen drei Fehlerlabels.
+
+Die Unterscheidung zwischen mehreren gleichzeitig markierten Fehlern und widersprüchlichen Daten ist wissenschaftlich korrekt.
+
+4. Interpretation und Grenzen
+
+Die Untersuchung ist eine deskriptive Datenanalyse. Aus den Häufigkeiten lassen sich keine kausalen Fehlerursachen ableiten.
+
+Die seltenen Fehlerklassen, mögliche Abhängigkeiten zwischen Labels und die zwei Duplikate ohne ID sollten bei späteren Modellierungsaufgaben berücksichtigt werden.
+
+Es besteht kein Anlass, Daten oder Labels ohne zusätzliche Begründung zu verändern.
+
+5. Formale Einschränkung
+
+Die Aufgabenanforderung zur Kaggle-Registrierung ist noch offen.
+
+Der öffentlich zugängliche Datensatz ermöglicht zwar die technische Bearbeitung, ersetzt aber nicht automatisch die ausdrücklich geforderte persönliche Registrierung.
+
+Diese Einschränkung muss sichtbar dokumentiert bleiben. Eine Registrierung darf nicht als durchgeführt bezeichnet werden, solange sie nicht tatsächlich erfolgt ist.
+
+6. Gesamtentscheidung
+
+Die wissenschaftliche Ausarbeitung ist auf Grundlage der geprüften Ergebnisse nachvollziehbar, konsistent und angemessen.
+
+Keine zusätzlichen Analysen oder Modelle erforderlich.
+
+SCIENTIFICALLY APPROVED.
+
+Die technische Validierung wurde vom ausführenden System berichtet; sie ist nicht Bestandteil einer eigenständigen erneuten Notebook-Ausführung dieses Human Reviews.
+
+Die Kaggle-Registrierung bleibt als formaler offener Punkt dokumentiert.
+
+Keine Freigabe für eine Universitätseinreichung.
