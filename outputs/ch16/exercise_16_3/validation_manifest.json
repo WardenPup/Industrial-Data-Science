@@ -1,0 +1,23 @@
+{
+  "validated_date": "2026-11-21",
+  "status": "AWAITING HUMAN REVIEW",
+  "ai_assistance": "Codex",
+  "raw_sha256": "3f7a7e52bd2b0efd0f3af43b07efa2c05620589a09d67d82519598f6f99d6d03",
+  "sequential_code_cells": 11,
+  "approved_16_1_16_2_cells_sha256": "0c4977ceec3d16f6b80b2826f9acec78e5a6afd0ad62c275327443f7c3cb3314",
+  "prior_exports_unchanged": true,
+  "same_runner_fresh_executions": 2,
+  "prior_class_changes": 0,
+  "prior_probability_max_abs_difference": 0.0,
+  "embedded_images": 4,
+  "files": {
+    "sessions/ch16/multimodal_health_monitoring.ipynb": "213d25f587e72ebfb481257b5ff39f4c9cff902570056b34b5ca592df38c0e8a",
+    "outputs/ch16/exercise_16_3/multimodal_health_monitoring.html": "18a6f766686e974cb42e4cea34f1dfaeebedf19fa8261b4b37446ae61ae4d0b9",
+    "outputs/ch16/exercise_16_3/comparison.csv": "abaf174dfd2ae0c5ee6d1db250ea1f28a0813fa370cc64303ce5c5fd0dcb15e4",
+    "outputs/ch16/exercise_16_3/confusion_matrices.csv": "aaa74215a0d4f56c8fbcc32a1e6108bbbadfb212cd97456fc1a63dbbd1bfaed8",
+    "outputs/ch16/exercise_16_3/predictions.csv": "47ea68f9589419efd1b190f84632c5309cc430623a8862e267ef92b8ee403008",
+    "outputs/ch16/exercise_16_3/01_four_confusion_matrices.png": "56d51afa047d16d53fd9e93cbf8ee6cc0af9bcccb35ed14c0fb3f5442b5002d5",
+    "outputs/ch16/exercise_16_3/summary.json": "6cd0248392bee4652163ec4f9fae7de6fef52f06c913bf186b767f8bd1a05adc"
+  },
+  "post_execution_documentation": "Measured interpretation added; incidental write-count echo suppressed by assignment; HTML re-exported/offline checked without extra training. CI executes final source."
+}

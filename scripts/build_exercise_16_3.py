@@ -1,0 +1,168 @@
+"""Execute the shared notebook with the prescribed early and late fusion and verify predictions and offline HTML."""
+import argparse
+import copy
+import shutil
+import tempfile
+import asyncio
+import base64
+import hashlib
+from io import BytesIO
+import json
+import os
+from pathlib import Path
+import sys
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+for name, rel in {"JUPYTER_CONFIG_DIR": ".jupyter", "JUPYTER_DATA_DIR": ".local/share/jupyter",
+                  "JUPYTER_RUNTIME_DIR": ".local/share/jupyter/runtime", "IPYTHONDIR": ".local/ipython",
+                  "MPLCONFIGDIR": ".tools/matplotlib"}.items():
+    os.environ.setdefault(name, str(ROOT / rel))
+
+import nbformat
+import numpy as np
+import pandas as pd
+from bs4 import BeautifulSoup
+from nbclient import NotebookClient
+from nbconvert import HTMLExporter
+from PIL import Image
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--check-html", action="store_true")
+    args = parser.parse_args()
+    source = ROOT / "sessions/ch16/multimodal_health_monitoring.ipynb"
+    output = ROOT / "outputs/ch16/exercise_16_3"
+    notebook = nbformat.read(source, 4)
+    nbformat.validate(notebook)
+    boundary=next(i for i,c in enumerate(notebook.cells) if c.cell_type=="markdown" and c.source.startswith("## Exercise 16.3"))
+    approved=copy.deepcopy(notebook.cells[:boundary])
+    cell_hash=lambda cells:hashlib.sha256(json.dumps(cells,sort_keys=True,ensure_ascii=False).encode()).hexdigest()
+    assert cell_hash(approved)=="0c4977ceec3d16f6b80b2826f9acec78e5a6afd0ad62c275327443f7c3cb3314", "Approved 16.1/16.2 cells changed"
+    previous=ROOT/"outputs/ch16/exercise_16_1"
+    previous_bytes={p:p.read_bytes() for p in previous.iterdir() if p.is_file()}
+    previous_second=ROOT/"outputs/ch16/exercise_16_2"
+    previous_bytes.update({p:p.read_bytes() for p in previous_second.iterdir() if p.is_file()})
+    os.environ["PYTHONPATH"]=str(ROOT)+os.pathsep+os.environ.get("PYTHONPATH","")
+    # Execute every cell unchanged; relative writes stay in a temporary working directory.
+    with tempfile.TemporaryDirectory(prefix="16_3_execution_",dir=ROOT/".tools") as execution_dir:
+        client=NotebookClient(notebook,timeout=240,kernel_name="python3",resources={"metadata":{"path":execution_dir}})
+        if sys.platform=="win32":
+            with asyncio.Runner(loop_factory=asyncio.SelectorEventLoop) as runner:runner.run(client.async_execute())
+        else:client.execute()
+        scratch=Path(execution_dir)/"outputs/ch16"
+        original=pd.read_csv(previous/"predictions.csv")
+        repeated=pd.read_csv(scratch/"exercise_16_1/predictions.csv")
+        assert np.array_equal(original[["Index_0basiert","Ist"]],repeated[["Index_0basiert","Ist"]])
+        prior_class_changes=int((original.Vorhersage!=repeated.Vorhersage).sum())
+        reference_probs=original[["p_Normal","p_Warning","p_Critical"]].to_numpy()
+        repeated_probs=repeated[["p_Normal","p_Warning","p_Critical"]].to_numpy()
+        assert np.isfinite(repeated_probs).all() and (repeated_probs>=0).all() and (repeated_probs<=1).all()
+        assert np.allclose(repeated_probs.sum(axis=1),1,atol=1e-6)
+        assert np.array_equal(repeated_probs.argmax(axis=1),repeated.Vorhersage)
+        prior_probability_max_abs_difference=float(np.max(np.abs(reference_probs-repeated_probs)))
+        print(f"16.1 replay: identical indices/labels; saved-platform class changes={prior_class_changes}; max probability difference from saved platform = {prior_probability_max_abs_difference:.12g}")
+        if prior_probability_max_abs_difference>1e-5:
+            print("WARNING: platform-dependent probability differences; saved 16.1 outputs stay untouched. No cross-platform probability tolerance is claimed.")
+        # Reproducibility is checked on the same runner, never against a different CPU.
+        current_predictions=pd.read_csv(scratch/"exercise_16_3/predictions.csv")
+        for name,part in [("Vibration","exercise_16_1"),("Thermal","exercise_16_2")]:
+            existing=pd.read_csv(scratch/part/"predictions.csv")
+            assert np.array_equal(current_predictions[name+"_Vorhersage"],existing.Vorhersage)
+            assert np.array_equal(current_predictions.Index_0basiert,existing.Index_0basiert)
+            assert np.allclose(current_predictions[[name+"_p"+str(i) for i in range(3)]],existing[["p_Normal","p_Warning","p_Critical"]],atol=1e-7)
+        replay_notebook=copy.deepcopy(notebook)
+        replay_client=NotebookClient(replay_notebook,timeout=240,kernel_name="python3",resources={"metadata":{"path":execution_dir}})
+        if sys.platform=="win32":
+            with asyncio.Runner(loop_factory=asyncio.SelectorEventLoop) as runner:runner.run(replay_client.async_execute())
+        else:replay_client.execute()
+        pd.testing.assert_frame_equal(repeated,pd.read_csv(scratch/"exercise_16_1/predictions.csv"),check_exact=True)
+        pd.testing.assert_frame_equal(current_predictions,pd.read_csv(scratch/"exercise_16_3/predictions.csv"),check_exact=True)
+        print("PASS: two independent fresh eleven-cell executions give exactly identical predictions/probabilities on this runner")
+        print("Runner accuracies:", {name:float((current_predictions.Ist==current_predictions[name+"_Vorhersage"]).mean()) for name in ["Vibration","Thermal","Early","Late"]})
+        output.mkdir(parents=True,exist_ok=True)
+        for p in (scratch/"exercise_16_3").iterdir():shutil.copyfile(p,output/p.name)
+    # Keep all approved text, code, displayed output and execution metadata untouched.
+    notebook.cells[:boundary]=approved
+    assert cell_hash(notebook.cells[:boundary])==cell_hash(approved)
+    assert all(p.read_bytes()==content for p,content in previous_bytes.items())
+    counts = [c.execution_count for c in notebook.cells if c.cell_type == "code"]
+    assert counts == list(range(1, len(counts)+1))
+    assert not any(o.output_type == "error" for c in notebook.cells if c.cell_type == "code" for o in c.outputs)
+    html, _ = HTMLExporter(embed_images=True, raw_template=(ROOT / "templates/notebook_export.html.j2").read_text(encoding="utf-8")).from_notebook_node(notebook)
+    page = BeautifulSoup(html, "html.parser")
+    for element in page.select("script, link[href^='http']"):
+        element.decompose()
+    images = page.select("img[src^='data:image/png;base64,']")
+    assert len(images) == 4
+    for item in images:
+        with Image.open(BytesIO(base64.b64decode(item["src"].split(",", 1)[1]))) as im:
+            im.verify()
+        link = page.new_tag("a", href=item["src"], target="_blank", title="Grafik in Originalauflösung öffnen")
+        item.wrap(link)
+    nbformat.write(notebook, source)
+    destination = output / "multimodal_health_monitoring.html"
+    destination.write_text(str(page), encoding="utf-8")
+    from sessions.ch16.multimodal import load_multimodal_data,DATA_PATH,RAW_SHA256,prepare_data
+    from sklearn.metrics import confusion_matrix
+    ts,img,labels,levels=load_multimodal_data(str(DATA_PATH))
+    prepared=prepare_data(ts,img,labels,levels)
+    pred=pd.read_csv(output/"predictions.csv")
+    assert len(pred)==100 and pred.Index_0basiert.tolist()==prepared["test_indices"].tolist()
+    assert np.array_equal(pred.Ist,labels[prepared["test_indices"]])
+    matrices=pd.read_csv(output/"confusion_matrices.csv")
+    comparison=pd.read_csv(output/"comparison.csv")
+    assert len(matrices)==36 and comparison.Modell.tolist()==["Vibration","Thermal","Early","Late"]
+    for name in comparison.Modell:
+        probs=pred[[name+"_p"+str(i) for i in range(3)]].to_numpy()
+        assert np.isfinite(probs).all() and (probs>=0).all() and (probs<=1).all()
+        assert np.allclose(probs.sum(axis=1),1,atol=1e-6)
+        assert np.array_equal(probs.argmax(axis=1),pred[name+"_Vorhersage"])
+        cm=confusion_matrix(pred.Ist,pred[name+"_Vorhersage"],labels=[0,1,2])
+        stored=matrices.loc[matrices.Modell.eq(name)].sort_values(["Ist","Vorhersage"])
+        assert np.array_equal(cm.ravel(),stored.Anzahl)
+        row=comparison.loc[comparison.Modell.eq(name)].iloc[0]
+        assert row.Korrekt==int(np.trace(cm)) and np.isclose(row.Accuracy,np.trace(cm)/100)
+        assert row["Critical erkannt"]==cm[2,2] and row["Critical TEST"]==15
+    expected_mean=(pred[["Vibration_p"+str(i) for i in range(3)]].to_numpy()+pred[["Thermal_p"+str(i) for i in range(3)]].to_numpy())/2
+    assert np.allclose(expected_mean,pred[["Late_p"+str(i) for i in range(3)]],rtol=1e-6,atol=1e-7)
+    summary=json.loads((output/"summary.json").read_text())
+    assert summary["epochs_early"]==30 and summary["batch_size"]==16 and summary["seed"]==42
+    assert summary["early_parameters"]==136275
+    assert summary["early_train_shape"]==[400,2,32,32] and summary["early_test_shape"]==[100,2,32,32]
+    for k,v in summary["train_scaling"].items():assert np.isclose(v,prepared[k],rtol=0,atol=1e-12)
+    assert all(p.read_bytes()==content for p,content in previous_bytes.items())
+    def verify_file():return RAW_SHA256
+    files = [source, destination] + sorted(output.glob("*.csv")) + sorted(output.glob("*.png")) + [output / "summary.json"]
+    manifest = {"validated_date": "2026-11-21", "status": "AWAITING HUMAN REVIEW", "ai_assistance": "Codex",
+                "raw_sha256": verify_file(), "sequential_code_cells": len(counts), "approved_16_1_16_2_cells_sha256": cell_hash(approved), "prior_exports_unchanged": True, "same_runner_fresh_executions": 2, "prior_class_changes": prior_class_changes, "prior_probability_max_abs_difference": prior_probability_max_abs_difference, "embedded_images": 4,
+                "files": {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest() for p in files}}
+    (output / "validation_manifest.json").write_text(json.dumps(manifest, indent=2)+"\n", encoding="utf-8")
+    print(f"PASS: {len(counts)} fresh sequential cells; four embedded images; independent counts and raw SHA256 verified")
+    if args.check_html:
+        if (ROOT / ".tools/playwright").exists():
+            os.environ.setdefault("PLAYWRIGHT_BROWSERS_PATH", str(ROOT / ".tools/playwright"))
+        from playwright.sync_api import sync_playwright
+        with sync_playwright() as playwright:
+            browser = playwright.chromium.launch(headless=True)
+            for width in [900, 1400]:
+                tab = browser.new_page(viewport={"width": width, "height": 1000}, offline=True)
+                errors, failures = [], []
+                tab.on("pageerror", lambda e: errors.append(str(e)))
+                tab.on("requestfailed", lambda r: failures.append(r.url))
+                tab.goto(destination.as_uri())
+                assert tab.locator("img").count() == 4
+                assert tab.locator("img").evaluate_all("xs => xs.every(x => x.complete && x.naturalWidth > 0)")
+                assert not errors and not failures
+                assert tab.evaluate("document.documentElement.scrollWidth <= innerWidth")
+                screenshot = ROOT / f".tools/16_3_html/{width}.png"
+                screenshot.parent.mkdir(parents=True, exist_ok=True)
+                tab.screenshot(path=str(screenshot), full_page=True)
+                tab.close()
+                print(f"PASS offline HTML {width}px: image loaded; no page errors, failed requests or page overflow")
+            browser.close()
+
+
+if __name__ == "__main__":
+    main()
