@@ -1,3 +1,18 @@
+## 21.11.2026 – 15.2 integriert; 15.3 technisch geprüft
+
+PR #19 nach ausdrücklicher Freigabe regulär gemergt:
+`473fcfdc5c76f53bf155aa5a2f748751c3c803f8`. Vorher Originalreview 32f2342 und
+Nachprüfung 4d3df34, beide erfolgreichen aktuellen CI-Läufe sowie keine Kommentare/
+Reviewthreads/Konflikte bestätigt. main = origin/main am Merge-SHA. Registrierung
+aus 15.1 bleibt formal unerledigt, keine Kontoanlage oder Einreichungsfreigabe.
+
+15.3: **AWAITING HUMAN REVIEW**. Plotly-Parallelkoordinaten mit vier Fehlerauswahlen,
+Brushing und beobachteten Bereichen. Drei Tests bestanden (8,107 s), drei frische
+Codezellen, Offline-HTML 900/1400 px und Standalone ohne Python-Server, 16 tatsächliche
+Interaktionsprotokolle und 28 mit Originaldaten abgeglichene Bereiche. Neun Hashes,
+21 Archive und frühere wissenschaftliche Dateien unverändert bestätigt. Keine
+Modelle/15.4-Arbeit. Draft-PR/aktuelle Head-CI nach Push tatsächlich prüfen.
+
 ## 21.11.2026 – 15.1 bedingt integriert; 15.2 technisch geprüft
 
 PR #18 regulär gemergt: `6bf9e2d69ea4b5a75bc28bbe76d85cb542f11c88`.

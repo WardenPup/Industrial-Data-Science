@@ -1,0 +1,18 @@
+{
+  "validated_date": "2026-11-21",
+  "status": "AWAITING HUMAN REVIEW",
+  "ai_assistance": "Codex",
+  "raw_sha256": "e1dcc45f8821f7b96d923a253374150d5013cead40bc08b4bef33033aef0ab83",
+  "sequential_code_cells": 3,
+  "files": {
+    "sessions/ch15/interactive_patterns.ipynb": "f786f16f0e91e5a64af8a11caa4f877a4664aa011360ddfa719bb63a6e6cb540",
+    "outputs/ch15/exercise_15_3/parallel_coordinates_notebook.html": "294709515a6002e479b586cbee50dce2585c0df1a74cab3fed967ba9323b5995",
+    "outputs/ch15/exercise_15_3/parallel_coordinates.html": "4ea490b2307f7d02e01c6474405fbaa8a55b09e0d5c73746764ffa8fb59eb312",
+    "outputs/ch15/exercise_15_3/failure_counts.csv": "6ec1f271dabcbeee82149078bcf387892d4092f56a5ed14144b96325601ee4f5",
+    "outputs/ch15/exercise_15_3/summary.json": "f7c6c7a890efaf585d4a7dfd5b3882adc47d4abf871fa0207ad5ae57cd577f15",
+    "outputs/ch15/exercise_15_3/interaction_checks.json": "3cfefc4a82431eb786222b6d449bec570d2598a2c845118d16564cae889d76ba",
+    "outputs/ch15/exercise_15_3/brushed_bounds.csv": "f9e62f5198b600d65feec63fe7b03d9aa4c5ce9f83852ba4f65c02177ee8bbdc",
+    "outputs/ch15/exercise_15_3/01_bef_brushed.png": "ec9dbb9343a12786336d5d8068a1d700d5248f20d211dd6eeecfa81e5d398c82",
+    "outputs/ch15/exercise_15_3/02_fwf_brushed.png": "61543b393126fec0e4644edaf69efd2cb76ace5cc97671c89bc44c59093f838c"
+  }
+}

@@ -1,6 +1,6 @@
 # Nächste Self-Study-Aufgaben
 
-Stand/Abruf: **19.11.2026**. Status: **14.1 APPROVED und integriert; 14.2 APPROVED und integriert; 14.3 APPROVED und integriert; 14.4 APPROVED und integriert; 15.1 wissenschaftlich freigegeben und integriert, Registrierung offen; 15.2 AWAITING HUMAN REVIEW; übrige Übungen nur geplant**.
+Stand/Abruf: **19.11.2026**. Status: **14.1 APPROVED und integriert; 14.2 APPROVED und integriert; 14.3 APPROVED und integriert; 14.4 APPROVED und integriert; 15.1 wissenschaftlich freigegeben und integriert, Registrierung offen; 15.2 APPROVED und integriert; 15.3 AWAITING HUMAN REVIEW; übrige Übungen nur geplant**.
 Codex: Quellenprüfung, Anforderungsübersicht und Workflowvorschlag. Keine neuen
 studentischen Prüfungen oder Freigaben behauptet; bisherige Lösungen bleiben erhalten.
 
@@ -52,11 +52,11 @@ der Kursseiten. Pflichtartefakte wie Screenshots und Skripte sind separat genann
 **15.1 — Register and download the dataset — SCIENTIFICALLY APPROVED, integriert; Registrierung offen — low**
 - [ ] Kaggle registrieren/Zugang klären, Beschreibung lesen, Daten laden; Form, Typen, Probleme, Ziele und Klassenhäufigkeiten prüfen. Hauptflag gegen Vereinigung der Untergruppen sowie Mehrfachfehler prüfen und Umgang erläutern. Ergebnis: Daten-/Labelprüfung technisch durchgeführt (20.000 × 15, 0 Labelwidersprüche, 114 Mehrfachfehler). **Registrierung bleibt offen: Student hat noch kein Konto.** Öffentlicher Download möglich; keine Zugangsdaten im Repository.
 
-**15.2 — Explore the dataset — AWAITING HUMAN REVIEW — medium**
+**15.2 — Explore the dataset — APPROVED, PR #19 integriert — medium**
 - [x] Nach 15.1 Merkmale je Fehlertyp statistisch und mit mindestens zwei geeigneten Grafiken untersuchen; Befunde/Schwellen notieren und mit „Subgroup failures“ vergleichen. Bereits gelesene Beschreibung nicht als ungelesen ausgeben; explorative Betrachtung und anschließenden Vergleich transparent trennen.
 
-**15.3 — Visualize failure patterns with plotly — medium**
-- [ ] Auf Daten aus 15.1 aufbauen: Parallelkoordinaten, Dropdown nach Fehlertyp, Brushing je Fehlertyp; ungefähre Schwellen und neue Muster/Anomalien festhalten. Ergebnis: interaktive Darstellung mit kurzen Befunden, Schwellen für 15.4; 15.2 als Vergleich.
+**15.3 — Visualize failure patterns with plotly — AWAITING HUMAN REVIEW — medium**
+- [x] Auf Daten aus 15.1 aufbauen: Parallelkoordinaten, Dropdown nach Fehlertyp, Brushing je Fehlertyp; ungefähre Schwellen und neue Muster/Anomalien festhalten. Ergebnis: interaktive Darstellung mit kurzen Befunden, Schwellen für 15.4; 15.2 als Vergleich.
 
 **15.4 — From exploration to a rule-based failure model — medium**
 - [ ] Schwellen aus 15.2 und/oder 15.3 in je eine Python-Regelfunktion pro Fehlertyp übersetzen; je Confusion-Matrix berechnen. Flachen Baum pro Fehlertyp fitten, mit Regeln vergleichen und Erklärbarkeit für Prozessingenieure diskutieren. Abhängigkeit: 15.1 und die tatsächlich ermittelten Schwellen.
@@ -147,7 +147,7 @@ Es gibt keine hier zugesagten Modellgüten oder selbst erfundenen Sollmetriken.
 | `.github/workflows/quality.yml` | Vorhandene gesperrte Installation, Tests, Commitprüfung, PR-Checks; derzeit globale Tests plus mehrere vollständige Notebookläufe. Vorschlag: künftig gezielte neue Jobs/Pfadfilter, ohne Altprüfungen still abzuschalten; heute nichts geändert |
 | `reviews/TEMPLATE.md` | Auf einen knappen aufgabenspezifischen Review reduzieren: Ergebnis, tatsächliche Checks, Grenzen, 2–3 Fachfragen, echte studentische Entscheidung; Originalwortlaut erhalten |
 
-Fehlend im aktuellen Lockfile: **Plotly/ipywidgets** (14.4/15.3), OPC-UA-/GUI-Pakete
+Seit 14.4 im Lockfile vorhanden: **Plotly/ipywidgets** (für 15.3 wiederverwendet). Noch fehlend: OPC-UA-/GUI-Pakete
 wie **opcua-client/pyqtgraph** und gegebenenfalls **asyncua** (erst konkretes Simulator-
 README prüfen). Nur bei Bedarf per uv ergänzen. Interaktive Dropdowns müssen im
 Notebook funktionieren; ein statischer nbconvert-Export garantiert das nicht.
