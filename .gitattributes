@@ -52,3 +52,6 @@ outputs/ch15/exercise_15_2/* -text
 
 sessions/ch15/interactive_patterns.ipynb -text
 outputs/ch15/exercise_15_3/* -text
+
+sessions/ch15/rule_models.ipynb -text
+outputs/ch15/exercise_15_4/** -text
