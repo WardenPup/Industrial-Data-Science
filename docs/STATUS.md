@@ -1,3 +1,62 @@
+## 21.11.2026 – 16.2 wissenschaftlich freigegeben; Merge weiterhin ausstehend
+
+**SCIENTIFICALLY APPROVED**, Originalreview 85c9141 unverändert gesichert.
+Abschlussabgleich bestanden: neun neue Hashes, 100 Vorhersagen/300 Wahrscheinlichkeiten,
+Matrix 72/100 und Thermal-Level-Tabellen; identische TRAIN-Skalare/Split,
+freigegebene 16.1-Zellen und zwölf Ergebnisartefakte sowie 21 Archive unverändert.
+Plattformabweichungen bleiben sichtbar dokumentiert. Nur Review/Statusdokumentation
+geändert; keine zusätzlichen lokalen Trainingsläufe. Beide aktuellen Head-CI-Läufe
+und Threads/Konflikte vor Ready for Review vollständig prüfen. Finale Merge-Freigabe
+steht aus, kein Merge von PR #23; keine Arbeit an 16.3/16.4 oder Einreichung.
+
+## 21.11.2026 – 16.2: erfolgreiche CI und Plattformbefund
+
+Head 2c8be3a: Push 44909914982 und PR 44909918774 erfolgreich, je zwei vollständige
+frische Notebook-Läufe mit exakt gleichen Vorhersagen/Wahrscheinlichkeiten innerhalb
+des Runners. Thermal lokal 0,72; beobachtete CI-Werte 0,70/0,73. Vibration lokal
+0,58, CI 0,58/0,59. Keine plattformübergreifende Ergebnisgleichheit behauptet;
+Nebenbefund als Grenze in Notebook/HTML/Review ergänzt, keine Optimierung oder
+Änderung der lokalen Matrizen. HTML nach reiner Textergänzung offline erneut geprüft.
+16.2 bleibt AWAITING HUMAN REVIEW; neun neue Hashes sowie alte Artefakte erhalten.
+
+## 21.11.2026 – Finale Reproduzierbarkeitsprüfung 16.2
+
+Weitere CI-Runner zeigten auch abweichende neu berechnete 16.1-Klassen gegenüber
+dem gespeicherten Plattformstand. Daher keine plattformübergreifende Ergebnisgleichheit
+behaupten: Prüfer verlangt nun zwei unabhängige vollständige frische Notebook-Läufe
+auf demselben Runner mit exakt identischen Vorhersagen/Wahrscheinlichkeiten beider
+Modelle; Unterschiede zum gespeicherten Stand werden separat protokolliert.
+Lokal bestanden: acht Zellen zweimal frisch, Vibration 0,58 / Thermal 0,72,
+keine gespeicherte 16.1-Abweichung, sechs numerische Exporte unverändert und HTML
+900/1400 px bestanden. Frühere Prüferstände unten historisch. Aktuelle CI abwarten;
+16.2 bleibt AWAITING HUMAN REVIEW, Originalartefakte unverändert.
+
+## 21.11.2026 – Technischer CI-Nachtrag 16.2
+
+Erste Push-CI bestanden, erste PR-CI wegen zu strenger plattformübergreifender
+16.1-Wahrscheinlichkeitstoleranz von 1e-5 fehlgeschlagen; Klassen/Indizes/Labels
+waren identisch. Prüfer dokumentiert jetzt maximale Abweichung/Warnung, wahrt
+identische Klassen und gültige Wahrscheinlichkeiten. Kein Modell/Ergebnis geändert.
+Lokal erneut acht frische Zellen und Offline-HTML bestanden, Abweichung 0; sechs
+numerische Exporte unverändert. Neue aktuelle Head-CI im Draft-PR abwarten.
+Status bleibt AWAITING HUMAN REVIEW, kein Merge.
+
+## 21.11.2026 – 16.1 integriert; 16.2 technisch geprüft
+
+PR #22 nach ausdrücklicher Freigabe regulär gemergt:
+`70958d71c16c2f7dda900c0635900b7fb7f9b77e`. Originalreview c118c06 und
+Abschluss c77f402 erhalten; beide aktuellen CI-Läufe erfolgreich, keine Kommentare,
+Reviewthreads oder Konflikte. main = origin/main am Merge-SHA synchronisiert.
+
+16.2: **AWAITING HUMAN REVIEW**. Gemeinsames Notebook nur um ThermalCNN ergänzt,
+freigegebene 16.1-Zellen einschließlich Outputs/Metadaten exakt erhalten, alte
+Ergebnisdateien unverändert. Offizielle Architektur (136.131 Parameter), unveränderte
+TRAIN-Vorverarbeitung und 400/100-Split; 30 Epochen. TEST 72/100, fünf Critical-Fälle
+übersehen. Zwei Tests bestanden (3,685 s); acht frische sequenzielle Zellen zweimal,
+sechs numerische Exporte identisch. HTML offline 900/1400 px und Grafik visuell
+geprüft, neun Hashes und 21 Archive bestätigt. Aktuelle CI/Draft-PR nach Push prüfen.
+Keine Freigabe oder Merge von 16.2, keine Fusion/16.3/16.4 oder Einreichung.
+
 ## 21.11.2026 – Exercise 16.1 wissenschaftlich freigegeben
 
 **APPROVED**, Originalreview c118c06 erhalten. Drei Tests erneut bestanden

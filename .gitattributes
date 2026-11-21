@@ -59,3 +59,5 @@ outputs/ch15/exercise_15_4/** -text
 data/raw/sss3_multimodal.json -text
 sessions/ch16/multimodal_health_monitoring.ipynb -text
 outputs/ch16/exercise_16_1/** -text
+
+outputs/ch16/exercise_16_2/** -text

@@ -1,0 +1,25 @@
+{
+  "validated_date": "2026-11-21",
+  "status": "AWAITING HUMAN REVIEW",
+  "ai_assistance": "Codex",
+  "raw_sha256": "3f7a7e52bd2b0efd0f3af43b07efa2c05620589a09d67d82519598f6f99d6d03",
+  "sequential_code_cells": 8,
+  "approved_16_1_cells_sha256": "5e99f97ee231f26b461d6394b0ff1f05d4b08ac79fcd35b41dc95efc151227a9",
+  "prior_exports_unchanged": true,
+  "same_runner_fresh_executions": 2,
+  "prior_class_changes": 0,
+  "prior_probability_max_abs_difference": 0.0,
+  "embedded_images": 3,
+  "files": {
+    "sessions/ch16/multimodal_health_monitoring.ipynb": "703991bf31fa8399689d0cd59345b1ce0d84a3f019fa06fd96da974326416797",
+    "outputs/ch16/exercise_16_2/multimodal_health_monitoring.html": "c21d83c37cb4f312be4038effc97c33cdf4be013406d9dd221697cc0a27edb8b",
+    "outputs/ch16/exercise_16_2/confusion_matrix.csv": "bd504223a0b1e385fa597850ad069ffdfb4ce5b7bf489d25c0c69294f47e5c9d",
+    "outputs/ch16/exercise_16_2/predictions.csv": "ae302ddf7f738131a9eedd595de2ec2fb706cd913363589b787d4ec17d7d0f09",
+    "outputs/ch16/exercise_16_2/split.csv": "08b4146bb757ddc23733e50dd735f88fa86d2b74ef4957f13bb62f0fb606e3f0",
+    "outputs/ch16/exercise_16_2/thermal_levels_vs_status.csv": "301bca7c59058a92c4e12d42586d884b8f51167e571bae3aa9706a486080190b",
+    "outputs/ch16/exercise_16_2/01_confusion_matrix.png": "558face377665b8c262d86f90af4d6e7e3054ba614b59d064b600814e82351a9",
+    "outputs/ch16/exercise_16_2/summary.json": "dbdfcabf186b628ffa372c3cdb3b64f1679fe76272d7dedf93af9d52c44d3686",
+    "outputs/ch16/exercise_16_2/scaling.json": "c4b42d6f12571e25ab29b82fc14e664e98130490d80905cf5d1929d099cba73b"
+  },
+  "post_execution_documentation": "Observed CI platform variability added to markdown only; HTML re-exported and offline checked without additional training."
+}
