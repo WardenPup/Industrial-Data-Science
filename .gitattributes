@@ -39,3 +39,6 @@ data/raw/ai4i2020.csv -text
 
 sessions/ch14/engineered_features.ipynb -text
 outputs/ch14/exercise_14_3/* -text
+
+sessions/ch14/parallel_coordinates.ipynb -text
+outputs/ch14/exercise_14_4/* -text

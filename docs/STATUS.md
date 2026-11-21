@@ -1,3 +1,32 @@
+## 21.11.2026 – Exercise 14.4 wissenschaftlicher Review nachgeprüft
+
+**SCIENTIFICALLY APPROVED – TECHNICALLY VALIDATED – AWAITING FINAL MERGE AUTHORIZATION**.
+Originalreview wortgetreu in 72eac4f. Drei Tests erneut bestanden (8,206 s), drei
+frische Codezellen, 16 Offline-Interaktionsprotokolle; Notebook-HTML 900/1400 px und
+Standalone ohne Python-Server geprüft. Alle Zahlen/Featureformeln/Diagrammdimensionen
+und acht alte/neue Manifesthashes bestätigt. CSV/JSON/Standalone-HTML wissenschaftlich
+unverändert; 21 Archive erhalten. Keine fachliche Korrektur, nur Status/Prüfbericht
+und kleiner Builder-Docstring präzisiert. Aktuelle Head-CI und Ready-Status werden
+im PR #17 nach tatsächlichem Erfolg belegt. Finale Merge-Freigabe ausstehend.
+Keine Arbeit an 15.1; keine Einreichung.
+
+## 19.11.2026 – 14.3 integriert; 14.4 für Human Review vorbereitet
+
+PR #16 ausdrücklich autorisiert regulär gemergt:
+`63a1c03ce9e2f5e793558202103c25dc68524634`. Unmittelbar zuvor unveränderter
+Head 5ec97fc, Ready, beide erfolgreichen CI-Läufe, keine Konflikte/Kommentare/
+Reviewthreads bestätigt. Originalreview ff87709 und Nachprüfung 5ec97fc erhalten.
+Lokales main = origin/main am Merge-SHA.
+
+14.4: **AWAITING HUMAN REVIEW**. Plotly-Parallelkoordinaten mit acht kontinuierlichen
+Merkmalen, kategorialem Type/Fehlerflag und Type-Färbung; Jupyter-Dropdown und
+kernelunabhängige Offline-Auswahl. Drei gezielte Tests bestanden (7,323 s), drei
+Codezellen frisch sequenziell; echte Maus-Brushing-/Umordnungsaktionen und Offline-
+HTML bei 900/1400 px geprüft. Keine Modelle oder Folgeaufgaben. Head-CI wird im
+Draft-PR am tatsächlichen Commit dokumentiert. Frühere wissenschaftliche Dateien,
+Originalreviews, Rohdaten und Abgabepakete bleiben unverändert. Keine Freigabe,
+kein Merge von 14.4, kein Kapitel 15 und keine Einreichung.
+
 ## 19.11.2026 – 14.3: studentischer Review technisch nachgeprüft
 
 **SCIENTIFICALLY APPROVED – TECHNICALLY VALIDATED – AWAITING FINAL MERGE AUTHORIZATION**.
