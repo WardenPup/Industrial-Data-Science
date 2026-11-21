@@ -62,3 +62,33 @@ Zufallsmechanismus bei RNF. Frühere Lösungen und Reviews bleiben unverändert.
 4. Sind Offline-Bedienung, horizontales Scrollen sowie Unterschiede zum Jupyter-Dropdown verständlich und praktikabel?
 
 Kein studentischer Review erfunden. Kein Merge, kein Beginn Kapitel 15, keine Einreichung.
+
+
+---
+
+## Studentischer Human Review – Originalwortlaut, übergeben am 21.11.2026
+
+Die interaktive Parallelkoordinatenvisualisierung erfüllt die fachlichen Ziele von Exercise 14.4.
+
+Die acht kontinuierlichen Merkmale, kategorialen Fehlerflags und die Typklassifizierung sind verständlich dargestellt.
+
+Die HDF- und PWF-Auswahlen sind plausibel und stimmen mit den dokumentierten Ergebnissen überein.
+
+Bestätigte Ergebnisse:
+
+- 10.000 Datensätze.
+- HDF: 115 markierte Fälle.
+- PWF: 95 markierte Fälle.
+- TWF: 46 markierte Fälle.
+- HDF: Temperaturdifferenz maximal 8,6 K und Drehzahl maximal 1.379 rpm.
+- PWF: Keine markierten Fälle innerhalb 3.500–9.000 W.
+
+Brushing, Achsenumordnung und Dropdown-Auswahl sind nachvollziehbar dokumentiert.
+
+Die Darstellung enthält bei 10.000 Linien unvermeidbare Überlagerungen. Brushing reduziert diese Einschränkung.
+
+Die Ergebnisse beschreiben Muster synthetischer Daten. Sie beweisen keine kausalen Zusammenhänge und liefern keine Ausfallwahrscheinlichkeiten.
+
+Es besteht kein wissenschaftlicher Änderungsbedarf.
+
+Gesamturteil: SCIENTIFICALLY APPROVED.
