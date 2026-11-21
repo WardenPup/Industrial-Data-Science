@@ -141,3 +141,37 @@ Die vollständige Notebook- und Browserausführung wurde im Human Review nicht u
 
 Keine zusätzlichen Modelloptimierungen erforderlich.\
 Keine Universitätseinreichung.
+
+
+## Codex-Abschlussverifikation nach Human Review – 21.11.2026
+
+**SCIENTIFICALLY APPROVED.** Originalreview wortgetreu separat in 6753432;
+ursprünglicher technischer Bericht und gesamte Reviewhistorie unverändert erhalten.
+Finale Merge-Autorisierung weiterhin ausstehend.
+
+Tatsächlich erneut ausgeführt: zwei vorhandene Fusionstests bestanden (0,021 s),
+ohne Testtraining. Direkter Datenabgleich in bestehender uv-Umgebung bestätigt:
+100 eindeutige originale TEST-Indizes/Labels, 400 Klassenvorhersagen und 1.200
+gültige Wahrscheinlichkeiten/Argmax; vier Confusion-Matrizen mit 36 Werten und
+alle Vergleichstabellenwerte (58/72/91/79 korrekt, Critical 0/10/13/9 von 15).
+Early-Tensoren für 400 TRAIN/100 TEST geprüft: Bildkanal unverändert, alle 80
+standardisierten Signalwerte in richtiger Reihenfolge, 944 Nullen je Signal.
+Late-Mittelung unabhängig rechnerisch geprüft; Split und TRAIN-Skalare unverändert.
+
+Sieben Manifesthashes (sechs Ergebnisartefakte plus gemeinsames Notebook) und
+Rohdaten-SHA256 geprüft; freigegebener 16.1/16.2-Zellblock inklusive Outputs und
+Metadaten exakt gegen Merge 5b78a82 erhalten. Zwanzig frühere Ergebnisartefakte und
+21 Abgabearchive unverändert. Keine Änderung an Notebook, HTML, Code, lokalen
+Vorhersagen oder Ergebnistabellen durch diesen Nachtrag. Keine zusätzlichen lokalen
+Trainingsläufe. Vorhandene Belege für zwei unabhängige frische Elf-Zellen-Läufe,
+exakte Wiederholbarkeit innerhalb der Umgebung und visuelle/Offline-HTML-Prüfung
+900/1400 px erhalten; aktuelle konfigurierte Head-CI nach Push vollständig prüfen.
+
+Plattformvariation bleibt ausdrücklich dokumentiert: lokaler Early/Late-Vergleich
+0,91/0,79; beobachtete frühere CI-Läufe Early 0,90 und Late 0,78 bzw. 0,80.
+Keine plattformübergreifende Gleichheit, wissenschaftliche Überlegenheit oder
+zusätzliche studentische Notebook-/Browserausführung erfunden.
+
+Kommentare, Reviewthreads und Konfliktfreiheit nach erfolgreicher aktueller Push-/
+PR-CI prüfen. Erst danach Ready for Review; tatsächlicher Abschlussstatus und Links
+im PR-Bericht. Kein Merge von PR #24, keine Umsetzung von 16.4 oder Einreichung.

@@ -77,7 +77,7 @@ Diagnose, niemals als Input. Kursrahmen: Adam/Kreuzentropie, Batch 16, Seed doku
 **16.2 — Build and train the image network — APPROVED / INTEGRIERT — medium**
 - [x] `ThermalCNN` gemäß Tabelle 16.3 (64 Features, drei Logits), Shapes prüfen, 30 Epochen; TEST-Confusion-Matrix und thermische Level vergleichen. Grenzen einer einzelnen Modalität erläutern. Nutzt Datenaufbereitung und Trainingsrahmen aus 16.1.
 
-**16.3 — Combine the raw inputs, combine the predictions — AWAITING HUMAN REVIEW — medium**
+**16.3 — Combine the raw inputs, combine the predictions — SCIENTIFICALLY APPROVED / AWAITING FINAL MERGE AUTHORIZATION — medium**
 - [x] Early Fusion: 80 standardisierte Signalwerte auf 1.024 auffüllen, 32 × 32 formen, als zweiten Bildkanal stapeln; zweikanalige `ThermalCNN`, 30 Epochen. Late Fusion: Klassenwahrscheinlichkeiten aus 16.1/16.2 mitteln. Beide Confusion-Matrizen, Viermodellvergleich und Grenzen der Fusion erläutern. Benötigt beide unimodalen Modelle.
 
 **16.4 — Build and train the multimodal network — high**

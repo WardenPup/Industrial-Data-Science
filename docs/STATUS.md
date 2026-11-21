@@ -1,3 +1,14 @@
+## 21.11.2026 – 16.3 wissenschaftlich freigegeben; finale Integration ausstehend
+
+**SCIENTIFICALLY APPROVED**, Originalreview 6753432 unverändert gesichert.
+Zwei Tests erneut bestanden (0,021 s), ohne zusätzliches Training. Abschlussabgleich:
+sieben Hashes, vier Matrizen/Tabelle, 100 TEST-Indizes, 400 Vorhersagen und 1.200
+Wahrscheinlichkeiten, Early-Padding/Kanäle und Late-Mittelung korrekt; identischer
+Split/TRAIN-Skalare. 16.1/16.2-Zellen, zwanzig frühere Ergebnisartefakte und
+21 Archive unverändert. Plattformabweichungen bleiben dokumentiert.
+Aktuelle Head-CI und Thread-/Konfliktaudit vor Ready for Review vollständig abwarten.
+Finale Merge-Autorisierung fehlt, PR #24 nicht mergen; keine 16.4/Einreichung.
+
 ## 21.11.2026 – 16.2 integriert; 16.3 technisch geprüft
 
 PR #23 nach ausdrücklicher Freigabe regulär gemergt:
