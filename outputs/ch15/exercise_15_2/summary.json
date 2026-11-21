@@ -1,0 +1,18 @@
+{
+  "rows": 20000,
+  "failure_counts": {
+    "BEF": 215,
+    "CCF": 344,
+    "FWF": 278,
+    "WDF": 300
+  },
+  "numeric_rows": 56,
+  "categorical_rows": 48,
+  "fwf_material_counts": {
+    "N": 270,
+    "P": 5,
+    "K": 3
+  },
+  "prior_description_read": true,
+  "kaggle_registration": "pending"
+}

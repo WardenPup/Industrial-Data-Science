@@ -1,0 +1,29 @@
+Fehlertyp,Merkmal,n,Minimum markiert,Maximum markiert
+BEF,Cutting speed vc [m/min],215,16.33,22.0
+BEF,Spindle speed n [1/min],215,433.0,584.0
+BEF,Feed f [mm/rev],215,0.108,0.226
+BEF,Feed rate vf [mm/min],215,62.0,166.0
+BEF,Power Pc [kW],215,49.04,82.06
+BEF,Cooling [%],215,0.0,25.0
+BEF,Process Time [sec],215,31.23,38.57
+CCF,Cutting speed vc [m/min],344,16.57,30.67
+CCF,Spindle speed n [1/min],344,440.0,813.0
+CCF,Feed f [mm/rev],344,0.108,0.297
+CCF,Feed rate vf [mm/min],344,62.0,243.0
+CCF,Power Pc [kW],344,50.83,269.06
+CCF,Cooling [%],344,0.0,100.0
+CCF,Process Time [sec],344,18.02,37.71
+FWF,Cutting speed vc [m/min],278,16.57,29.7
+FWF,Spindle speed n [1/min],278,440.0,788.0
+FWF,Feed f [mm/rev],278,0.147,0.248
+FWF,Feed rate vf [mm/min],278,127.0,250.0
+FWF,Power Pc [kW],278,56.25,218.66
+FWF,Cooling [%],278,0.0,75.0
+FWF,Process Time [sec],278,16.67,36.11
+WDF,Cutting speed vc [m/min],300,16.62,30.67
+WDF,Spindle speed n [1/min],300,441.0,813.0
+WDF,Feed f [mm/rev],300,0.108,0.297
+WDF,Feed rate vf [mm/min],300,62.0,243.0
+WDF,Power Pc [kW],300,50.83,269.06
+WDF,Cooling [%],300,0.0,100.0
+WDF,Process Time [sec],300,17.8,37.71
