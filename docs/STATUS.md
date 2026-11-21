@@ -1,3 +1,13 @@
+## 21.11.2026 – Exercise 15.4 wissenschaftlich freigegeben
+
+**APPROVED**, Originalreview separat gesichert (223130c). Regulärer Merge von
+PR #21 ausdrücklich autorisiert, vorbehaltlich erfolgreicher aktueller Head-CI,
+Konfliktfreiheit und unveränderter Abgabearchive. Acht Matrizen/F1, 4.002 IDs mit
+vier Labels, zwölf Manifesthashes und 21 Archive erneut bestätigt; Ergebnisse
+unverändert. Tatsächlicher Merge und vollständige SHA werden im PR-Abschluss
+und Abschlussbericht dokumentiert. Frühere Statusabschnitte sind historisch.
+Kaggle-Registrierung bleibt formal offen; keine Einreichung, keine weitere Aufgabe.
+
 ## 21.11.2026 – 15.3 integriert; 15.4 technisch geprüft
 
 PR #20 regulär nach ausdrücklicher Freigabe gemergt:

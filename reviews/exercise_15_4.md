@@ -68,3 +68,10 @@ Zusätzliche Prüfung im Human Review:
 - GitHub-PR und erfolgreiche CI geprüft.
 
 Keine zusätzlichen Modelle oder Optimierungen erforderlich.
+
+
+## Codex-Abschlussabgleich – 21.11.2026
+
+**APPROVED (wissenschaftlich); Kaggle-Registrierung weiterhin offen.** Student hat den regulären Merge nach erfolgreicher Abschlussprüfung ausdrücklich autorisiert. Originalreview oben unverändert, frühere Prüfberichte als historische Einträge erhalten.
+
+Erneut tatsächlich geprüft: acht Confusion-Matrizen und F1 aus 16.008 Vorhersagezeilen; 4.002 eindeutige IDs mit jeweils vier Fehlerauswertungen; zwölf Manifesthashes (elf Ergebnisartefakte plus Notebook) und 21 unveränderte Abgabearchive. Keine wissenschaftlichen Änderungen, keine zusätzliche Ausführung behauptet. Aktuelle Head-CI und Reviewthreads werden unmittelbar vor dem Merge überprüft; tatsächliche Merge-SHA und CI-Links im PR-Abschluss und Abschlussbericht. Keine Universitätseinreichung oder weitere Aufgabe.

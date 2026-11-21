@@ -58,7 +58,7 @@ der Kursseiten. Pflichtartefakte wie Screenshots und Skripte sind separat genann
 **15.3 — Visualize failure patterns with plotly — APPROVED / INTEGRIERT — medium**
 - [x] Auf Daten aus 15.1 aufbauen: Parallelkoordinaten, Dropdown nach Fehlertyp, Brushing je Fehlertyp; ungefähre Schwellen und neue Muster/Anomalien festhalten. Ergebnis: interaktive Darstellung mit kurzen Befunden, Schwellen für 15.4; 15.2 als Vergleich.
 
-**15.4 — From exploration to a rule-based failure model — AWAITING HUMAN REVIEW — medium**
+**15.4 — From exploration to a rule-based failure model — APPROVED — medium**
 - [x] Schwellen aus 15.2 und/oder 15.3 in je eine Python-Regelfunktion pro Fehlertyp übersetzen; je Confusion-Matrix berechnen. Flachen Baum pro Fehlertyp fitten, mit Regeln vergleichen und Erklärbarkeit für Prozessingenieure diskutieren. Abhängigkeit: 15.1 und die tatsächlich ermittelten Schwellen.
 
 ### Kapitel 16 – S16, Daten: multimodales Kurs-JSON
