@@ -68,3 +68,58 @@ nicht vorgegeben; deshalb keine erfundenen physikalischen Achseneinheiten.
 4. Sind Split-/TRAIN-only-Vorverarbeitung und wissenschaftliche Grenzen ausreichend klar?
 
 Kein Merge von 16.1, keine Bearbeitung von 16.2–16.4 und keine Universitätseinreichung.
+
+
+## Studentischer Originalreview – 21.11.2026
+
+HUMAN REVIEW – EXERCISE 16.1
+
+Status: SCIENTIFICALLY APPROVED
+
+1. Methoden
+
+Das 1D-CNN entspricht der offiziellen Architektur. Faltung, Max Pooling, Average Pooling und Dropout sind verständlich und fachlich korrekt erklärt.
+
+Die Funktionen model.train() und model.eval() werden korrekt eingesetzt.
+
+Bewertung: BESTANDEN.
+
+2. Datenvisualisierung
+
+Die Vibrationssignale und Wärmebilder sind nachvollziehbar dargestellt. Die gemeinsame Temperaturskala ermöglicht einen direkten Vergleich.
+
+Die Interpretation berücksichtigt, dass einzelne Beispiele keine zuverlässige Klassentrennung beweisen.
+
+Bewertung: BESTANDEN.
+
+3. Modellergebnisse
+
+Die TEST-Accuracy beträgt 0,58 (58 von 100 richtig).
+
+Das Modell erkennt keinen der 15 Critical-Fälle.
+
+Die Confusion-Matrix und die Kreuztabellen mit dem verborgenen Vibrationslevel machen die begrenzte Aussagekraft der Vibrationsdaten nachvollziehbar.
+
+Es wird nicht behauptet, dass Critical grundsätzlich nicht anhand von Vibration erkannt werden kann.
+
+Bewertung: BESTANDEN.
+
+4. Wissenschaftliche Grenzen
+
+Der stratifizierte 80/20-Split, die TRAIN-only-Standardisierung und die getrennte Behandlung verborgener Zustandsstufen sind korrekt.
+
+Synthetische Daten, kleine Teststichprobe und fehlende externe Validierung werden angemessen berücksichtigt.
+
+Bewertung: BESTANDEN.
+
+GESAMTENTSCHEIDUNG:
+SCIENTIFICALLY APPROVED.
+
+Zusätzlicher Human Review:
+Die 100 exportierten Einzelvorhersagen, die Confusion-Matrix und zwölf hochgeladene Artefaktprüfsummen wurden kontrolliert.
+
+Die vollständige Notebook- und Browserausführung wurde im Human Review nicht unabhängig wiederholt.
+
+Die schlechte Critical-Erkennung bleibt als relevantes Ergebnis dokumentiert. Keine nachträgliche Modelloptimierung erforderlich.
+
+Keine Universitätseinreichung.
