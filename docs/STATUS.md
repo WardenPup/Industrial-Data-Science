@@ -1,3 +1,19 @@
+## 21.11.2026 – 16.2 integriert; 16.3 technisch geprüft
+
+PR #23 nach ausdrücklicher Freigabe regulär gemergt:
+`5b78a82a008c71c1ab8b58c3c12ef9a1dc82b62d`. Head b97ee67 unverändert,
+beide aktuellen CI-Läufe erfolgreich, keine Kommentare/Threads/Konflikte;
+Originalreview 85c9141 und gesamte Historie erhalten. main = origin/main synchronisiert.
+
+16.3: **AWAITING HUMAN REVIEW**. Nur Early/Late ergänzt, freigegebene 16.1/16.2-
+Zellen und zwanzig frühere Ergebnisartefakte unverändert. Zwei Tests (0,174 s), elf
+frische Zellen zweimal mit exakt identischen Vorhersagen/Wahrscheinlichkeiten;
+TRAIN-only-Vorverarbeitung unverändert. Lokaler gemeinsamer Vergleich:
+Vibration 58/100 (Critical 0/15), Thermal 72 (10/15), Early 91 (13/15), Late 79 (9/15).
+Viermodellgrafik/HTML offline 900/1400 visuell geprüft; sieben Hashes, Rohdaten und
+21 Archive unverändert. Plattformvariation bleibt Grenze, keine universelle Rangfolge.
+Aktuelle Draft-PR-/Head-CI nach Push prüfen. Kein Merge16.3, keine16.4/Einreichung.
+
 ## 21.11.2026 – 16.2 wissenschaftlich freigegeben; Merge weiterhin ausstehend
 
 **SCIENTIFICALLY APPROVED**, Originalreview 85c9141 unverändert gesichert.

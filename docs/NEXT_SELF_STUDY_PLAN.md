@@ -74,11 +74,11 @@ Diagnose, niemals als Input. Kursrahmen: Adam/Kreuzentropie, Batch 16, Seed doku
 - [x] Shapes/Klassenverteilung und pro Zustand Signal + Wärmebild mit gemeinsamer Farbskala zeigen; vorbereitete Array-/Tensorformen prüfen. Dropout, train/eval sowie Average-/Max-Pooling erklären.
 - [x] `TimeSeriesCNN` nach Tabelle 16.2 vervollständigen (32 Features, drei Logits), 30 Epochen; TEST-Confusion-Matrix und Kreuztabellen mit verstecktem Vibrationslevel interpretieren. Erste Stufe, keine Abhängigkeit von Drilling-Ergebnissen.
 
-**16.2 — Build and train the image network — SCIENTIFICALLY APPROVED / AWAITING FINAL MERGE AUTHORIZATION — medium**
+**16.2 — Build and train the image network — APPROVED / INTEGRIERT — medium**
 - [x] `ThermalCNN` gemäß Tabelle 16.3 (64 Features, drei Logits), Shapes prüfen, 30 Epochen; TEST-Confusion-Matrix und thermische Level vergleichen. Grenzen einer einzelnen Modalität erläutern. Nutzt Datenaufbereitung und Trainingsrahmen aus 16.1.
 
-**16.3 — Combine the raw inputs, combine the predictions — medium**
-- [ ] Early Fusion: 80 standardisierte Signalwerte auf 1.024 auffüllen, 32 × 32 formen, als zweiten Bildkanal stapeln; zweikanalige `ThermalCNN`, 30 Epochen. Late Fusion: Klassenwahrscheinlichkeiten aus 16.1/16.2 mitteln. Beide Confusion-Matrizen, Viermodellvergleich und Grenzen der Fusion erläutern. Benötigt beide unimodalen Modelle.
+**16.3 — Combine the raw inputs, combine the predictions — AWAITING HUMAN REVIEW — medium**
+- [x] Early Fusion: 80 standardisierte Signalwerte auf 1.024 auffüllen, 32 × 32 formen, als zweiten Bildkanal stapeln; zweikanalige `ThermalCNN`, 30 Epochen. Late Fusion: Klassenwahrscheinlichkeiten aus 16.1/16.2 mitteln. Beide Confusion-Matrizen, Viermodellvergleich und Grenzen der Fusion erläutern. Benötigt beide unimodalen Modelle.
 
 **16.4 — Build and train the multimodal network — high**
 - [ ] Frische untrainierte Featurezweige aus 16.1/16.2 end-to-end verbinden: 64 + 32 Features, gemeinsamer Kopf 96→32→3 mit ReLU/Dropout 0,3; 60 Epochen. Fünf Confusion-Matrizen nebeneinander und Accuracyübersicht; tatsächlich gemessene Rangfolge und Grenzen erklären, keine universelle Rangfolge versprechen. Benötigt 16.1–16.3.
