@@ -61,3 +61,21 @@ statistische Signifikanz oder TEST-basierte Optimierung behauptet.
 4. Ist die eingeschränkte Aussagekraft der Rangfolge durch Kapazität, Trainingsdauer und Plattformvariation ausreichend deutlich?
 
 Kein Merge von 16.4, keine weiteren Exercises und keine Universitätseinreichung.
+
+
+## Tatsächlicher CI-Befund: Gleichstand statt allgemeinem Vorsprung
+
+Head ced5d88: Push 44916904691 und PR 44916981444 erfolgreich. Jeweils zwei
+unabhängige frische vollständige Vierzehn-Zellen-Läufe mit exakt identischen
+Vorhersagen/Wahrscheinlichkeiten innerhalb des Runners; Offline-HTML bestanden.
+Beide CI-Runner: Vibration 0,58, Thermal 0,70, Early 0,90, Late 0,80,
+Intermediate 0,90. Intermediate liegt dort gleichauf mit Early, nicht eindeutig davor.
+Zum gespeicherten 16.1-Lauf null abweichende Klassen, maximale Wahrscheinlichkeits-
+abweichung ca. 1,5e-7. Lokal bleibt der beobachtete Vergleich 0,58/0,72/0,91/0,79/0,93.
+
+Dieser tatsächliche Unterschied ist als Grenze in Notebook/HTML ergänzt. Kein
+Vorsprung erzwungen, kein Ergebnis ausgetauscht und keine zusätzliche Optimierung.
+Keine geplante Mehrfachlauf-/Seedstudie oder Unsicherheitsschätzung behauptet.
+Nur Markdown/HTML ergänzt und offline erneut geprüft, kein weiteres lokales Training.
+Die dokumentierten lokalen Matrizen und frühere freigegebene Abschnitte bleiben
+unverändert. Aktuelle CI nach diesem reinen Dokumentationscommit erneut prüfen.

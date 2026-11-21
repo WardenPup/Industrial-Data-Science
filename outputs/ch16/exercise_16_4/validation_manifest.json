@@ -11,13 +11,13 @@
   "prior_probability_max_abs_difference": 0.0,
   "embedded_images": 5,
   "files": {
-    "sessions/ch16/multimodal_health_monitoring.ipynb": "8e827b9ae704f284747406c9e7f387eb74dde9d0940045ca3a9b475808d1d02a",
-    "outputs/ch16/exercise_16_4/multimodal_health_monitoring.html": "bf4288764675c8f342c4b98ed7f3465900230d8a352010e28ac3cac62555d914",
+    "sessions/ch16/multimodal_health_monitoring.ipynb": "bef154a5297b3dc0a8e4da9432d3e17a6161c38d79c3158fd869d7d316d7fdb8",
+    "outputs/ch16/exercise_16_4/multimodal_health_monitoring.html": "73a4a6598f435e0c24d518fd0c37ae56da7335ef6284ab439e73b173701a7a72",
     "outputs/ch16/exercise_16_4/comparison.csv": "6e43f52da07169a9078d370f3c36badd39c45f935c62b60c9e3e93d64cc57eed",
     "outputs/ch16/exercise_16_4/confusion_matrices.csv": "e2a6581b14f8f568c49dd5390f5ca0a5adf77ac17504be02cb8fa8c6aaff8de5",
     "outputs/ch16/exercise_16_4/predictions.csv": "6c492c8f54a7c66433e4e013c2b21d34c16a7bcc67ad6f69323f32d4eac1e06c",
     "outputs/ch16/exercise_16_4/01_five_confusion_matrices.png": "065f9a0f4a94d97d181d425f02e343b3f2ac6688a01fa2889369ce23d5a10dde",
     "outputs/ch16/exercise_16_4/summary.json": "0243d74968fe99aed550ce3d330cd9ce00beb07ddc69041b2713a49e23e9c140"
   },
-  "post_execution_documentation": "Actual local interpretation/parameter count added to markdown; HTML re-exported and checked offline without extra training."
+  "post_execution_documentation": "Measured local interpretation and actual CI tie added to markdown; HTML re-exported/offline checked without additional training."
 }

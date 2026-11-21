@@ -1,3 +1,12 @@
+## 21.11.2026 – 16.4: erfolgreiche CI mit beobachtetem Gleichstand
+
+Head ced5d88: Push 44916904691 und PR 44916981444 erfolgreich; je zwei frische
+vollständige Läufe exakt wiederholt. Beide CI-Runner Early 0,90 / Intermediate 0,90,
+lokal 0,91 / 0,93. Der lokale Vorsprung ist nicht umgebungsübergreifend stabil.
+Tatsächlichen Gleichstand in Notebook/HTML/Review ergänzt; keine Optimierung,
+kein Austausch lokaler Ergebnisse. HTML nach reiner Textergänzung erneut offline
+900/1400 px geprüft. 16.4 bleibt AWAITING HUMAN REVIEW; finale Head-CI abwarten.
+
 ## 21.11.2026 – 16.3 integriert; 16.4 technisch geprüft
 
 PR #24 regulär nach ausdrücklicher Freigabe gemergt:
