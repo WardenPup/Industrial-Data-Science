@@ -352,7 +352,7 @@ jobs:
         run: |
           python -m pip install uv==0.13.5
           uv sync --locked
-      - name: Check disclosure and focused drilling exploration tests
+      - name: Check disclosure and focused vibration CNN tests
         run: |
           uv run --locked python scripts/check_commit_messages.py --base origin/main --head "$QA_HEAD"
           uv run --locked python -m unittest discover -s tests -p test_multimodal_vibration.py -v

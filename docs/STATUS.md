@@ -1,3 +1,16 @@
+## 21.11.2026 – Exercise 16.1 technisch geprüft
+
+**AWAITING HUMAN REVIEW** auf exercise/16.1, aus synchronisiertem main
+`4ba3dc5f7c45e19447bb421bb9161ec9c5b35ec5`. Gemeinsames Kapitel-16-Notebook,
+ausschließlich 16.1. Offizielle Kursdaten 500 Beobachtungen, Split 400/100,
+TRAIN-only-Modalskalare, exaktes Vibration-CNN (3.843 Parameter), 30 Epochen.
+TEST: 58/100 korrekt, keine Critical-Vorhersage; thermische Information fehlt.
+Drei Tests bestanden (19,693 s), fünf frische Codezellen; nach Interpretation erneut
+frisch ausgeführt, neun numerische Exporte identisch. Zwei Grafiken und HTML offline
+900/1400 px visuell/technisch geprüft; 13 Hashes und 21 Archive unverändert.
+Aktuelle Head-CI und Draft-PR nach Push tatsächlich prüfen. Keine Freigabe/Merge,
+keine Umsetzung 16.2–16.4 und keine Einreichung.
+
 ## 21.11.2026 – Exercise 15.4 wissenschaftlich freigegeben
 
 **APPROVED**, Originalreview separat gesichert (223130c). Regulärer Merge von

@@ -1,0 +1,23 @@
+{
+  "validated_date": "2026-11-21",
+  "status": "AWAITING HUMAN REVIEW",
+  "ai_assistance": "Codex",
+  "raw_sha256": "3f7a7e52bd2b0efd0f3af43b07efa2c05620589a09d67d82519598f6f99d6d03",
+  "sequential_code_cells": 5,
+  "embedded_images": 2,
+  "files": {
+    "sessions/ch16/multimodal_health_monitoring.ipynb": "9093ccaa7e56b11c11dd4945e299c47103c00c6c9e60e2d685985f67a23586d2",
+    "outputs/ch16/exercise_16_1/multimodal_health_monitoring.html": "05083b6e1e24d3db7c60b19d48b4785e3f22b3ccb91617eb6c71302e41797d8d",
+    "outputs/ch16/exercise_16_1/class_counts.csv": "b2f4a537ca278df11ff646eb04981e2d62e56301a97a1c3bbbf7b1904dce7db4",
+    "outputs/ch16/exercise_16_1/confusion_matrix.csv": "9d792b4b8742a80c14632d177becd7c0c14166c23494f1c59f0eaaef8c1e0266",
+    "outputs/ch16/exercise_16_1/example_indices.csv": "9f8ba6d42b85579a9a202e239ce952bdb35732f48f5cee9b036d47823d671842",
+    "outputs/ch16/exercise_16_1/predictions.csv": "be4cdfe15cceec4c7f1b512a21a7056bfe183773a11c74b76977dac0798811d5",
+    "outputs/ch16/exercise_16_1/shapes.csv": "deb5282315d9b7f6d596412bdba8feda52a991d58823883d4da0d9c6e83798f0",
+    "outputs/ch16/exercise_16_1/split.csv": "08b4146bb757ddc23733e50dd735f88fa86d2b74ef4957f13bb62f0fb606e3f0",
+    "outputs/ch16/exercise_16_1/vibration_levels_vs_status.csv": "af46bb3c32e298fb566a4fe25772aeec4e4a035f72bc00a28cee334d40bdf229",
+    "outputs/ch16/exercise_16_1/01_class_examples.png": "9db7c8268e4929b29f229303000096014a9507c5b99ea850ca46f31d7ff3e33c",
+    "outputs/ch16/exercise_16_1/02_confusion_matrix.png": "b5aa17e9cb58d86d79034079350c9edc848a9928543e8ad708844c5aae5b120d",
+    "outputs/ch16/exercise_16_1/summary.json": "53635018b0d0f0c69acebb869a610708fad145e6e8d9cb5def45dcbc3865a886",
+    "outputs/ch16/exercise_16_1/scaling.json": "c4b42d6f12571e25ab29b82fc14e664e98130490d80905cf5d1929d099cba73b"
+  }
+}

@@ -1,0 +1,4 @@
+Klasse,Gesamt,TRAIN,TEST
+Normal,240,192,48
+Warning,185,148,37
+Critical,75,60,15

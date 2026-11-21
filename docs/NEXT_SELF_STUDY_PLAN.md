@@ -70,9 +70,9 @@ Gemeinsamer Rahmen: 80/20-Split, `random_state=42`, stratifiziert; gepaarte Moda
 zusammen halten, Skalierung nur auf TRAIN. Versteckte Levels ausschließlich zur
 Diagnose, niemals als Input. Kursrahmen: Adam/Kreuzentropie, Batch 16, Seed dokumentieren.
 
-**16.1 — Explore the data and train a 1D CNN on the vibration signals — medium**
-- [ ] Shapes/Klassenverteilung und pro Zustand Signal + Wärmebild mit gemeinsamer Farbskala zeigen; vorbereitete Array-/Tensorformen prüfen. Dropout, train/eval sowie Average-/Max-Pooling erklären.
-- [ ] `TimeSeriesCNN` nach Tabelle 16.2 vervollständigen (32 Features, drei Logits), 30 Epochen; TEST-Confusion-Matrix und Kreuztabellen mit verstecktem Vibrationslevel interpretieren. Erste Stufe, keine Abhängigkeit von Drilling-Ergebnissen.
+**16.1 — Explore the data and train a 1D CNN on the vibration signals — AWAITING HUMAN REVIEW — medium**
+- [x] Shapes/Klassenverteilung und pro Zustand Signal + Wärmebild mit gemeinsamer Farbskala zeigen; vorbereitete Array-/Tensorformen prüfen. Dropout, train/eval sowie Average-/Max-Pooling erklären.
+- [x] `TimeSeriesCNN` nach Tabelle 16.2 vervollständigen (32 Features, drei Logits), 30 Epochen; TEST-Confusion-Matrix und Kreuztabellen mit verstecktem Vibrationslevel interpretieren. Erste Stufe, keine Abhängigkeit von Drilling-Ergebnissen.
 
 **16.2 — Build and train the image network — medium**
 - [ ] `ThermalCNN` gemäß Tabelle 16.3 (64 Features, drei Logits), Shapes prüfen, 30 Epochen; TEST-Confusion-Matrix und thermische Level vergleichen. Grenzen einer einzelnen Modalität erläutern. Nutzt Datenaufbereitung und Trainingsrahmen aus 16.1.
