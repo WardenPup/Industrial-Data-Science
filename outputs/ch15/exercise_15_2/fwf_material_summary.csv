@@ -1,0 +1,13 @@
+Material,FWF,Merkmal,n,min,Median,max
+K,0,Cutting speed vc [m/min],6671,16.33,17.39,18.57
+K,0,Feed rate vf [mm/min],6671,79.0,117.0,158.0
+K,1,Cutting speed vc [m/min],3,16.57,16.67,16.67
+K,1,Feed rate vf [mm/min],3,149.0,152.0,166.0
+N,0,Cutting speed vc [m/min],6382,28.9,30.01,31.07
+N,0,Feed rate vf [mm/min],6382,134.0,194.0,261.0
+N,1,Cutting speed vc [m/min],270,29.08,29.6,29.7
+N,1,Feed rate vf [mm/min],270,206.0,222.5,250.0
+P,0,Cutting speed vc [m/min],6669,21.41,22.61,23.81
+P,0,Feed rate vf [mm/min],6669,62.0,109.0,156.0
+P,1,Cutting speed vc [m/min],5,21.94,21.98,21.99
+P,1,Feed rate vf [mm/min],5,127.0,146.0,152.0

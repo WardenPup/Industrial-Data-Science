@@ -1,3 +1,21 @@
+## 21.11.2026 – 15.1 bedingt integriert; 15.2 technisch geprüft
+
+PR #18 regulär gemergt: `6bf9e2d69ea4b5a75bc28bbe76d85cb542f11c88`.
+Vorher vollständiger Originalreview 6fb3e7d, erfolgreiche Nachprüfung b365b36,
+beide aktuellen CI-Läufe, keine Kommentare/Reviewthreads/Konflikte bestätigt.
+main = origin/main am Merge-SHA. Student autorisierte Integration unter sichtbarer
+formaler Einschränkung; Registrierung ist keine ausdrücklich festgelegte Git-Merge-
+Sperre. **Kaggle-Registrierung bleibt unerledigt**, gesamte 15.1 nicht als formal
+vollständig abgeschlossen kennzeichnen. Keine Kontoanlage oder Einreichungsfreigabe.
+
+15.2: **AWAITING HUMAN REVIEW**. Statistiken aller neun Prozessmerkmale je Fehlerflag,
+zwei Grafiken, beobachtete Bereiche und transparenter Beschreibungsvergleich. Keine
+Blindanalyse behauptet. Drei Tests bestanden (0,705 s), drei frische Codezellen,
+HTML offline 900/1400 px, zwei PNGs visuell und elf Manifesthashes geprüft. Material-
+effekt bei FWF erklärt; keine Modelle/Regelfunktionen oder 15.3-Arbeit. Frühere
+Daten/Reviews/Artefakte und 21 Abgabearchive unverändert. Draft-PR/aktuelle Head-CI
+werden nach Push tatsächlich geprüft. Keine wissenschaftliche Freigabe vorweggenommen.
+
 ## 21.11.2026 – 14.4 integriert; 15.1 zur fachlichen Prüfung vorbereitet
 
 PR #17 nach ausdrücklicher Autorisierung regulär gemergt:
