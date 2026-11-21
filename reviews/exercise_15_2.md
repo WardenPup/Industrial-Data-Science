@@ -49,3 +49,65 @@ sind Bestandszählungen, keine allgemeine Fehlerwahrscheinlichkeit oder Kausalit
 
 Kaggle-Registrierung aus 15.1 weiterhin formal offen. Kein Konto angelegt, keine
 studentische Freigabe erfunden. Kein Merge von 15.2, kein Beginn 15.3, keine Einreichung.
+
+
+---
+
+## Studentischer Originalreview – übergeben am 21.11.2026
+
+HUMAN REVIEW – EXERCISE 15.2
+
+Status: SCIENTIFICALLY APPROVED
+
+1. Materialeffekt bei FWF
+
+Der beobachtete Materialeffekt ist nachvollziehbar. Der Gesamtvergleich der Schnittgeschwindigkeit ist durch die ungleiche Materialzusammensetzung verzerrt.
+
+Innerhalb aller drei Materialien liegt der Schnittgeschwindigkeitsmedian FWF-markierter Fälle niedriger.
+
+Die kleinen Teilgruppen K (n=3) und P (n=5) werden angemessen vorsichtig interpretiert.
+
+Bewertung: BESTANDEN.
+
+2. Stichprobengrenzen und Entscheidungsregeln
+
+Die dokumentierten Bereiche werden korrekt als beobachtete Stichprobengrenzen verstanden.
+
+Sie sind weder validierte Entscheidungsregeln noch allgemeingültige technische Fehlergrenzen.
+
+Bewertung: BESTANDEN.
+
+3. Überlappende Fehlergruppen
+
+Die mögliche gleichzeitige Kennzeichnung mehrerer Fehlergruppen ist berücksichtigt.
+
+Flag=0 für einen bestimmten Fehlertyp bedeutet nicht zwangsläufig, dass keine andere Fehlerart vorliegt.
+
+Bewertung: BESTANDEN.
+
+4. Visualisierungen
+
+Die numerischen Boxplots zeigen die Unterschiede und Überschneidungen der Merkmalsverteilungen.
+
+Die WDF-Heatmap macht den Zusammenhang zwischen Material, Bohrertyp und Fehlerkennzeichnung deutlich.
+
+Die grafischen Ergebnisse unterstützen die vorsichtige Interpretation.
+
+Bewertung: BESTANDEN.
+
+5. Wissenschaftliche Grenzen
+
+Die Analysen sind deskriptiv.
+
+Aus den beobachteten Zusammenhängen ergeben sich keine validierten kausalen Aussagen oder universellen Fehlerregeln.
+
+Eine unabhängige erneute Notebook-Ausführung war nicht Bestandteil dieses Human Reviews.
+
+GESAMTENTSCHEIDUNG:
+SCIENTIFICALLY APPROVED.
+
+Keine zusätzlichen wissenschaftlichen Analysen erforderlich.
+
+Die aus Exercise 15.1 weiterhin offene Kaggle-Registrierung bleibt dokumentiert.
+
+Keine Universitätseinreichung.
