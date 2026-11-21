@@ -1,3 +1,6 @@
+> Stand 21.11.2026: **SCIENTIFICALLY APPROVED – TECHNICALLY VALIDATED – AWAITING FINAL MERGE AUTHORIZATION**.
+> Erstbericht, Originalreview und folgende Codex-Verifikation sind getrennt dokumentiert.
+
 # Exercise 14.4 – Technischer Bericht für Human Review
 
 **AWAITING HUMAN REVIEW**, 19.11.2026. Keine studentische Bewertung/Freigabe erhalten.
@@ -92,3 +95,36 @@ Die Ergebnisse beschreiben Muster synthetischer Daten. Sie beweisen keine kausal
 Es besteht kein wissenschaftlicher Änderungsbedarf.
 
 Gesamturteil: SCIENTIFICALLY APPROVED.
+
+
+---
+
+## Codex-Abschlussverifikation – 21.11.2026
+
+Studentischer Originalreview aus dem Nutzerauftrag wortgetreu separat in **72eac4f**
+gesichert. Keine zusätzlichen studentischen Tests, Aussagen oder Merge-Freigaben
+erfunden. Offizielle Aufgabe 14.4 am 21.11.2026 erneut direkt per HTTPS gelesen und
+alle Anforderungen gegen Implementierung/Prüfroutinen abgeglichen.
+
+Tatsächlich erneut ausgeführt:
+- `scripts/uv.cmd run --offline --locked python -m unittest discover -s tests -p test_parallel_coordinates.py -v`: **3/3 bestanden**, 8,206 s (zuvor 7,323 s). Originalwerte/Featureformeln, alle Dimensionen/Kategorien/Type-Farben und realer Jupyter-Dropdown-Callback geprüft.
+- `scripts/uv.cmd run --offline --locked python scripts/build_exercise_14_4.py --check-html`: **3 Codezellen frisch sequenziell**, fehlerfrei. Notebook-HTML offline **900/1400 px**, alle sechs Dropdown-/Maus-Brushing-/Reset-Fälle und Achsenumordnung bestanden; Standalone ohne Notebook/Python-Server geprüft. **16 Interaktionsprotokolle**; keine fehlgeschlagenen Netzabrufe/Seitenfehler oder horizontalen Seitenüberläufe. Zwei PNGs und beide Browseransichten visuell kontrolliert.
+- Separater direkter Vergleich Original-CSV/Diagramm/CSV/JSON: 10.000 Zeilen, Zählungen Machine failure/TWF/HDF/PWF/OSF/RNF = **339/46/115/95/98/19**. Alle acht kontinuierlichen Diagrammdimensionen stimmen mit Originalmesswerten bzw. festen physikalischen Ableitungen überein. HDF maximal rund **8,6 K** (Gleitkommawert 8,599999999999966), **1.379 rpm**; kein markierter PWF innerhalb **3.500–9.000 W**.
+- Bestehende **8 Manifesthashes vor Regeneration** bestätigt; danach sämtliche acht aktuellen Hashes und Rohdaten-SHA256 geprüft. Wissenschaftliche CSV, JSON und Standalone-Plot-HTML sind **bytegleich mit 908bb68**. 21 Abgabearchive unverändert, frühere Aufgaben/Originalreviews nicht geändert.
+
+Keine wissenschaftlichen Abweichungen oder Korrekturen erforderlich. Nur Status-/
+Prüfdokumentation und frische Exporte aktualisiert; irreführenden kopierten Builder-
+Docstring (HDF/PWF) auf Parallelkoordinaten präzisiert. Kein neuer Test, keine
+Zusatzanalyse oder Installation. Bekannte lokale Jupyter-TCP-Warnung erneut ohne
+Ausführungsfehler. Lokaler Windows-Prozessstart erforderte wegen eines Zugriffsfehlers
+einen erneuten Start; die fachlichen Prüfungen selbst liefen danach erfolgreich.
+
+Bekannte Grenzen bleiben bestehen: Überlagerung/progressives WebGL-Rendering,
+horizontaler Grafik-Scrollbereich bei schmalem Fenster, synthetische Daten ohne
+Kausalitäts- oder Wahrscheinlichkeitsnachweis. Der Jupyter-Callback benötigt einen
+Kernel und baut neu auf; die geprüfte Browserauswahl funktioniert offline und erhält
+die Reihenfolge. Kein zusätzlicher vollständiger Jupyter-Frontend-Klicktest behauptet.
+
+Aktuelle CI-/Review-/Konfliktprüfung wird nach Push am tatsächlichen Head im PR #17
+belegt. Ready erst nach Erfolg beider Läufe und fehlenden Reviewblockern.
+**Kein Merge, keine Arbeit an 15.1, keine Universitätseinreichung.**

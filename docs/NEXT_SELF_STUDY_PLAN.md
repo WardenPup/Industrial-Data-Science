@@ -1,6 +1,6 @@
 # Nächste Self-Study-Aufgaben
 
-Stand/Abruf: **19.11.2026**. Status: **14.1 APPROVED und integriert; 14.2 APPROVED und integriert; 14.3 APPROVED und integriert; 14.4 AWAITING HUMAN REVIEW; übrige Übungen nur geplant**.
+Stand/Abruf: **19.11.2026**. Status: **14.1 APPROVED und integriert; 14.2 APPROVED und integriert; 14.3 APPROVED und integriert; 14.4 wissenschaftlich freigegeben, Merge-Autorisierung ausstehend; übrige Übungen nur geplant**.
 Codex: Quellenprüfung, Anforderungsübersicht und Workflowvorschlag. Keine neuen
 studentischen Prüfungen oder Freigaben behauptet; bisherige Lösungen bleiben erhalten.
 
@@ -44,7 +44,7 @@ der Kursseiten. Pflichtartefakte wie Screenshots und Skripte sind separat genann
 **14.3 — Engineered features and model performance — APPROVED, PR #16 integriert — medium**
 - [x] Tiefenvergleich für HDF/PWF mit und ohne `temp_diff` beziehungsweise `power`; F1 statt Accuracy auswerten und Klassenungleichgewicht erklären. Ergebnis: kompakter Leistungsvergleich; Vorgehen aus 14.2 wiederverwenden, Featuredefinitionen aus Kapitel 13 prüfen.
 
-**14.4 — Parallel coordinates plots — AWAITING HUMAN REVIEW — medium**
+**14.4 — Parallel coordinates plots — SCIENTIFICALLY APPROVED, Merge ausstehend — medium**
 - [x] Plotly-Parallelkoordinaten: alle verfügbaren kontinuierlichen Variablen, gewählter Fehlertyp und Type; Fehlertyp kategorial, Linienfarbe nach Type. Jupyter-Dropdown zur Fehlertypwahl; Achsen umordnen und Brushing tatsächlich nutzen, erkannte Muster dokumentieren. Voraussetzung: AI4I/Kapitel-13-Muster; 14.1–14.3 liefern Vergleich, sind keine neue Datenquelle.
 
 ### Kapitel 15 – S15, Daten: XAI Drilling

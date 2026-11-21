@@ -1,3 +1,15 @@
+## 21.11.2026 – Exercise 14.4 wissenschaftlicher Review nachgeprüft
+
+**SCIENTIFICALLY APPROVED – TECHNICALLY VALIDATED – AWAITING FINAL MERGE AUTHORIZATION**.
+Originalreview wortgetreu in 72eac4f. Drei Tests erneut bestanden (8,206 s), drei
+frische Codezellen, 16 Offline-Interaktionsprotokolle; Notebook-HTML 900/1400 px und
+Standalone ohne Python-Server geprüft. Alle Zahlen/Featureformeln/Diagrammdimensionen
+und acht alte/neue Manifesthashes bestätigt. CSV/JSON/Standalone-HTML wissenschaftlich
+unverändert; 21 Archive erhalten. Keine fachliche Korrektur, nur Status/Prüfbericht
+und kleiner Builder-Docstring präzisiert. Aktuelle Head-CI und Ready-Status werden
+im PR #17 nach tatsächlichem Erfolg belegt. Finale Merge-Freigabe ausstehend.
+Keine Arbeit an 15.1; keine Einreichung.
+
 ## 19.11.2026 – 14.3 integriert; 14.4 für Human Review vorbereitet
 
 PR #16 ausdrücklich autorisiert regulär gemergt:
