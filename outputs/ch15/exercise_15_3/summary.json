@@ -1,0 +1,11 @@
+{
+  "rows": 20000,
+  "failure_counts": {
+    "BEF": 215,
+    "CCF": 344,
+    "FWF": 278,
+    "WDF": 300
+  },
+  "kaggle_registration": "pending",
+  "models_trained": false
+}

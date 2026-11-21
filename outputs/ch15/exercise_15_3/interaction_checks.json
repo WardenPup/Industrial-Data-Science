@@ -1,0 +1,790 @@
+[
+  {
+    "width": 900,
+    "action": "dropdown and pointer brush",
+    "target": "BEF",
+    "rows": 215,
+    "positive": 215,
+    "materials": {
+      "P": 154,
+      "K": 61,
+      "N": 0
+    },
+    "failures": {
+      "BEF": 215,
+      "CCF": 13,
+      "FWF": 8,
+      "WDF": 5
+    },
+    "bounds": {
+      "Cutting speed vc [m/min]": [
+        16.33,
+        22
+      ],
+      "Spindle speed n [1/min]": [
+        433,
+        584
+      ],
+      "Feed f [mm/rev]": [
+        0.108,
+        0.226
+      ],
+      "Feed rate vf [mm/min]": [
+        62,
+        166
+      ],
+      "Power Pc [kW]": [
+        49.04,
+        82.06
+      ],
+      "Cooling [%]": [
+        0,
+        25
+      ],
+      "Process Time [sec]": [
+        31.23,
+        38.57
+      ]
+    }
+  },
+  {
+    "width": 900,
+    "action": "dropdown and pointer brush",
+    "target": "CCF",
+    "rows": 344,
+    "positive": 344,
+    "materials": {
+      "P": 149,
+      "K": 159,
+      "N": 36
+    },
+    "failures": {
+      "BEF": 13,
+      "CCF": 344,
+      "FWF": 17,
+      "WDF": 106
+    },
+    "bounds": {
+      "Cutting speed vc [m/min]": [
+        16.57,
+        30.67
+      ],
+      "Spindle speed n [1/min]": [
+        440,
+        813
+      ],
+      "Feed f [mm/rev]": [
+        0.108,
+        0.297
+      ],
+      "Feed rate vf [mm/min]": [
+        62,
+        243
+      ],
+      "Power Pc [kW]": [
+        50.83,
+        269.06
+      ],
+      "Cooling [%]": [
+        0,
+        100
+      ],
+      "Process Time [sec]": [
+        18.02,
+        37.71
+      ]
+    }
+  },
+  {
+    "width": 900,
+    "action": "dropdown and pointer brush",
+    "target": "FWF",
+    "rows": 278,
+    "positive": 278,
+    "materials": {
+      "P": 5,
+      "K": 3,
+      "N": 270
+    },
+    "failures": {
+      "BEF": 8,
+      "CCF": 17,
+      "FWF": 278,
+      "WDF": 9
+    },
+    "bounds": {
+      "Cutting speed vc [m/min]": [
+        16.57,
+        29.7
+      ],
+      "Spindle speed n [1/min]": [
+        440,
+        788
+      ],
+      "Feed f [mm/rev]": [
+        0.147,
+        0.248
+      ],
+      "Feed rate vf [mm/min]": [
+        127,
+        250
+      ],
+      "Power Pc [kW]": [
+        56.25,
+        218.66
+      ],
+      "Cooling [%]": [
+        0,
+        75
+      ],
+      "Process Time [sec]": [
+        16.67,
+        36.11
+      ]
+    }
+  },
+  {
+    "width": 900,
+    "action": "dropdown and pointer brush",
+    "target": "WDF",
+    "rows": 300,
+    "positive": 300,
+    "materials": {
+      "P": 90,
+      "K": 106,
+      "N": 104
+    },
+    "failures": {
+      "BEF": 5,
+      "CCF": 106,
+      "FWF": 9,
+      "WDF": 300
+    },
+    "bounds": {
+      "Cutting speed vc [m/min]": [
+        16.62,
+        30.67
+      ],
+      "Spindle speed n [1/min]": [
+        441,
+        813
+      ],
+      "Feed f [mm/rev]": [
+        0.108,
+        0.297
+      ],
+      "Feed rate vf [mm/min]": [
+        62,
+        243
+      ],
+      "Power Pc [kW]": [
+        50.83,
+        269.06
+      ],
+      "Cooling [%]": [
+        0,
+        100
+      ],
+      "Process Time [sec]": [
+        17.8,
+        37.71
+      ]
+    }
+  },
+  {
+    "width": 900,
+    "action": "pointer reorder after Cooling and brush",
+    "target": "BEF",
+    "order": [
+      "Cutting speed vc [m/min]",
+      "Spindle speed n [1/min]",
+      "Feed f [mm/rev]",
+      "Feed rate vf [mm/min]",
+      "Power Pc [kW]",
+      "Cooling [%]",
+      "failure",
+      "Process Time [sec]",
+      "Material",
+      "Drill Bit Type"
+    ],
+    "rows": 215,
+    "positive": 215,
+    "materials": {
+      "P": 154,
+      "K": 61,
+      "N": 0
+    },
+    "failures": {
+      "BEF": 215,
+      "CCF": 13,
+      "FWF": 8,
+      "WDF": 5
+    },
+    "bounds": {
+      "Cutting speed vc [m/min]": [
+        16.33,
+        22
+      ],
+      "Spindle speed n [1/min]": [
+        433,
+        584
+      ],
+      "Feed f [mm/rev]": [
+        0.108,
+        0.226
+      ],
+      "Feed rate vf [mm/min]": [
+        62,
+        166
+      ],
+      "Power Pc [kW]": [
+        49.04,
+        82.06
+      ],
+      "Cooling [%]": [
+        0,
+        25
+      ],
+      "Process Time [sec]": [
+        31.23,
+        38.57
+      ]
+    }
+  },
+  {
+    "width": 900,
+    "action": "FWF and Material N pointer brushes",
+    "rows": 270,
+    "positive": 270,
+    "materials": {
+      "P": 0,
+      "K": 0,
+      "N": 270
+    },
+    "failures": {
+      "BEF": 0,
+      "CCF": 9,
+      "FWF": 270,
+      "WDF": 9
+    },
+    "bounds": {
+      "Cutting speed vc [m/min]": [
+        29.08,
+        29.7
+      ],
+      "Spindle speed n [1/min]": [
+        771,
+        788
+      ],
+      "Feed f [mm/rev]": [
+        0.206,
+        0.248
+      ],
+      "Feed rate vf [mm/min]": [
+        206,
+        250
+      ],
+      "Power Pc [kW]": [
+        177.45,
+        218.66
+      ],
+      "Cooling [%]": [
+        75,
+        75
+      ],
+      "Process Time [sec]": [
+        16.67,
+        22.34
+      ]
+    }
+  },
+  {
+    "width": 900,
+    "action": "FWF Material N and drill N/H pointer brushes",
+    "rows": 9,
+    "positive": 9,
+    "materials": {
+      "P": 0,
+      "K": 0,
+      "N": 9
+    },
+    "failures": {
+      "BEF": 0,
+      "CCF": 9,
+      "FWF": 9,
+      "WDF": 9
+    },
+    "bounds": {
+      "Cutting speed vc [m/min]": [
+        29.35,
+        29.67
+      ],
+      "Spindle speed n [1/min]": [
+        779,
+        787
+      ],
+      "Feed f [mm/rev]": [
+        0.209,
+        0.242
+      ],
+      "Feed rate vf [mm/min]": [
+        210,
+        243
+      ],
+      "Power Pc [kW]": [
+        182.58,
+        211.47
+      ],
+      "Cooling [%]": [
+        75,
+        75
+      ],
+      "Process Time [sec]": [
+        18.48,
+        21.29
+      ]
+    }
+  },
+  {
+    "width": 1400,
+    "action": "dropdown and pointer brush",
+    "target": "BEF",
+    "rows": 215,
+    "positive": 215,
+    "materials": {
+      "P": 154,
+      "K": 61,
+      "N": 0
+    },
+    "failures": {
+      "BEF": 215,
+      "CCF": 13,
+      "FWF": 8,
+      "WDF": 5
+    },
+    "bounds": {
+      "Cutting speed vc [m/min]": [
+        16.33,
+        22
+      ],
+      "Spindle speed n [1/min]": [
+        433,
+        584
+      ],
+      "Feed f [mm/rev]": [
+        0.108,
+        0.226
+      ],
+      "Feed rate vf [mm/min]": [
+        62,
+        166
+      ],
+      "Power Pc [kW]": [
+        49.04,
+        82.06
+      ],
+      "Cooling [%]": [
+        0,
+        25
+      ],
+      "Process Time [sec]": [
+        31.23,
+        38.57
+      ]
+    }
+  },
+  {
+    "width": 1400,
+    "action": "dropdown and pointer brush",
+    "target": "CCF",
+    "rows": 344,
+    "positive": 344,
+    "materials": {
+      "P": 149,
+      "K": 159,
+      "N": 36
+    },
+    "failures": {
+      "BEF": 13,
+      "CCF": 344,
+      "FWF": 17,
+      "WDF": 106
+    },
+    "bounds": {
+      "Cutting speed vc [m/min]": [
+        16.57,
+        30.67
+      ],
+      "Spindle speed n [1/min]": [
+        440,
+        813
+      ],
+      "Feed f [mm/rev]": [
+        0.108,
+        0.297
+      ],
+      "Feed rate vf [mm/min]": [
+        62,
+        243
+      ],
+      "Power Pc [kW]": [
+        50.83,
+        269.06
+      ],
+      "Cooling [%]": [
+        0,
+        100
+      ],
+      "Process Time [sec]": [
+        18.02,
+        37.71
+      ]
+    }
+  },
+  {
+    "width": 1400,
+    "action": "dropdown and pointer brush",
+    "target": "FWF",
+    "rows": 278,
+    "positive": 278,
+    "materials": {
+      "P": 5,
+      "K": 3,
+      "N": 270
+    },
+    "failures": {
+      "BEF": 8,
+      "CCF": 17,
+      "FWF": 278,
+      "WDF": 9
+    },
+    "bounds": {
+      "Cutting speed vc [m/min]": [
+        16.57,
+        29.7
+      ],
+      "Spindle speed n [1/min]": [
+        440,
+        788
+      ],
+      "Feed f [mm/rev]": [
+        0.147,
+        0.248
+      ],
+      "Feed rate vf [mm/min]": [
+        127,
+        250
+      ],
+      "Power Pc [kW]": [
+        56.25,
+        218.66
+      ],
+      "Cooling [%]": [
+        0,
+        75
+      ],
+      "Process Time [sec]": [
+        16.67,
+        36.11
+      ]
+    }
+  },
+  {
+    "width": 1400,
+    "action": "dropdown and pointer brush",
+    "target": "WDF",
+    "rows": 300,
+    "positive": 300,
+    "materials": {
+      "P": 90,
+      "K": 106,
+      "N": 104
+    },
+    "failures": {
+      "BEF": 5,
+      "CCF": 106,
+      "FWF": 9,
+      "WDF": 300
+    },
+    "bounds": {
+      "Cutting speed vc [m/min]": [
+        16.62,
+        30.67
+      ],
+      "Spindle speed n [1/min]": [
+        441,
+        813
+      ],
+      "Feed f [mm/rev]": [
+        0.108,
+        0.297
+      ],
+      "Feed rate vf [mm/min]": [
+        62,
+        243
+      ],
+      "Power Pc [kW]": [
+        50.83,
+        269.06
+      ],
+      "Cooling [%]": [
+        0,
+        100
+      ],
+      "Process Time [sec]": [
+        17.8,
+        37.71
+      ]
+    }
+  },
+  {
+    "width": 1400,
+    "action": "pointer reorder after Cooling and brush",
+    "target": "BEF",
+    "order": [
+      "Cutting speed vc [m/min]",
+      "Spindle speed n [1/min]",
+      "Feed f [mm/rev]",
+      "Feed rate vf [mm/min]",
+      "Power Pc [kW]",
+      "Cooling [%]",
+      "failure",
+      "Process Time [sec]",
+      "Material",
+      "Drill Bit Type"
+    ],
+    "rows": 215,
+    "positive": 215,
+    "materials": {
+      "P": 154,
+      "K": 61,
+      "N": 0
+    },
+    "failures": {
+      "BEF": 215,
+      "CCF": 13,
+      "FWF": 8,
+      "WDF": 5
+    },
+    "bounds": {
+      "Cutting speed vc [m/min]": [
+        16.33,
+        22
+      ],
+      "Spindle speed n [1/min]": [
+        433,
+        584
+      ],
+      "Feed f [mm/rev]": [
+        0.108,
+        0.226
+      ],
+      "Feed rate vf [mm/min]": [
+        62,
+        166
+      ],
+      "Power Pc [kW]": [
+        49.04,
+        82.06
+      ],
+      "Cooling [%]": [
+        0,
+        25
+      ],
+      "Process Time [sec]": [
+        31.23,
+        38.57
+      ]
+    }
+  },
+  {
+    "width": 1400,
+    "action": "FWF and Material N pointer brushes",
+    "rows": 270,
+    "positive": 270,
+    "materials": {
+      "P": 0,
+      "K": 0,
+      "N": 270
+    },
+    "failures": {
+      "BEF": 0,
+      "CCF": 9,
+      "FWF": 270,
+      "WDF": 9
+    },
+    "bounds": {
+      "Cutting speed vc [m/min]": [
+        29.08,
+        29.7
+      ],
+      "Spindle speed n [1/min]": [
+        771,
+        788
+      ],
+      "Feed f [mm/rev]": [
+        0.206,
+        0.248
+      ],
+      "Feed rate vf [mm/min]": [
+        206,
+        250
+      ],
+      "Power Pc [kW]": [
+        177.45,
+        218.66
+      ],
+      "Cooling [%]": [
+        75,
+        75
+      ],
+      "Process Time [sec]": [
+        16.67,
+        22.34
+      ]
+    }
+  },
+  {
+    "width": 1400,
+    "action": "FWF Material N and drill N/H pointer brushes",
+    "rows": 9,
+    "positive": 9,
+    "materials": {
+      "P": 0,
+      "K": 0,
+      "N": 9
+    },
+    "failures": {
+      "BEF": 0,
+      "CCF": 9,
+      "FWF": 9,
+      "WDF": 9
+    },
+    "bounds": {
+      "Cutting speed vc [m/min]": [
+        29.35,
+        29.67
+      ],
+      "Spindle speed n [1/min]": [
+        779,
+        787
+      ],
+      "Feed f [mm/rev]": [
+        0.209,
+        0.242
+      ],
+      "Feed rate vf [mm/min]": [
+        210,
+        243
+      ],
+      "Power Pc [kW]": [
+        182.58,
+        211.47
+      ],
+      "Cooling [%]": [
+        75,
+        75
+      ],
+      "Process Time [sec]": [
+        18.48,
+        21.29
+      ]
+    }
+  },
+  {
+    "width": 1500,
+    "action": "standalone pointer brush",
+    "target": "BEF",
+    "rows": 215,
+    "positive": 215,
+    "materials": {
+      "P": 154,
+      "K": 61,
+      "N": 0
+    },
+    "failures": {
+      "BEF": 215,
+      "CCF": 13,
+      "FWF": 8,
+      "WDF": 5
+    },
+    "bounds": {
+      "Cutting speed vc [m/min]": [
+        16.33,
+        22
+      ],
+      "Spindle speed n [1/min]": [
+        433,
+        584
+      ],
+      "Feed f [mm/rev]": [
+        0.108,
+        0.226
+      ],
+      "Feed rate vf [mm/min]": [
+        62,
+        166
+      ],
+      "Power Pc [kW]": [
+        49.04,
+        82.06
+      ],
+      "Cooling [%]": [
+        0,
+        25
+      ],
+      "Process Time [sec]": [
+        31.23,
+        38.57
+      ]
+    }
+  },
+  {
+    "width": 1500,
+    "action": "standalone pointer brush",
+    "target": "FWF",
+    "rows": 278,
+    "positive": 278,
+    "materials": {
+      "P": 5,
+      "K": 3,
+      "N": 270
+    },
+    "failures": {
+      "BEF": 8,
+      "CCF": 17,
+      "FWF": 278,
+      "WDF": 9
+    },
+    "bounds": {
+      "Cutting speed vc [m/min]": [
+        16.57,
+        29.7
+      ],
+      "Spindle speed n [1/min]": [
+        440,
+        788
+      ],
+      "Feed f [mm/rev]": [
+        0.147,
+        0.248
+      ],
+      "Feed rate vf [mm/min]": [
+        127,
+        250
+      ],
+      "Power Pc [kW]": [
+        56.25,
+        218.66
+      ],
+      "Cooling [%]": [
+        0,
+        75
+      ],
+      "Process Time [sec]": [
+        16.67,
+        36.11
+      ]
+    }
+  }
+]
