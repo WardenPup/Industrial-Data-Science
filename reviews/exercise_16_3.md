@@ -64,3 +64,80 @@ TEST-Optimierung. Beobachtete Verwechslungen bleiben offen dokumentiert.
 4. Sind Modellkapazität, Plattformvariation und fehlende allgemeine Übertragbarkeit ausreichend berücksichtigt?
 
 Kein Merge von 16.3, keine Umsetzung von 16.4 und keine Universitätseinreichung.
+
+
+## Studentischer Originalreview – 21.11.2026
+
+HUMAN REVIEW – EXERCISE 16.3
+
+Status: SCIENTIFICALLY APPROVED
+
+1. Early und Late Fusion
+
+Early Fusion kombiniert standardisierte Vibrationssignale und Wärmebilder vor der Klassifikation in einem zweikanaligen CNN.
+
+Die 80 Vibrationswerte werden mit 944 Nullen auf 1.024 Werte erweitert und anschließend als Bildkanal verarbeitet.
+
+Die künstliche räumliche Anordnung ist eine methodische Einschränkung, die korrekt dokumentiert wurde.
+
+Late Fusion kombiniert die Wahrscheinlichkeitsvektoren der beiden bestehenden Einzelmodelle durch ungewichtete Mittelung. Es wurde kein zusätzliches Modell trainiert.
+
+Bewertung: BESTANDEN.
+
+2. Vergleichbarkeit
+
+Alle vier Modelle wurden anhand derselben 100 TEST-Beobachtungen, derselben Klassenreihenfolge und desselben aktuellen Laufs verglichen.
+
+Die historischen Ergebnisse von 16.1 und 16.2 wurden nicht als unabhängige Vergleichsläufe vermischt.
+
+Bewertung: BESTANDEN.
+
+3. Modellergebnisse und Critical-Erkennung
+
+Die lokalen TEST-Ergebnisse sind:
+
+Vibration: Accuracy 0,58; Critical 0/15.\
+Thermal: Accuracy 0,72; Critical 10/15.\
+Early Fusion: Accuracy 0,91; Critical 13/15.\
+Late Fusion: Accuracy 0,79; Critical 9/15.
+
+Early Fusion erreicht die höchste beobachtete Accuracy und erkennt die meisten Critical-Fälle.
+
+Zwei Critical-Fälle bleiben jedoch übersehen. Zusätzlich werden vier Warning-Fälle als Critical klassifiziert.
+
+Late Fusion verbessert die Gesamtaccuracy gegenüber den Einzelmodellen, erkennt aber einen Critical-Fall weniger als Thermal allein.
+
+Die Unterschiede zwischen Accuracy und Critical-Erkennung sind korrekt interpretiert.
+
+Bewertung: BESTANDEN.
+
+4. Wissenschaftliche Grenzen
+
+Der Datensatz ist synthetisch und umfasst nur 500 Beobachtungen. Die Auswertung basiert auf einem festen TRAIN-/TEST-Split.
+
+Die Modellkapazitäten unterscheiden sich, weshalb die beobachteten Leistungsunterschiede nicht ausschließlich dem Fusionsverfahren zugeschrieben werden dürfen.
+
+Early Fusion verwendet eine künstliche zweidimensionale Anordnung der Vibrationswerte.
+
+Late Fusion lernt keine zusätzlichen gemeinsamen Merkmale und kann Fehler der Einzelmodelle übernehmen.
+
+Die dokumentierten Plattformabweichungen werden transparent behandelt. Keine allgemeingültige Rangfolge oder statistische Signifikanz wird behauptet.
+
+Bewertung: BESTANDEN.
+
+GESAMTENTSCHEIDUNG:\
+SCIENTIFICALLY APPROVED.
+
+Zusätzliche Human-Review-Prüfung:
+
+- Alle vier Confusion-Matrizen unabhängig nachgerechnet.
+- 100 eindeutige TEST-Indizes bestätigt.
+- 400 Klassenvorhersagen mit ihren exportierten Wahrscheinlichkeiten abgeglichen.
+- Late-Fusion-Mittelung rechnerisch geprüft.
+- Sechs hochgeladene Ergebnisartefakte stimmen mit den Manifestprüfsummen überein.
+- GitHub-PR und erfolgreicher PR-CI-Lauf geprüft.
+
+Die vollständige Notebook- und Browserausführung wurde im Human Review nicht unabhängig wiederholt.
+
+Keine zusätzlichen Modelloptimierungen erforderlich.\
+Keine Universitätseinreichung.
