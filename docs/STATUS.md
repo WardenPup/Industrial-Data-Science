@@ -1,3 +1,15 @@
+## 21.11.2026 – Finale Reproduzierbarkeitsprüfung 16.2
+
+Weitere CI-Runner zeigten auch abweichende neu berechnete 16.1-Klassen gegenüber
+dem gespeicherten Plattformstand. Daher keine plattformübergreifende Ergebnisgleichheit
+behaupten: Prüfer verlangt nun zwei unabhängige vollständige frische Notebook-Läufe
+auf demselben Runner mit exakt identischen Vorhersagen/Wahrscheinlichkeiten beider
+Modelle; Unterschiede zum gespeicherten Stand werden separat protokolliert.
+Lokal bestanden: acht Zellen zweimal frisch, Vibration 0,58 / Thermal 0,72,
+keine gespeicherte 16.1-Abweichung, sechs numerische Exporte unverändert und HTML
+900/1400 px bestanden. Frühere Prüferstände unten historisch. Aktuelle CI abwarten;
+16.2 bleibt AWAITING HUMAN REVIEW, Originalartefakte unverändert.
+
 ## 21.11.2026 – Technischer CI-Nachtrag 16.2
 
 Erste Push-CI bestanden, erste PR-CI wegen zu strenger plattformübergreifender

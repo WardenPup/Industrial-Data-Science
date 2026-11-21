@@ -80,3 +80,21 @@ einen temporären Ordner; setup-python@v5 meldet veraltete Node-20-Zielversion b
 Ausführung auf Node 24. Kein wissenschaftlicher Einfluss daraus abgeleitet.
 
 Nach der Prüferkorrektur lokal erneut acht Zellen frisch und HTML offline 900/1400 px bestanden. 16.1-Wahrscheinlichkeitsabweichung lokal 0, sämtliche Klassen identisch; sechs numerische 16.2-Exporte weiterhin bytegleich zum ersten Lauf. Neun neue Artefakthashes und 21 unveränderte Archive erneut bestätigt. Keine wissenschaftlichen Änderungen.
+
+
+### Weiterer tatsächlicher Plattformbefund
+
+Head 546efd5: beide CI-Läufe scheiterten nun am zusätzlich verlangten Vergleich
+der neu ausgeführten 16.1-Klassen mit dem gespeicherten Windows-Lauf. Damit ist
+auch Klassenidentität zwischen beliebigen Runner-CPUs nicht zugesichert. Dieser
+Befund wird nicht als wissenschaftliche Ergebnisänderung verdeckt.
+Der finale Prüfer fordert stattdessen **zwei vollständige frische Ausführungen auf
+demselben Runner** mit exakt identischen Vorhersage-CSV-Dateien beider Modelle
+(einschließlich Wahrscheinlichkeiten). Indizes/Labels müssen weiter mit dem Original
+übereinstimmen. Abweichende Klassen/Wahrscheinlichkeiten gegenüber dem gespeicherten
+Plattformstand werden separat gezählt/protokolliert, nicht als gleich behauptet.
+Die dokumentierte Matrix/72 % beziehen sich ausdrücklich auf die lokale Umgebung;
+CI-Neuberechnungen können abweichen. Die früheren Einträge beschreiben jeweils den
+damaligen Prüfstand. Beide aktuellen CI-Läufe nach dieser Änderung erneut abwarten.
+
+Finaler lokaler Prüfer: zwei unabhängige frische Acht-Zellen-Ausführungen mit exakt identischen Vorhersage-CSV-Dateien für beide Modelle bestanden. Lokal erneut Vibration 0,58 / Thermal 0,72, null abweichende 16.1-Klassen und maximale Wahrscheinlichkeitsabweichung 0. HTML offline 900/1400 px bestanden; sechs numerische 16.2-Exporte unverändert. Die aktuellen CI-Ergebnisse folgen im Draft-PR.
