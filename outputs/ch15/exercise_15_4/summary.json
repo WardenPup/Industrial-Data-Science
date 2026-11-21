@@ -1,0 +1,9 @@
+{
+  "rows": 20000,
+  "train": 15998,
+  "test": 4002,
+  "seed": 42,
+  "max_depth": 3,
+  "raw_sha256": "e1dcc45f8821f7b96d923a253374150d5013cead40bc08b4bef33033aef0ab83",
+  "evaluation": "retrospective; rules informed by entire dataset"
+}

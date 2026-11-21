@@ -1,0 +1,22 @@
+{
+  "validated_date": "2026-11-21",
+  "status": "AWAITING HUMAN REVIEW",
+  "ai_assistance": "Codex",
+  "raw_sha256": "e1dcc45f8821f7b96d923a253374150d5013cead40bc08b4bef33033aef0ab83",
+  "sequential_code_cells": 3,
+  "embedded_images": 1,
+  "files": {
+    "sessions/ch15/rule_models.ipynb": "7d592423417ac8765be729426bd1acd6b31d11dd39c1387f7679d2f3bda5512a",
+    "outputs/ch15/exercise_15_4/rule_models.html": "59f6acb0851ec05b88062486d6b68801bea89337330c96afc5e095459b6f5f93",
+    "outputs/ch15/exercise_15_4/class_counts.csv": "9c3f165f4a815a8f908f24d973d7034af181b3589d991ef905d93a8639ece69b",
+    "outputs/ch15/exercise_15_4/metrics.csv": "dc9c209653f3bd1e1cbe8d3be0f2cc83eb24a754df6c65664f357af15c7b674d",
+    "outputs/ch15/exercise_15_4/predictions.csv": "aac5c251a42478a47e826e483167576e5847c1c4c5d3ece62f7a7cdc7ab0b87f",
+    "outputs/ch15/exercise_15_4/split.csv": "21c632861decea6ae298535bea2189e3181e4342694b330d520937e4ba65cf9c",
+    "outputs/ch15/exercise_15_4/01_confusion_matrices.png": "e3600c8344f73312391c586f4e0198d69767c26aa3ecf396e282bf1f3a233167",
+    "outputs/ch15/exercise_15_4/tree_bef.txt": "ef71639fd3acfc02565ebb8d86869b9817ed1c0e0212051781702babbe4da8a1",
+    "outputs/ch15/exercise_15_4/tree_ccf.txt": "a518eab4c1ddb39daecac68ad45881474a57b4ccb9ff291b2a0016fde6f4e97c",
+    "outputs/ch15/exercise_15_4/tree_fwf.txt": "289d2c5e46439d279d5bf6edd4a5101263cd91f949dfb691584d161e24d172bf",
+    "outputs/ch15/exercise_15_4/tree_wdf.txt": "3f370f62c7f355a82774d4a3266ad93d30c5d0b2dea3b117c807d151bc0cbc5f",
+    "outputs/ch15/exercise_15_4/summary.json": "e4138cd5ec8417e288be8df5c30b806f6211bb7808691eccefab0f264e770358"
+  }
+}

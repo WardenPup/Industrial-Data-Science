@@ -1,0 +1,13 @@
+|--- numeric__Feed rate vf [mm/min] <= 62.500
+|   |--- class: 1
+|--- numeric__Feed rate vf [mm/min] >  62.500
+|   |--- numeric__Process Time [sec] <= 36.535
+|   |   |--- numeric__Feed rate vf [mm/min] <= 111.500
+|   |   |   |--- class: 0
+|   |   |--- numeric__Feed rate vf [mm/min] >  111.500
+|   |   |   |--- class: 0
+|   |--- numeric__Process Time [sec] >  36.535
+|   |   |--- category__Drill Bit Type_N <= 0.500
+|   |   |   |--- class: 1
+|   |   |--- category__Drill Bit Type_N >  0.500
+|   |   |   |--- class: 0

@@ -332,4 +332,3 @@ jobs:
         run: uv run --locked playwright install --with-deps chromium
       - name: Execute and verify only Exercise 15.4
         run: uv run --locked python scripts/build_exercise_15_4.py --check-html
-

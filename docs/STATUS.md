@@ -1,3 +1,18 @@
+## 21.11.2026 – 15.3 integriert; 15.4 technisch geprüft
+
+PR #20 regulär nach ausdrücklicher Freigabe gemergt:
+`eccb1e36558dc094257ae43200080104e75c9479`. Originalreview 624ff6f und
+Abschlussabgleich 95ee0b9 erhalten. Beide aktuellen Head-CI-Läufe erfolgreich,
+keine Kommentare/Reviewthreads/Konflikte. main = origin/main am Merge-SHA.
+
+15.4: **AWAITING HUMAN REVIEW**. Vier feste Regeln und vier TRAIN-only-Bäume
+(Tiefe 3, Seed 42), gemeinsamer Gruppensplit 15.998/4.002, acht Confusion-Matrizen.
+Drei Tests bestanden (1,846 s), drei frische Codezellen, Offline-HTML 900/1400 px,
+16.008 Vorhersagezeilen und 12 Artefakthashes geprüft; 21 Abgabearchive unverändert.
+Retrospektive Grenzen wegen vorbekannter Gesamtdatenexploration offengelegt.
+Kaggle-Registrierung bleibt offen. Keine weitere Aufgabe/Einreichung/Freigabe.
+Draft-PR und tatsächliche aktuelle CI nach Push prüfen.
+
 ## 21.11.2026 – 15.2 integriert; 15.3 technisch geprüft
 
 PR #19 nach ausdrücklicher Freigabe regulär gemergt:
