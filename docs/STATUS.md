@@ -1,3 +1,20 @@
+## 21.11.2026 – 16.3 integriert; 16.4 technisch geprüft
+
+PR #24 regulär nach ausdrücklicher Freigabe gemergt:
+`3a6cc2010754030d7713082266a5b341b00091cd`. Head ec40ce8, beide Head-CI-Läufe
+erfolgreich, keine Kommentare/Threads/Konflikte. Originalreview/gesamte Historie,
+16.1/16.2-Ergebnisse und 21 Archive erhalten; main = origin/main synchronisiert.
+
+16.4: **AWAITING HUMAN REVIEW**. Frische Merkmalszweige, 96→32→3-Kopf,
+142.883 Parameter, 60 Epochen; gepaarter Split/TRAIN-Skalierung unverändert.
+Zwei Tests bestanden (2,802 s), 14 Zellen zweimal frisch, exakt gleiche Vorhersagen/
+Wahrscheinlichkeiten innerhalb der Umgebung. Lokaler gemeinsamer Vergleich:
+Vibration 58/100, Thermal 72, Early 91, Late 79, Intermediate 93 (Critical 13/15,
+zwei übersehen). Fünf Matrizen nebeneinander, offline HTML 900/1400 samt horizontaler
+Bedienung/visueller Prüfung bestanden. Sieben Hashes, 26 frühere Ergebnisartefakte,
+genehmigte Zellen und 21 Archive unverändert. Aktuelle Draft-PR-/Head-CI nach Push
+prüfen. Keine Freigabe/Merge, weitere Aufgabe oder Universitätseinreichung.
+
 ## 21.11.2026 – 16.3 wissenschaftlich freigegeben; finale Integration ausstehend
 
 **SCIENTIFICALLY APPROVED**, Originalreview 6753432 unverändert gesichert.
