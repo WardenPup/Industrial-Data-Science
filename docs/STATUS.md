@@ -1,3 +1,14 @@
+## 21.11.2026 – 16.2 wissenschaftlich freigegeben; Merge weiterhin ausstehend
+
+**SCIENTIFICALLY APPROVED**, Originalreview 85c9141 unverändert gesichert.
+Abschlussabgleich bestanden: neun neue Hashes, 100 Vorhersagen/300 Wahrscheinlichkeiten,
+Matrix 72/100 und Thermal-Level-Tabellen; identische TRAIN-Skalare/Split,
+freigegebene 16.1-Zellen und zwölf Ergebnisartefakte sowie 21 Archive unverändert.
+Plattformabweichungen bleiben sichtbar dokumentiert. Nur Review/Statusdokumentation
+geändert; keine zusätzlichen lokalen Trainingsläufe. Beide aktuellen Head-CI-Läufe
+und Threads/Konflikte vor Ready for Review vollständig prüfen. Finale Merge-Freigabe
+steht aus, kein Merge von PR #23; keine Arbeit an 16.3/16.4 oder Einreichung.
+
 ## 21.11.2026 – 16.2: erfolgreiche CI und Plattformbefund
 
 Head 2c8be3a: Push 44909914982 und PR 44909918774 erfolgreich, je zwei vollständige

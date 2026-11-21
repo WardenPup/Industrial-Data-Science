@@ -179,3 +179,33 @@ Die vollständige Notebook- und Browserausführung wurde im Human Review nicht u
 
 Keine weitere Modelloptimierung erforderlich.\
 Keine Universitätseinreichung.
+
+
+## Codex-Abschlussverifikation nach Human Review – 21.11.2026
+
+**SCIENTIFICALLY APPROVED.** Originalreview wortgetreu separat in 85c9141,
+ursprünglicher technischer Bericht und gesamte Historie unverändert erhalten.
+Keine finale Merge-Autorisierung erteilt.
+
+Tatsächlich erneut abgeglichen: neun aktuelle Manifesthashes (acht Ergebnisartefakte
+plus gemeinsames Notebook), Rohdaten-SHA256, freigegebener 16.1-Zellblock inklusive
+Outputs/Metadaten exakt gegen Merge 70958d7 und zwölf frühere Ergebnisartefakte.
+Alle 100 TEST-Indizes/Labels, 300 Wahrscheinlichkeiten/Argmax, Confusion-Matrix und
+72/100 korrekt; fünf Critical als Warning, vier Warning als Critical. Beide
+Thermal-Level-Kreuztabellen unabhängig aus den Originallevels neu gezählt; alle zehn
+Thermal-Level-2-Fälle korrekt Critical. Identischer Split und TRAIN-only-Skalare
+unabhängig nachgerechnet. 21 Abgabearchive unverändert. Keine Änderung an Modellen,
+Notebook, HTML, lokalen Vorhersagen oder Ergebnistabellen durch diesen Nachtrag.
+
+Vorhandene Prüfbelege erhalten: zwei gezielte Thermal-Tests; zwei unabhängige frische
+Acht-Zellen-Ausführungen mit exakter Wiederholbarkeit innerhalb des Runners;
+visuelle Grafik-/Offline-HTML-Prüfung 900/1400 px. Plattformabweichungen 0,70/0,73
+gegenüber lokal 0,72 bleiben ausdrücklich in Notebook/HTML und Bericht dokumentiert,
+einschließlich ursprünglicher CI-Fehlschläge und deren Prüferkorrektur. Keine
+plattformübergreifende Gleichheit oder zusätzliche studentische Ausführung erfunden.
+Keine unnötigen lokalen Trainingswiederholungen vorgenommen.
+
+Nach Push werden beide aktuellen Head-CI-Läufe vollständig abgewartet und Kommentare,
+Reviewthreads/Konfliktfreiheit überprüft. Nur danach Ready for Review; tatsächlicher
+Abschlussstatus und CI-Links im PR-Bericht. PR #23 wird nicht gemergt; keine Umsetzung
+16.3/16.4 und keine Universitätseinreichung.

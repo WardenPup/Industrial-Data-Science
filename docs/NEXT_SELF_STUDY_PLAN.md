@@ -74,7 +74,7 @@ Diagnose, niemals als Input. Kursrahmen: Adam/Kreuzentropie, Batch 16, Seed doku
 - [x] Shapes/Klassenverteilung und pro Zustand Signal + Wärmebild mit gemeinsamer Farbskala zeigen; vorbereitete Array-/Tensorformen prüfen. Dropout, train/eval sowie Average-/Max-Pooling erklären.
 - [x] `TimeSeriesCNN` nach Tabelle 16.2 vervollständigen (32 Features, drei Logits), 30 Epochen; TEST-Confusion-Matrix und Kreuztabellen mit verstecktem Vibrationslevel interpretieren. Erste Stufe, keine Abhängigkeit von Drilling-Ergebnissen.
 
-**16.2 — Build and train the image network — AWAITING HUMAN REVIEW — medium**
+**16.2 — Build and train the image network — SCIENTIFICALLY APPROVED / AWAITING FINAL MERGE AUTHORIZATION — medium**
 - [x] `ThermalCNN` gemäß Tabelle 16.3 (64 Features, drei Logits), Shapes prüfen, 30 Epochen; TEST-Confusion-Matrix und thermische Level vergleichen. Grenzen einer einzelnen Modalität erläutern. Nutzt Datenaufbereitung und Trainingsrahmen aus 16.1.
 
 **16.3 — Combine the raw inputs, combine the predictions — medium**
