@@ -16,7 +16,7 @@ concurrency:
 jobs:
   python-and-notebooks:
     # Exercise 14.1 uses the focused job below; legacy exercise checks stay intact.
-    if: github.head_ref != 'exercise/14.1' && github.ref != 'refs/heads/exercise/14.1' && github.head_ref != 'exercise/14.2' && github.ref != 'refs/heads/exercise/14.2' && github.head_ref != 'exercise/14.3' && github.ref != 'refs/heads/exercise/14.3' && github.head_ref != 'exercise/14.4' && github.ref != 'refs/heads/exercise/14.4' && github.head_ref != 'exercise/15.1' && github.ref != 'refs/heads/exercise/15.1' && github.head_ref != 'exercise/15.2' && github.ref != 'refs/heads/exercise/15.2' && github.head_ref != 'exercise/15.3' && github.ref != 'refs/heads/exercise/15.3' && github.head_ref != 'exercise/15.4' && github.ref != 'refs/heads/exercise/15.4' && github.head_ref != 'exercise/16.1' && github.ref != 'refs/heads/exercise/16.1' && github.head_ref != 'exercise/16.2' && github.ref != 'refs/heads/exercise/16.2' && github.head_ref != 'exercise/16.3' && github.ref != 'refs/heads/exercise/16.3'
+    if: github.head_ref != 'exercise/14.1' && github.ref != 'refs/heads/exercise/14.1' && github.head_ref != 'exercise/14.2' && github.ref != 'refs/heads/exercise/14.2' && github.head_ref != 'exercise/14.3' && github.ref != 'refs/heads/exercise/14.3' && github.head_ref != 'exercise/14.4' && github.ref != 'refs/heads/exercise/14.4' && github.head_ref != 'exercise/15.1' && github.ref != 'refs/heads/exercise/15.1' && github.head_ref != 'exercise/15.2' && github.ref != 'refs/heads/exercise/15.2' && github.head_ref != 'exercise/15.3' && github.ref != 'refs/heads/exercise/15.3' && github.head_ref != 'exercise/15.4' && github.ref != 'refs/heads/exercise/15.4' && github.head_ref != 'exercise/16.1' && github.ref != 'refs/heads/exercise/16.1' && github.head_ref != 'exercise/16.2' && github.ref != 'refs/heads/exercise/16.2' && github.head_ref != 'exercise/16.3' && github.ref != 'refs/heads/exercise/16.3' && github.head_ref != 'exercise/16.4' && github.ref != 'refs/heads/exercise/16.4'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     env:
@@ -416,3 +416,31 @@ jobs:
         run: uv run --locked playwright install --with-deps chromium
       - name: Execute and verify only Exercise 16.3
         run: uv run --locked python scripts/build_exercise_16_3.py --check-html
+
+  intermediate-fusion-review:
+    if: github.head_ref == 'exercise/16.4' || github.ref == 'refs/heads/exercise/16.4'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      PLAYWRIGHT_BROWSERS_PATH: ${{ github.workspace }}/.tools/playwright
+      QA_HEAD: ${{ github.event.pull_request.head.sha || github.sha }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version-file: .python-version
+      - name: Install the existing locked environment
+        run: |
+          python -m pip install uv==0.13.5
+          uv sync --locked
+      - name: Check disclosure and focused intermediate fusion tests
+        run: |
+          uv run --locked python scripts/check_commit_messages.py --base origin/main --head "$QA_HEAD"
+          uv run --locked python -m unittest discover -s tests -p test_intermediate_fusion.py -v
+      - name: Install offline HTML browser
+        run: uv run --locked playwright install --with-deps chromium
+      - name: Execute and verify only Exercise 16.4
+        run: uv run --locked python scripts/build_exercise_16_4.py --check-html
