@@ -1,3 +1,43 @@
+## 21.11.2026 – 16.4 wissenschaftlich freigegeben; Merge ausstehend
+
+**SCIENTIFICALLY APPROVED**, Originalreview 22c1945 wortgetreu erhalten.
+Abschlussabgleich bestanden: sieben Originalhashes, fünf Matrizen/Tabelle,
+100 TEST-Indizes/500 Vorhersagen/1.500 Wahrscheinlichkeiten, Late-Mittelung und
+TRAIN-Skalare/Split. Original-PNG lokal/Git/GitHub byteidentisch zum Manifest;
+Ursache abweichender Uploadkopie mangels vorliegender Kopie nicht festgestellt,
+keine Umwandlung behauptet. Zwei bestehende Tests bestanden (13,931 s), nur
+funktionaler Ein-Batch-Trainingscheck; keine zusätzlichen vollständigen Trainingsläufe.
+Genehmigte 16.1–16.3-Zellen, 26 frühere Ergebnisartefakte und 21 Archive unverändert.
+Plattformvariation bleibt dokumentiert. Aktuelle Head-CI und Thread-/Konfliktaudit
+vor Ready for Review vollständig abwarten. Finale Merge-Autorisierung fehlt;
+kein Merge von PR #25, keine weitere Aufgabe oder Universitätseinreichung.
+
+## 21.11.2026 – 16.4: erfolgreiche CI mit beobachtetem Gleichstand
+
+Head ced5d88: Push 44916904691 und PR 44916981444 erfolgreich; je zwei frische
+vollständige Läufe exakt wiederholt. Beide CI-Runner Early 0,90 / Intermediate 0,90,
+lokal 0,91 / 0,93. Der lokale Vorsprung ist nicht umgebungsübergreifend stabil.
+Tatsächlichen Gleichstand in Notebook/HTML/Review ergänzt; keine Optimierung,
+kein Austausch lokaler Ergebnisse. HTML nach reiner Textergänzung erneut offline
+900/1400 px geprüft. 16.4 bleibt AWAITING HUMAN REVIEW; finale Head-CI abwarten.
+
+## 21.11.2026 – 16.3 integriert; 16.4 technisch geprüft
+
+PR #24 regulär nach ausdrücklicher Freigabe gemergt:
+`3a6cc2010754030d7713082266a5b341b00091cd`. Head ec40ce8, beide Head-CI-Läufe
+erfolgreich, keine Kommentare/Threads/Konflikte. Originalreview/gesamte Historie,
+16.1/16.2-Ergebnisse und 21 Archive erhalten; main = origin/main synchronisiert.
+
+16.4: **AWAITING HUMAN REVIEW**. Frische Merkmalszweige, 96→32→3-Kopf,
+142.883 Parameter, 60 Epochen; gepaarter Split/TRAIN-Skalierung unverändert.
+Zwei Tests bestanden (2,802 s), 14 Zellen zweimal frisch, exakt gleiche Vorhersagen/
+Wahrscheinlichkeiten innerhalb der Umgebung. Lokaler gemeinsamer Vergleich:
+Vibration 58/100, Thermal 72, Early 91, Late 79, Intermediate 93 (Critical 13/15,
+zwei übersehen). Fünf Matrizen nebeneinander, offline HTML 900/1400 samt horizontaler
+Bedienung/visueller Prüfung bestanden. Sieben Hashes, 26 frühere Ergebnisartefakte,
+genehmigte Zellen und 21 Archive unverändert. Aktuelle Draft-PR-/Head-CI nach Push
+prüfen. Keine Freigabe/Merge, weitere Aufgabe oder Universitätseinreichung.
+
 ## 21.11.2026 – 16.3 wissenschaftlich freigegeben; finale Integration ausstehend
 
 **SCIENTIFICALLY APPROVED**, Originalreview 6753432 unverändert gesichert.
